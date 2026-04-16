@@ -59,15 +59,16 @@ export default function BalineseMassagePage() {
       <section className="relative h-[420px] md:h-[480px] lg:h-[520px] flex items-center justify-center overflow-hidden bg-stone-950">
 
   {/* Background Image */}
-  <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+  <div className="absolute inset-0 z-0">
   <Image 
-    src="/images/balinese-massage-therapy-lucknow.webp"
-    alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+    src="/images/balinese-massage-gomti-nagar-lucknow.webp"
+    alt="Balinese Massage in Gomti Nagar Lucknow Relaxio Spa"
     fill
-    className="object-cover"
-    loading="lazy"
+    className="object-cover object-[center_65%]"
+    priority
   />
-  </div>
+  <div className="absolute inset-0 bg-black/50" />
+</div>
 
   {/* Content */}
   <div className="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col items-center justify-center">
@@ -99,16 +100,7 @@ export default function BalineseMassagePage() {
       <section className="py-24 bg-[#fdfbf7]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-stone prose-lg max-w-none font-light text-stone-700">
-            
-            <FadeIn>
-              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">Discover the Magic of Balinese Massage</h2>
-              <p className="mb-6 leading-relaxed">
-                When you are looking for the <strong>best spa in Gomti Nagar</strong> to unwind after a long week, our Balinese Massage is the ultimate escape. Originating from the beautiful island of Bali, this therapy is a deeply relaxing, holistic treatment that targets both the physical body and the mind.
-              </p>
-              <p className="mb-10 leading-relaxed">
-                As a premier <strong>massage spa in Lucknow</strong>, Relaxio Spa brings this exotic therapy directly to you. The technique involves a seamless blend of gentle stretches, skin rolling, kneading, and stroking, combined with targeted acupressure. We use warm, premium essential oils that not only nourish your skin but also provide powerful aromatherapy benefits to calm your nervous system.
-              </p>
-            </FadeIn>
+
 
             <FadeIn>
               <div className="absolute inset-0 z-0">
