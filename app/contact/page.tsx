@@ -143,9 +143,9 @@ export default function ContactPage() {
             <FadeIn direction="left">
               <div className="h-full min-h-[500px] w-full rounded-3xl overflow-hidden shadow-xl relative">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.877283914113!2d80.9999999!3d26.8500000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDUxJzAwLjAiTiA4MMKwNTknNTkuOSJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" 
+                  src="https://www.google.com/maps?q=26.8554035,80.9959241&output=embed"
                   width="100%" 
-                  height="100%" 
+                  height="350%" 
                   style={{ border: 0, filter: 'grayscale(100%) contrast(1.2) opacity(0.8)' }} 
                   allowFullScreen={false} 
                   loading="lazy" 

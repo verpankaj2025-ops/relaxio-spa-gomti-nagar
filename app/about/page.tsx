@@ -14,7 +14,7 @@ export const metadata = {
     title: 'About Relaxio Spa | Best Luxury Spa in Gomti Nagar Lucknow',
     description: 'Learn about Relaxio Spa, the premier luxury wellness destination in Gomti Nagar, Lucknow. Discover our commitment to hygiene, privacy, and expert therapy.',
     url: '/about',
-    images: ['https://picsum.photos/seed/spa-about-1/1200/630'],
+    images: ['https://relaxiospa.in/images/spa-hero-lucknow.webp']
   }
 };
 
@@ -25,24 +25,69 @@ export default function AboutPage() {
   ];
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbSchema(breadcrumbs)) }}
-      />
-      
+
+      <>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(getBreadcrumbSchema(breadcrumbs))
+    }}
+  />
+
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+"name": "Relaxio Spa",
+"url": "https://relaxiospa.in",
+"image": "https://relaxiospa.in/images/spa-hero-lucknow.webp",
+"telephone": "+917081891995",
+"priceRange": "₹1499 - ₹12000",
+"address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2nd Floor, 4/526, Vivek Khand 4",
+    "addressLocality": "Gomti Nagar",
+    "addressRegion": "Lucknow",
+    "postalCode": "226010",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 26.8554035,
+    "longitude": 80.9959241
+  },
+"openingHoursSpecification": [{
+  "@type": "OpeningHoursSpecification",
+  "dayOfWeek": [
+    "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+  ],
+  "opens": "10:00",
+  "closes": "22:00"
+}]
+      })
+    }}
+  />
+
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950">
         <div className="absolute inset-0 z-0 opacity-40">
-          <Image src="https://picsum.photos/seed/spa-about-hero/1920/1080" alt="Relaxio Spa Gomti Nagar Lucknow" fill className="object-cover" referrerPolicy="no-referrer" />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent" />
+          <Image 
+  src="/images/spa-hero-lucknow.webp"
+  alt="Best Spa in Gomti Nagar Lucknow - Relaxio Spa"
+  fill
+  className="object-cover"
+/>
+<div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Our Story</span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
-              A Sanctuary in the Heart of <br/><span className="italic text-stone-300">Lucknow</span>
-            </h1>
+  Best Spa in Gomti Nagar Lucknow <br/>
+  <span className="italic text-stone-300">Relaxio Spa</span>
+</h1>
             <p className="text-lg md:text-xl text-stone-300 font-light max-w-2xl mx-auto mb-10">
               Founded with a vision to bring authentic, world-class wellness therapies to Gomti Nagar, Relaxio Spa has quickly become the preferred destination for those seeking genuine relaxation and pain relief.
             </p>
@@ -60,8 +105,8 @@ export default function AboutPage() {
                 <h2 className="text-3xl md:text-4xl font-serif text-stone-900 mb-6">Redefining Wellness in Gomti Nagar</h2>
                 <div className="prose prose-stone font-light text-stone-700">
                   <p className="mb-6 leading-relaxed">
-                    When we opened the doors to Relaxio Spa, our mission was simple: to create the <strong>best spa in Gomti Nagar Lucknow</strong>. We noticed a gap in the market for a truly premium, hygienic, and authentic wellness center where clients could escape the chaos of the city.
-                  </p>
+  Located in Gomti Nagar near Brijwasi Bakery, Relaxio Spa is one of the best spa in Gomti Nagar Lucknow offering full body massage, Thai massage, and professional wellness therapies.
+</p>
                   <p className="mb-6 leading-relaxed">
                     We believe that a spa experience should be more than just a massage; it should be a holistic journey that rejuvenates the mind, body, and soul. That is why we obsess over every detail—from the ambient lighting and calming aromas to the premium quality of our massage oils.
                   </p>
@@ -73,7 +118,12 @@ export default function AboutPage() {
             </FadeIn>
             <FadeIn direction="left">
               <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="https://picsum.photos/seed/spa-about-1/800/1000" alt="Relaxio Spa Interior Gomti Nagar" fill className="object-cover" referrerPolicy="no-referrer" />
+                <Image 
+  src="/images/massage-therapy-lucknow.webp"
+  alt="Professional Massage Therapy in Gomti Nagar Lucknow"
+  fill
+  className="object-cover"
+/>
               </div>
             </FadeIn>
           </div>
@@ -82,7 +132,12 @@ export default function AboutPage() {
           <FadeIn>
             <div className="bg-stone-900 text-stone-50 py-24 px-8 md:px-16 rounded-3xl shadow-2xl mb-32 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-                <Image src="https://picsum.photos/seed/spa-pattern-2/1920/1080" alt="Texture" fill className="object-cover" referrerPolicy="no-referrer" />
+                <Image 
+  src="/images/spa-texture.webp"
+  alt="Spa ambiance background"
+  fill
+  className="object-cover"
+/>
               </div>
               <div className="relative z-10">
                 <div className="text-center mb-16">
@@ -127,15 +182,19 @@ export default function AboutPage() {
                   Choosing the right wellness center is crucial for your health and peace of mind. When you search for a <strong>body massage near me</strong>, you want assurance that you are stepping into a safe, professional, and luxurious environment. 
                 </p>
                 <p className="mb-6 leading-relaxed">
-                  At Relaxio Spa, we do not compromise. From the moment you walk through our doors in Gomti Nagar, you are treated like royalty. We offer a comprehensive menu of services, including authentic Thai massage, deeply relaxing Balinese massage, and therapeutic deep tissue treatments. 
-                </p>
-                <p className="mb-6 leading-relaxed">
-                  Our commitment to excellence extends beyond our massages. We use only the finest, skin-nourishing essential oils. Our ambiance is meticulously curated to lower your heart rate and ease your mind before the therapy even begins. It is this dedication to the complete sensory experience that makes us the most highly recommended <strong>spa in Gomti Nagar Lucknow</strong>.
-                </p>
-                <div className="mt-12 text-center">
-                  <a href="https://wa.me/919999999999?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+  If you are searching for the best spa in Gomti Nagar Lucknow or a professional body massage near you, Relaxio Spa is your trusted destination for relaxation and wellness.
+</p>
+                <div className="mt-8 text-center">
+  <p>
+    Explore our <a href="/services" className="underline">massage services</a> 
+    or <a href="/contact" className="underline">contact us</a> to book your session.
+  </p>
+</div>
+
+<div className="mt-12 text-center">
+  <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa..."
                      className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-all duration-300 text-sm uppercase tracking-widest font-medium">
-                    Experience Relaxio Today
+                    Experience Relaxio Spa Today
                   </a>
                 </div>
               </div>
