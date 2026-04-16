@@ -57,10 +57,18 @@ export default function ThaiMassagePage() {
       
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950">
-        <div className="absolute inset-0 z-0 opacity-40">
-          <Image src="https://picsum.photos/seed/thai-massage-hero/1920/1080" alt="Authentic Thai Massage in Gomti Nagar Lucknow" fill className="object-cover" referrerPolicy="no-referrer" />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent" />
-        </div>
+        <div className="absolute inset-0 z-0">
+  <Image 
+    src="/images/thai-massage-gomti-nagar-lucknow.webp"
+    alt="Best Thai Massage in Gomti Nagar Lucknow Relaxio Spa"
+    fill
+    className="object-cover object-bottom"
+    priority
+  />
+
+  {/* Light overlay */}
+  <div className="absolute inset-0 bg-black/50" />
+</div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Premium Wellness</span>
@@ -69,8 +77,8 @@ export default function ThaiMassagePage() {
             </h1>
             <p className="text-lg md:text-xl text-stone-300 font-light max-w-2xl mx-auto mb-10">
               Discover the ancient healing art of Thai Massage. Improve flexibility, relieve deep joint tension, and restore your body&apos;s natural energy flow at Lucknow&apos;s most luxurious spa.
-            </p>
-            <a href="https://wa.me/919999999999?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Thai%20Massage." 
+            images: ['https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.webp']</p>
+            <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Thai%20Massage." 
                className="inline-block px-10 py-4 bg-[#d4af37] text-white rounded-full hover:bg-[#c19b2e] transition-all duration-300 text-sm uppercase tracking-widest font-medium shadow-lg hover:-translate-y-1">
               Book Your Session
             </a>
@@ -95,7 +103,13 @@ export default function ThaiMassagePage() {
 
             <FadeIn>
               <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="https://picsum.photos/seed/thai-massage-detail/1200/800" alt="Thai Massage Therapy in Lucknow" fill className="object-cover" referrerPolicy="no-referrer" />
+                <Image 
+  src="/images/thai-massage-gomti-nagar.webp"
+  alt="Thai Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+  fill
+  className="object-cover"
+  loading="lazy"
+/>
               </div>
             </FadeIn>
 
