@@ -103,19 +103,6 @@ export default function BalineseMassagePage() {
 
 
             <FadeIn>
-              <div className="absolute inset-0 z-0">
-  <Image 
-    src="/images/balinese-massage-gomti-nagar-lucknow.webp"
-    alt="Balinese Massage in Gomti Nagar Lucknow Relaxio Spa"
-    fill
-    className="object-cover object-bottom"
-    priority
-  />
-  <div className="absolute inset-0 bg-black/50" />
-</div>
-            </FadeIn>
-
-            <FadeIn>
               <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">Incredible Benefits of Balinese Massage</h2>
               <p className="mb-6 leading-relaxed">
                 A Balinese massage is more than just a luxury; it is a therapeutic journey. If you are searching for a <strong>body massage near me</strong> that offers comprehensive healing, here is what you can expect:
