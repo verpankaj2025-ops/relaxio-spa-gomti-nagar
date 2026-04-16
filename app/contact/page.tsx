@@ -42,13 +42,12 @@ export default function ContactPage() {
 
   {/* Background Image */}
   <div className="absolute inset-0">
-  <Image
-    src="/images/spa-contact-gomti-nagar-lucknow.webp"
-    alt="Relaxio Spa Gomti Nagar Lucknow contact location luxury spa interior"
-    fill
-    className="object-cover scale-105 animate-[pulse_20s_ease-in-out_infinite_alternate]"
-    priority
-  />
+  <Image 
+  src="/images/your-image.webp"
+  alt="Spa interior Gomti Nagar Lucknow Relaxio Spa"
+  fill
+  className="object-cover object-[center_80%]"
+/>
   <div className="absolute inset-0 bg-black/70" />
 </div>
 
