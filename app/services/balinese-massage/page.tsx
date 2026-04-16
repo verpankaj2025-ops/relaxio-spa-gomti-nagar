@@ -14,7 +14,7 @@ export const metadata = {
     title: 'Best Balinese Massage in Gomti Nagar Lucknow | Relaxio Spa',
     description: 'Indulge in the best Balinese Massage in Gomti Nagar, Lucknow. A holistic, full-body treatment combining acupressure, aromatherapy, and deep relaxation.',
     url: '/services/balinese-massage',
-    images: ['balinese-massage-gomti-nagar-lucknow.webp'],
+    images: ['https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.webp']
   }
 };
 
@@ -58,7 +58,13 @@ export default function BalineseMassagePage() {
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950">
         <div className="absolute inset-0 z-0 opacity-40">
-          images: ['https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.webp']
+          <Image 
+  src="/images/balinese-massage-therapy-lucknow.webp"
+  alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+  fill
+  className="object-cover"
+  loading="lazy"
+/>
           <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -94,15 +100,16 @@ export default function BalineseMassagePage() {
             </FadeIn>
 
             <FadeIn>
-              <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <Image 
-  src="/images/balinese-massage-therapy-lucknow-spa.webp"
-  alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
-  fill
-  className="object-cover"
-  loading="lazy"
-/>
-              </div>
+              <div className="absolute inset-0 z-0">
+  <Image 
+    src="/images/balinese-massage-gomti-nagar-lucknow.webp"
+    alt="Balinese Massage in Gomti Nagar Lucknow Relaxio Spa"
+    fill
+    className="object-cover object-bottom"
+    priority
+  />
+  <div className="absolute inset-0 bg-black/50" />
+</div>
             </FadeIn>
 
             <FadeIn>
