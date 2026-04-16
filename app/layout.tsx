@@ -9,13 +9,25 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-serif' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.APP_URL || 'https://relaxiospa.com'),
-  title: {
+  metadataBase: new URL(process.env.APP_URL || 'https://relaxiospa.in'),
+  
+    verification: {
+       google: "fqsDy4r5bvC7t2LFbPsXD_h6SqzwN4GMD6ihrS1sDog",
+   },
+   
+   title: {
     default: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa & Massage',
     template: '%s | Relaxio Spa Gomti Nagar'
   },
   description: 'Looking for the best spa in Gomti Nagar, Lucknow? Relaxio Spa offers premium Thai, Balinese, and Deep Tissue body massages near you. Book your session today!',
-  keywords: ['Spa in Gomti Nagar Lucknow', 'Best Spa in Gomti Nagar', 'Massage Spa in Lucknow', 'Body Massage near me', 'Thai Massage Lucknow', 'Balinese Massage Lucknow', 'Deep Tissue Massage Lucknow'],
+  keywords: [
+    'Spa in Gomti Nagar Lucknow',
+    'Massage Spa in Lucknow',
+    'Body Massage near me',
+    'Thai Massage Lucknow',
+    'Balinese Massage Lucknow',
+    'Deep Tissue Massage Lucknow'
+  ],
   alternates: {
     canonical: '/',
   },
