@@ -56,33 +56,45 @@ export default function BalineseMassagePage() {
       />
       
       {/* Hero Section */}
-      <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950">
-        <div className="absolute inset-0 z-0 opacity-40">
-          <Image 
-  src="/images/balinese-massage-therapy-lucknow.webp"
-  alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
-  fill
-  className="object-cover"
-  loading="lazy"
-/>
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent" />
-        </div>
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeIn>
-            <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Holistic Therapy</span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
-              Best Balinese Massage in <br/><span className="italic text-stone-300">Gomti Nagar Lucknow</span>
-            </h1>
-            <p className="text-lg md:text-xl text-stone-300 font-light max-w-2xl mx-auto mb-10">
-              Immerse yourself in deep relaxation. Our signature Balinese massage combines aromatherapy, gentle stretching, and acupressure to melt away stress.
-            </p>
-            <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Balinese%20Massage." 
-               className="inline-block px-10 py-4 bg-[#d4af37] text-white rounded-full hover:bg-[#c19b2e] transition-all duration-300 text-sm uppercase tracking-widest font-medium shadow-lg hover:-translate-y-1">
-              Book Your Session
-            </a>
-          </FadeIn>
-        </div>
-      </section>
+      <section className="relative h-[60vh] min-h-[420px] max-h-[720px] flex items-center justify-center overflow-hidden bg-stone-950">
+
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <Image 
+      src="/images/balinese-massage-gomti-nagar-lucknow.webp"
+      alt="Balinese Massage in Gomti Nagar Lucknow Relaxio Spa"
+      fill
+      className="object-cover object-[center_70%]"
+      priority
+    />
+    <div className="absolute inset-0 bg-black/50" />
+  </div>
+
+  {/* Content */}
+  <div className="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col items-center justify-center">
+
+    <span className="text-[#d4af37] tracking-[0.25em] uppercase text-xs md:text-sm font-medium mb-4">
+      Luxury Wellness Experience
+    </span>
+
+    <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-4 leading-tight">
+      Best Balinese Massage in <br/>
+      <span className="italic text-stone-300">Gomti Nagar Lucknow</span>
+    </h1>
+
+    <p className="text-sm md:text-lg text-stone-300 font-light max-w-2xl mx-auto mb-6 leading-relaxed">
+      Experience deep relaxation with Balinese massage in Gomti Nagar Lucknow at Relaxio Spa, combining aromatherapy, gentle stretches, and therapeutic techniques.
+    </p>
+
+    <a 
+      href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20Balinese%20Massage"
+      className="inline-block px-8 py-3 bg-[#d4af37] text-black rounded-full text-xs md:text-sm uppercase tracking-widest font-medium hover:bg-[#c19b2e] transition-all duration-300 shadow-lg hover:-translate-y-1"
+    >
+      Book Your Session
+    </a>
+
+  </div>
+</section>
 
       {/* Main Content */}
       <section className="py-24 bg-[#fdfbf7]">
