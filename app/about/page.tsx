@@ -74,12 +74,16 @@ export default function AboutPage() {
       <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950">
         <div className="absolute inset-0 z-0 opacity-40">
           <Image 
-  src="/images/spa-hero-lucknow.webp"
-  alt="Best Spa in Gomti Nagar Lucknow - Relaxio Spa"
+  src="/images/spa-about-gomti-nagar-lucknow.webp"
+  alt="Luxury spa interior in Gomti Nagar Lucknow Relaxio Spa massage center"
   fill
-  className="object-cover"
+  className="object-cover scale-105"
+  priority
 />
-<div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent" />
+<p className="text-center text-stone-400 mt-6 max-w-2xl mx-auto">
+  Experience the best spa in Gomti Nagar Lucknow with Relaxio Spa, known for luxury ambiance, expert therapists, and premium massage services.
+</p>
+<div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/50 to-black/70 to-transparent" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
@@ -89,7 +93,7 @@ export default function AboutPage() {
   <span className="italic text-stone-300">Relaxio Spa</span>
 </h1>
             <p className="text-lg md:text-xl text-stone-300 font-light max-w-2xl mx-auto mb-10">
-              Founded with a vision to bring authentic, world-class wellness therapies to Gomti Nagar, Relaxio Spa has quickly become the preferred destination for those seeking genuine relaxation and pain relief.
+              Relaxio Spa is a premium spa in Gomti Nagar Lucknow offering luxury wellness therapies, full body massage, Thai massage, and professional relaxation services for those searching spa near me.
             </p>
           </FadeIn>
         </div>
