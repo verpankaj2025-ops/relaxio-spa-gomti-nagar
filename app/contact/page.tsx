@@ -43,7 +43,7 @@ export default function ContactPage() {
   {/* Background Image */}
   <div className="absolute inset-0">
   <Image 
-  src="/images/your-image.webp"
+  src="/spa-contact-gomti-nagar-lucknow.webp"
   alt="Spa interior Gomti Nagar Lucknow Relaxio Spa"
   fill
   className="object-[center_80%]"
