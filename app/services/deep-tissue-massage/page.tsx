@@ -103,7 +103,7 @@ export default function DeepTissueMassagePage() {
             <FadeIn>
               <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
-  src="/images/deep-tissue-therapy-lucknow.webp"
+  src="/images/deep-tissue-therapy-lucknow-spa.webp"
   alt="Deep Tissue Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
   fill
   className="object-cover"
