@@ -14,7 +14,7 @@ export const metadata = {
     title: 'Best Deep Tissue Massage in Gomti Nagar Lucknow | Relaxio Spa',
     description: 'Get the best Deep Tissue Massage in Gomti Nagar, Lucknow. Ideal for chronic pain, muscle stiffness, and sports recovery.',
     url: '/services/deep-tissue-massage',
-    images: ['https://picsum.photos/seed/deep-tissue-detail/1200/630'],
+    images: ['https://relaxiospa.in/images/deep-tissue-massage-gomti-nagar-lucknow.webp']
   }
 };
 
@@ -57,10 +57,17 @@ export default function DeepTissueMassagePage() {
       
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950">
-        <div className="absolute inset-0 z-0 opacity-40">
-          <Image src="https://picsum.photos/seed/deep-tissue-hero/1920/1080" alt="Deep Tissue Massage in Gomti Nagar Lucknow" fill className="object-cover" referrerPolicy="no-referrer" />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent" />
-        </div>
+        <div className="absolute inset-0 z-0">
+  <Image 
+    src="/images/deep-tissue-massage-gomti-nagar-lucknow.webp"
+    alt="Deep Tissue Massage in Gomti Nagar Lucknow Relaxio Spa"
+    fill
+    className="object-cover object-bottom"
+    priority
+  />
+
+  <div className="absolute inset-0 bg-black/50" />
+</div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Targeted Pain Relief</span>
@@ -95,7 +102,13 @@ export default function DeepTissueMassagePage() {
 
             <FadeIn>
               <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                <Image src="https://picsum.photos/seed/deep-tissue-detail/1200/800" alt="Deep Tissue Massage Therapy in Lucknow" fill className="object-cover" referrerPolicy="no-referrer" />
+                <Image 
+  src="/images/deep-tissue-therapy-lucknow.webp"
+  alt="Deep Tissue Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+  fill
+  className="object-cover"
+  loading="lazy"
+/>
               </div>
             </FadeIn>
 
