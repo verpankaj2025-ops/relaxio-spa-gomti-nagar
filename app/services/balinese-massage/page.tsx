@@ -56,7 +56,7 @@ export default function BalineseMassagePage() {
       />
       
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[420px] max-h-[720px] flex items-center justify-center overflow-hidden bg-stone-950">
+      <section className="relative h-[50vh] min-h-[340px] max-h-[520px] flex items-center justify-center overflow-hidden bg-stone-950">
 
   {/* Background Image */}
   <div className="absolute inset-0 z-0">
