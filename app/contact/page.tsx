@@ -1,18 +1,26 @@
 import { getBreadcrumbSchema } from '@/lib/seo';
 import FadeIn from '@/components/ui/FadeIn';
 import { MapPin, Phone, Clock, Mail } from 'lucide-react';
+import Image from 'next/image';
 
 export const metadata = {
-  title: 'Contact Relaxio Spa | Best Spa in Gomti Nagar Lucknow',
-  description: 'Get in touch with Relaxio Spa. Find our location in Gomti Nagar, Lucknow, operating hours, and book your appointment via WhatsApp.',
-  keywords: ['Contact Relaxio Spa', 'Spa in Gomti Nagar Lucknow', 'Massage Spa in Lucknow', 'Body Massage near me'],
+  title: 'Contact Relaxio Spa Gomti Nagar Lucknow | Book Body Massage Near You',
+  description: 'Contact Relaxio Spa in Gomti Nagar Lucknow for premium Thai, Balinese & Deep Tissue Massage. Call or WhatsApp now to book your body massage near you.',
+  keywords: [
+  'Contact Spa in Gomti Nagar Lucknow',
+  'Massage Spa Contact Lucknow',
+  'Body Massage near me Lucknow',
+  'Spa Phone Number Gomti Nagar',
+  'Relaxio Spa Contact'
+],
   alternates: {
-    canonical: '/contact',
+    canonical: 'https://relaxiospa.in/contact',
   },
   openGraph: {
-    title: 'Contact Relaxio Spa | Best Spa in Gomti Nagar Lucknow',
-    description: 'Get in touch with Relaxio Spa. Find our location in Gomti Nagar, Lucknow, operating hours, and book your appointment via WhatsApp.',
-    url: '/contact',
+    title: 'Contact Relaxio Spa Gomti Nagar Lucknow | Book Body Massage Near You',
+    description: 'Contact Relaxio Spa in Gomti Nagar Lucknow for Thai, Balinese & Deep Tissue Massage. Call or WhatsApp now to book your body massage near you.',
+
+    url: 'https://relaxiospa.in/contact',
   }
 };
 
@@ -30,8 +38,22 @@ export default function ContactPage() {
       />
       
       {/* Header Section */}
-      <section className="pt-40 pb-20 bg-stone-950 text-center">
-        <div className="max-w-3xl mx-auto px-4">
+      <section className="relative pt-40 pb-20 text-center overflow-hidden">
+
+  {/* Background Image */}
+  <div className="absolute inset-0">
+  <Image
+    src="/images/spa-contact-gomti-nagar-lucknow.webp"
+    alt="Relaxio Spa Gomti Nagar Lucknow contact location luxury spa interior"
+    fill
+    className="object-cover scale-105 animate-[pulse_20s_ease-in-out_infinite_alternate]"
+    priority
+  />
+  <div className="absolute inset-0 bg-black/70" />
+</div>
+
+  {/* Content */}
+  <div className="relative z-10 max-w-3xl mx-auto px-4">
           <FadeIn>
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Get in Touch</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">Visit Our Sanctuary</h1>
@@ -59,7 +81,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-2">Address</h3>
                       <p className="text-stone-700 font-light text-lg leading-relaxed">
-                        123 Luxury Avenue, Phase 1<br />
+                        2nd Floor, 4/526, Vivek Khand 4,<br />
                         Gomti Nagar, Lucknow<br />
                         Uttar Pradesh 226010
                       </p>
@@ -86,7 +108,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-2">Phone</h3>
                       <p className="text-stone-700 font-light text-lg leading-relaxed">
-                        +91 99999 99999
+                        +91 7081891995
                       </p>
                     </div>
                   </div>
@@ -108,9 +130,9 @@ export default function ContactPage() {
                     <p className="text-stone-600 font-light mb-6">
                       We prefer WhatsApp for instant confirmations and personalized service.
                     </p>
-                    <a href="https://wa.me/919999999999?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
+                    <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
                        className="inline-flex items-center justify-center px-10 py-4 bg-[#25D366] text-white rounded-full hover:bg-[#1ebe57] transition-all duration-300 text-sm uppercase tracking-widest font-medium w-full sm:w-auto shadow-lg hover:-translate-y-1">
-                      Message on WhatsApp
+                      Book Spa Appointment on WhatsApp
                     </a>
                   </div>
                 </div>
