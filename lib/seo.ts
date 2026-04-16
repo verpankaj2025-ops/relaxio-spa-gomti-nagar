@@ -1,5 +1,5 @@
 export function getLocalBusinessSchema() {
-  const baseUrl = process.env.APP_URL || 'https://relaxiospa.com';
+  const baseUrl = process.env.APP_URL || 'https://relaxiospa.in';
   return {
     "@context": "https://schema.org",
     "@type": ["Spa", "HealthAndBeautyBusiness", "LocalBusiness"],
@@ -53,7 +53,7 @@ export function getLocalBusinessSchema() {
 }
 
 export function getBreadcrumbSchema(items: { name: string; item: string }[]) {
-  const baseUrl = process.env.APP_URL || 'https://relaxiospa.com';
+  const baseUrl = process.env.APP_URL || 'https://relaxiospa.in';
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

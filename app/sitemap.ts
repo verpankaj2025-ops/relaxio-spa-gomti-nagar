@@ -1,50 +1,32 @@
-import { MetadataRoute } from 'next';
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.APP_URL || 'https://relaxiospa.com';
-
+export default function sitemap() {
   return [
     {
-      url: `${baseUrl}/`,
+      url: 'https://relaxiospa.in',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
     },
     {
-      url: `${baseUrl}/services`,
+      url: 'https://relaxiospa.in/services',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/thai-massage`,
+      url: 'https://relaxiospa.in/services/thai-massage',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/balinese-massage`,
+      url: 'https://relaxiospa.in/services/balinese-massage',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/deep-tissue-massage`,
+      url: 'https://relaxiospa.in/services/deep-tissue-massage',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
     },
     {
-      url: `${baseUrl}/about`,
+      url: 'https://relaxiospa.in/about',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: 'https://relaxiospa.in/contact',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
     },
   ];
 }

@@ -98,7 +98,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-2">Email</h3>
                       <p className="text-stone-700 font-light text-lg leading-relaxed">
-                        hello@relaxiospa.com
+                        hello@relaxiospa.in
                       </p>
                     </div>
                   </div>
