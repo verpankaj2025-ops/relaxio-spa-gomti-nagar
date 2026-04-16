@@ -59,15 +59,14 @@ export default function BalineseMassagePage() {
       <section className="relative h-[420px] md:h-[480px] lg:h-[520px] flex items-center justify-center overflow-hidden bg-stone-950">
 
   {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-    <Image 
-      src="/images/balinese-massage-gomti-nagar-lucknow.webp"
-      alt="Balinese Massage in Gomti Nagar Lucknow Relaxio Spa"
-      fill
-      className="object-cover object-[center_70%]"
-      priority
-    />
-    <div className="absolute inset-0 bg-black/50" />
+  <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+  <Image 
+    src="/images/balinese-massage-therapy-lucknow.webp"
+    alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+    fill
+    className="object-cover"
+    loading="lazy"
+  />
   </div>
 
   {/* Content */}
@@ -185,7 +184,7 @@ export default function BalineseMassagePage() {
                   </div>
                 </div>
                 <div className="mt-10 text-center">
-                  <a href="https://wa.me/919999999999?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Balinese%20Massage." 
+                  <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Balinese%20Massage." 
                      className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-all duration-300 text-sm uppercase tracking-widest font-medium w-full md:w-auto">
                     Book Your Appointment
                   </a>
