@@ -46,7 +46,7 @@ export default function ContactPage() {
   src="/images/your-image.webp"
   alt="Spa interior Gomti Nagar Lucknow Relaxio Spa"
   fill
-  className="object-cover object-[center_80%]"
+  className="object-cover object-bottom"
 />
   <div className="absolute inset-0 bg-black/70" />
 </div>
