@@ -14,7 +14,7 @@ export const metadata = {
     title: 'Best Balinese Massage in Gomti Nagar Lucknow | Relaxio Spa',
     description: 'Indulge in the best Balinese Massage in Gomti Nagar, Lucknow. A holistic, full-body treatment combining acupressure, aromatherapy, and deep relaxation.',
     url: '/services/balinese-massage',
-    images: ['https://picsum.photos/seed/balinese-massage-detail/1200/630'],
+    images: ['balinese-massage-gomti-nagar-lucknow.webp'],
   }
 };
 
@@ -96,7 +96,7 @@ export default function BalineseMassagePage() {
             <FadeIn>
               <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
-  src="/images/balinese-massage-therapy-lucknow.webp"
+  src="/images/balinese-massage-therapy-lucknow-spa.webp"
   alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
   fill
   className="object-cover"
