@@ -56,7 +56,7 @@ export default function DeepTissueMassagePage() {
       />
       
       {/* Hero Section */}
-      <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950">
+      <section className="relative pt-28 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-stone-950">
         <div className="absolute inset-0 z-0">
   <Image 
     src="/images/deep-tissue-massage-gomti-nagar-lucknow.webp"
