@@ -64,12 +64,12 @@ export default function ServicesPage() {
               </Link>
             </div>
             <div className="relative h-[400px] lg:h-[500px] order-1 lg:order-2">
-              <Image 
-  src="/images/balinese-massage-gomti-nagar-lucknow.webp"
-  alt="Balinese Massage in Gomti Nagar Lucknow"
-  fill
-  className="object-cover"
-  loading="lazy"
+         <Image 
+           src="/images/balinese-massage-gomti-nagar-lucknow.webp"
+           alt="Balinese Massage in Gomti Nagar Lucknow"
+           fill
+           className="object-cover"
+           loading="lazy"
 />
             </div>
           </div>
