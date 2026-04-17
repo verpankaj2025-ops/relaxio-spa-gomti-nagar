@@ -21,7 +21,13 @@ export default function ServicesPage() {
           {/* Deep Tissue */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] lg:h-[500px]">
-              <Image src="https://picsum.photos/seed/deep-tissue-service/800/1000" alt="Deep Tissue Massage" fill className="object-cover" referrerPolicy="no-referrer" />
+              <Image 
+  src="/images/deep-tissue-massage-gomti-nagar-lucknow.webp"
+  alt="Deep Tissue Massage in Gomti Nagar Lucknow"
+  fill
+  className="object-cover"
+  loading="lazy"
+/>
             </div>
             <div>
               <h2 className="text-3xl font-serif text-stone-900 mb-4">Deep Tissue Massage</h2>

@@ -69,7 +69,6 @@ export default function BalineseMassagePage() {
   />
   <div className="absolute inset-0 bg-black/50" />
 </div>
-
   {/* Content */}
   <div className="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col items-center justify-center">
 
@@ -125,7 +124,17 @@ export default function BalineseMassagePage() {
                 ))}
               </div>
             </FadeIn>
-
+ <FadeIn>
+  <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
+    <Image 
+      src="/images/balinese-massage-therapy-lucknow.webp"
+      alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+      fill
+      className="object-cover"
+      loading="lazy"
+    />
+  </div>
+</FadeIn>
             <FadeIn>
               <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">Why Relaxio is the Best Spa in Gomti Nagar</h2>
               <p className="mb-6 leading-relaxed">
