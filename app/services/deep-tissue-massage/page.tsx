@@ -77,7 +77,7 @@ export default function DeepTissueMassagePage() {
             <p className="text-lg md:text-xl text-stone-300 font-light max-w-2xl mx-auto mb-10">
               Release chronic muscle tension, break up scar tissue, and alleviate severe stiffness with our intense, focused deep tissue therapy.
             </p>
-            <a href="https://wa.me/919999999999?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Deep%20Tissue%20Massage." 
+            <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Deep%20Tissue%20Massage." 
                className="inline-block px-10 py-4 bg-[#d4af37] text-white rounded-full hover:bg-[#c19b2e] transition-all duration-300 text-sm uppercase tracking-widest font-medium shadow-lg hover:-translate-y-1">
               Book Your Session
             </a>
@@ -103,7 +103,7 @@ export default function DeepTissueMassagePage() {
             <FadeIn>
               <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
-  src="/images/deep-tissue-therapy-lucknow-spa.webp"
+  src="/images/deep-tissue-massage-lucknow-spa.webp"
   alt="Deep Tissue Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
   fill
   className="object-cover"
@@ -173,7 +173,7 @@ export default function DeepTissueMassagePage() {
                   </div>
                 </div>
                 <div className="mt-10 text-center">
-                  <a href="https://wa.me/919999999999?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Deep%20Tissue%20Massage." 
+                  <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Deep%20Tissue%20Massage." 
                      className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-all duration-300 text-sm uppercase tracking-widest font-medium w-full md:w-auto">
                     Book Your Appointment
                   </a>
