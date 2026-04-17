@@ -59,12 +59,12 @@ export default function DeepTissueMassagePage() {
       <section className="relative h-[65vh] min-h-[420px] flex items-center justify-center overflow-hidden bg-stone-950">
         <div className="absolute inset-0 z-0">
   <Image 
-    src="/images/deep-tissue-massage-gomti-nagar-lucknow.webp"
-    alt="Deep Tissue Massage in Gomti Nagar Lucknow Relaxio Spa"
-    fill
-    className="object-cover object-bottom"
-    priority
-  />
+  src="/images/deep-tissue-massage-therapy-lucknow-spa.webp"
+  alt="Deep Tissue Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+  fill
+  className="object-cover"
+  loading="lazy"
+/>
 
   <div className="absolute inset-0 bg-black/50" />
 </div>
