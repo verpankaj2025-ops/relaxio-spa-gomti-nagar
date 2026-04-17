@@ -64,14 +64,26 @@ export default function ServicesPage() {
               </Link>
             </div>
             <div className="relative h-[400px] lg:h-[500px] order-1 lg:order-2">
-              <Image src="https://picsum.photos/seed/balinese-service/800/1000" alt="Balinese Massage" fill className="object-cover" referrerPolicy="no-referrer" />
+              <Image 
+  src="/images/balinese-massage-gomti-nagar-lucknow.webp"
+  alt="Balinese Massage in Gomti Nagar Lucknow"
+  fill
+  className="object-cover"
+  loading="lazy"
+/>
             </div>
           </div>
 
           {/* Thai Massage */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] lg:h-[500px]">
-              <Image src="https://picsum.photos/seed/thai-service/800/1000" alt="Thai Massage" fill className="object-cover" referrerPolicy="no-referrer" />
+              <Image 
+  src="/images/thai-massage-gomti-nagar-lucknow.webp"
+  alt="Thai Massage in Gomti Nagar Lucknow"
+  fill
+  className="object-cover"
+  loading="lazy"
+/>
             </div>
             <div>
               <h2 className="text-3xl font-serif text-stone-900 mb-4">Thai Massage</h2>
