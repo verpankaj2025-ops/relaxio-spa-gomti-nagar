@@ -64,7 +64,7 @@ export default function BalineseMassagePage() {
     src="/images/balinese-massage-gomti-nagar-lucknow.webp"
     alt="Balinese Massage in Gomti Nagar Lucknow Relaxio Spa"
     fill
-    className="object-cover object-[center_65%]"
+    className="object-cover object-center"
     priority
   />
   <div className="absolute inset-0 bg-black/50" />
