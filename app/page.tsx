@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getLocalBusinessSchema, getFAQSchema, getReviewSchema } from '@/lib/seo';
+import { getLocalBusinessSchema, getFAQSchema } from '@/lib/seo';
 import FadeIn from '@/components/ui/FadeIn';
 import { Star, MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
 
@@ -31,10 +31,6 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(faqs)) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getReviewSchema(reviews)) }}
       />
       
       {/* 1. HERO SECTION */}
