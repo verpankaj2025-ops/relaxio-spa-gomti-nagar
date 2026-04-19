@@ -99,6 +99,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       review: [
         {
           "@type": "Review",
+    "itemReviewed": {
+      "@type": "LocalBusiness",
+      "name": "Relaxio Spa"
+    },
           author: {
             "@type": "Person",
             name: "Rahul Sharma"
@@ -111,6 +115,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         },
         {
           "@type": "Review",
+    "itemReviewed": {
+      "@type": "LocalBusiness",
+      "name": "Relaxio Spa"
+    },
           author: {
             "@type": "Person",
             name: "Priya Singh"
