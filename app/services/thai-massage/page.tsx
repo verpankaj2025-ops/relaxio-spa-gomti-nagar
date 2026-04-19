@@ -77,7 +77,7 @@ export default function ThaiMassagePage() {
             </h1>
             <p className="text-lg md:text-xl text-stone-300 font-light max-w-2xl mx-auto mb-10">
               Discover the ancient healing art of Thai Massage. Improve flexibility, relieve deep joint tension, and restore your body&apos;s natural energy flow at Lucknow&apos;s most luxurious spa.
-            images: ['https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.webp']</p>
+            </p>
             <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Thai%20Massage." 
                className="inline-block px-10 py-4 bg-[#d4af37] text-white rounded-full hover:bg-[#c19b2e] transition-all duration-300 text-sm uppercase tracking-widest font-medium shadow-lg hover:-translate-y-1">
               Book Your Session
@@ -104,7 +104,7 @@ export default function ThaiMassagePage() {
             <FadeIn>
               <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
-  src="/images/thai-massage-gomti-nagar.webp"
+  src="/images/thai-massage-gomti-nagar-lucknow-spa.webp"
   alt="Thai Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
   fill
   className="object-cover"

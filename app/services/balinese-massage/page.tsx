@@ -127,7 +127,7 @@ export default function BalineseMassagePage() {
  <FadeIn>
   <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
     <Image 
-      src="/images/balinese-massage-therapy-lucknow-spa.webp"
+      src="/images/balinese-massage-gomti-nagar-lucknow-spa.webp"
       alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
       fill
       className="object-cover"
