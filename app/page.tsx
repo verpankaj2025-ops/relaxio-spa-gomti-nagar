@@ -50,22 +50,15 @@ export default function Home() {
             </span>
           </FadeIn>
           <FadeIn delay={0.4}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white font-bold">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight text-white mb-4">
   Best Spa in Gomti Nagar Lucknow
   <br />
-  <span className="italic text-stone-300">
-    Luxury Massage & Wellness Center
-  </span>
 </h1>
           </FadeIn>
           <FadeIn delay={0.6}>
   <h2 className="text-lg md:text-2xl text-stone-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
     Experience the ultimate luxury massage spa in Lucknow. Relax, Rejuvenate, and Recharge with our premium therapies.
   </h2>
-
-  <p className="text-base md:text-lg text-stone-400 max-w-2xl mx-auto mt-4">
-    Experience the most relaxing spa in Gomti Nagar Lucknow. We offer Thai massage, Balinese massage, and deep tissue massage for stress relief, pain recovery, and full body relaxation near Vivek Khand and Patrakarpuram.
-  </p>
 </FadeIn>
         
           <FadeIn delay={0.8}>
