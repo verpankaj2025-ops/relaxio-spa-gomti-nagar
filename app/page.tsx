@@ -45,10 +45,10 @@ export default function Home() {
   alt="Luxury spa in Gomti Nagar Lucknow Relaxio Spa premium massage room" 
   fill 
   sizes="100vw"
-  className="object-cover opacity-90"
+  className="object-cover"
   priority
 />
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-900/80 via-stone-900/60 to-stone-950/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
         </div>
         
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
@@ -58,16 +58,24 @@ export default function Home() {
             </span>
           </FadeIn>
           <FadeIn delay={0.4}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-8 leading-[1.1]">
-              Best Spa in <br />
-              <span className="italic text-stone-300">Gomti Nagar Lucknow</span>
-            </h1>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl text-white font-bold">
+  Best Spa in Gomti Nagar Lucknow
+  <br />
+  <span className="italic text-stone-300">
+    Luxury Massage & Wellness Center
+  </span>
+</h1>
           </FadeIn>
           <FadeIn delay={0.6}>
-            <h2 className="text-lg md:text-2xl text-stone-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-              Experience the ultimate luxury massage spa in Lucknow. Relax, Rejuvenate, and Recharge with our premium therapies.
-            </h2>
-          </FadeIn>
+  <h2 className="text-lg md:text-2xl text-stone-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+    Experience the ultimate luxury massage spa in Lucknow. Relax, Rejuvenate, and Recharge with our premium therapies.
+  </h2>
+
+  <p className="text-base md:text-lg text-stone-400 max-w-2xl mx-auto mt-4">
+    Experience the most relaxing spa in Gomti Nagar Lucknow. We offer Thai massage, Balinese massage, and deep tissue massage for stress relief, pain recovery, and full body relaxation near Vivek Khand and Patrakarpuram.
+  </p>
+</FadeIn>
+        
           <FadeIn delay={0.8}>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage." 
