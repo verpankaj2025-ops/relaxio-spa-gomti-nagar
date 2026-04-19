@@ -11,6 +11,10 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-serif'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.APP_URL || 'https://relaxiospa.in'),
+  
+  icons: {
+  icon: "/favicon.ico",
+},
 
   verification: {
     google: "fqsDy4r5bvC7t2LFbPsXD_h6SqzwN4GMD6ihrS1sDog",
