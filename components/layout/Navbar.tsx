@@ -73,7 +73,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <a 
-          href="https://wa.me/919999999999?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
+          href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
           target="_blank" 
           rel="noreferrer" 
           className="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition-colors text-sm uppercase tracking-widest font-medium shadow-sm"
@@ -158,7 +158,7 @@ export default function Navbar() {
             </Link>
             
             <a 
-              href="https://wa.me/919999999999?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
+              href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
               target="_blank" 
               rel="noreferrer" 
               onClick={closeMenu}
