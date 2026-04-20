@@ -126,9 +126,12 @@ export default function ContactPage() {
 
                   <div className="pt-8 border-t border-stone-100">
                     <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-4">Direct Booking</h3>
+                    
                     <p className="text-stone-600 font-light mb-6">
                       We prefer WhatsApp for instant confirmations and personalized service.
                     </p>
+                  
+
                     <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
                        className="inline-flex items-center justify-center px-10 py-4 bg-[#25D366] text-white rounded-full hover:bg-[#1ebe57] transition-all duration-300 text-sm uppercase tracking-widest font-medium w-full sm:w-auto shadow-lg hover:-translate-y-1">
                       Book Spa Appointment on WhatsApp
@@ -139,21 +142,30 @@ export default function ContactPage() {
             </FadeIn>
 
             {/* Map */}
-            <FadeIn direction="left">
-              <div className="h-full min-h-[500px] w-full rounded-3xl overflow-hidden shadow-xl relative">
-                <iframe 
-                  src="https://www.google.com/maps?q=26.8554035,80.9959241&output=embed"
-                  width="100%" 
-                  height="350%" 
-                  style={{ border: 0, filter: 'grayscale(100%) contrast(1.2) opacity(0.8)' }} 
-                  allowFullScreen={false} 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Relaxio Spa Location in Gomti Nagar Lucknow"
-                ></iframe>
-              </div>
-            </FadeIn>
-            
+<FadeIn direction="left">
+  <div className="h-full min-h-[500px] w-full rounded-3xl overflow-hidden shadow-xl relative">
+
+    {/* 👇 पूरा map clickable */}
+    <a
+      href="https://www.google.com/maps/dir/?api=1&destination=26.8553677,80.9985092"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="absolute inset-0 z-10"
+    ></a>
+
+    {/* 👇 Map */}
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5152049774847!2d80.9985092!3d26.855367700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be336e4d8fa9f%3A0x6a5eb278f8c99c28!2sRelaxio%20Spa%20Gomti%20Nagar%20Lucknow!5e0!3m2!1sen!2sin!4v1776642592306!5m2!1sen!2sin"
+      width="100%"
+      height="100%"
+      style={{ border: 0, filter: 'grayscale(100%) contrast(1.1) opacity(0.9)' }}
+      loading="lazy"
+      title="Relaxio Spa Location"
+      className="pointer-events-none"
+    ></iframe>
+
+  </div>
+</FadeIn>            
           </div>
         </div>
       </section>

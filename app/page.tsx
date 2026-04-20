@@ -306,20 +306,30 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn direction="left">
-              <div className="h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl relative">
-                {/* Grayscale map for premium look */}
-                <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.514229806334!2d80.9985044!3d26.8553987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be34ee0fb49db%3A0xbb9a4225ff54c30d!2sAura%20Wellness%20%26%20Spa%20%E2%80%93%20Gomti%20Nagar!5e0!3m2!1sen!2sin!4v1776314585804!5m2!1sen!2sin"
-  width="100%" 
-  height="100%" 
-  style={{ border: 0, filter: 'grayscale(100%) contrast(1.2) opacity(0.8)' }} 
-  allowFullScreen
-  loading="lazy" 
-  referrerPolicy="no-referrer-when-downgrade"
-  title="Relaxio Spa Location in Gomti Nagar Lucknow"
-/>
-              </div>
-            </FadeIn>
+  <div className="h-[500px] w-full rounded-2xl overflow-hidden shadow-2xl relative">
+
+    {/* 👇 CLICKABLE OVERLAY */}
+    <a
+      href="https://www.google.com/maps/dir/?api=1&destination=26.8553677,80.9985092"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="absolute inset-0 z-10"
+    ></a>
+
+    {/* 👇 MAP */}
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5152049774847!2d80.9985092!3d26.855367700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be336e4d8fa9f%3A0x6a5eb278f8c99c28!2sRelaxio%20Spa%20Gomti%20Nagar%20Lucknow!5e0!3m2!1sen!2sin!4v1776642592306!5m2!1sen!2sin"
+      width="100%" 
+      height="100%" 
+      style={{ border: 0, filter: 'grayscale(100%) contrast(1.2) opacity(0.8)' }} 
+      loading="lazy" 
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Relaxio Spa Location in Gomti Nagar Lucknow"
+      className="pointer-events-none"
+    />
+    
+  </div>
+</FadeIn>
           </div>
         </div>
       </section>
