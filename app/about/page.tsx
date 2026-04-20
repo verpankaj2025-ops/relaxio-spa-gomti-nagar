@@ -14,7 +14,7 @@ export const metadata = {
     title: 'About Relaxio Spa | Best Luxury Spa in Gomti Nagar Lucknow',
     description: 'Learn about Relaxio Spa, the premier luxury wellness destination in Gomti Nagar, Lucknow. Discover our commitment to hygiene, privacy, and expert therapy.',
     url: '/about',
-    images: ['https://relaxiospa.in/images/spa-hero-lucknow.webp']
+    image: ['https://relaxiospa.in/images/spa-hero-lucknow.png']
   }
 };
 
