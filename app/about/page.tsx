@@ -196,7 +196,7 @@ export default function AboutPage() {
 </p>
                 <div className="mt-8 text-center">
   <p>
-    Explore our <a href="/services" className="underline">massage services</a> 
+    Explore our <a href="/services" className="underline">massage services </a> 
      or <a href="/contact" className="underline">contact us</a> to book your session.
   </p>
 </div>
