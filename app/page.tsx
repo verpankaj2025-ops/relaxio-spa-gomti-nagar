@@ -1,20 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import FAQ from "@/components/FAQ";
+import { faqs } from "@/data/faq";
 import { getFAQSchema } from '@/lib/seo';
 import FadeIn from '@/components/ui/FadeIn';
 import { Star, MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
 
 export default function Home() {
-  const faqs = [
-    {
-      question: "What is the best spa in Gomti Nagar Lucknow?",
-      answer: "Relaxio Spa is widely considered the best spa in Gomti Nagar, Lucknow, offering premium Thai, Balinese, and Deep Tissue massages in a luxurious and hygienic environment."
-    },
-    {
-      question: "Do you offer body massage near me?",
-      answer: "Yes, if you are in or around Gomti Nagar, Lucknow, Relaxio Spa provides the most relaxing and therapeutic body massages near you."
-    }
-  ];
 
   const reviews = [
     { author: 'Priya S.', rating: 5, reviewBody: 'Absolutely the best spa in Gomti Nagar. The Balinese massage was incredibly relaxing. The hygiene and ambiance are top-notch.' },
@@ -333,6 +325,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <FAQ />
+      
     </>
   );
 }
