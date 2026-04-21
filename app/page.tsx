@@ -5,15 +5,30 @@ import { getFAQSchema } from '@/lib/seo';
 import FadeIn from '@/components/ui/FadeIn';
 import { Star, MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
 
+export const dynamic = "force-dynamic";
 async function getFAQs() {
-  const res = await fetch("https://arunkumar1995.app.n8n.cloud/webhook/faq-data", {
-    cache: "no-store",
-  });
-  return res.json();
+  try {
+    const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+const res = await fetch(`${baseUrl}/api/faqs`, {
+  cache: "no-store",
+});
+
+    return res.json();
+  } catch (error) {
+    console.error("FAQ fetch error:", error);
+    return [];
+  }
 }
 
 export default async function Home() {
-  const faqs = await getFAQs();
+  const allFaqs = (await getFAQs()) || [];
+const faqs = Array.isArray(allFaqs)
+  ? allFaqs.filter(
+      (f) => f.page?.toLowerCase().trim() === "home"
+    )
+  : [];
 
   const reviews = [
     { author: 'Priya S.', rating: 5, reviewBody: 'Absolutely the best spa in Gomti Nagar. The Balinese massage was incredibly relaxing. The hygiene and ambiance are top-notch.' },

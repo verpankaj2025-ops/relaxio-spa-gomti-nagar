@@ -1,15 +1,45 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import FAQ from "@/components/FAQ";
+
+export const dynamic = "force-dynamic";
+async function getFAQs() {
+  try {
+    const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+const res = await fetch(`${baseUrl}/api/faqs`, {
+  cache: "no-store",
+});
+
+    return res.json();
+  } catch (error) {
+    console.error("FAQ fetch error:", error);
+    return [];
+  }
+}
 
 export const metadata = {
   title: 'Our Spa Services',
   description: 'Explore our premium spa services in Gomti Nagar, Lucknow including Thai, Balinese, and Deep Tissue massages.',
 };
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const allFaqs = (await getFAQs()) || [];
+
+  console.log("ALL FAQS 👉", Array.isArray(allFaqs) ? allFaqs : "NOT ARRAY");
+
+  const faqs = Array.isArray(allFaqs)
+  ? allFaqs.filter(
+      (f) => f.page?.toLowerCase().trim() === "services"
+    )
+  : [];
+
+  console.log("FILTERED FAQS", faqs);
   return (
+    <>
     <div className="pt-32 pb-24 bg-stone-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-serif text-stone-900 mb-6">Our Premium Therapies</h1>
           <p className="text-lg text-stone-600 max-w-2xl mx-auto font-light">
@@ -103,6 +133,10 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-    </div>
-  );
+        </div>
+
+    {/* 👇 FAQ SECTION */}
+    <FAQ faqs={faqs} />
+  </>
+);
 }
