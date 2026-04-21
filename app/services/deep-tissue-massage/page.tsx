@@ -1,8 +1,23 @@
 import Image from 'next/image';
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
+import FAQ from "@/components/FAQ";
 import FadeIn from '@/components/ui/FadeIn';
 import { CheckCircle2 } from 'lucide-react';
 
+async function getFAQs() {
+  try {
+    const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+const res = await fetch(`${baseUrl}/api/faqs`, {
+  cache: "no-store",
+});
+
+    return res.json();
+  } catch (error) {
+    return [];
+  }
+}
 export const metadata = {
   title: 'Best Deep Tissue Massage in Gomti Nagar Lucknow | Relaxio Spa',
   description: 'Get the best Deep Tissue Massage in Gomti Nagar, Lucknow. Ideal for chronic pain, muscle stiffness, and sports recovery. Book your session today.',
@@ -18,31 +33,20 @@ export const metadata = {
   }
 };
 
-export default function DeepTissueMassagePage() {
+export default async function DeepTissueMassagePage() {
   const breadcrumbs = [
     { name: 'Home', item: '/' },
     { name: 'Services', item: '/services' },
     { name: 'Deep Tissue Massage', item: '/services/deep-tissue-massage' }
   ];
 
-  const faqs = [
-    {
-      question: "Is Deep Tissue Massage painful?",
-      answer: "Deep tissue massage uses firm pressure to reach deeper muscle layers. While you may feel some discomfort as knots are worked out, it should never be agonizingly painful. Our therapists in Gomti Nagar will constantly check in with you to adjust the pressure."
-    },
-    {
-      question: "Will I be sore after the massage?",
-      answer: "It is common to feel a bit sore for a day or two after a deep tissue massage, similar to how you feel after a good workout. Drinking plenty of water helps flush out the toxins released during the session."
-    },
-    {
-      question: "Who should get a Deep Tissue Massage?",
-      answer: "This therapy is ideal for athletes, individuals with chronic back or neck pain, people recovering from injuries, or anyone experiencing severe muscle stiffness from sitting at a desk all day."
-    },
-    {
-      question: "How often should I get a Deep Tissue Massage?",
-      answer: "For chronic pain or injury recovery, we recommend a session every 1-2 weeks initially. For general maintenance and tension relief, once a month is highly beneficial."
-    }
-  ];
+  const allFaqs = (await getFAQs()) || [];
+
+const faqs = Array.isArray(allFaqs)
+  ? allFaqs.filter(
+      (f) => f.page?.toLowerCase().trim() === "deep-tissue"
+    )
+  : [];
 
   return (
     <>
@@ -182,16 +186,8 @@ export default function DeepTissueMassagePage() {
             </FadeIn>
 
             <FadeIn>
-              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8 mb-16">
-                {faqs.map((faq, index) => (
-                  <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
-                    <h3 className="text-xl font-serif text-stone-900 mb-3">{faq.question}</h3>
-                    <p className="text-stone-600 leading-relaxed">{faq.answer}</p>
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
+  <FAQ faqs={faqs} />
+</FadeIn>
 
           </div>
         </div>

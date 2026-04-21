@@ -1,7 +1,24 @@
 import Image from 'next/image';
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
+import FAQ from "@/components/FAQ";
 import FadeIn from '@/components/ui/FadeIn';
 import { CheckCircle2 } from 'lucide-react';
+
+export const dynamic = "force-dynamic";
+async function getFAQs() {
+  try {
+    const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+const res = await fetch(`${baseUrl}/api/faqs`, {
+  cache: "no-store",
+});
+
+    return res.json();
+  } catch (error) {
+    return [];
+  }
+}
 
 export const metadata = {
   title: 'Best Thai Massage in Gomti Nagar Lucknow | Relaxio Spa',
@@ -18,31 +35,20 @@ export const metadata = {
   }
 };
 
-export default function ThaiMassagePage() {
+export default async function ThaiMassagePage() {
   const breadcrumbs = [
     { name: 'Home', item: '/' },
     { name: 'Services', item: '/services' },
     { name: 'Thai Massage', item: '/services/thai-massage' }
   ];
 
-  const faqs = [
-    {
-      question: "What should I wear for a Thai Massage?",
-      answer: "Unlike traditional oil massages, Thai massage is performed fully clothed. We provide loose, comfortable cotton garments for you to wear during the session to allow for maximum flexibility and stretching."
-    },
-    {
-      question: "Is Thai Massage painful?",
-      answer: "While Thai massage involves deep stretching and pressure, it should not be painful. Our expert therapists in Gomti Nagar will communicate with you to ensure the pressure is perfectly tailored to your comfort level."
-    },
-    {
-      question: "How is Thai Massage different from regular massage?",
-      answer: "Thai massage is often called 'lazy man's yoga'. Instead of rubbing muscles with oil, the therapist uses their hands, knees, legs, and feet to move you into a series of yoga-like stretches and applies deep muscle compression."
-    },
-    {
-      question: "How long does a typical session last?",
-      answer: "At Relaxio Spa, we offer Thai massage sessions ranging from 60 minutes to 120 minutes. We highly recommend a 90-minute session to allow enough time for a full-body stretch and complete relaxation."
-    }
-  ];
+  const allFaqs = (await getFAQs()) || [];
+
+const faqs = Array.isArray(allFaqs)
+  ? allFaqs.filter(
+      (f) => f.page?.toLowerCase().trim() === "thai"
+    )
+  : [];
 
   return (
     <>
@@ -183,16 +189,8 @@ export default function ThaiMassagePage() {
             </FadeIn>
 
             <FadeIn>
-              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8 mb-16">
-                {faqs.map((faq, index) => (
-                  <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
-                    <h3 className="text-xl font-serif text-stone-900 mb-3">{faq.question}</h3>
-                    <p className="text-stone-600 leading-relaxed">{faq.answer}</p>
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
+  <FAQ faqs={faqs} />
+</FadeIn>
 
           </div>
         </div>

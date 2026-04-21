@@ -1,7 +1,23 @@
 import Image from 'next/image';
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
+import FAQ from "@/components/FAQ";
 import FadeIn from '@/components/ui/FadeIn';
 import { CheckCircle2 } from 'lucide-react';
+
+export const dynamic = "force-dynamic";
+async function getFAQs() {
+  try {
+    const baseUrl =
+  process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+const res = await fetch(`${baseUrl}/api/faqs`, {
+  cache: "no-store",
+});
+  return res.json();
+  } catch {
+    return [];
+  }
+}
 
 export const metadata = {
   title: 'Best Balinese Massage in Gomti Nagar Lucknow | Relaxio Spa',
@@ -18,31 +34,20 @@ export const metadata = {
   }
 };
 
-export default function BalineseMassagePage() {
+export default async function BalineseMassagePage() {
   const breadcrumbs = [
     { name: 'Home', item: '/' },
     { name: 'Services', item: '/services' },
     { name: 'Balinese Massage', item: '/services/balinese-massage' }
   ];
 
-  const faqs = [
-    {
-      question: "What is a Balinese Massage?",
-      answer: "Balinese massage is a full-body, deep-tissue, holistic treatment. It uses a combination of gentle stretches, acupressure, reflexology, and aromatherapy to stimulate the flow of blood, oxygen, and 'qi' (energy) around your body."
-    },
-    {
-      question: "Is Balinese massage good for relaxation?",
-      answer: "Absolutely. It is one of the most relaxing therapies available at our spa in Gomti Nagar Lucknow. The use of warm essential oils and smooth, flowing strokes deeply relaxes the mind and body."
-    },
-    {
-      question: "How is it different from a Swedish massage?",
-      answer: "While Swedish massage focuses primarily on relaxation using long, gliding strokes, Balinese massage incorporates deeper tissue work, acupressure, and reflexology to address muscle knots and energy blockages."
-    },
-    {
-      question: "What oils are used during the massage?",
-      answer: "At Relaxio Spa, we use premium, authentic essential oils imported specifically for our Balinese treatments. These include jasmine, sandalwood, and frangipani, which are known for their calming and therapeutic properties."
-    }
-  ];
+  const allFaqs = (await getFAQs()) || [];
+
+const faqs = Array.isArray(allFaqs)
+  ? allFaqs.filter(
+      (f) => f.page?.toLowerCase().trim() === "balinese"
+    )
+  : [];
 
   return (
     <>
@@ -181,16 +186,8 @@ export default function BalineseMassagePage() {
             </FadeIn>
 
             <FadeIn>
-              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-8">Frequently Asked Questions</h2>
-              <div className="space-y-8 mb-16">
-                {faqs.map((faq, index) => (
-                  <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
-                    <h3 className="text-xl font-serif text-stone-900 mb-3">{faq.question}</h3>
-                    <p className="text-stone-600 leading-relaxed">{faq.answer}</p>
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
+  <FAQ faqs={faqs} />
+</FadeIn>
 
           </div>
         </div>
