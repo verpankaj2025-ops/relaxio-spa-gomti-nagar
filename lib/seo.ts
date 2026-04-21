@@ -11,11 +11,11 @@ export function getLocalBusinessSchema() {
     ],
     "@id": baseUrl,
     "url": baseUrl,
-    "telephone": "+919999999999",
-    "priceRange": "₹₹",
+    "telephone": "+917081891995",
+    "priceRange": "₹1499 - ₹8999",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Luxury Avenue, Phase 1, Gomti Nagar",
+      "streetAddress": "2nd Floor, 4/526, Vivek Khand 4, Gomti Nagar",
       "addressLocality": "Lucknow",
       "postalCode": "226010",
       "addressRegion": "UP",
@@ -37,7 +37,7 @@ export function getLocalBusinessSchema() {
         "Saturday",
         "Sunday"
       ],
-      "opens": "10:00",
+      "opens": "11:00",
       "closes": "21:00"
     },
     "aggregateRating": {
@@ -46,8 +46,9 @@ export function getLocalBusinessSchema() {
       "reviewCount": "128"
     },
     "sameAs": [
-      "https://www.facebook.com/relaxiospa",
-      "https://www.instagram.com/relaxiospa"
+      "https://www.facebook.com/profile.php?id=61570999326665",
+      "https://www.instagram.com/relaxio_spa_gomti_nagar",
+      "https://share.google/i1iBzhC5VmGDd0MhV",
     ]
   };
 }
