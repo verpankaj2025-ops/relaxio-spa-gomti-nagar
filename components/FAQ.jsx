@@ -1,8 +1,6 @@
 "use client";
 import { useState } from "react";
-import { faqs } from "@/data/faq";
-
-export default function FAQ() {
+export default function FAQ({ faqs }) {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {

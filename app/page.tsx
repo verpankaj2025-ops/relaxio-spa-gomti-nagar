@@ -1,12 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import FAQ from "@/components/FAQ";
-import { faqs } from "@/data/faq";
 import { getFAQSchema } from '@/lib/seo';
 import FadeIn from '@/components/ui/FadeIn';
 import { Star, MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
 
-export default function Home() {
+async function getFAQs() {
+  const res = await fetch("https://arunkumar1995.app.n8n.cloud/webhook/faq-data", {
+    cache: "no-store",
+  });
+  return res.json();
+}
+
+export default async function Home() {
+  const faqs = await getFAQs();
 
   const reviews = [
     { author: 'Priya S.', rating: 5, reviewBody: 'Absolutely the best spa in Gomti Nagar. The Balinese massage was incredibly relaxing. The hygiene and ambiance are top-notch.' },
@@ -325,7 +332,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <FAQ />
+      <FAQ faqs={faqs} />
       
     </>
   );
