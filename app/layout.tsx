@@ -67,38 +67,67 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} scroll-smooth`}>
+    <html lang="en-IN" className={`${inter.variable} ${playfair.variable} scroll-smooth`}>
       <body className="font-sans bg-[#fdfbf7] text-stone-900 antialiased selection:bg-[#d4af37]/30" suppressHydrationWarning>
 
         {/* ✅ FINAL FIXED SCHEMA */}
         <Script
   id="schema"
   type="application/ld+json"
-  strategy="beforeInteractive"
+  strategy="afterInteractive"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://relaxiospa.in",
+      "@type": ["Spa", "HealthAndBeautyBusiness", "LocalBusiness"],
+      "@id": "https://relaxiospa.in/#spa",
       name: "Relaxio Spa",
       url: "https://relaxiospa.in",
       telephone: "+917081891995",
-      image: "https://relaxiospa.in/images/spa.jpg",
+      priceRange: "₹1499 - ₹8999",
+      image: "https://relaxiospa.in/images/luxury-spa-gomti-nagar-lucknow.webp",
 
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Gomti Nagar",
+        streetAddress: "2nd Floor, 4/526, Vivek Khand 4",
         addressLocality: "Lucknow",
         addressRegion: "UP",
         postalCode: "226010",
         addressCountry: "IN"
       },
 
-      aggregateRating: {
+      geo: {
+  "@type": "GeoCoordinates",
+  latitude: 26.8553677,
+  longitude: 80.9985092
+},
+hasMap:
+  "https://www.google.com/maps/dir/?api=1&destination=26.8553677,80.9985092",
+
+      openingHoursSpecification: [
+  {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+    ],
+    opens: "11:00",
+    closes: "21:00"
+  }
+],
+
+aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: "4.8",
         reviewCount: "120"
       },
+
+areaServed: [
+  { "@type": "Place", name: "Gomti Nagar" },
+  { "@type": "Place", name: "Lucknow" },
+  { "@type": "Place", name: "Vivek Khand" },
+  { "@type": "Place", name: "Indira Nagar" },
+  { "@type": "Place", name: "Patrakarpuram" },
+  { "@type": "Place", name: "Chinhut" },
+],
 
       review: [
         {
