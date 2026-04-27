@@ -1,32 +1,46 @@
+const lastUpdated = new Date("2026-04-01");
+
 export default function sitemap() {
   return [
     {
       url: 'https://relaxiospa.in',
-      lastModified: new Date(),
+      lastModified: lastUpdated,
     },
     {
       url: 'https://relaxiospa.in/services',
-      lastModified: new Date(),
+      lastModified: lastUpdated,
     },
+
+    // 🔥 SERVICES
     {
       url: 'https://relaxiospa.in/services/thai-massage',
-      lastModified: new Date(),
+      lastModified: lastUpdated,
     },
     {
       url: 'https://relaxiospa.in/services/balinese-massage',
-      lastModified: new Date(),
+      lastModified: lastUpdated,
     },
     {
       url: 'https://relaxiospa.in/services/deep-tissue-massage',
-      lastModified: new Date(),
+      lastModified: lastUpdated,
     },
     {
+      url: 'https://relaxiospa.in/services/couple-massage',
+      lastModified: lastUpdated,
+    },
+    {
+      url: 'https://relaxiospa.in/services/spa-facilities',
+      lastModified: lastUpdated,
+    },
+
+    // 🔥 OTHER PAGES
+    {
       url: 'https://relaxiospa.in/about',
-      lastModified: new Date(),
+      lastModified: lastUpdated,
     },
     {
       url: 'https://relaxiospa.in/contact',
-      lastModified: new Date(),
+      lastModified: lastUpdated,
     },
   ];
 }

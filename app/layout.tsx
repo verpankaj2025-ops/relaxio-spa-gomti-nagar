@@ -8,9 +8,10 @@ import WhatsAppWidget from '@/components/layout/WhatsAppWidget';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-serif' });
+const SITE_URL = "https://relaxiospa.in";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.APP_URL || 'https://relaxiospa.in'),
+  metadataBase: new URL(SITE_URL),
   
   icons: {
   icon: "/favicon.ico",
@@ -37,13 +38,13 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: '/',
-  },
+  canonical: SITE_URL,
+},
 
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: '/',
+    url: SITE_URL,
     siteName: 'Relaxio Spa',
     title: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
     description: 'Looking for the best spa in Gomti Nagar, Lucknow? Relaxio Spa offers premium Thai, Balinese, and Deep Tissue body massages near you.',
@@ -79,12 +80,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     __html: JSON.stringify({
       "@context": "https://schema.org",
       "@type": ["Spa", "HealthAndBeautyBusiness", "LocalBusiness"],
-      "@id": "https://relaxiospa.in/#spa",
+      "@id": `${SITE_URL}/#spa`,
       name: "Relaxio Spa",
-      url: "https://relaxiospa.in",
+      url: SITE_URL,
       telephone: "+917081891995",
       priceRange: "₹1499 - ₹8999",
-      image: "https://relaxiospa.in/images/luxury-spa-gomti-nagar-lucknow.webp",
+      image: `${SITE_URL}/images/luxury-spa-gomti-nagar-lucknow.webp`,
 
       address: {
         "@type": "PostalAddress",
@@ -155,6 +156,24 @@ areaServed: [
           reviewBody: "Professional therapists and great ambience."
         }
       ]
+    })
+  }}
+/>
+
+<Script
+  id="website-schema"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "Relaxio Spa",
+      publisher: {
+        "@id": `${SITE_URL}/#spa`
+      }
     })
   }}
 />
