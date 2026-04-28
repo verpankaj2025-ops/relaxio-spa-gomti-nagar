@@ -73,7 +73,7 @@ export default function SpaFacilitiesPage() {
           </h3>
 
           <p className="text-3xl font-semibold text-amber-600 mb-4">
-            ₹999 – ₹1999
+            ₹999 – ₹5999
           </p>
 
           <p className="text-stone-600 mb-6">
