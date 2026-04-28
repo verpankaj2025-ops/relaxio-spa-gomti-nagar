@@ -84,6 +84,13 @@ export default function Navbar() {
             </div>
           </div>
 
+          <Link 
+  href="/blog" 
+  className="text-stone-700 hover:text-amber-600 font-medium transition-colors text-sm uppercase tracking-widest"
+>
+  Blog
+</Link>
+
           <Link href="/contact" className="text-stone-700 hover:text-amber-600 font-medium transition-colors text-sm uppercase tracking-widest">
             Contact
           </Link>
@@ -184,6 +191,14 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+
+          <Link 
+  href="/blog" 
+  onClick={closeMenu} 
+  className="text-stone-800 text-lg font-medium hover:text-amber-600 transition-colors py-2"
+>
+  Blog
+</Link>
 
             <Link 
               href="/contact" 
