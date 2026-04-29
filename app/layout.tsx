@@ -5,6 +5,7 @@ import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppWidget from '@/components/layout/WhatsAppWidget';
+import CallWidget from '@/components/layout/CallWidget';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-serif' });
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     description: 'Looking for the best spa in Gomti Nagar, Lucknow? Relaxio Spa offers premium Thai, Balinese, and Deep Tissue body massages near you.',
     images: [
       {
-        url: 'https://relaxiospa.in/images/spa.jpg',
+        url: 'https://relaxiospa.in/images/spa.webp',
         width: 1200,
         height: 630,
         alt: 'Relaxio Spa Gomti Nagar Lucknow',
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
     description: 'Looking for the best spa in Gomti Nagar, Lucknow? Relaxio Spa offers premium Thai, Balinese, and Deep Tissue body massages near you.',
-    images: ['https://relaxiospa.in/images/spa.jpg'],
+    images: ['https://relaxiospa.in/images/spa.webp'],
   },
 };
 
@@ -75,7 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script
   id="schema"
   type="application/ld+json"
-  strategy="afterInteractive"
+  strategy="lazyOnload"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",
@@ -184,6 +185,7 @@ areaServed: [
         </main>
         <Footer />
         <WhatsAppWidget />
+        <CallWidget />
 
       </body>
     </html>

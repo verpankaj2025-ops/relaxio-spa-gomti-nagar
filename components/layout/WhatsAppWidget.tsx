@@ -5,26 +5,23 @@ import { motion } from 'motion/react';
 export default function WhatsAppWidget() {
   return (
     <motion.a
-      href="https://wa.me/919999999999?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment."
+      href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20found%20you%20through%20your%20website%20and%20want%20to%20book%20a%20spa%20session."
       target="_blank"
-      rel="noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:bg-[#1ebe57] transition-colors flex items-center justify-center group"
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ delay: 1, type: 'spring', stiffness: 200, damping: 20 }}
+      rel="noopener noreferrer"
+      className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:bg-[#1ebe57] transition-colors duration-200 flex items-center justify-center group"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      aria-label="Chat on WhatsApp"
+      aria-label="Chat on WhatsApp with Relaxio Spa"
     >
-      <MessageCircle size={32} />
+      <MessageCircle size={28} />
       
       {/* Tooltip */}
-      <span className="absolute right-full mr-4 bg-white text-stone-900 text-sm py-2 px-4 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-medium shadow-xl border border-stone-100">
+      <span className="hidden md:block absolute right-full mr-4 bg-white text-stone-900 text-sm py-2 px-4 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-medium shadow-lg border border-stone-100">
         Book via WhatsApp
       </span>
       
       {/* Pulse Effect */}
-      <span className="absolute inset-0 rounded-full border-2 border-[#25D366] animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite] opacity-75"></span>
+      <span className="absolute inset-0 rounded-full border-2 border-[#25D366] animate-pulse opacity-75 pointer-events-none"></span>
     </motion.a>
   );
 }

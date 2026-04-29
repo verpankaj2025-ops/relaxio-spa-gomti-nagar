@@ -10,15 +10,18 @@ const nextConfig: NextConfig = {
   },
   // Allow access to remote image placeholder.
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        port: '',
-        pathname: '/**', // This allows any path under the hostname
-      },
-    ],
-  },
+  qualities: [75, 80, 85, 90],
+
+  remotePatterns: [
+    {
+      protocol: 'https',
+      hostname: 'picsum.photos',
+      port: '',
+      pathname: '/**',
+    },
+  ],
+},
+
   output: 'standalone',
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {

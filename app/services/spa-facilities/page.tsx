@@ -1,133 +1,266 @@
 import Image from "next/image";
-import Link from "next/link";
+import FAQ from "@/components/FAQ";
+import FadeIn from "@/components/ui/FadeIn";
+import { CheckCircle2 } from "lucide-react";
+import { getBreadcrumbSchema, getFAQSchema } from "@/lib/seo";
 
-export default function SpaFacilitiesPage() {
+export const dynamic = "force-dynamic";
+export const metadata = {
+  title: "Jacuzzi & Steam Bath in Gomti Nagar Lucknow | Relaxio Spa",
+  description:
+    "Experience luxury Jacuzzi and Steam Bath in Gomti Nagar Lucknow at Relaxio Spa. Premium wellness sessions for relaxation detox and stress relief.",
+  keywords: [
+    "Jacuzzi in Gomti Nagar Lucknow",
+    "Steam Bath in Lucknow",
+    "Luxury Spa in Gomti Nagar",
+    "Best Spa in Lucknow",
+    "Jacuzzi Spa Near Me"
+  ],
+  alternates: {
+    canonical: "/services/spa-facilities",
+  },
+  openGraph: {
+    title: "Jacuzzi & Steam Bath in Gomti Nagar Lucknow | Relaxio Spa",
+    description:
+      "Luxury Jacuzzi and Steam Bath sessions in Gomti Nagar Lucknow for complete relaxation wellness and detox.",
+    url: "/services/spa-facilities",
+    images: [
+      "https://relaxiospa.in/images/jacuzzi-steam-bath-lucknow.webp"
+    ],
+  },
+};
+
+async function getFAQs() {
+  try {
+    const baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+    const res = await fetch(`${baseUrl}/api/faqs`, {
+      cache: "no-store",
+    });
+
+    return res.json();
+  } catch {
+    return [];
+  }
+}
+
+export default async function SpaFacilitiesPage() {
+  const breadcrumbs = [
+  { name: "Home", item: "/" },
+  { name: "Services", item: "/services" },
+  { name: "Spa Facilities", item: "/services/spa-facilities" },
+];
+  const allFaqs = (await getFAQs()) || [];
+
+  const faqs = Array.isArray(allFaqs)
+    ? allFaqs.filter(
+        (f) => f.page?.toLowerCase().trim() === "spa-facilities"
+      )
+    : [];
+
   return (
-    <div>
+    <>
+    <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(getBreadcrumbSchema(breadcrumbs)),
+  }}
+/>
 
-      {/* 🔥 HERO SECTION */}
-      <section className="relative pt-40 pb-28 text-center text-white">
-        <Image
-          src="/images/spa.webp"
-          fill
-          className="object-cover"
-          alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow"
-          priority
-        />
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(getFAQSchema(faqs)),
+  }}
+/>
+      {/* HERO SECTION */}
+      <section className="relative h-[340px] md:h-[400px] lg:h-[440px] flex items-center justify-center overflow-hidden bg-stone-950">
+        <div className="absolute inset-0 z-0">
+          <Image
+  src="/images/jacuzzi-steam-bath-lucknow.webp"
+  alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow"
+  fill
+  sizes="100vw"
+  quality={85}
+  className="object-cover object-center"
+  priority
+/>
 
-        <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/35" />
+        </div>
 
-        <div className="relative">
-          <h1 className="text-4xl md:text-5xl font-serif mb-4">
-            Jacuzzi & Steam Bath in Gomti Nagar Lucknow
+        <div 
+        className="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col items-center justify-center">
+          <span className="text-[#d4af37] tracking-[0.25em] uppercase text-xs md:text-sm font-medium mb-4">
+            Luxury Wellness Experience
+          </span>
+
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-4 leading-tight">
+            Jacuzzi & Steam Bath in <br />
+            <span className="italic text-stone-300">
+              Gomti Nagar Lucknow
+            </span>
           </h1>
-          <p className="text-white/90 max-w-xl mx-auto">
-            Relax your body and mind with luxury Jacuzzi and Steam Bath sessions at Relaxio Spa.
-          </p>
-        </div>
-      </section>
 
-      {/* 🔥 CONTENT */}
-      <section className="py-20 max-w-3xl mx-auto px-4 text-center">
-
-        <h2 className="text-3xl font-serif mb-6">
-          Premium Spa Facilities for Deep Relaxation
-        </h2>
-
-        <p className="text-stone-700 leading-relaxed mb-6">
-          Experience the best Jacuzzi and Steam Bath in Gomti Nagar Lucknow with a calm, hygienic and luxury spa environment.
-        </p>
-
-        <p className="text-stone-700 leading-relaxed mb-6">
-          These therapies help detox your body, improve blood circulation and provide complete relaxation after a long day.
-        </p>
-
-      </section>
-
-      {/* 🔥 BENEFITS (BALINESE STYLE) */}
-      <section className="pb-20 max-w-3xl mx-auto px-4 text-center">
-
-        <h3 className="text-2xl font-serif mb-6">
-          Benefits of Jacuzzi & Steam Bath
-        </h3>
-
-        <div className="space-y-3 text-stone-700">
-
-          <p>✔ Detoxifies body and removes toxins</p>
-          <p>✔ Improves blood circulation</p>
-          <p>✔ Relieves muscle tension and pain</p>
-          <p>✔ Enhances skin health</p>
-          <p>✔ Reduces stress and fatigue</p>
-          <p>✔ Perfect before or after massage</p>
-
-        </div>
-      </section>
-
-      {/* 💰 PRICING CARD */}
-      <section className="pb-20 max-w-xl mx-auto px-4 text-center">
-
-        <div className="p-8 bg-white rounded-2xl shadow-xl border border-amber-200">
-
-          <h3 className="text-2xl font-serif mb-4">
-            Pricing
-          </h3>
-
-          <p className="text-3xl font-semibold text-amber-600 mb-4">
-            ₹999 – ₹5999
-          </p>
-
-          <p className="text-stone-600 mb-6">
-            Combine with massage sessions for complete relaxation experience.
+          <p className="text-sm md:text-lg text-stone-300 max-w-2xl mx-auto mb-6">
+            Relax your body and mind with premium Jacuzzi and Steam Bath sessions at Relaxio Spa.
           </p>
 
           <a
-            href="https://wa.me/917081891995?text=Hi%20I%20want%20to%20book%20Jacuzzi%20and%20Steam%20Bath"
-            target="_blank"
-            className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full shadow-lg transition"
+            href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20Jacuzzi%20and%20Steam%20Bath"
+            aria-label="Book Jacuzzi and Steam Bath Session at Relaxio Spa"
+            className="inline-block px-8 py-3 bg-[#d4af37] text-black rounded-full text-xs md:text-sm uppercase tracking-widest font-medium hover:bg-[#c19b2e] transition"
           >
-            Check Availability Now
+            Book Your Session
           </a>
-
         </div>
       </section>
 
-      {/* 🔥 FAQ */}
-      <section className="pb-20 max-w-3xl mx-auto px-4">
+      {/* MAIN CONTENT */}
+      <section className="py-24 bg-[#fdfbf7] content-auto">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-none font-light text-stone-700">
 
-        <h3 className="text-2xl font-serif text-center mb-6">
-          Frequently Asked Questions
-        </h3>
+            {/* Intro */}
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <p className="text-lg text-stone-600 leading-relaxed">
+                Experience luxury Jacuzzi and Steam Bath sessions at Relaxio Spa Gomti Nagar Lucknow. Relax your body, detox your skin, and enjoy complete wellness in a premium spa environment.
+              </p>
+            </div>
 
-        <div className="space-y-4">
+            {/* Benefits */}
+              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6 text-center">
+                Incredible Benefits of Jacuzzi & Steam Bath
+              </h2>
 
-          <details className="bg-[#f8f5ef] p-4 rounded-xl">
-            <summary className="font-semibold cursor-pointer">
-              Is Jacuzzi safe for everyone?
-            </summary>
-            <p className="mt-2 text-stone-600">
-              Yes, but people with medical conditions should consult before use.
-            </p>
-          </details>
+              <p className="mb-10 leading-relaxed text-center max-w-3xl mx-auto">
+                Jacuzzi and Steam Bath therapies are more than just luxury spa facilities; they are powerful wellness experiences that help your body relax, detoxify, and recover from daily stress and fatigue.
+              </p>
 
-          <details className="bg-[#f8f5ef] p-4 rounded-xl">
-            <summary className="font-semibold cursor-pointer">
-              Can I combine this with massage?
-            </summary>
-            <p className="mt-2 text-stone-600">
-              Yes, it enhances relaxation when combined with Thai or Balinese massage.
-            </p>
-          </details>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                {[
+                  "Detoxifies the body and removes toxins",
+                  "Improves blood circulation and recovery",
+                  "Relieves muscle tension and body fatigue",
+                  "Enhances skin health and glow",
+                  "Reduces stress and mental exhaustion",
+                  "Supports relaxation before massage therapy",
+                  "Helps improve sleep quality",
+                  "Provides a luxury wellness experience",
+                ].map((benefit, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <CheckCircle2
+                      className="text-[#d4af37] shrink-0 mt-1"
+                      size={20}
+                    />
 
+                    <span className="text-stone-700">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            
+            {/* Center Image */}
+            <FadeIn>
+              <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/jacuzzi-steam-bath-lucknow.webp"
+                  alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow Relaxio Spa"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 1200px"
+                  quality={80}
+                  className="object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </FadeIn>
+
+            {/* Why Relaxio */}
+              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">
+                Why Relaxio is the Best Spa in Gomti Nagar
+              </h2>
+
+              <p className="mb-6 leading-relaxed">
+                At Relaxio Spa, we provide premium Jacuzzi and Steam Bath facilities designed for complete body relaxation and wellness. Our luxury spa environment, hygienic facilities, and peaceful ambience create the perfect experience for stress relief and rejuvenation.
+              </p>
+
+              <p className="mb-10 leading-relaxed">
+                Whether you want to relax after a long day, prepare your body before massage therapy, or enjoy a complete wellness session, Relaxio Spa offers one of the best Jacuzzi and Steam Bath experiences in Gomti Nagar Lucknow.
+              </p>
+            
+            {/* Pricing */}
+              <div className="bg-white p-10 rounded-3xl shadow-lg border border-stone-100 my-16">
+                <h2 className="font-serif text-3xl text-stone-900 mb-8 text-center">
+                  Jacuzzi & Steam Bath Pricing
+                </h2>
+
+                <div className="space-y-6">
+                  <div className="flex justify-between items-center border-b border-stone-100 pb-6">
+                    <div>
+                      <h4 className="text-xl font-serif text-stone-900">
+                        Relaxation Session
+                      </h4>
+
+                      <p className="text-stone-500 text-sm">
+                        30 Minutes
+                      </p>
+                    </div>
+
+                    <div className="text-2xl font-serif text-[#d4af37]">
+                      ₹999
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between items-center border-b border-stone-100 pb-6">
+                    <div>
+                      <h4 className="text-xl font-serif text-stone-900">
+                        Luxury Wellness Session
+                      </h4>
+
+                      <p className="text-stone-500 text-sm">
+                        60 Minutes
+                      </p>
+                    </div>
+
+                    <div className="text-2xl font-serif text-[#d4af37]">
+                      ₹3,499
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <h4 className="text-xl font-serif text-stone-900">
+                        Complete Spa Experience
+                      </h4>
+
+                      <p className="text-stone-500 text-sm">
+                        Jacuzzi + Steam Bath + Massage
+                      </p>
+                    </div>
+
+                    <div className="text-2xl font-serif text-[#d4af37]">
+                      ₹5,999
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-10 text-center">
+                  <a
+                    href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20Jacuzzi%20and%20Steam%20Bath"
+                    aria-label="Book Jacuzzi and Steam Bath Appointment"
+                    className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-all duration-300 text-sm uppercase tracking-widest font-medium w-full md:w-auto"
+                  >
+                    Book Your Appointment
+                  </a>
+                </div>
+              </div>
+
+            {/* FAQ */}
+              <FAQ faqs={faqs} />
+            
+          </div>
         </div>
       </section>
-
-      {/* 🔙 BACK */}
-      <div className="text-center pb-20">
-        <Link href="/services" className="text-amber-600 underline">
-          ← Back to Services
-        </Link>
-      </div>
-
-    </div>
+    </>
   );
 }
