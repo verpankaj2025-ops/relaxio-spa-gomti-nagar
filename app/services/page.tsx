@@ -129,7 +129,9 @@ export default async function ServicesPage() {
               <Link href="/services/thai-massage" className="inline-block border-b-2 border-amber-500 text-amber-600 pb-1 hover:text-amber-500 hover:border-amber-400 transition-colors uppercase tracking-widest text-sm font-medium">
                 Learn More & Book
               </Link>
-              {/* Couple Massage */}
+            </div>
+          </div>
+          {/* Couple Massage */}
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
   <div className="order-2 lg:order-1">
@@ -164,7 +166,10 @@ export default async function ServicesPage() {
       className="object-cover"
       loading="lazy"
     />
-    {/* Jacuzzi & Steam Bath */}
+        </div>
+        </div>
+        
+{/* Jacuzzi & Steam Bath */}
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
   <div className="relative h-[400px] lg:h-[500px]">
@@ -200,17 +205,12 @@ export default async function ServicesPage() {
       Learn More & Book
     </Link>
   </div>
-
-</div>
-  </div>
-
-</div>
-            </div>
-          </div>
-        </div>
+  
       </div>
-        </div>
+    </div>
+</div>
 
+</div>
     {/* 👇 FAQ SECTION */}
     <FAQ faqs={faqs} />
   </>
