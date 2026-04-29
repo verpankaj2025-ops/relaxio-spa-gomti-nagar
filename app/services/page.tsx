@@ -174,7 +174,7 @@ export default async function ServicesPage() {
 
   <div className="relative h-[400px] lg:h-[500px]">
     <Image
-      src="/images/spa-contact-gomti-nagar-lucknow.webp"
+      src="/images/jacuzzi-steam-bath-lucknow.webp"
       alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow"
       fill
       className="object-cover"
@@ -205,12 +205,13 @@ export default async function ServicesPage() {
       Learn More & Book
     </Link>
   </div>
-  
+
       </div>
     </div>
 </div>
 
 </div>
+
     {/* 👇 FAQ SECTION */}
     <FAQ faqs={faqs} />
   </>
