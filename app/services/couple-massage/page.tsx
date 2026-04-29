@@ -96,7 +96,9 @@ export default async function CoupleMassagePage() {
   </div>
 </section>
 
-      <div className="py-20 px-4 max-w-5xl mx-auto">
+      <section className="py-24 bg-[#fdfbf7]">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="prose prose-stone prose-lg max-w-none font-light text-stone-700">
 
       <div className="max-w-3xl mx-auto text-center mb-12">
   <p className="text-lg text-stone-600 leading-relaxed">
@@ -106,40 +108,16 @@ export default async function CoupleMassagePage() {
   </p>
 </div>
 
-      <div className="max-w-3xl mx-auto text-center mb-16">
-  <h2 className="text-3xl font-serif mb-4">
-    What is Couple Massage?
-  </h2>
+      <div 
+      className="text-center mt-12 mb-16">
 
-  <p className="text-stone-600 leading-relaxed">
-    Couple massage is a relaxing spa experience where two people receive massage therapy together in a private room. 
-    At Relaxio Spa, we provide a peaceful and luxurious environment perfect for partners and special occasions.
-  </p>
-</div>
-
-      <div className="text-center mb-10">
-
-  <div className="text-green-600 font-medium mb-4">
-    ❤️ Private Room &nbsp;|&nbsp; 💆‍♂️ Expert Therapists &nbsp;|&nbsp; 🔥 Same Time Service
-  </div>
-
-  <a
-    href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20Couple%20Massage"
-    className="inline-block px-8 py-3 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition"
-  >
-    Book Couple Massage on WhatsApp
-  </a>
-
-</div>
-
-      <div className="text-center mt-12 mb-16">
-
-  <h2 className="text-3xl font-serif mb-4">
-    Benefits of Couple Massage in Gomti Nagar Lucknow
+  <h2 
+    className="text-3xl font-serif mb-4">
+    Incredible Benefits of Couple Massage
   </h2>
 
   <p className="text-stone-600 max-w-2xl mx-auto mb-8">
-    Experience the best couple massage in Gomti Nagar Lucknow with private rooms, expert therapists and a relaxing spa ambience designed for complete comfort and connection.
+    A couple massage is more than just a relaxing spa session; it is a luxury wellness experience designed for comfort, bonding, and stress relief. If you are searching for the best couple massage in Gomti Nagar Lucknow, here is what you can expect:
   </p>
 
     <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl mx-auto text-left text-stone-700">
@@ -187,77 +165,114 @@ export default async function CoupleMassagePage() {
 </div>
   </div>
 
-      <div className="max-w-3xl mx-auto text-center mt-10">
+  <FadeIn>
+  <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+    <Image
+      src="/images/couple-massage-lucknow-spa.webp"
+      alt="Couple Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+      fill
+      className="object-cover"
+      loading="lazy"
+    />
+  </div>
+</FadeIn>
 
-  <a 
-    href="/services/spa-facilities" 
-    className="inline-block underline text-amber-600 mb-6"
-  >
-    Add Jacuzzi & Steam Bath with your couple session
-  </a>
-
-  <h2 className="text-2xl font-semibold mb-4">
-    What’s Included
+<FadeIn>
+  <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">
+    Why Relaxio is the Best Couple Spa in Gomti Nagar
   </h2>
 
-  <p className="text-stone-600 leading-relaxed">
-    You can combine couple massage with Thai, Balinese or Deep Tissue therapy. 
-    Add Jacuzzi or Steam Bath for a complete luxury spa experience.
+  <p className="mb-6 leading-relaxed">
+    At Relaxio Spa, we provide a premium couple massage experience designed for relaxation, privacy, and complete wellness. Our luxury spa rooms are specially designed for couples seeking a peaceful and romantic spa session in Gomti Nagar Lucknow.
   </p>
 
-</div>
+  <p className="mb-10 leading-relaxed">
+    Our trained therapists provide synchronized massage therapies using premium oils, calming ambience, relaxing music, and hygienic spa standards. Whether you are visiting for stress relief, celebration, or quality time together, Relaxio Spa offers one of the best couple massage experiences in Lucknow.
+  </p>
+</FadeIn>
 
-      {/* 🔥 PRICING */}
-      <div className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl p-8 border border-stone-100 text-center mt-10 mb-16">
+  </div>
 
-  <h2 className="text-2xl font-serif mb-6">
+    </div>
+
+  {/* 🔥 PREMIUM PRICING */}
+<div className="max-w-4xl mx-auto bg-white rounded-[32px] shadow-xl border border-stone-100 px-8 md:px-10 py-12 my-20">
+
+  <h2 className="text-3xl md:text-4xl font-serif text-center text-stone-900 mb-12">
     Couple Massage Pricing
   </h2>
 
-  <div className="space-y-5 text-stone-700">
+  <div className="divide-y divide-stone-200">
 
-    <div className="flex justify-between items-center">
-      <span>60 Minutes</span>
-      <span className="text-amber-600 font-semibold">₹2999</span>
+    {/* Package 1 */}
+    <div className="flex items-center justify-between py-6">
+      <div>
+        <h3 className="text-2xl font-serif text-stone-900">
+          Romantic Escape
+        </h3>
+
+        <p className="text-stone-500 mt-1">
+          60 Minutes
+        </p>
+      </div>
+
+      <p className="text-3xl text-[#d4af37] font-serif">
+        ₹2,999
+      </p>
     </div>
 
-    <div className="flex justify-between items-center">
-      <span>90 Minutes (Recommended)</span>
-      <span className="text-amber-600 font-semibold">₹3999</span>
+    {/* Package 2 */}
+    <div className="flex items-center justify-between py-6">
+      <div>
+        <h3 className="text-2xl font-serif text-stone-900">
+          Luxury Couple Retreat (Recommended)
+        </h3>
+
+        <p className="text-stone-500 mt-1">
+          90 Minutes
+        </p>
+      </div>
+
+      <p className="text-3xl text-[#d4af37] font-serif">
+        ₹3,999
+      </p>
     </div>
 
-    <div className="flex justify-between items-center">
-      <span>120 Minutes (Luxury Session)</span>
-      <span className="text-amber-600 font-semibold">₹4999</span>
+    {/* Package 3 */}
+    <div className="flex items-center justify-between py-6">
+      <div>
+        <h3 className="text-2xl font-serif text-stone-900">
+          Royal Couple Wellness
+        </h3>
+
+        <p className="text-stone-500 mt-1">
+          120 Minutes
+        </p>
+      </div>
+
+      <p className="text-3xl text-[#d4af37] font-serif">
+        ₹4,999
+      </p>
     </div>
 
   </div>
 
-  <a
-    href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20Couple%20Massage%20pricing"
-    className="inline-block mt-8 px-8 py-3 bg-black text-white rounded-full hover:bg-stone-800 transition"
-  >
-    Book Your Appointment
-  </a>
+  <div className="text-center mt-10">
+    <a
+      href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20Couple%20Massage"
+      className="inline-flex items-center justify-center rounded-full bg-black px-10 py-4 text-sm uppercase tracking-[0.2em] text-white hover:bg-stone-800 transition"
+    >
+      Book Your Appointment
+    </a>
+  </div>
 
 </div>
 
-      {/* 🔥 FINAL CTA */}
-      <div className="text-center mt-10">
-  <a
-    href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20Couple%20Massage%20details.%20(Source:%20Couple%20Bottom)"
-    className="inline-block px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition"
-  >
-    Check Availability Now
-  </a>
-</div>
+  <FAQ faqs={faqs} 
+  />
 
-      <FadeIn>
-  <FAQ faqs={faqs} />
-</FadeIn>
+   </section>
 
-    </div>
-
-   </>
+</>
   );
 }
