@@ -1,3 +1,4 @@
+import ServiceHero from "@/components/services/ServiceHero";
 import Image from "next/image";
 import FAQ from "@/components/FAQ";
 import FadeIn from "@/components/ui/FadeIn";
@@ -74,48 +75,12 @@ export default async function SpaFacilitiesPage() {
     __html: JSON.stringify(getFAQSchema(faqs)),
   }}
 />
-      {/* HERO SECTION */}
-      <section className="relative h-[340px] md:h-[400px] lg:h-[440px] flex items-center justify-center overflow-hidden bg-stone-950">
-        <div className="absolute inset-0 z-0">
-          <Image
-  src="/images/jacuzzi-steam-bath-lucknow.webp"
+<ServiceHero
+  title="Jacuzzi & Steam Bath in Gomti Nagar Lucknow"
+  subtitle="Relax your body and mind with premium Jacuzzi and Steam Bath sessions at Relaxio Spa."
+  image="/images/jacuzzi-steam-bath-lucknow.webp"
   alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow"
-  fill
-  sizes="100vw"
-  quality={85}
-  className="object-cover object-center"
-  priority
 />
-
-          <div className="absolute inset-0 bg-black/35" />
-        </div>
-
-        <div 
-        className="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col items-center justify-center">
-          <span className="text-[#d4af37] tracking-[0.25em] uppercase text-xs md:text-sm font-medium mb-4">
-            Luxury Wellness Experience
-          </span>
-
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-4 leading-tight">
-            Jacuzzi & Steam Bath in <br />
-            <span className="italic text-stone-300">
-              Gomti Nagar Lucknow
-            </span>
-          </h1>
-
-          <p className="text-sm md:text-lg text-stone-300 max-w-2xl mx-auto mb-6">
-            Relax your body and mind with premium Jacuzzi and Steam Bath sessions at Relaxio Spa.
-          </p>
-
-          <a
-            href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20Jacuzzi%20and%20Steam%20Bath"
-            aria-label="Book Jacuzzi and Steam Bath Session at Relaxio Spa"
-            className="inline-block px-8 py-3 bg-[#d4af37] text-black rounded-full text-xs md:text-sm uppercase tracking-widest font-medium hover:bg-[#c19b2e] transition"
-          >
-            Book Your Session
-          </a>
-        </div>
-      </section>
 
       {/* MAIN CONTENT */}
       <section className="py-24 bg-[#fdfbf7] content-auto">

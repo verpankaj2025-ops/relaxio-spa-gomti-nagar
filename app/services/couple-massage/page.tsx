@@ -1,3 +1,4 @@
+import ServiceHero from "@/components/services/ServiceHero";
 import Image from "next/image";
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
@@ -55,48 +56,15 @@ export default async function CoupleMassagePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(faqs)) }}
       />
       
-      {/* FULL WIDTH HERO (container ke bahar) */}
-      <section className="relative h-[420px] md:h-[480px] lg:h-[520px] flex items-center justify-center overflow-hidden bg-stone-950">
-
-  {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-    <Image
-  src="/images/couple-massage-lucknow.webp"
+      {/* HERO SECTION */}
+      <ServiceHero
+  title="Couple Massage in Gomti Nagar Lucknow"
+  subtitle="Enjoy a luxury couple massage experience with private spa rooms at Relaxio Spa."
+  image="/images/couple-massage-lucknow.webp"
   alt="Couple Massage in Gomti Nagar Lucknow"
-  fill
-  className="object-cover object-center"
-  priority
 />
-    <div className="absolute inset-0 bg-black/50" />
-  </div>
 
-  {/* Content */}
-  <div className="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col items-center justify-center">
-
-    <span className="text-[#d4af37] tracking-[0.25em] uppercase text-xs md:text-sm font-medium mb-4">
-      Luxury Wellness Experience
-    </span>
-
-    <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-4 leading-tight">
-      Couple Massage in <br/>
-      <span className="italic text-stone-300">Gomti Nagar Lucknow</span>
-    </h1>
-
-    <p className="text-sm md:text-lg text-stone-300 max-w-2xl mx-auto mb-6">
-      Enjoy a relaxing and romantic couple massage with private rooms and expert therapists.
-    </p>
-
-    <a
-      href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20Couple%20Massage"
-      className="inline-block px-8 py-3 bg-[#d4af37] text-black rounded-full text-xs md:text-sm uppercase tracking-widest font-medium hover:bg-[#c19b2e] transition"
-    >
-      Book Your Session
-    </a>
-
-  </div>
-</section>
-
-      <section className="py-24 bg-[#fdfbf7]">
+      <section className="py-24 bg-[#fdfbf7] content-auto">
   <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="prose prose-stone prose-lg max-w-none font-light text-stone-700">
 

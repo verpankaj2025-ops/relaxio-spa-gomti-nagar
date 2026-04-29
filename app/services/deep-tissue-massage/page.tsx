@@ -1,3 +1,4 @@
+import ServiceHero from "@/components/services/ServiceHero";
 import Image from 'next/image';
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
@@ -60,34 +61,12 @@ const faqs = Array.isArray(allFaqs)
       />
       
       {/* Hero Section */}
-      <section className="relative h-[65vh] min-h-[420px] flex items-center justify-center overflow-hidden bg-stone-950">
-        <div className="absolute inset-0 z-0">
-  <Image 
-  src="/images/deep-tissue-massage-gomti-nagar-lucknow.webp"
-  alt="Deep Tissue Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
-  fill
-  className="object-cover"
-  loading="lazy"
+      <ServiceHero
+  title="Deep Tissue Massage in Gomti Nagar Lucknow"
+  subtitle="Relieve muscle tension and body pain with deep tissue massage therapy at Relaxio Spa."
+  image="/images/deep-tissue-massage-gomti-nagar-lucknow.webp"
+  alt="Deep Tissue Massage in Gomti Nagar Lucknow"
 />
-
-  <div className="absolute inset-0 bg-black/50" />
-</div>
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeIn>
-            <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Targeted Pain Relief</span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
-              Best Deep Tissue Massage in <br/><span className="italic text-stone-300">Gomti Nagar Lucknow</span>
-            </h1>
-            <p className="text-lg md:text-xl text-stone-300 font-light max-w-2xl mx-auto mb-10">
-              Release chronic muscle tension, break up scar tissue, and alleviate severe stiffness with our intense, focused deep tissue therapy.
-            </p>
-            <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Deep%20Tissue%20Massage." 
-               className="inline-block px-10 py-4 bg-[#d4af37] text-white rounded-full hover:bg-[#c19b2e] transition-all duration-300 text-sm uppercase tracking-widest font-medium shadow-lg hover:-translate-y-1">
-              Book Your Session
-            </a>
-          </FadeIn>
-        </div>
-      </section>
 
       {/* Main Content */}
       <section className="py-24 bg-[#fdfbf7]">

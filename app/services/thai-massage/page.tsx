@@ -1,3 +1,4 @@
+import ServiceHero from "@/components/services/ServiceHero";
 import Image from 'next/image';
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
@@ -62,35 +63,12 @@ const faqs = Array.isArray(allFaqs)
       />
       
       {/* Hero Section */}
-      <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950">
-        <div className="absolute inset-0 z-0">
-  <Image 
-    src="/images/thai-massage-gomti-nagar-lucknow.webp"
-    alt="Best Thai Massage in Gomti Nagar Lucknow Relaxio Spa"
-    fill
-    className="object-cover object-bottom"
-    priority
-  />
-
-  {/* Light overlay */}
-  <div className="absolute inset-0 bg-black/50" />
-</div>
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeIn>
-            <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Premium Wellness</span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
-              Best Thai Massage in <br/><span className="italic text-stone-300">Gomti Nagar Lucknow</span>
-            </h1>
-            <p className="text-lg md:text-xl text-stone-300 font-light max-w-2xl mx-auto mb-10">
-              Discover the ancient healing art of Thai Massage. Improve flexibility, relieve deep joint tension, and restore your body&apos;s natural energy flow at Lucknow&apos;s most luxurious spa.
-            </p>
-            <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20Thai%20Massage.%20(Source:%20Thai%20Page)" 
-               className="inline-block px-10 py-4 bg-[#d4af37] text-white rounded-full hover:bg-[#c19b2e] transition-all duration-300 text-sm uppercase tracking-widest font-medium shadow-lg hover:-translate-y-1">
-              Book Your Session
-            </a>
-          </FadeIn>
-        </div>
-      </section>
+      <ServiceHero
+  title="Thai Massage in Gomti Nagar Lucknow"
+  subtitle="Experience authentic Thai massage therapy at Relaxio Spa Gomti Nagar Lucknow."
+  image="/images/thai-massage-gomti-nagar-lucknow.webp"
+  alt="Thai Massage in Gomti Nagar Lucknow"
+/>
 
       {/* Main Content */}
       <section className="py-24 bg-[#fdfbf7]">

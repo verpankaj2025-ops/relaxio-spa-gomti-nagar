@@ -1,3 +1,4 @@
+import ServiceHero from "@/components/services/ServiceHero";
 import Image from 'next/image';
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
@@ -61,44 +62,12 @@ const faqs = Array.isArray(allFaqs)
       />
       
       {/* Hero Section */}
-      <section className="relative h-[420px] md:h-[480px] lg:h-[520px] flex items-center justify-center overflow-hidden bg-stone-950">
-
-  {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-  <Image 
-    src="/images/balinese-massage-gomti-nagar-lucknow.webp"
-    alt="Balinese Massage in Gomti Nagar Lucknow Relaxio Spa"
-    fill
-    className="object-cover object-center"
-    priority
-  />
-  <div className="absolute inset-0 bg-black/50" />
-</div>
-  {/* Content */}
-  <div className="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col items-center justify-center">
-
-    <span className="text-[#d4af37] tracking-[0.25em] uppercase text-xs md:text-sm font-medium mb-4">
-      Luxury Wellness Experience
-    </span>
-
-    <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-4 leading-tight">
-      Best Balinese Massage in <br/>
-      <span className="italic text-stone-300">Gomti Nagar Lucknow</span>
-    </h1>
-
-    <p className="text-sm md:text-lg text-stone-300 font-light max-w-2xl mx-auto mb-6 leading-relaxed">
-      Experience deep relaxation with Balinese massage in Gomti Nagar Lucknow at Relaxio Spa, combining aromatherapy, gentle stretches, and therapeutic techniques.
-    </p>
-
-    <a 
-      href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20Balinese%20Massage"
-      className="inline-block px-8 py-3 bg-[#d4af37] text-black rounded-full text-xs md:text-sm uppercase tracking-widest font-medium hover:bg-[#c19b2e] transition-all duration-300 shadow-lg hover:-translate-y-1"
-    >
-      Book Your Session
-    </a>
-
-  </div>
-</section>
+      <ServiceHero
+  title="Balinese Massage in Gomti Nagar Lucknow"
+  subtitle="Relax your body and mind with luxury Balinese massage therapy at Relaxio Spa."
+  image="/images/balinese-massage-gomti-nagar-lucknow.webp"
+  alt="Balinese Massage in Gomti Nagar Lucknow"
+/>
 
       {/* Main Content */}
       <section className="py-24 bg-[#fdfbf7]">
