@@ -411,56 +411,6 @@ const faqs = Array.isArray(allFaqs)
         </div>
       </section>
 
-      <section className="py-20 bg-[#fdfbf7]">
-  <div className="max-w-4xl mx-auto px-4 text-center">
-
-    <h2 className="text-3xl md:text-4xl font-serif mb-10">
-      Frequently Asked Questions – Spa in Gomti Nagar Lucknow
-    </h2>
-
-    <div className="space-y-6 text-left">
-
-      <div>
-        <h3 className="font-semibold text-lg">
-          Which is the best spa in Gomti Nagar Lucknow?
-        </h3>
-        <p className="text-stone-600">
-          Relaxio Spa is one of the best spas in Gomti Nagar Lucknow offering premium massage therapies and luxury ambience.
-        </p>
-      </div>
-
-      <div>
-        <h3 className="font-semibold text-lg">
-          What types of massage are available?
-        </h3>
-        <p className="text-stone-600">
-          We offer Thai massage, Balinese massage, Deep Tissue massage, Couple massage, Jacuzzi and Steam Bath.
-        </p>
-      </div>
-
-      <div>
-        <h3 className="font-semibold text-lg">
-          Do you provide couple massage in Lucknow?
-        </h3>
-        <p className="text-stone-600">
-          Yes, we offer private couple massage rooms with luxury ambience and trained therapists.
-        </p>
-      </div>
-
-      <div>
-        <h3 className="font-semibold text-lg">
-          Is Jacuzzi and Steam Bath available?
-        </h3>
-        <p className="text-stone-600">
-          Yes, you can add Jacuzzi and Steam Bath with your massage session for a complete spa experience.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
       <FAQ faqs={faqs} />
       
     </>
