@@ -1,4 +1,25 @@
 import Image from "next/image";
+import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
+import FAQ from "@/components/FAQ";
+import FadeIn from '@/components/ui/FadeIn';
+import { CheckCircle2 } from 'lucide-react';
+
+export const dynamic = "force-dynamic";
+
+async function getFAQs() {
+  try {
+    const baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+    const res = await fetch(`${baseUrl}/api/faqs`, {
+      cache: "no-store",
+    });
+
+    return res.json();
+  } catch {
+    return [];
+  }
+}
 
 export const metadata = {
   title: "Couple Massage in Gomti Nagar Lucknow | Relaxio Spa",
@@ -6,9 +27,34 @@ export const metadata = {
     "Book romantic couple massage in Gomti Nagar Lucknow at Relaxio Spa. Private room, luxury ambience, trained therapists. Starting from ₹2999.",
 };
 
-export default function CoupleMassagePage() {
+export default async function CoupleMassagePage() {
+
+    const breadcrumbs = [
+    { name: 'Home', item: '/' },
+    { name: 'Services', item: '/services' },
+    { name: 'Couple Massage', item: '/services/couple-massage' }
+  ];
+
+  const allFaqs = (await getFAQs()) || [];
+
+  const faqs = Array.isArray(allFaqs)
+    ? allFaqs.filter(
+        (f) => f.page?.toLowerCase().trim() === "couple-massage"
+      )
+    : [];
+
   return (
     <>
+
+          <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbSchema(breadcrumbs)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(faqs)) }}
+      />
+      
       {/* FULL WIDTH HERO (container ke bahar) */}
       <section className="relative h-[420px] md:h-[480px] lg:h-[520px] flex items-center justify-center overflow-hidden bg-stone-950">
 
@@ -206,49 +252,9 @@ export default function CoupleMassagePage() {
   </a>
 </div>
 
-      <div className="max-w-3xl mx-auto mt-16 mb-20">
-
-  <h2 className="text-3xl font-serif text-center mb-10">
-    Frequently Asked Questions
-  </h2>
-
-  <div className="space-y-4">
-
-    <details className="bg-white rounded-xl shadow p-5 group">
-      <summary className="flex justify-between items-center cursor-pointer text-lg font-medium">
-        Is couple massage private?
-        <span className="group-open:rotate-45 transition">+</span>
-      </summary>
-      <p className="mt-3 text-stone-600">
-        Yes, we provide a fully private room for couples ensuring complete comfort and privacy.
-      </p>
-    </details>
-
-    <details className="bg-white rounded-xl shadow p-5 group">
-      <summary className="flex justify-between items-center cursor-pointer text-lg font-medium">
-        Can we choose different therapies?
-        <span className="group-open:rotate-45 transition">+</span>
-      </summary>
-      <p className="mt-3 text-stone-600">
-        Yes, both individuals can choose different massage therapies based on their preference.
-      </p>
-    </details>
-
-    <details className="bg-white rounded-xl shadow p-5 group">
-      <summary className="flex justify-between items-center cursor-pointer text-lg font-medium">
-        Is it suitable for first-time visitors?
-        <span className="group-open:rotate-45 transition">+</span>
-      </summary>
-      <p className="mt-3 text-stone-600">
-        Absolutely, couple massage is one of the best relaxing experiences for beginners.
-      </p>
-    </details>
-
-  </div>
-
-</div>
-
-      
+      <FadeIn>
+  <FAQ faqs={faqs} />
+</FadeIn>
 
     </div>
 
