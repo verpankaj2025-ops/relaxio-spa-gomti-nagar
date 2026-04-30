@@ -198,13 +198,14 @@ const faqs = Array.isArray(allFaqs)
                     className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 border border-stone-100">
                   <div className="relative h-96 overflow-hidden">
                     <Image 
-  src={service.img} 
-  alt={service.alt} 
-  fill 
-  sizes="(max-width: 768px) 100vw, 33vw"
-  quality={65}
-  className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
-/>
+                      src={service.img} 
+                      alt={service.alt}
+                      fill
+                      unoptimized
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      quality={65}
+                      className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                   </div>
                   <div className="p-8 text-center relative bg-white -mt-10 mx-6 rounded-xl shadow-lg group-hover:-translate-y-1 transition-transform duration-500">
