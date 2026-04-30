@@ -287,6 +287,44 @@ export default async function ContactPage() {
         </div>
       </section>
 
+           {/* CTA Section */}
+      <section className="py-24 bg-[#fdfbf7]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div className="relative overflow-hidden rounded-[2rem] bg-stone-950 px-8 py-16 md:px-16 md:py-20 text-center">
+
+            {/* Background Glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#d4af37]/20 via-transparent to-transparent"></div>
+
+            <div className="relative z-10">
+
+              <FadeIn>
+                <span className="text-[#d4af37] uppercase tracking-[0.25em] text-xs md:text-sm font-medium mb-4 block">
+                  Relax • Rejuvenate • Recharge
+                </span>
+
+                <h2 className="text-3xl md:text-5xl font-serif text-white mb-6 leading-tight">
+                  Book Your Luxury Spa Experience Today
+                </h2>
+
+                <p className="text-stone-300 text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed mb-10">
+                  Experience premium Thai Massage, Balinese Massage, Deep Tissue Therapy,
+                  and wellness treatments at Relaxio Spa Gomti Nagar Lucknow.
+                </p>
+
+                <a
+                  href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment."
+                  className="inline-flex items-center justify-center px-10 py-4 bg-[#25D366] text-white rounded-full hover:bg-[#1ebe57] transition-all duration-300 text-sm uppercase tracking-widest font-medium shadow-xl hover:-translate-y-1"
+                >
+                  Book on WhatsApp
+                </a>
+              </FadeIn>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <div className="bg-[#fdfbf7] pb-24">
         <FAQ faqs={faqs} />
       </div>
