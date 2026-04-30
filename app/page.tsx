@@ -141,35 +141,40 @@ const faqs = Array.isArray(allFaqs)
                 desc: 'Perfect for chronic pain relief and releasing deep muscle tension. The best deep tissue massage in Gomti Nagar.',
                 img: '/images/deep-tissue-massage-gomti-nagar-lucknow.webp',
                 alt: 'Deep tissue massage in Gomti Nagar Lucknow for pain relief at Relaxio Spa',
-                link: '/services/deep-tissue-massage'
+                link: '/services/deep-tissue-massage',
+                cta: 'Book Deep Tissue'
               },
               {
                 title: 'Balinese Massage Lucknow',
                 desc: 'A holistic, full-body treatment combining acupressure and aromatherapy for ultimate relaxation.',
                 img: '/images/balinese-massage-gomti-nagar-lucknow.webp',
                 alt: 'Balinese massage in Gomti Nagar Lucknow with aromatherapy at Relaxio Spa',
-                link: '/services/balinese-massage'
+                link: '/services/balinese-massage',
+                cta: 'Relax with Balinese'
               },
               {
                 title: 'Thai Massage Lucknow',
                 desc: 'An active therapy that improves flexibility and energy flow. Experience authentic Thai massage in Lucknow.',
                 img: '/images/thai-massage-gomti-nagar-lucknow.webp',
                 alt: 'Thai massage in Gomti Nagar Lucknow with stretching therapy at Relaxio Spa',
-                link: '/services/thai-massage'
+                link: '/services/thai-massage',
+                cta: 'Try Thai Massage'
               },
               {
   title: 'Couple Massage Lucknow',
   desc: 'Enjoy a romantic couple massage in Gomti Nagar with private rooms, expert therapists and luxury ambience.',
   img: '/images/couple-massage-lucknow.webp',
   alt: 'Couple massage in Gomti Nagar Lucknow with private spa room at Relaxio Spa',
-  link: '/services/couple-massage'
+  link: '/services/couple-massage',
+  cta: 'Book Couple Spa'
 },
 {
   title: 'Jacuzzi & Steam Bath Lucknow',
   desc: 'Relax with jacuzzi and steam bath in Gomti Nagar for complete detox and luxury spa experience.',
   img: '/images/jacuzzi-steam-bath-lucknow.webp',
   alt: 'Jacuzzi and steam bath spa in Gomti Nagar Lucknow at Relaxio Spa',
-  link: '/services/spa-facilities'
+  link: '/services/spa-facilities',
+  cta: 'Relax in Jacuzzi'
 },
             ].map((service, index) => (
               
@@ -186,10 +191,11 @@ const faqs = Array.isArray(allFaqs)
                   </div>
                   <div className="p-8 text-center relative bg-white -mt-10 mx-6 rounded-xl shadow-lg group-hover:-translate-y-1 transition-transform duration-500">
                     <h3 className="text-2xl font-serif mb-3 text-stone-900 group-hover:text-[#d4af37] transition-colors">{service.title}</h3>
-                    <p className="text-stone-600 font-light mb-6 line-clamp-2">{service.desc}</p>
+                    <p className="text-stone-600 font-light mb-6 min-h-[72px]">{service.desc}</p>
                     <span className="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium text-[#d4af37]">
-                      Explore <ArrowRight size={16} className=" transition-transform" />
-                    </span>
+                     {service.cta}
+                     <ArrowRight size={16} />
+                     </span>
                   </div>
                 </Link>
               
