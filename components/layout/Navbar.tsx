@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -40,7 +40,7 @@ export default function Navbar() {
               href="/services" 
               className="flex items-center gap-1 text-stone-700 hover:text-amber-600 font-medium transition-colors py-2 text-sm uppercase tracking-widest"
             >
-              Services <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+              Services <span className="text-xs group-hover:rotate-180 transition-transform duration-300">⌄</span>
             </Link>
             <div className="absolute top-full left-0 hidden group-hover:block pt-2">
               <div className="bg-white shadow-xl rounded-lg border border-stone-100 p-2 w-64 flex flex-col">
@@ -144,10 +144,13 @@ export default function Navbar() {
   className="flex items-center justify-between text-stone-800 text-lg font-medium hover:text-amber-600 transition-colors py-2 w-full text-left"
 >
                 Services
-                <ChevronDown 
-                  size={20} 
-                  className={`transition-transform duration-300 ${isMobileServicesOpen ? 'rotate-180' : ''}`} 
-                />
+                <span
+  className={`text-sm transition-transform duration-300 ${
+    isMobileServicesOpen ? 'rotate-180' : ''
+  }`}
+>
+  ⌄
+</span>
               </button>
               
               {isMobileServicesOpen && (

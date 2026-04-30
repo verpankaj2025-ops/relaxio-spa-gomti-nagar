@@ -20,7 +20,7 @@ export default function WhatsAppWidget() {
 
       <span
         aria-hidden="true"
-        className="absolute inset-0 rounded-full border-2 border-[#25D366] animate-pulse opacity-75 pointer-events-none"
+        className="absolute inset-0 rounded-full border-2 border-[#25D366] opacity-75 pointer-events-none"
       ></span>
     </a>
   );

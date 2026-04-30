@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import FAQ from "@/components/FAQ";
+import dynamic from 'next/dynamic';
+
 import { getFAQSchema } from '@/lib/seo';
 import FadeIn from '@/components/ui/FadeIn';
 import {
@@ -16,6 +17,8 @@ import {
 } from 'lucide-react';
 
 import type { Metadata } from "next";
+
+const FAQ = dynamic(() => import('@/components/FAQ'));
 
 export const metadata: Metadata = {
   title: "Best Spa in Gomti Nagar Lucknow | Relaxio Spa",
@@ -90,7 +93,7 @@ const faqs = Array.isArray(allFaqs)
       />
       
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
    <Image 
   src="/images/luxury-spa-gomti-nagar-lucknow.webp"
@@ -98,6 +101,7 @@ const faqs = Array.isArray(allFaqs)
   fill 
   sizes="100vw"
   quality={75}
+  placeholder="blur"
   className="object-cover"
   priority
 />
@@ -194,12 +198,13 @@ const faqs = Array.isArray(allFaqs)
                     className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 border border-stone-100">
                   <div className="relative h-96 overflow-hidden">
                     <Image 
-                     src={service.img} 
-                     alt={service.alt} 
-                     fill 
-                     sizes="(max-width: 768px) 100vw, 33vw"
-                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                   />
+  src={service.img} 
+  alt={service.alt} 
+  fill 
+  sizes="(max-width: 768px) 100vw, 33vw"
+  quality={65}
+  className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+/>
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                   </div>
                   <div className="p-8 text-center relative bg-white -mt-10 mx-6 rounded-xl shadow-lg group-hover:-translate-y-1 transition-transform duration-500">
@@ -225,6 +230,7 @@ const faqs = Array.isArray(allFaqs)
   alt="Relaxio Spa Gomti Nagar Lucknow ambiance luxury spa background" 
   fill 
   sizes="100vw"
+  quality={40}
   className="object-cover"
 />
         </div>
@@ -484,7 +490,7 @@ const faqs = Array.isArray(allFaqs)
       width="100%" 
       height="100%" 
       style={{ border: 0, opacity: 0.9 }} 
-      loading="lazy" 
+      loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
       title="Relaxio Spa Location in Gomti Nagar Lucknow"
       className="pointer-events-none"
