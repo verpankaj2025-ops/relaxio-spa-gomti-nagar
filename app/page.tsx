@@ -186,17 +186,20 @@ const faqs = Array.isArray(allFaqs)
   link: '/services/spa-facilities',
   cta: 'Relax in Jacuzzi'
 },
-            ].map((service, index) => (
+            ].map((service) => (
               
-                <Link href={service.link} className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 border border-stone-100">
+                <Link
+                    key={service.title}
+                    href={service.link} 
+                    className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 border border-stone-100">
                   <div className="relative h-96 overflow-hidden">
                     <Image 
-  src={service.img} 
-  alt={service.alt} 
-  fill 
-  sizes="(max-width: 768px) 100vw, 33vw"
-  className="object-cover group-hover:scale-105 transition-transform duration-500"
-/>
+                     src={service.img} 
+                     alt={service.alt} 
+                     fill 
+                     sizes="(max-width: 768px) 100vw, 33vw"
+                     className="object-cover group-hover:scale-105 transition-transform duration-500"
+                   />
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                   </div>
                   <div className="p-8 text-center relative bg-white -mt-10 mx-6 rounded-xl shadow-lg group-hover:-translate-y-1 transition-transform duration-500">
@@ -238,9 +241,10 @@ const faqs = Array.isArray(allFaqs)
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {reviews.map((review, i) => (
-              
-                <div className="bg-stone-800/50 p-10 rounded-2xl border border-stone-700/50 hover:border-[#d4af37]/50 transition-colors duration-300 h-full flex flex-col">
+            {reviews.map((review) => (
+                <div
+                    key={review.author}
+                    className="bg-stone-800/50 p-10 rounded-2xl border border-stone-700/50 hover:border-[#d4af37]/50 transition-colors duration-300 h-full flex flex-col">
                   <div className="flex gap-1 mb-6">
                     {[...Array(5)].map((_, j) => (
                       <Star key={j} size={20} className="fill-[#d4af37] text-[#f2cc60]" />

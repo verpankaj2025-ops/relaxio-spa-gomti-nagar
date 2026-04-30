@@ -105,6 +105,7 @@ export default function BlogDetail({ params }: any) {
   return (
     <div className="py-20 max-w-3xl mx-auto px-4 text-center">
         <Script
+  id="blog-schema"
   type="application/ld+json"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({

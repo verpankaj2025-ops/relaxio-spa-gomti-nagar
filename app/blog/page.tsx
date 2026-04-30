@@ -31,7 +31,7 @@ const blogs = [
 export default function BlogPage() {
   return (
     <div>
-      import Image from "next/image";
+      &quot;Luxury Spa&quot;
 
 <section className="relative pt-32 pb-20 text-center text-white min-h-[400px]">
 
@@ -46,7 +46,7 @@ export default function BlogPage() {
   <div className="absolute inset-0 bg-black/40"></div>
 
   <div className="relative">
-    ...
+    
   </div>
 
 </section>
