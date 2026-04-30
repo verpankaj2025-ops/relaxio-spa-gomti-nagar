@@ -101,7 +101,7 @@ export default function Navbar() {
           href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
           target="_blank" 
           rel="noreferrer" 
-          className="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-amber-500 text-white rounded-full hover:bg-amber-600 transition-colors text-sm uppercase tracking-widest font-medium shadow-sm"
+          className="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-amber-500 text-stone-900 rounded-full hover:bg-amber-600 transition-colors text-sm uppercase tracking-widest font-medium shadow-sm"
         >
           Book Now
         </a>
@@ -137,9 +137,12 @@ export default function Navbar() {
             
             <div className="flex flex-col">
               <button 
-                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                className="flex items-center justify-between text-stone-800 text-lg font-medium hover:text-amber-600 transition-colors py-2 w-full text-left"
-              >
+  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+  aria-expanded={isMobileServicesOpen}
+  aria-controls="mobile-services-menu"
+  aria-label="Toggle Services Menu"
+  className="flex items-center justify-between text-stone-800 text-lg font-medium hover:text-amber-600 transition-colors py-2 w-full text-left"
+>
                 Services
                 <ChevronDown 
                   size={20} 
@@ -148,7 +151,10 @@ export default function Navbar() {
               </button>
               
               {isMobileServicesOpen && (
-                <div className="flex flex-col gap-2 pl-4 pt-2 pb-2 border-l-2 border-stone-100 ml-2 mt-2">
+                <div 
+  id="mobile-services-menu"
+  className="flex flex-col gap-2 pl-4 pt-2 pb-2 border-l-2 border-stone-100 ml-2 mt-2"
+>
                   <Link 
                     href="/services/thai-massage" 
                     onClick={closeMenu} 
@@ -213,7 +219,7 @@ export default function Navbar() {
               target="_blank" 
               rel="noreferrer" 
               onClick={closeMenu}
-              className="mt-4 flex items-center justify-center w-full py-3 bg-amber-500 text-white rounded-full text-sm uppercase tracking-widest font-medium shadow-md hover:bg-amber-600 transition-colors"
+              className="mt-4 flex items-center justify-center w-full py-3 bg-amber-500 text-stone-900 rounded-full text-sm uppercase tracking-widest font-medium shadow-md hover:bg-amber-600 transition-colors"
             >
               Book Now
             </a>

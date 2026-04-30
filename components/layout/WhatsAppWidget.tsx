@@ -16,12 +16,18 @@ export default function WhatsAppWidget() {
       <MessageCircle size={28} />
       
       {/* Tooltip */}
-      <span className="hidden md:block absolute right-full mr-4 bg-white text-stone-900 text-sm py-2 px-4 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-medium shadow-lg border border-stone-100">
+      <span
+  aria-hidden="true"
+  className="hidden md:block absolute right-full mr-4 bg-white text-stone-900 text-sm py-2 px-4 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-medium shadow-lg border border-stone-100"
+>
         Book via WhatsApp
       </span>
       
       {/* Pulse Effect */}
-      <span className="absolute inset-0 rounded-full border-2 border-[#25D366] animate-pulse opacity-75 pointer-events-none"></span>
+      <span
+  aria-hidden="true"
+  className="absolute inset-0 rounded-full border-2 border-[#25D366] animate-pulse opacity-75 pointer-events-none"
+></span>
     </motion.a>
   );
 }
