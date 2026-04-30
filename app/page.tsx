@@ -462,10 +462,19 @@ const faqs = Array.isArray(allFaqs)
                     </div>
                     <div>
                       <h3 className="text-xl font-serif text-stone-900 mb-2">Contact</h3>
-                      <p className="text-stone-600 font-light leading-relaxed">
-                        +91 7081891995<br />
-                        info@relaxiospa.in
-                      </p>
+                      <a
+  href="tel:+917081891995"
+  className="block text-stone-600 hover:text-[#d4af37] transition-colors"
+>
+  +91 7081891995
+</a>
+
+<a
+  href="mailto:hello@relaxiospa.in"
+  className="block mt-2 text-stone-600 hover:text-[#d4af37] transition-colors"
+>
+  hello@relaxiospa.in
+</a>
                     </div>
                   </div>
                 </div>
