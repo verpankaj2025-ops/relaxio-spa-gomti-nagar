@@ -102,13 +102,13 @@ export default async function AboutPage() {
   />
 
       {/* Hero Section */}
-      <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950">
+      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden bg-stone-950">
         <div className="absolute inset-0 z-0">
   <Image 
     src="/images/spa-about-gomti-nagar-lucknow.webp"
     alt="Luxury spa interior in Gomti Nagar Lucknow Relaxio Spa massage center"
     fill
-    className="object-cover scale-105"
+    className="object-cover"
     priority
   />
 
@@ -118,19 +118,14 @@ export default async function AboutPage() {
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Our Story</span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-white mb-6 leading-tight">
   Best Spa in Gomti Nagar Lucknow <br/>
-  <span className="italic text-stone-300">Relaxio Spa</span>
+  <span className="italic text-stone-300 font-light">Relaxio Spa</span>
 </h1>
 
 {/* 🔥 MAIN SEO PARAGRAPH (ADD THIS) */}
-<p className="text-lg md:text-xl text-stone-300 font-light max-w-2xl mx-auto mb-6">
-  Relaxio Spa is a premium spa in Gomti Nagar Lucknow offering luxury wellness therapies, full body massage, Thai massage, and professional relaxation services.
-</p>
-
-{/* EXISTING LINE (KEEP THIS) */}
-<p className="text-sm text-stone-400 max-w-2xl mx-auto">
-  Experience the best spa in Gomti Nagar Lucknow with Relaxio Spa, known for luxury ambiance, expert therapists, and premium massage services.
+<p className="text-base md:text-lg text-stone-300 font-light max-w-2xl mx-auto leading-relaxed">
+  Relaxio Spa offers luxury body massage, Thai massage, and premium wellness therapies in Gomti Nagar Lucknow.
 </p>
           </FadeIn>
         </div>
@@ -182,7 +177,7 @@ export default async function AboutPage() {
               </div>
               <div className="relative z-10">
                 <div className="text-center mb-16">
-                  <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">The Relaxio Standard</span>
+                  <span className="text-[#d4af37] tracking-[0.18em] uppercase text-xs md:text-sm font-medium mb-5 block">The Relaxio Standard</span>
                   <h2 className="text-4xl font-serif mb-6">Our Core Pillars</h2>
                   <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
                 </div>

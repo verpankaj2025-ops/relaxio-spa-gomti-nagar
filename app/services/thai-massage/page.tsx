@@ -89,7 +89,7 @@ const faqs = Array.isArray(allFaqs)
   alt="Thai Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
   fill
   sizes="(max-width: 768px) 100vw, 1200px"
-  quality={80}
+  quality={75}
   className="object-cover brightness-95"
   loading="lazy"
 />
