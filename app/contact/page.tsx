@@ -1,8 +1,17 @@
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FadeIn from '@/components/ui/FadeIn';
 import FAQ from '@/components/FAQ';
-import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 import Image from 'next/image';
+import {
+  MapPin,
+  Phone,
+  Clock,
+  Mail,
+  ShieldCheck,
+  Sparkles,
+  MessageCircle
+} from 'lucide-react';
+
 
 export const metadata = {
   title: 'Contact Relaxio Spa Gomti Nagar Lucknow | Book Body Massage Near You',
@@ -216,11 +225,11 @@ export default async function ContactPage() {
               Why Choose Relaxio Spa
             </span>
 
-            <h2 className="text-4xl md:text-5xl font-serif mb-6">
+            <h2 className="text-3xl md:text-5xl font-serif mb-6 leading-tight">
               Luxury Wellness Experience in Gomti Nagar
             </h2>
 
-            <p className="text-stone-300 max-w-3xl mx-auto font-light leading-relaxed mb-16">
+            <p className="text-base md:text-lg text-stone-300 max-w-3xl mx-auto font-light leading-relaxed mb-16">
               Relaxio Spa offers professional massage therapies, luxury ambiance,
               private spa rooms, and expert wellness treatments designed to help
               you relax, recover, and rejuvenate in complete comfort.
@@ -231,6 +240,9 @@ export default async function ContactPage() {
 
             <FadeIn>
               <div className="bg-stone-800/50 rounded-3xl p-10 border border-stone-700">
+                <div className="w-16 h-16 mx-auto rounded-full bg-[#d4af37]/10 flex items-center justify-center mb-6">
+  <ShieldCheck className="text-[#d4af37]" size={30} />
+</div>
                 <h3 className="text-2xl font-serif mb-4 text-[#d4af37]">
                   Certified Therapists
                 </h3>
@@ -243,7 +255,10 @@ export default async function ContactPage() {
 
             <FadeIn>
               <div className="bg-stone-800/50 rounded-3xl p-10 border border-stone-700">
-                <h3 className="text-2xl font-serif mb-4 text-[#d4af37]">
+                <div className="w-16 h-16 mx-auto rounded-full bg-[#d4af37]/10 flex items-center justify-center mb-6">
+  <Sparkles className="text-[#d4af37]" size={30} />
+</div>
+                  <h3 className="text-2xl font-serif mb-4 text-[#d4af37]">
                   Private Luxury Rooms
                 </h3>
 
@@ -255,6 +270,9 @@ export default async function ContactPage() {
 
             <FadeIn>
               <div className="bg-stone-800/50 rounded-3xl p-10 border border-stone-700">
+                <div className="w-16 h-16 mx-auto rounded-full bg-[#d4af37]/10 flex items-center justify-center mb-6">
+  <MessageCircle className="text-[#d4af37]" size={30} />
+</div>
                 <h3 className="text-2xl font-serif mb-4 text-[#d4af37]">
                   Easy WhatsApp Booking
                 </h3>
