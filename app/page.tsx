@@ -106,7 +106,7 @@ const faqs = Array.isArray(allFaqs)
         
            <div 
              className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
-            <span className="text-[#e0b94b] tracking-[0.3em] uppercase text-sm md:text-base font-medium mb-6 block">
+            <span className="text-[#ffd369] tracking-[0.3em] uppercase text-sm font-medium mb-6 block">
               Welcome to Relaxio Spa
             </span>
 
@@ -138,7 +138,7 @@ const faqs = Array.isArray(allFaqs)
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-20">
-              <span className="text-[#e0b94b] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Our Offerings</span>
+              <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Our Offerings</span>
               <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">Premium Body Massage Near Me</h2>
               <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
             </div>
@@ -200,9 +200,9 @@ const faqs = Array.isArray(allFaqs)
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                   </div>
                   <div className="p-8 text-center relative bg-white -mt-10 mx-6 rounded-xl shadow-lg group-hover:-translate-y-1 transition-transform duration-500">
-                    <h3 className="text-2xl font-serif mb-3 text-stone-900 group-hover:text-[#e0b94b] transition-colors">{service.title}</h3>
+                    <h3 className="text-2xl font-serif mb-3 text-stone-900 group-hover:text-[#f2cc60] transition-colors">{service.title}</h3>
                     <p className="text-stone-600 font-light mb-6 min-h-[72px]">{service.desc}</p>
-                    <span className="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium text-[#e0b94b]">
+                    <span className="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium text-[#f2cc60]">
                      {service.cta}
                      <ArrowRight size={16} />
                      </span>
@@ -228,8 +228,11 @@ const faqs = Array.isArray(allFaqs)
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <FadeIn>
             <div className="text-center mb-20">
-              <span className="text-[#e0b94b] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Guest Experiences</span>
-              <h2 className="text-4xl md:text-5xl font-serif mb-6">What Our Clients Say</h2>
+              <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Guest Experiences</span>
+              <h2 className="text-4xl md:text-5xl font-serif mb-6">
+                     What Our Clients Say
+                </h2>
+
               <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
             </div>
           </FadeIn>
@@ -240,14 +243,14 @@ const faqs = Array.isArray(allFaqs)
                 <div className="bg-stone-800/50 p-10 rounded-2xl border border-stone-700/50 hover:border-[#d4af37]/50 transition-colors duration-300 h-full flex flex-col">
                   <div className="flex gap-1 mb-6">
                     {[...Array(5)].map((_, j) => (
-                      <Star key={j} size={20} className="fill-[#d4af37] text-[#e0b94b]" />
+                      <Star key={j} size={20} className="fill-[#d4af37] text-[#f2cc60]" />
                     ))}
                   </div>
                   <p className="text-stone-300 font-light text-lg leading-relaxed mb-8 flex-grow italic">
                     &quot;{review.reviewBody}&quot;
                   </p>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-stone-700 rounded-full flex items-center justify-center text-[#e0b94b] font-serif text-xl">
+                    <div className="w-12 h-12 bg-stone-700 rounded-full flex items-center justify-center text-[#f2cc60] font-serif text-xl">
                       {review.author.charAt(0)}
                     </div>
                     <span className="font-medium tracking-wide">{review.author}</span>
@@ -264,9 +267,12 @@ const faqs = Array.isArray(allFaqs)
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn>
             <div className="text-center mb-20">
-              <span className="text-[#e0b94b] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Transparent Pricing</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">Massage Spa Packages in Lucknow</h2>
-              <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
+              <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Transparent Pricing</span>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
+                Massage Spa Packages in Lucknow
+             </h2>
+
+            <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
             </div>
           </FadeIn>
 
@@ -345,7 +351,7 @@ const faqs = Array.isArray(allFaqs)
 
       <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
   <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
-    <ShieldCheck className="text-[#e0b94b]" size={28} />
+    <ShieldCheck className="text-[#f2cc60]" size={28} />
   </div>
 
   <h3 className="font-semibold mb-2 text-stone-900">
@@ -359,7 +365,7 @@ const faqs = Array.isArray(allFaqs)
 
       <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
   <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
-    <BedDouble className="text-[#e0b94b]" size={28} />
+    <BedDouble className="text-[#f2cc60]" size={28} />
   </div>
 
   <h3 className="font-semibold mb-2 text-stone-900">
@@ -373,7 +379,7 @@ const faqs = Array.isArray(allFaqs)
 
       <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
   <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
-    <Sparkles className="text-[#e0b94b]" size={28} />
+    <Sparkles className="text-[#f2cc60]" size={28} />
   </div>
 
   <h3 className="font-semibold mb-2 text-stone-900">
@@ -387,7 +393,7 @@ const faqs = Array.isArray(allFaqs)
 
       <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
   <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
-    <MessageCircle className="text-[#e0b94b]" size={28} />
+    <MessageCircle className="text-[#f2cc60]" size={28} />
   </div>
 
   <h3 className="font-semibold mb-2 text-stone-900">
@@ -410,13 +416,13 @@ const faqs = Array.isArray(allFaqs)
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
               <div>
-                <span className="text-[#e0b94b] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Find Us</span>
+                <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Find Us</span>
                 <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-10">Visit Our Sanctuary in Gomti Nagar</h2>
                 
                 <div className="space-y-8">
                   <div className="flex items-start gap-6">
                     <div className="w-12 h-12 bg-[#fdfbf7] rounded-full flex items-center justify-center shrink-0">
-                      <MapPin className="text-[#e0b94b]" size={24} />
+                      <MapPin className="text-[#f2cc60]" size={24} />
                     </div>
                     <div>
                       <h3 className="text-xl font-serif text-stone-900 mb-2">Location</h3>
@@ -429,7 +435,7 @@ const faqs = Array.isArray(allFaqs)
 
                   <div className="flex items-start gap-6">
                     <div className="w-12 h-12 bg-[#fdfbf7] rounded-full flex items-center justify-center shrink-0">
-                      <Clock className="text-[#e0b94b]" size={24} />
+                      <Clock className="text-[#f2cc60]" size={24} />
                     </div>
                     <div>
                       <h3 className="text-xl font-serif text-stone-900 mb-2">Operating Hours</h3>
