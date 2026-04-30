@@ -3,7 +3,17 @@ import Link from 'next/link';
 import FAQ from "@/components/FAQ";
 import { getFAQSchema } from '@/lib/seo';
 import FadeIn from '@/components/ui/FadeIn';
-import { Star, MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
+import {
+  Star,
+  MapPin,
+  Phone,
+  Clock,
+  ArrowRight,
+  ShieldCheck,
+  BedDouble,
+  Sparkles,
+  MessageCircle,
+} from 'lucide-react';
 
 import type { Metadata } from "next";
 
@@ -333,25 +343,61 @@ const faqs = Array.isArray(allFaqs)
 
     <div className="grid md:grid-cols-4 gap-6">
 
-      <div className="p-6 bg-[#fdfbf7] rounded-xl">
-        <h3 className="font-semibold mb-2">Expert Therapists</h3>
-        <p className="text-sm text-stone-600">Highly trained professionals</p>
-      </div>
+      <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
+  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
+    <ShieldCheck className="text-[#d4af37]" size={28} />
+  </div>
 
-      <div className="p-6 bg-[#fdfbf7] rounded-xl">
-        <h3 className="font-semibold mb-2">Private Rooms</h3>
-        <p className="text-sm text-stone-600">Complete privacy & comfort</p>
-      </div>
+  <h3 className="font-semibold mb-2 text-stone-900">
+    Expert Therapists
+  </h3>
 
-      <div className="p-6 bg-[#fdfbf7] rounded-xl">
-        <h3 className="font-semibold mb-2">Luxury Ambience</h3>
-        <p className="text-sm text-stone-600">Premium spa experience</p>
-      </div>
+  <p className="text-sm text-stone-600">
+    Highly trained professionals
+  </p>
+</div>
 
-      <div className="p-6 bg-[#fdfbf7] rounded-xl">
-        <h3 className="font-semibold mb-2">Easy Booking</h3>
-        <p className="text-sm text-stone-600">WhatsApp & call support</p>
-      </div>
+      <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
+  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
+    <BedDouble className="text-[#d4af37]" size={28} />
+  </div>
+
+  <h3 className="font-semibold mb-2 text-stone-900">
+    Private Rooms
+  </h3>
+
+  <p className="text-sm text-stone-600">
+    Complete privacy & comfort
+  </p>
+</div>
+
+      <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
+  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
+    <Sparkles className="text-[#d4af37]" size={28} />
+  </div>
+
+  <h3 className="font-semibold mb-2 text-stone-900">
+    Luxury Ambience
+  </h3>
+
+  <p className="text-sm text-stone-600">
+    Premium spa experience
+  </p>
+</div>
+
+      <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
+  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
+    <MessageCircle className="text-[#d4af37]" size={28} />
+  </div>
+
+  <h3 className="font-semibold mb-2 text-stone-900">
+    Easy Booking
+  </h3>
+
+  <p className="text-sm text-stone-600">
+    WhatsApp & call support
+  </p>
+</div>
 
     </div>
 
