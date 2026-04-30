@@ -1,5 +1,6 @@
-import { getBreadcrumbSchema } from '@/lib/seo';
+import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FadeIn from '@/components/ui/FadeIn';
+import FAQ from '@/components/FAQ';
 import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 import Image from 'next/image';
 
@@ -24,7 +25,32 @@ export const metadata = {
   }
 };
 
-export default function ContactPage() {
+async function getFAQs() {
+  try {
+    const baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+    const res = await fetch(`${baseUrl}/api/faqs`, {
+      next: { revalidate: 3600 },
+    });
+
+    return res.json();
+  } catch (error) {
+    console.error("FAQ fetch error:", error);
+    return [];
+  }
+}
+
+export default async function ContactPage() {
+  
+    const allFaqs = (await getFAQs()) || [];
+
+  const faqs = Array.isArray(allFaqs)
+    ? allFaqs.filter(
+        (f) => f.page?.toLowerCase().trim() === "contact"
+      )
+    : [];
+
   const breadcrumbs = [
     { name: 'Home', item: '/' },
     { name: 'Contact Us', item: '/contact' }
@@ -36,17 +62,24 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbSchema(breadcrumbs)) }}
       />
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(getFAQSchema(faqs))
+  }}
+/>
       
       {/* Header Section */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 text-center overflow-hidden min-h-[70vh] flex items-center">
 
   {/* Background Image */}
-  <div className="absolute inset-0">
+  <div className="absolute inset-0 z-0">
   <Image 
-  src="/images/luxury-spa-gomti-nagar-lucknow.webp"
+  src="/images/relaxio-spa-gomti-nagar-lucknow-contact.webp"
   alt="Luxury spa interior in Gomti Nagar Lucknow at Relaxio Spa"
   fill
   priority
+  unoptimized
   quality={65}
   sizes="100vw"
   className="object-cover object-center"
@@ -173,6 +206,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+          <div className="bg-[#fdfbf7] pb-24">
+        <FAQ faqs={faqs} />
+      </div>
     </>
   );
 }
