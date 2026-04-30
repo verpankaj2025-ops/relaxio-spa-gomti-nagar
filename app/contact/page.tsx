@@ -70,7 +70,7 @@ export default async function ContactPage() {
 />
       
       {/* Header Section */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 text-center overflow-hidden min-h-[70vh] flex items-center">
+      <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950">
 
   {/* Background Image */}
   <div className="absolute inset-0 z-0">
@@ -89,7 +89,7 @@ export default async function ContactPage() {
 </div>
 
   {/* Content */}
-  <div className="relative z-10 max-w-3xl mx-auto px-4">
+  <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn>
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Get in Touch</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">Visit Our Sanctuary</h1>
@@ -205,8 +205,71 @@ export default async function ContactPage() {
 </FadeIn>            
           </div>
         </div>
+           </section>
+
+      {/* Trust Section */}
+      <section className="py-24 bg-stone-900 text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+          <FadeIn>
+            <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">
+              Why Choose Relaxio Spa
+            </span>
+
+            <h2 className="text-4xl md:text-5xl font-serif mb-6">
+              Luxury Wellness Experience in Gomti Nagar
+            </h2>
+
+            <p className="text-stone-300 max-w-3xl mx-auto font-light leading-relaxed mb-16">
+              Relaxio Spa offers professional massage therapies, luxury ambiance,
+              private spa rooms, and expert wellness treatments designed to help
+              you relax, recover, and rejuvenate in complete comfort.
+            </p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+            <FadeIn>
+              <div className="bg-stone-800/50 rounded-3xl p-10 border border-stone-700">
+                <h3 className="text-2xl font-serif mb-4 text-[#d4af37]">
+                  Certified Therapists
+                </h3>
+
+                <p className="text-stone-300 font-light leading-relaxed">
+                  Experienced and professionally trained therapists delivering premium wellness therapies.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-stone-800/50 rounded-3xl p-10 border border-stone-700">
+                <h3 className="text-2xl font-serif mb-4 text-[#d4af37]">
+                  Private Luxury Rooms
+                </h3>
+
+                <p className="text-stone-300 font-light leading-relaxed">
+                  Enjoy peaceful and hygienic spa rooms designed for complete privacy and relaxation.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn>
+              <div className="bg-stone-800/50 rounded-3xl p-10 border border-stone-700">
+                <h3 className="text-2xl font-serif mb-4 text-[#d4af37]">
+                  Easy WhatsApp Booking
+                </h3>
+
+                <p className="text-stone-300 font-light leading-relaxed">
+                  Quick appointment confirmations and personalized support directly through WhatsApp.
+                </p>
+              </div>
+            </FadeIn>
+
+          </div>
+        </div>
       </section>
-          <div className="bg-[#fdfbf7] pb-24">
+
+      <div className="bg-[#fdfbf7] pb-24">
         <FAQ faqs={faqs} />
       </div>
     </>
