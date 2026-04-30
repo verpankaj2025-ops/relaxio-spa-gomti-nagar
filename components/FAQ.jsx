@@ -18,23 +18,31 @@ export default function FAQ({ faqs }) {
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
-              key={index}
+              key={faq.question}
               className="border border-stone-200 rounded-xl overflow-hidden bg-white shadow-sm"
             >
               <button
                 onClick={() => toggleFAQ(index)}
+                aria-expanded={activeIndex === index}
+                aria-controls={`faq-content-${index}`}
+                id={`faq-button-${index}`}
                 className="w-full text-left px-6 py-4 flex justify-between items-center"
-              >
+               >
                 <span className="text-lg font-medium text-stone-900">
                   {faq.question}
                 </span>
-                <span className="text-xl">
+                <span aria-hidden="true" className="text-xl">
                   {activeIndex === index ? "-" : "+"}
                 </span>
               </button>
 
               {activeIndex === index && (
-                <div className="px-6 pb-4 text-stone-600">
+                <div
+                   id={`faq-content-${index}`}
+                   role="region"
+                   aria-labelledby={`faq-button-${index}`}
+                   className="px-6 pb-4 text-stone-600"
+                  >
                   {faq.answer}
                 </div>
               )}
