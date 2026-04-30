@@ -43,9 +43,19 @@ export default function BlogPage() {
     priority
   />
 
-  <div className="absolute inset-0 bg-black/40"></div>
+  <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+  <div className="text-center px-4">
+    <h1 className="text-4xl md:text-6xl font-serif text-white mb-4">
+      Relaxio Spa Blog
+    </h1>
 
-  <div className="relative">
+    <p className="text-white/90 max-w-2xl mx-auto text-lg md:text-xl font-light">
+      Discover wellness tips, massage benefits, spa therapies, and relaxation guides from the best spa in Gomti Nagar Lucknow.
+    </p>
+  </div>
+</div>
+
+<div className="relative">
     
   </div>
 

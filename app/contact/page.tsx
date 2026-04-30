@@ -38,16 +38,20 @@ export default function ContactPage() {
       />
       
       {/* Header Section */}
-      <section className="relative pt-40 pb-20 text-center overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 text-center overflow-hidden min-h-[70vh] flex items-center">
 
   {/* Background Image */}
   <div className="absolute inset-0">
   <Image 
-  src="/images/spa-contact-gomti-nagar-lucknow.webp"
-  alt="Spa interior Gomti Nagar Lucknow Relaxio Spa"
+  src="/images/luxury-spa-gomti-nagar-lucknow.webp"
+  alt="Luxury spa interior in Gomti Nagar Lucknow at Relaxio Spa"
   fill
-  className="object-cover object-[center_80%]"
+  priority
+  quality={65}
+  sizes="100vw"
+  className="object-cover object-center"
 />
+
   <div className="absolute inset-0 bg-black/70" />
 </div>
 
