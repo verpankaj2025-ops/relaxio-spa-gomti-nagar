@@ -99,13 +99,13 @@ export default async function ContactPage() {
 
   {/* Content */}
   <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeIn>
+          
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Get in Touch</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">Visit Our Sanctuary</h1>
-            <p className="text-lg text-stone-400 font-light">
-              We are conveniently located in the heart of Gomti Nagar. Reach out to us to book your session or ask any questions about our premium therapies.
-            </p>
-          </FadeIn>
+            <p className="text-sm text-stone-400 max-w-2xl mx-auto">
+  Contact Relaxio Spa today for professional wellness therapies, private luxury spa rooms, and quick WhatsApp booking assistance.
+</p>
+        
         </div>
       </section>
 

@@ -101,7 +101,6 @@ const faqs = Array.isArray(allFaqs)
   fill 
   sizes="100vw"
   quality={75}
-  placeholder="blur"
   className="object-cover"
   priority
 />
@@ -231,7 +230,7 @@ const faqs = Array.isArray(allFaqs)
   alt="Relaxio Spa Gomti Nagar Lucknow ambiance luxury spa background" 
   fill 
   sizes="100vw"
-  quality={40}
+  quality={65}
   className="object-cover"
 />
         </div>
