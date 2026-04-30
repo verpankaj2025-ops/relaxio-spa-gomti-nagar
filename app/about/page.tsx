@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import { getBreadcrumbSchema } from '@/lib/seo';
+import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FadeIn from '@/components/ui/FadeIn';
+import FAQ from '@/components/FAQ';
 import { ShieldCheck, Sparkles, HeartHandshake } from 'lucide-react';
 
 export const metadata = {
@@ -18,7 +19,30 @@ export const metadata = {
   }
 };
 
-export default function AboutPage() {
+async function getFAQs() {
+  try {
+    const baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+    const res = await fetch(`${baseUrl}/api/faqs`, {
+      next: { revalidate: 3600 },
+    });
+
+    return res.json();
+  } catch (error) {
+    console.error("FAQ fetch error:", error);
+    return [];
+  }
+}
+export default async function AboutPage() {
+  
+    const allFaqs = (await getFAQs()) || [];
+
+  const faqs = Array.isArray(allFaqs)
+    ? allFaqs.filter(
+        (f) => f.page?.toLowerCase().trim() === "about"
+      )
+    : [];
   const breadcrumbs = [
     { name: 'Home', item: '/' },
     { name: 'About Us', item: '/about' }
@@ -33,6 +57,13 @@ export default function AboutPage() {
       __html: JSON.stringify(getBreadcrumbSchema(breadcrumbs))
     }}
   />
+
+  <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(getFAQSchema(faqs))
+  }}
+/>
 
   <script
     type="application/ld+json"
@@ -143,7 +174,7 @@ export default function AboutPage() {
             <div className="bg-stone-900 text-stone-50 py-24 px-8 md:px-16 rounded-3xl shadow-2xl mb-32 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                 <Image 
-  src="/images/spa-texture.webp"
+  src="/images/spa-texture-gomti-nagar.webp"
   alt="Spa ambiance background"
   fill
   className="object-cover"
@@ -211,7 +242,11 @@ export default function AboutPage() {
             </FadeIn>
           </div>
 
-        </div>
+                </div>
+             </div>
+
+      <div className="bg-[#fdfbf7] pb-24">
+        <FAQ faqs={faqs} />
       </div>
     </>
   );
