@@ -62,23 +62,24 @@ const faqs = Array.isArray(allFaqs)
       />
       
       {/* Hero Section */}
-      <ServiceHero
-  title="Balinese Massage in Gomti Nagar Lucknow"
-  subtitle="Relax your body and mind with luxury Balinese massage therapy at Relaxio Spa."
-  image="/images/balinese-massage-gomti-nagar-lucknow.webp"
-  alt="Balinese Massage in Gomti Nagar Lucknow"
-/>
+          <ServiceHero
+            title="Balinese Massage in Gomti Nagar Lucknow"
+            subtitle="Relax your body and mind with luxury Balinese massage therapy at Relaxio Spa."
+            image="/images/balinese-massage-gomti-nagar-lucknow.webp"
+            alt="Balinese Massage in Gomti Nagar Lucknow"
+          />
 
       {/* Main Content */}
-      <section className="py-24 bg-[#fdfbf7]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-stone prose-lg max-w-none font-light text-stone-700">
+          <section className="pt-28 pb-24 bg-[#fdfbf7] content-auto">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="prose prose-stone prose-base md:prose-lg max-w-none font-light text-stone-700">
 
-
-            <FadeIn>
-              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">Incredible Benefits of Balinese Massage</h2>
+              <h2 
+                className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">
+                Incredible Benefits of Balinese Massage
+               </h2>
               <p className="mb-6 leading-relaxed">
-                A Balinese massage is more than just a luxury; it is a therapeutic journey. If you are searching for a <strong>body massage near me</strong> that offers comprehensive healing, here is what you can expect:
+              A Balinese massage is more than just a luxury; it is a therapeutic journey. If you are searching for a <strong>body massage near me</strong> that offers comprehensive healing, here is what you can expect:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {[
@@ -92,35 +93,37 @@ const faqs = Array.isArray(allFaqs)
                   "Alleviates symptoms of depression and stress"
                 ].map((benefit, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="text-[#d4af37] shrink-0 mt-1" size={20} />
-                    <span className="text-stone-700">{benefit}</span>
+                  <CheckCircle2 className="text-[#d4af37] shrink-0 mt-1" size={20} />
+                  <span className="text-stone-700">{benefit}</span>
                   </div>
                 ))}
               </div>
-            </FadeIn>
- <FadeIn>
-  <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
-    <Image 
-      src="/images/balinese-massage-gomti-nagar-lucknow-spa.webp"
-      alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
-      fill
-      className="object-cover"
-      loading="lazy"
-    />
-  </div>
-</FadeIn>
-            <FadeIn>
-              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">Why Relaxio is the Best Spa in Gomti Nagar</h2>
+
+                 <FadeIn>
+                   <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
+                   <Image 
+                   src="/images/balinese-massage-gomti-nagar-lucknow-spa.webp"
+                   alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+                   fill
+                   sizes="(max-width: 768px) 100vw, 1200px"
+                   quality={80}
+                   className="object-cover brightness-95"
+                   loading="lazy"
+                   />
+                </div>
+                </FadeIn>
+            
+              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">
+                Why Relaxio is the Best Spa in Gomti Nagar
+              </h2>
               <p className="mb-6 leading-relaxed">
                 At Relaxio Spa, we believe that the environment is just as important as the therapy itself. Our luxury spa in Gomti Nagar Lucknow is designed to transport you to a state of absolute serenity. Our private therapy rooms are soundproofed, climate-controlled, and infused with calming scents.
               </p>
               <p className="mb-10 leading-relaxed">
                 Our therapists are certified experts in Balinese techniques. They understand how to read your body&apos;s tension points and adjust their pressure accordingly. We strictly maintain 100% hygiene, using fresh, high-quality linens and sanitized equipment for every guest. Experience the pinnacle of wellness and see why we are rated the top <strong>spa in Gomti Nagar Lucknow</strong>.
               </p>
-            </FadeIn>
 
-            <FadeIn>
-              <div className="bg-white p-10 rounded-3xl shadow-lg border border-stone-100 my-16">
+              <div className="bg-white/95 backdrop-blur-sm p-10 rounded-3xl shadow-xl border border-stone-100 my-16">
                 <h2 className="font-serif text-3xl text-stone-900 mb-8 text-center">Balinese Massage Pricing</h2>
                 <div className="space-y-6">
                   <div className="flex justify-between items-center border-b border-stone-100 pb-6">
@@ -146,17 +149,18 @@ const faqs = Array.isArray(allFaqs)
                   </div>
                 </div>
                 <div className="mt-10 text-center">
-                  <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Balinese%20Massage." 
-                     className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-all duration-300 text-sm uppercase tracking-widest font-medium w-full md:w-auto">
+                  <a 
+                    href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Balinese%20Massage."
+                    aria-label="Book Balinese Massage Appointment" 
+                    className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-colors duration-300 text-sm uppercase tracking-widest font-medium w-full md:w-auto">
                     Book Your Appointment
                   </a>
                 </div>
               </div>
-            </FadeIn>
 
-            <FadeIn>
-  <FAQ faqs={faqs} />
-</FadeIn>
+                <div className="mt-16">
+                   <FAQ faqs={faqs} />
+                </div>
 
           </div>
         </div>

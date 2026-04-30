@@ -3,9 +3,7 @@ import Image from "next/image";
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
 import FadeIn from '@/components/ui/FadeIn';
-import { CheckCircle2 } from 'lucide-react';
-
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 async function getFAQs() {
   try {
@@ -13,7 +11,7 @@ async function getFAQs() {
       process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
     const res = await fetch(`${baseUrl}/api/faqs`, {
-      cache: "no-store",
+      next: { revalidate: 3600 }
     });
 
     return res.json();
@@ -23,9 +21,37 @@ async function getFAQs() {
 }
 
 export const metadata = {
-  title: "Couple Massage in Gomti Nagar Lucknow | Relaxio Spa",
+  title:
+    "Couple Massage in Gomti Nagar Lucknow | Luxury Couple Spa | Relaxio Spa",
+
   description:
-    "Book romantic couple massage in Gomti Nagar Lucknow at Relaxio Spa. Private room, luxury ambience, trained therapists. Starting from ₹2999.",
+    "Book luxury couple massage in Gomti Nagar Lucknow at Relaxio Spa. Private couple spa rooms, romantic ambience, Thai massage, steam bath & premium wellness therapies.",
+
+  keywords: [
+    "Couple Massage Gomti Nagar",
+    "Couple Spa Lucknow",
+    "Luxury Spa Lucknow",
+    "Best Couple Spa in Gomti Nagar",
+    "Thai Massage Lucknow",
+    "Romantic Spa for Couples",
+  ],
+
+  openGraph: {
+    title:
+      "Couple Massage in Gomti Nagar Lucknow | Relaxio Spa",
+
+    description:
+      "Luxury couple massage and spa experience in Gomti Nagar Lucknow.",
+
+    images: [
+      "https://relaxiospa.in/images/couple-massage-lucknow.webp",
+    ],
+  },
+
+  alternates: {
+    canonical:
+      "https://relaxiospa.in/services/couple-massage",
+  },
 };
 
 export default async function CoupleMassagePage() {
@@ -55,6 +81,36 @@ export default async function CoupleMassagePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(faqs)) }}
       />
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+
+      name: "Relaxio Spa Gomti Nagar Lucknow",
+
+      image:
+        "https://relaxiospa.in/images/couple-massage-lucknow.webp",
+
+      telephone: "+917081891995",
+
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Lucknow",
+        addressRegion: "Uttar Pradesh",
+      },
+
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "5000",
+      },
+
+      priceRange: "₹₹₹",
+    }),
+  }}
+/>
       
       {/* HERO SECTION */}
       <ServiceHero
@@ -64,9 +120,9 @@ export default async function CoupleMassagePage() {
   alt="Couple Massage in Gomti Nagar Lucknow"
 />
 
-      <section className="py-24 bg-[#fdfbf7] content-auto">
+      <section className="pt-28 pb-24 bg-[#fdfbf7] content-auto">
   <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="prose prose-stone prose-lg max-w-none font-light text-stone-700">
+    <div className="prose prose-stone prose-base md:prose-lg max-w-none font-light text-stone-700">
 
       <div className="max-w-3xl mx-auto text-center mb-12">
   <p className="text-lg text-stone-600 leading-relaxed">
@@ -75,10 +131,10 @@ export default async function CoupleMassagePage() {
     create the perfect spa experience for couples in Gomti Nagar Lucknow.
   </p>
 </div>
-
-      <div 
-      className="text-center mt-12 mb-16">
-
+<p className="text-stone-600 leading-relaxed mt-6">
+  Relaxio Spa is one of the most trusted luxury couple spas in Gomti Nagar Lucknow, known for private spa rooms, premium wellness therapies, and romantic spa experiences.
+</p>
+      <div className="text-center mt-12 mb-16">
   <h2 
     className="text-3xl font-serif mb-4">
     Incredible Benefits of Couple Massage
@@ -129,25 +185,40 @@ export default async function CoupleMassagePage() {
     <span className="text-amber-500 mt-1 text-sm">✔</span>
     <span>Best couple spa experience in Lucknow</span>
   </div>
+  <div className="flex items-start gap-3">
+  <span className="text-amber-500 mt-1 text-sm">✔</span>
+
+  <span>
+    Luxury Jacuzzi and steam bath spa experience
+  </span>
+</div>
+
+<div className="flex items-start gap-3">
+  <span className="text-amber-500 mt-1 text-sm">✔</span>
+
+  <span>
+    Best luxury couple spa in Gomti Nagar Lucknow
+  </span>
+</div>
 
 </div>
   </div>
 
   <FadeIn>
-  <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+  <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
     <Image
-      src="/images/couple-massage-lucknow-spa.webp"
-      alt="Couple Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
-      fill
-      className="object-cover"
-      loading="lazy"
-    />
+  src="/images/couple-massage-lucknow-spa.webp"
+  alt="Couple Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+  fill
+  quality={85}
+  sizes="(max-width:768px) 100vw, 1200px"
+  className="object-cover brightness-95"
+  loading="lazy"
+/>
   </div>
 </FadeIn>
 
-<FadeIn>
-  <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">
-    Why Relaxio is the Best Couple Spa in Gomti Nagar
+  <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">Why Relaxio is the Best Couple Spa in Gomti Nagar
   </h2>
 
   <p className="mb-6 leading-relaxed">
@@ -155,16 +226,27 @@ export default async function CoupleMassagePage() {
   </p>
 
   <p className="mb-10 leading-relaxed">
-    Our trained therapists provide synchronized massage therapies using premium oils, calming ambience, relaxing music, and hygienic spa standards. Whether you are visiting for stress relief, celebration, or quality time together, Relaxio Spa offers one of the best couple massage experiences in Lucknow.
-  </p>
-</FadeIn>
+  Our trained therapists provide synchronized massage therapies using premium oils, calming ambience, relaxing music, and hygienic spa standards.
 
+  We also offer premium Thai Massage, Balinese Massage, Steam Bath Spa, and Jacuzzi Spa therapies in Gomti Nagar Lucknow.
+
+  Whether you are visiting for stress relief, celebration, or quality time together, Relaxio Spa offers one of the best couple massage experiences in Lucknow.
+</p>
+  </div>
   </div>
 
-    </div>
+  <div className="text-center my-16">
+  <p className="text-2xl font-serif text-stone-900">
+    ★★★★★ Rated 4.9 by 5000+ Happy Clients
+  </p>
+
+  <p className="text-stone-600 mt-4">
+    Certified Therapists • Luxury Ambience • Hygienic Couple Spa Rooms
+  </p>
+</div>
 
   {/* 🔥 PREMIUM PRICING */}
-<div className="max-w-4xl mx-auto bg-white rounded-[32px] shadow-xl border border-stone-100 px-8 md:px-10 py-12 my-20">
+<div className="max-w-4xl mx-auto bg-white/95 backdrop-blur-sm rounded-[32px] shadow-xl border border-stone-100 px-6 md:px-10 py-12 my-20">
 
   <h2 className="text-3xl md:text-4xl font-serif text-center text-stone-900 mb-12">
     Couple Massage Pricing
@@ -228,16 +310,17 @@ export default async function CoupleMassagePage() {
   <div className="text-center mt-10">
     <a
       href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20Couple%20Massage"
-      className="inline-flex items-center justify-center rounded-full bg-black px-10 py-4 text-sm uppercase tracking-[0.2em] text-white hover:bg-stone-800 transition"
+      aria-label="Book Couple Massage on WhatsApp"
+      className="inline-flex items-center justify-center rounded-full bg-black px-10 py-4 text-sm uppercase tracking-[0.2em] text-white hover:bg-stone-800 transition-colors duration-300"
     >
-      Book Your Appointment
+      Book Couple Spa Appointment
     </a>
   </div>
 
 </div>
-
-  <FAQ faqs={faqs} 
-  />
+  <div className="mt-16">
+  <FAQ faqs={faqs} />
+</div>
 
    </section>
 
