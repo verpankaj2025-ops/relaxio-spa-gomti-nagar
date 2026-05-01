@@ -191,9 +191,12 @@ areaServed: [
       "@id": `${SITE_URL}/#website`,
       url: SITE_URL,
       name: "Relaxio Spa",
-      publisher: {
-        "@id": `${SITE_URL}/#spa`
-      }
+      
+      inLanguage: "en-IN",
+      
+      about: {
+  "@id": `${SITE_URL}/#spa`
+}
     })
   }}
 />
