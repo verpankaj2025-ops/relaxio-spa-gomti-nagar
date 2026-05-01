@@ -43,13 +43,19 @@ export const metadata: Metadata = {
   description: 'Looking for the best spa in Gomti Nagar, Lucknow? Relaxio Spa offers premium Thai, Balinese, and Deep Tissue body massages near you. Book your session today!',
 
   keywords: [
-    'Spa in Gomti Nagar Lucknow',
-    'Massage Spa in Lucknow',
-    'Body Massage near me',
-    'Thai Massage Lucknow',
-    'Balinese Massage Lucknow',
-    'Deep Tissue Massage Lucknow'
-  ],
+  'Best Spa in Gomti Nagar Lucknow',
+  'Spa in Gomti Nagar Lucknow',
+  'Massage Spa in Lucknow',
+  'Luxury Spa in Lucknow',
+  'Body Massage near me',
+  'Thai Massage Lucknow',
+  'Balinese Massage Lucknow',
+  'Deep Tissue Massage Lucknow',
+  'Couple Spa in Lucknow',
+  'Full Body Massage Lucknow',
+  'Spa near Patrakarpuram',
+  'Spa near Indira Nagar',
+],
 
   alternates: {
   canonical: SITE_URL,
@@ -132,7 +138,7 @@ hasMap:
 aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: "4.8",
-        reviewCount: "120"
+        reviewCount: "23"
       },
 
 areaServed: [
