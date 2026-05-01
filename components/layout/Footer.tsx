@@ -16,15 +16,27 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-4">
-            <a className="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center opacity-50 cursor-not-allowed">
-              <Instagram size={18} />
-            </a>
-            <a className="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center opacity-50 cursor-not-allowed">
-              <Facebook size={18} />
-            </a>
-            <a className="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center opacity-50 cursor-not-allowed">
-              <Twitter size={18} />
-            </a>
+            <div
+  role="img"
+  aria-label="Instagram coming soon"
+  className="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center opacity-50 cursor-not-allowed"
+>
+  <Instagram aria-hidden="true" size={18} />
+</div>
+            <div
+  role="img"
+  aria-label="Facebook coming soon"
+  className="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center opacity-50 cursor-not-allowed"
+>
+  <Facebook aria-hidden="true" size={18} />
+</div>
+            <div
+  role="img"
+  aria-label="Twitter coming soon"
+  className="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center opacity-50 cursor-not-allowed"
+>
+  <Twitter aria-hidden="true" size={18} />
+</div>
           </div>
         </div>
 
@@ -70,10 +82,11 @@ export default function Footer() {
 
         <div className="flex gap-6">
           <a 
-            href="https://wa.me/917081891995" 
+  href="https://wa.me/917081891995"
+  aria-label="Chat on WhatsApp"
             className="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white"
           >
-            <Phone size={18} />
+            <Phone aria-hidden="true" size={18} />
           </a>
         </div>
       </div>

@@ -87,9 +87,7 @@ export default async function ContactPage() {
   src="/images/relaxio-spa-gomti-nagar-lucknow-contact.webp"
   alt="Luxury spa interior in Gomti Nagar Lucknow at Relaxio Spa"
   fill
-  priority
-  unoptimized
-  quality={65}
+  quality={70}
   sizes="100vw"
   className="object-cover object-center"
 />

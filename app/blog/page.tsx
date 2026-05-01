@@ -36,12 +36,13 @@ export default function BlogPage() {
 <section className="relative pt-32 pb-20 text-center text-white min-h-[400px]">
 
   <Image
-    src="/images/spa.webp"
-    fill
-    className="object-cover"
-    alt="Luxury Spa in Gomti Nagar Lucknow"
-    priority
-  />
+  src="/images/spa.webp"
+  fill
+  className="object-cover"
+  alt="Luxury Spa in Gomti Nagar Lucknow"
+  quality={70}
+  sizes="100vw"
+/>
 
   <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
   <div className="text-center px-4">

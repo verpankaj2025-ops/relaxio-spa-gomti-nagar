@@ -5,7 +5,6 @@ import FAQ from "@/components/FAQ";
 import FadeIn from '@/components/ui/FadeIn';
 import { CheckCircle2 } from 'lucide-react';
 
-export const dynamic = "force-dynamic";
 async function getFAQs() {
   try {
     const baseUrl =

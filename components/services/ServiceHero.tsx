@@ -21,10 +21,9 @@ export default function ServiceHero({
           src={image}
           alt={alt}
           fill
-          sizes="100vw"
-          quality={85}
+          sizes="(max-width: 768px) 100vw, 1400px"
+          quality={75}
           className="object-cover object-[center_65%]"
-          priority
         />
 
         <div className="absolute inset-0 bg-black/35" />

@@ -1,8 +1,11 @@
 export async function GET() {
   try {
-    const res = await fetch(
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqjcqONpk-8NyLGN4e74KKzFsGp8SMgZvOZxtBinYLaTg7IDQG8-NwuOFgbzTDCMfLVvIAJTiYEiPx/pub?output=csv"
-    );
+    const url =
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqjcqONpk-8NyLGN4e74KKzFsGp8SMgZvOZxtBinYLaTg7IDQG8-NwuOFgbzTDCMfLVvIAJTiYEiPx/pub?output=csv";
+
+const res = await fetch(url, {
+  next: { revalidate: 86400 },
+});
 
     const text = await res.text();
 
@@ -21,6 +24,7 @@ export async function GET() {
       .filter((f) => f.page && f.question && f.answer);
 
     return Response.json(faqs);
+    
   } catch (error) {
     return Response.json({ error: "Failed to fetch FAQs" });
   }

@@ -200,10 +200,10 @@ const faqs = Array.isArray(allFaqs)
                       src={service.img} 
                       alt={service.alt}
                       fill
-                      unoptimized
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      quality={65}
+                      quality={70}
                       className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                   </div>

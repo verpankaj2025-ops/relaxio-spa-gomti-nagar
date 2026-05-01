@@ -5,7 +5,8 @@ import './globals.css';
 
 import dynamic from 'next/dynamic';
 
-import Navbar from '@/components/layout/Navbar';
+const Navbar = dynamic(() => import('@/components/layout/Navbar'));
+
 import Footer from '@/components/layout/Footer';
 import WhatsAppWidget from '@/components/layout/WhatsAppWidget';
 import CallWidget from '@/components/layout/CallWidget';

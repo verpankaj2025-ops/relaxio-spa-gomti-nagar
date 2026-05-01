@@ -5,10 +5,10 @@ export function getLocalBusinessSchema() {
     "@type": ["Spa", "HealthAndBeautyBusiness", "LocalBusiness"],
     "name": "Relaxio Spa",
     "image": [
-      "https://picsum.photos/seed/spa-exterior/1x1/800/800",
-      "https://picsum.photos/seed/spa-exterior/4x3/800/600",
-      "https://picsum.photos/seed/spa-exterior/16x9/1200/675"
-    ],
+  "https://relaxiospa.in/images/luxury-spa-gomti-nagar-lucknow.webp",
+  "https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.webp",
+  "https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.webp"
+],
     "@id": baseUrl,
     "url": baseUrl,
     "telephone": "+917081891995",

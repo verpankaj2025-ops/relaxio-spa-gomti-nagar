@@ -1,23 +1,7 @@
+import { faqs } from '@/lib/faqs';
 import Image from 'next/image';
 import Link from 'next/link';
 import FAQ from "@/components/FAQ";
-
-export const dynamic = "force-dynamic";
-async function getFAQs() {
-  try {
-    const baseUrl =
-  process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-
-const res = await fetch(`${baseUrl}/api/faqs`, {
-  cache: "no-store",
-});
-
-    return res.json();
-  } catch (error) {
-    console.error("FAQ fetch error:", error);
-    return [];
-  }
-}
 
 export const metadata = {
   title: 'Our Spa Services',
@@ -25,17 +9,11 @@ export const metadata = {
 };
 
 export default async function ServicesPage() {
-  const allFaqs = (await getFAQs()) || [];
 
-  console.log("ALL FAQS 👉", Array.isArray(allFaqs) ? allFaqs : "NOT ARRAY");
+  const servicesFaqs = faqs.filter(
+  (f) => f.page === "services"
+);
 
-  const faqs = Array.isArray(allFaqs)
-  ? allFaqs.filter(
-      (f) => f.page?.toLowerCase().trim() === "services"
-    )
-  : [];
-
-  console.log("FILTERED FAQS", faqs);
   return (
     <>
     <div className="pt-32 pb-24 bg-stone-50">
@@ -213,7 +191,7 @@ export default async function ServicesPage() {
 </div>
 
     {/* 👇 FAQ SECTION */}
-    <FAQ faqs={faqs} />
+    <FAQ faqs={servicesFaqs} />
   </>
 );
 }

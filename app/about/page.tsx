@@ -75,7 +75,7 @@ export default async function AboutPage() {
 "url": "https://relaxiospa.in",
 "image": "https://relaxiospa.in/images/spa-hero-lucknow.webp",
 "telephone": "+917081891995",
-"priceRange": "₹1499 - ₹12000",
+"priceRange": "₹1499 - ₹8999",
 "address": {
     "@type": "PostalAddress",
     "streetAddress": "2nd Floor, 4/526, Vivek Khand 4",
@@ -159,6 +159,7 @@ export default async function AboutPage() {
   alt="Professional Massage Therapy in Gomti Nagar Lucknow"
   fill
   className="object-cover"
+  loading="lazy"
 />
               </div>
             </FadeIn>
@@ -173,6 +174,7 @@ export default async function AboutPage() {
   alt="Spa ambiance background"
   fill
   className="object-cover"
+  loading="lazy"
 />
               </div>
               <div className="relative z-10">
