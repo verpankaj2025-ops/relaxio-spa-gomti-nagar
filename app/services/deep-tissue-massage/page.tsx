@@ -64,7 +64,7 @@ const faqs = Array.isArray(allFaqs)
       <ServiceHero
   title="Deep Tissue Massage in Gomti Nagar Lucknow"
   subtitle="Relieve muscle tension and body pain with deep tissue massage therapy at Relaxio Spa."
-  image="/images/deep-tissue-massage-gomti-nagar-lucknow.webp"
+  image="/images/deep-tissue-massage-gomti-nagar-lucknow.avif"
   alt="Deep Tissue Massage in Gomti Nagar Lucknow"
 />
 

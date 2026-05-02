@@ -64,7 +64,7 @@ const faqs = Array.isArray(allFaqs)
           <ServiceHero
             title="Balinese Massage in Gomti Nagar Lucknow"
             subtitle="Relax your body and mind with luxury Balinese massage therapy at Relaxio Spa."
-            image="/images/balinese-massage-gomti-nagar-lucknow.webp"
+            image="/images/balinese-massage-gomti-nagar-lucknow.avif"
             alt="Balinese Massage in Gomti Nagar Lucknow"
           />
 
@@ -101,7 +101,7 @@ const faqs = Array.isArray(allFaqs)
                  <FadeIn>
                    <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
                    <Image 
-                   src="/images/balinese-massage-gomti-nagar-lucknow-spa.webp"
+                   src="/images/balinese-massage-gomti-nagar-lucknow.avif"
                    alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
                    fill
                    sizes="(max-width: 768px) 100vw, 1200px"

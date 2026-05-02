@@ -116,7 +116,7 @@ export default async function CoupleMassagePage() {
       <ServiceHero
   title="Couple Massage in Gomti Nagar Lucknow"
   subtitle="Enjoy a luxury couple massage experience with private spa rooms at Relaxio Spa."
-  image="/images/couple-massage-lucknow.webp"
+  image="/images/couple-massage-lucknow.avif"
   alt="Couple Massage in Gomti Nagar Lucknow"
 />
 

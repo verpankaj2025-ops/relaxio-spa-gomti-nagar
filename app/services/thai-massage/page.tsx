@@ -65,7 +65,7 @@ const faqs = Array.isArray(allFaqs)
       <ServiceHero
   title="Thai Massage in Gomti Nagar Lucknow"
   subtitle="Experience authentic Thai massage therapy at Relaxio Spa Gomti Nagar Lucknow."
-  image="/images/thai-massage-gomti-nagar-lucknow.webp"
+  image="/images/thai-massage-gomti-nagar-lucknow.avif"
   alt="Thai Massage in Gomti Nagar Lucknow"
 />
 

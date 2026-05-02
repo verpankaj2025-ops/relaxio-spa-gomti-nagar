@@ -26,7 +26,7 @@ export const metadata = {
       "Luxury Jacuzzi and Steam Bath sessions in Gomti Nagar Lucknow for complete relaxation wellness and detox.",
     url: "/services/spa-facilities",
     images: [
-      "https://relaxiospa.in/images/jacuzzi-steam-bath-lucknow.webp"
+      "https://relaxiospa.in/images/jacuzzi-steam-bath-lucknow.avif"
     ],
   },
 };
@@ -78,7 +78,7 @@ export default async function SpaFacilitiesPage() {
 <ServiceHero
   title="Jacuzzi & Steam Bath in Gomti Nagar Lucknow"
   subtitle="Relax your body and mind with premium Jacuzzi and Steam Bath sessions at Relaxio Spa."
-  image="/images/jacuzzi-steam-bath-lucknow.webp"
+  image="/images/jacuzzi-steam-bath-lucknow.avif"
   alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow"
 />
 
@@ -102,7 +102,7 @@ export default async function SpaFacilitiesPage() {
               <p className="mb-10 leading-relaxed text-center max-w-3xl mx-auto">
                 Jacuzzi and Steam Bath therapies are more than just luxury spa facilities; they are powerful wellness experiences that help your body relax, detoxify, and recover from daily stress and fatigue.
               </p>
-
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {[
                   "Detoxifies the body and removes toxins",
@@ -129,14 +129,14 @@ export default async function SpaFacilitiesPage() {
             <FadeIn>
               <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/jacuzzi-steam-bath-lucknow.webp"
+                  src="/images/jacuzzi-steam-bath-lucknow.avif"
                   alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow Relaxio Spa"
                   fill
-                  sizes="(max-width: 768px) 100vw, 1200px"
-                  quality={80}
+                  sizes="100vw"
+                  quality={65}
                   className="object-cover"
                   loading="lazy"
-                />
+                 />
               </div>
             </FadeIn>
 
@@ -154,6 +154,7 @@ export default async function SpaFacilitiesPage() {
               </p>
             
             {/* Pricing */}
+            <FadeIn>
               <div className="bg-white p-10 rounded-3xl shadow-lg border border-stone-100 my-16">
                 <h2 className="font-serif text-3xl text-stone-900 mb-8 text-center">
                   Jacuzzi & Steam Bath Pricing
@@ -219,6 +220,7 @@ export default async function SpaFacilitiesPage() {
                   </a>
                 </div>
               </div>
+              </FadeIn>
 
             {/* FAQ */}
               <FAQ faqs={faqs} />
