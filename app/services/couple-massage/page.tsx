@@ -44,7 +44,7 @@ export const metadata = {
       "Luxury couple massage and spa experience in Gomti Nagar Lucknow.",
 
     images: [
-      "https://relaxiospa.in/images/couple-massage-lucknow.webp",
+      "https://relaxiospa.in/images/couple-massage-lucknow.avif",
     ],
   },
 
@@ -91,7 +91,7 @@ export default async function CoupleMassagePage() {
       name: "Relaxio Spa Gomti Nagar Lucknow",
 
       image:
-        "https://relaxiospa.in/images/couple-massage-lucknow.webp",
+        "https://relaxiospa.in/images/couple-massage-lucknow.avif",
 
       telephone: "+917081891995",
 

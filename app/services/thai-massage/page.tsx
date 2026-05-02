@@ -31,7 +31,7 @@ export const metadata = {
     title: 'Best Thai Massage in Gomti Nagar Lucknow | Relaxio Spa',
     description: 'Experience the best authentic Thai Massage in Gomti Nagar, Lucknow. Improve flexibility, relieve joint tension, and boost energy.',
     url: 'https://relaxiospa.in/services/thai-massage',
-    images: ['https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.webp'],
+    images: ['https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.avif'],
   }
 };
 
@@ -84,8 +84,8 @@ const faqs = Array.isArray(allFaqs)
             <FadeIn>
               <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
                 <Image
-  src="/images/thai-massage-gomti-nagar-lucknow-spa.webp"
-  alt="Thai Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+                  src="/images/thai-massage-gomti-nagar-lucknow-spa.webp"
+                  alt="Thai Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
   fill
   sizes="(max-width: 768px) 100vw, 1200px"
   quality={75}

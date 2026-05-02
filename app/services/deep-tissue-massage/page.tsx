@@ -30,7 +30,7 @@ export const metadata = {
     title: 'Best Deep Tissue Massage in Gomti Nagar Lucknow | Relaxio Spa',
     description: 'Get the best Deep Tissue Massage in Gomti Nagar, Lucknow. Ideal for chronic pain, muscle stiffness, and sports recovery.',
     url: 'https://relaxiospa.in/services/deep-tissue-massage',
-    images: ['https://relaxiospa.in/images/deep-tissue-massage-gomti-nagar-lucknow.webp']
+    images: ['https://relaxiospa.in/images/deep-tissue-massage-gomti-nagar-lucknow.avif']
   }
 };
 
