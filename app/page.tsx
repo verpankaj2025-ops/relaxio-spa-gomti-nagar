@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 
 import type { Metadata } from "next";
+import Head from 'next/head';
 
 const FAQ = dynamic(() => import('@/components/FAQ'));
 
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "https://relaxiospa.in/images/luxury-spa-gomti-nagar-lucknow.webp",
+        url: "https://relaxiospa.in/images/luxury-spa-gomti-nagar-lucknow.avif",
         width: 1200,
         height: 630,
         alt: "Relaxio Spa Gomti Nagar Lucknow",
@@ -77,26 +78,30 @@ const faqs = Array.isArray(allFaqs)
   ? allFaqs.filter(
       (f) => f.page?.toLowerCase().trim() === "home"
     )
-  : [];
+  :[];
 
   const reviews = [
     { author: 'Priya S.', rating: 5, reviewBody: 'Absolutely the best spa in Gomti Nagar. The Balinese massage was incredibly relaxing. The hygiene and ambiance are top-notch.' },
     { author: 'Rahul M.', rating: 5, reviewBody: 'I had severe back pain and opted for the Deep Tissue massage. The therapist was highly skilled. Highly recommended!' },
-    { author: 'Anjali & Vikram', rating: 5, reviewBody: 'We booked a couple\'s session for our anniversary. The private room, the oils, the service—everything felt like a 5-star luxury hotel.' }
+    { author: 'Anjali & Vikram', rating: 5, reviewBody: 'We booked a couple\'s session for our anniversary. The private room, the oils, the service—everything felt like a 5-star luxury hotel.' },
+
   ];
 
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(faqs)) }}
-      />
-      
-      {/* 1. HERO SECTION */}
+    return (
+      <>
+        <Head>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(faqs)) }}
+          />
+        </Head>
+        <main>
+          
+          {/* 1. HERO SECTION */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
    <Image 
-  src="/images/luxury-spa-gomti-nagar-lucknow.webp"
+  src="/images/luxury-spa-gomti-nagar-lucknow.avif"
   alt="Luxury spa in Gomti Nagar Lucknow Relaxio Spa premium massage room" 
   fill 
   sizes="100vw"
@@ -139,55 +144,56 @@ const faqs = Array.isArray(allFaqs)
       {/* 2. SERVICES SECTION */}
       <section className="py-32 bg-[#fdfbf7] content-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
+          
             <div className="text-center mb-20">
               <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Our Offerings</span>
               <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">Premium Body Massage Near Me</h2>
               <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
             </div>
-          </FadeIn>
+              
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div 
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {[
               {
                 title: 'Deep Tissue Massage Lucknow',
-                desc: 'Perfect for chronic pain relief and releasing deep muscle tension. The best deep tissue massage in Gomti Nagar.',
-                img: '/images/deep-tissue-massage-gomti-nagar-lucknow.webp',
+                desc: 'Perfect for chronic pain relief and releasing deep muscle tension. The best deep tissue massage in Gomti Nagar',
+                img: '/images/deep-tissue-massage-gomti-nagar-lucknow.avif',
                 alt: 'Deep tissue massage in Gomti Nagar Lucknow for pain relief at Relaxio Spa',
                 link: '/services/deep-tissue-massage',
-                cta: 'Book Deep Tissue'
+                cta: 'Book Deep Tissue',
               },
               {
                 title: 'Balinese Massage Lucknow',
                 desc: 'A holistic, full-body treatment combining acupressure and aromatherapy for ultimate relaxation.',
-                img: '/images/balinese-massage-gomti-nagar-lucknow.webp',
+                img: '/images/balinese-massage-gomti-nagar-lucknow.avif',
                 alt: 'Balinese massage in Gomti Nagar Lucknow with aromatherapy at Relaxio Spa',
                 link: '/services/balinese-massage',
-                cta: 'Relax with Balinese'
+                cta: 'Relax with Balinese',
               },
               {
                 title: 'Thai Massage Lucknow',
                 desc: 'An active therapy that improves flexibility and energy flow. Experience authentic Thai massage in Lucknow.',
-                img: '/images/thai-massage-gomti-nagar-lucknow.webp',
+                img: '/images/thai-massage-gomti-nagar-lucknow.avif',
                 alt: 'Thai massage in Gomti Nagar Lucknow with stretching therapy at Relaxio Spa',
                 link: '/services/thai-massage',
-                cta: 'Try Thai Massage'
+                cta: 'Try Thai Massage',
               },
               {
   title: 'Couple Massage Lucknow',
   desc: 'Enjoy a romantic couple massage in Gomti Nagar with private rooms, expert therapists and luxury ambience.',
-  img: '/images/couple-massage-lucknow.webp',
+  img: '/images/couple-massage-lucknow.avif',
   alt: 'Couple massage in Gomti Nagar Lucknow with private spa room at Relaxio Spa',
   link: '/services/couple-massage',
-  cta: 'Book Couple Spa'
+  cta: 'Book Couple Spa',
 },
 {
   title: 'Jacuzzi & Steam Bath Lucknow',
   desc: 'Relax with jacuzzi and steam bath in Gomti Nagar for complete detox and luxury spa experience.',
-  img: '/images/jacuzzi-steam-bath-lucknow.webp',
+  img: '/images/jacuzzi-steam-bath-lucknow.avif',
   alt: 'Jacuzzi and steam bath spa in Gomti Nagar Lucknow at Relaxio Spa',
   link: '/services/spa-facilities',
-  cta: 'Relax in Jacuzzi'
+  cta: 'Relax in Jacuzzi',
 },
             ].map((service) => (
               
@@ -225,17 +231,18 @@ const faqs = Array.isArray(allFaqs)
       {/* 3. TESTIMONIALS SECTION */}
       <section className="py-32 bg-stone-900 text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+          
           <Image 
-  src="/images/spa-texture-gomti-nagar.webp" 
-  alt="Relaxio Spa Gomti Nagar Lucknow ambiance luxury spa background" 
-  fill 
-  sizes="100vw"
-  quality={65}
-  className="object-cover"
-/>
+             src="/images/spa-texture-gomti-nagar.avif" 
+             alt="Relaxio Spa Gomti Nagar Lucknow ambiance luxury spa background" 
+             fill 
+             sizes="100vw"
+             quality={65}
+             className="object-cover"
+           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <FadeIn>
+          
             <div className="text-center mb-20">
               <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Guest Experiences</span>
               <h2 className="text-4xl md:text-5xl font-serif mb-6">
@@ -244,38 +251,40 @@ const faqs = Array.isArray(allFaqs)
 
               <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
             </div>
-          </FadeIn>
+              
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {reviews.map((review) => (
-                <div
+             {reviews.map((review) => (
+                 <div
                     key={review.author}
                     className="bg-stone-800/50 p-10 rounded-2xl border border-stone-700/50 hover:border-[#d4af37]/50 transition-colors duration-300 h-full flex flex-col">
-                  <div className="flex gap-1 mb-6">
+                  
+                                    <div className="flex gap-1 mb-6">
                     {[...Array(5)].map((_, j) => (
                       <Star key={j} size={20} className="fill-[#d4af37] text-[#f2cc60]" />
                     ))}
                   </div>
-                  <p className="text-stone-300 font-light text-lg leading-relaxed mb-8 flex-grow italic">
-                    &quot;{review.reviewBody}&quot;
+
+                  <p className="text-stone-300 mb-6">
+                    {review.reviewBody}
                   </p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-stone-700 rounded-full flex items-center justify-center text-[#f2cc60] font-serif text-xl">
-                      {review.author.charAt(0)}
-                    </div>
-                    <span className="font-medium tracking-wide">{review.author}</span>
+
+                  <div className="mt-auto">
+                    <h3 className="text-white font-medium">
+                      {review.author}
+                    </h3>
                   </div>
-                </div>
-              
-            ))}
-          </div>
+              </div>
+          ))}
+      </div>
         </div>
+        
       </section>
 
       {/* 4. PRICING SECTION */}
       <section className="py-32 bg-[#fdfbf7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn>
+            
             <div className="text-center mb-20">
               <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Transparent Pricing</span>
               <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
@@ -284,7 +293,7 @@ const faqs = Array.isArray(allFaqs)
 
             <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
             </div>
-          </FadeIn>
+              
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
             {/* Basic */}
@@ -511,10 +520,10 @@ const faqs = Array.isArray(allFaqs)
         </div>
       </section>
 
-      <div className="mt-16">
-  <FAQ faqs={faqs} />
-</div>
-      
-    </>
-  );
+        <div className="mt-16">
+          <FAQ faqs={faqs} />
+        </div>
+      </main>
+      </>
+    );
 }

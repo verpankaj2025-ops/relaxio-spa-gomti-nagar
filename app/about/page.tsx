@@ -73,7 +73,7 @@ export default async function AboutPage() {
         "@type": "LocalBusiness",
 "name": "Relaxio Spa",
 "url": "https://relaxiospa.in",
-"image": "https://relaxiospa.in/images/spa-hero-lucknow.webp",
+"image": "https://relaxiospa.in/images/spa-hero-lucknow.avif      ",
 "telephone": "+917081891995",
 "priceRange": "₹1499 - ₹8999",
 "address": {
@@ -105,7 +105,7 @@ export default async function AboutPage() {
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden bg-stone-950">
         <div className="absolute inset-0 z-0">
   <Image 
-    src="/images/spa-about-gomti-nagar-lucknow.webp"
+    src="/images/spa-about-gomti-nagar-lucknow.avif"
     alt="Luxury spa interior in Gomti Nagar Lucknow Relaxio Spa massage center"
     fill
     className="object-cover"
@@ -155,7 +155,7 @@ export default async function AboutPage() {
             <FadeIn direction="left">
               <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
-  src="/images/massage-therapy-lucknow.webp"
+  src="/images/massage-therapy-lucknow.avif"
   alt="Professional Massage Therapy in Gomti Nagar Lucknow"
   fill
   className="object-cover"
@@ -170,7 +170,7 @@ export default async function AboutPage() {
             <div className="bg-stone-900 text-stone-50 py-24 px-8 md:px-16 rounded-3xl shadow-2xl mb-32 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                 <Image 
-  src="/images/spa-texture-gomti-nagar.webp"
+  src="/images/spa-texture-gomti-nagar.avif"
   alt="Spa ambiance background"
   fill
   className="object-cover"

@@ -33,19 +33,21 @@ export default function BlogPage() {
     <div>
       &quot;Luxury Spa&quot;
 
-<section className="relative pt-32 pb-20 text-center text-white min-h-[400px]">
+    {/* 🔥 HERO SECTION (same as services pages) */}
 
+<section className="relative pt-32 pb-20 text-center text-white min-h-[400px]">
+  
   <Image
-  src="/images/spa.webp"
-  fill
-  className="object-cover"
-  alt="Luxury Spa in Gomti Nagar Lucknow"
-  quality={70}
-  sizes="100vw"
-/>
+    src="/images/spa.avif"
+    fill
+    className="object-cover"
+    alt="Luxury Spa in Gomti Nagar Lucknow"
+    sizes="100vw"
+  />
 
   <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
   <div className="text-center px-4">
+  
     <h1 className="text-4xl md:text-6xl font-serif text-white mb-4">
       Relaxio Spa Blog
     </h1>
@@ -60,9 +62,7 @@ export default function BlogPage() {
     
   </div>
 
-</section>
-
-      {/* 🔥 HERO SECTION (same as services pages) */}
+   </section>
 
       {/* 🔥 BLOG LIST */}
       <section className="pb-20 max-w-3xl mx-auto px-4">

@@ -207,14 +207,13 @@ export default async function CoupleMassagePage() {
   <FadeIn>
   <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
     <Image
-  src="/images/couple-massage-lucknow-spa.webp"
-  alt="Couple Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
-  fill
-  quality={85}
-  sizes="(max-width:768px) 100vw, 1200px"
-  className="object-cover brightness-95"
-  loading="lazy"
-/>
+       src="/images/couple-massage-lucknow-spa.avif"
+       alt="Couple Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+       fill
+       sizes="(max-width:768px) 100vw, 1200px"
+       className="object-cover brightness-95"
+       loading="lazy"
+     />
   </div>
 </FadeIn>
 

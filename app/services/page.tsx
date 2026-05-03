@@ -30,7 +30,7 @@ export default async function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] lg:h-[500px]">
               <Image 
-  src="/images/deep-tissue-massage-gomti-nagar-lucknow.webp"
+  src="/images/deep-tissue-massage-gomti-nagar-lucknow.avif"
   alt="Deep Tissue Massage in Gomti Nagar Lucknow"
   fill
   className="object-cover"
@@ -73,7 +73,7 @@ export default async function ServicesPage() {
             </div>
             <div className="relative h-[400px] lg:h-[500px] order-1 lg:order-2">
          <Image 
-           src="/images/balinese-massage-gomti-nagar-lucknow.webp"
+           src="/images/balinese-massage-gomti-nagar-lucknow.avif"
            alt="Balinese Massage in Gomti Nagar Lucknow"
            fill
            className="object-cover"
@@ -86,7 +86,7 @@ export default async function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] lg:h-[500px]">
               <Image 
-  src="/images/thai-massage-gomti-nagar-lucknow.webp"
+  src="/images/thai-massage-gomti-nagar-lucknow.avif"
   alt="Thai Massage in Gomti Nagar Lucknow"
   fill
   className="object-cover"
@@ -138,7 +138,7 @@ export default async function ServicesPage() {
 
   <div className="relative h-[400px] lg:h-[500px] order-1 lg:order-2">
     <Image
-      src="/images/couple-massage-lucknow.webp"
+      src="/images/couple-massage-lucknow.avif"
       alt="Couple Massage in Gomti Nagar Lucknow"
       fill
       className="object-cover"
@@ -152,7 +152,7 @@ export default async function ServicesPage() {
 
   <div className="relative h-[400px] lg:h-[500px]">
     <Image
-      src="/images/jacuzzi-steam-bath-lucknow.webp"
+      src="/images/jacuzzi-steam-bath-lucknow.avif"
       alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow"
       fill
       className="object-cover"

@@ -28,8 +28,7 @@ Both offer unique benefits based on your needs.
 "spa-near-me-lucknow": {
   title: "Spa Near Me Lucknow",
   content: `
-Looking for a spa near you in Lucknow? Relaxio Spa offers premium services in Gomti Nagar with expert therapists and luxury ambience.
-  `,
+Looking for a spa near you in Lucknow? Relaxio Spa offers premium services in Gomti Nagar with expert therapists and luxury ambience.`,
 },
   "best-spa-in-gomti-nagar-lucknow": {
     title: "Best Spa in Gomti Nagar Lucknow",
@@ -45,8 +44,7 @@ Services we offer:
 - Couple Massage
 - Jacuzzi & Steam Bath
 
-Book your appointment now for a luxury spa experience in Gomti Nagar.
-    `,
+Book your appointment now for a luxury spa experience in Gomti Nagar.`,
   },
 
   "benefits-of-thai-massage": {
@@ -56,8 +54,7 @@ Thai massage improves flexibility, reduces stress and boosts energy.
 
 It combines stretching, acupressure and body alignment techniques.
 
-Regular Thai massage helps relieve pain, improve circulation and enhance overall wellness.
-    `,
+Regular Thai massage helps relieve pain, improve circulation and enhance overall wellness.`,
   },
 
   "couple-massage-benefits": {
@@ -65,8 +62,7 @@ Regular Thai massage helps relieve pain, improve circulation and enhance overall
     content: `
 Couple massage helps improve bonding, reduce stress and create a relaxing shared experience.
 
-It is perfect for partners, special occasions and relaxation therapy.
-    `,
+It is perfect for partners, special occasions and relaxation therapy.`,
   },
 };
 
@@ -88,7 +84,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     type: "article",
     images: [
       {
-        url: "https://relaxiospa.in/images/spa.jpg",
+        url: "https://relaxiospa.in/images/spa.avif",
         width: 1200,
         height: 630,
       },
@@ -113,13 +109,13 @@ export default function BlogDetail({ params }: any) {
       "@type": "BlogPosting",
 
       url: `https://relaxiospa.in/blog/${params.slug}`,
-image: "https://relaxiospa.in/images/spa.jpg",
+image: "https://relaxiospa.in/images/spa.avif",
 
       headline: post?.title,
       description: post?.content.slice(0, 150),
       author: {
         "@type": "Organization",
-        name: "Relaxio Spa",
+         name: "Relaxio Spa",
       },
       publisher: {
         "@type": "Organization",
@@ -146,7 +142,7 @@ image: "https://relaxiospa.in/images/spa.jpg",
   <p className="font-semibold">Explore Our Services:</p>
 
   <p className="text-center">
-    👉 <a href="/services/thai-massage" className="text-amber-600 hover:underline">
+   <a href="/services/thai-massage" className="text-amber-600 hover:underline">
       Thai Massage
     </a>
   </p>

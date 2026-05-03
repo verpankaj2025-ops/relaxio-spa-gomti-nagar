@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     description: 'Looking for the best spa in Gomti Nagar, Lucknow? Relaxio Spa offers premium Thai, Balinese, and Deep Tissue body massages near you.',
     images: [
       {
-        url: 'https://relaxiospa.in/images/spa.webp',
+        url: 'https://relaxiospa.in/images/spa.avif      ',
         width: 1200,
         height: 630,
         alt: 'Relaxio Spa Gomti Nagar Lucknow',
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
     description: 'Looking for the best spa in Gomti Nagar, Lucknow? Relaxio Spa offers premium Thai, Balinese, and Deep Tissue body massages near you.',
-    images: ['https://relaxiospa.in/images/spa.webp'],
+    images: ['https://relaxiospa.in/images/spa.avif      '],
   },
 };
 
@@ -99,13 +99,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",
-      "@type": ["Spa", "HealthAndBeautyBusiness", "LocalBusiness"],
+      "@type": "Spa",
       "@id": `${SITE_URL}/#spa`,
       name: "Relaxio Spa",
       url: SITE_URL,
       telephone: "+917081891995",
       priceRange: "₹1499 - ₹8999",
-      image: `${SITE_URL}/images/luxury-spa-gomti-nagar-lucknow.webp`,
+      image: `${SITE_URL}/images/luxury-spa-gomti-nagar-lucknow.avif      `,
 
       address: {
         "@type": "PostalAddress",
@@ -153,26 +153,47 @@ areaServed: [
       review: [
         {
           "@type": "Review",
+
+          itemReviewed: {
+            "@type": "Spa",
+            name: "Relaxio Spa"
+          },
+
           author: {
             "@type": "Person",
             name: "Rahul Sharma"
           },
+          
+          datePublished: "2026-05-01",
+
           reviewRating: {
             "@type": "Rating",
             ratingValue: "5"
           },
+
           reviewBody: "Amazing experience and very relaxing environment."
         },
+
         {
           "@type": "Review",
+
+          itemReviewed: {
+            "@type": "Spa",
+            name: "Relaxio Spa"
+          },
+
           author: {
             "@type": "Person",
             name: "Priya Singh"
           },
+
+          datePublished: "2026-05-01",
+          
           reviewRating: {
             "@type": "Rating",
             ratingValue: "4"
           },
+
           reviewBody: "Professional therapists and great ambience."
         }
       ]

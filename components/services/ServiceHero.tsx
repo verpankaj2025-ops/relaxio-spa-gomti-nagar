@@ -23,7 +23,7 @@ export default function ServiceHero({
   fill
   priority
   sizes="100vw"
-  quality={65}
+  
   className="object-cover object-[center_65%]"
 />
 

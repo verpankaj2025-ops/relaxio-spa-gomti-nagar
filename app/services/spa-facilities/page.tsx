@@ -129,11 +129,12 @@ export default async function SpaFacilitiesPage() {
             <FadeIn>
               <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-lg">
                 <Image
+
                   src="/images/jacuzzi-steam-bath-lucknow.avif"
                   alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow Relaxio Spa"
                   fill
                   sizes="100vw"
-                  quality={65}
+                  
                   className="object-cover"
                   loading="lazy"
                  />

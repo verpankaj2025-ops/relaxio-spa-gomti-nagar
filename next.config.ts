@@ -19,13 +19,15 @@ const nextConfig: NextConfig = {
   },
 
   images: {
-    qualities: [40, 65, 70, 75, 85],
+    formats: ['image/avif', 'image/webp'],
+
+    qualities: [55, 60, 65, 70, 75, 80, 85, 90],
 
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'picsum.photos',
-        port: '',
+        
         pathname: '/**',
       },
     ],

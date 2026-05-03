@@ -1,17 +1,7 @@
-import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
-import FadeIn from '@/components/ui/FadeIn';
-import FAQ from '@/components/FAQ';
 import Image from 'next/image';
-import {
-  MapPin,
-  Phone,
-  Clock,
-  Mail,
-  ShieldCheck,
-  Sparkles,
-  MessageCircle
-} from 'lucide-react';
-
+import { getBreadcrumbSchema } from '@/lib/seo';
+import FadeIn from '@/components/ui/FadeIn';
+import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 
 export const metadata = {
   title: 'Contact Relaxio Spa Gomti Nagar Lucknow | Book Body Massage Near You',
@@ -34,32 +24,7 @@ export const metadata = {
   }
 };
 
-async function getFAQs() {
-  try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-
-    const res = await fetch(`${baseUrl}/api/faqs`, {
-      next: { revalidate: 3600 },
-    });
-
-    return res.json();
-  } catch (error) {
-    console.error("FAQ fetch error:", error);
-    return [];
-  }
-}
-
-export default async function ContactPage() {
-  
-    const allFaqs = (await getFAQs()) || [];
-
-  const faqs = Array.isArray(allFaqs)
-    ? allFaqs.filter(
-        (f) => f.page?.toLowerCase().trim() === "contact"
-      )
-    : [];
-
+export default function ContactPage() {
   const breadcrumbs = [
     { name: 'Home', item: '/' },
     { name: 'Contact Us', item: '/contact' }
@@ -71,39 +36,31 @@ export default async function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbSchema(breadcrumbs)) }}
       />
-      <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(getFAQSchema(faqs))
-  }}
-/>
       
       {/* Header Section */}
-      <section className="relative pt-40 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950">
+      <section className="relative pt-40 pb-20 text-center overflow-hidden">
 
   {/* Background Image */}
-  <div className="absolute inset-0 z-0">
+  <div className="absolute inset-0">
   <Image 
-  src="/images/relaxio-spa-gomti-nagar-lucknow-contact.webp"
-  alt="Luxury spa interior in Gomti Nagar Lucknow at Relaxio Spa"
+  src="/images/spa-contact-gomti-nagar-lucknow.avif"
+  alt="Spa interior Gomti Nagar Lucknow Relaxio Spa"
   fill
-  quality={70}
-  sizes="100vw"
-  className="object-cover object-center"
+  className="object-cover object-[center_80%]"
 />
 
   <div className="absolute inset-0 bg-black/70" />
 </div>
 
   {/* Content */}
-  <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          
+  <div className="relative z-10 max-w-3xl mx-auto px-4">
+          <FadeIn>
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Get in Touch</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6">Visit Our Sanctuary</h1>
-            <p className="text-sm text-stone-400 max-w-2xl mx-auto">
-  Contact Relaxio Spa today for professional wellness therapies, private luxury spa rooms, and quick WhatsApp booking assistance.
-</p>
-        
+            <p className="text-lg text-stone-400 font-light">
+              We are conveniently located in the heart of Gomti Nagar. Reach out to us to book your session or ask any questions about our premium therapies.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
@@ -212,120 +169,7 @@ export default async function ContactPage() {
 </FadeIn>            
           </div>
         </div>
-           </section>
-
-      {/* Trust Section */}
-      <section className="py-24 bg-stone-900 text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
-          <FadeIn>
-            <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">
-              Why Choose Relaxio Spa
-            </span>
-
-            <h2 className="text-3xl md:text-5xl font-serif mb-6 leading-tight">
-              Luxury Wellness Experience in Gomti Nagar
-            </h2>
-
-            <p className="text-base md:text-lg text-stone-300 max-w-3xl mx-auto font-light leading-relaxed mb-16">
-              Relaxio Spa offers professional massage therapies, luxury ambiance,
-              private spa rooms, and expert wellness treatments designed to help
-              you relax, recover, and rejuvenate in complete comfort.
-            </p>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-            <FadeIn>
-              <div className="bg-stone-800/50 rounded-3xl p-10 border border-stone-700">
-                <div className="w-16 h-16 mx-auto rounded-full bg-[#d4af37]/10 flex items-center justify-center mb-6">
-  <ShieldCheck className="text-[#d4af37]" size={30} />
-</div>
-                <h3 className="text-2xl font-serif mb-4 text-[#d4af37]">
-                  Certified Therapists
-                </h3>
-
-                <p className="text-stone-300 font-light leading-relaxed">
-                  Experienced and professionally trained therapists delivering premium wellness therapies.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn>
-              <div className="bg-stone-800/50 rounded-3xl p-10 border border-stone-700">
-                <div className="w-16 h-16 mx-auto rounded-full bg-[#d4af37]/10 flex items-center justify-center mb-6">
-  <Sparkles className="text-[#d4af37]" size={30} />
-</div>
-                  <h3 className="text-2xl font-serif mb-4 text-[#d4af37]">
-                  Private Luxury Rooms
-                </h3>
-
-                <p className="text-stone-300 font-light leading-relaxed">
-                  Enjoy peaceful and hygienic spa rooms designed for complete privacy and relaxation.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn>
-              <div className="bg-stone-800/50 rounded-3xl p-10 border border-stone-700">
-                <div className="w-16 h-16 mx-auto rounded-full bg-[#d4af37]/10 flex items-center justify-center mb-6">
-  <MessageCircle className="text-[#d4af37]" size={30} />
-</div>
-                <h3 className="text-2xl font-serif mb-4 text-[#d4af37]">
-                  Easy WhatsApp Booking
-                </h3>
-
-                <p className="text-stone-300 font-light leading-relaxed">
-                  Quick appointment confirmations and personalized support directly through WhatsApp.
-                </p>
-              </div>
-            </FadeIn>
-
-          </div>
-        </div>
       </section>
-
-           {/* CTA Section */}
-      <section className="py-24 bg-[#fdfbf7]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          <div className="relative overflow-hidden rounded-[2rem] bg-stone-950 px-8 py-16 md:px-16 md:py-20 text-center">
-
-            {/* Background Glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#d4af37]/20 via-transparent to-transparent"></div>
-
-            <div className="relative z-10">
-
-              <FadeIn>
-                <span className="text-[#d4af37] uppercase tracking-[0.25em] text-xs md:text-sm font-medium mb-4 block">
-                  Relax • Rejuvenate • Recharge
-                </span>
-
-                <h2 className="text-3xl md:text-5xl font-serif text-white mb-6 leading-tight">
-                  Book Your Luxury Spa Experience Today
-                </h2>
-
-                <p className="text-stone-300 text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed mb-10">
-                  Experience premium Thai Massage, Balinese Massage, Deep Tissue Therapy,
-                  and wellness treatments at Relaxio Spa Gomti Nagar Lucknow.
-                </p>
-
-                <a
-                  href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment."
-                  className="inline-flex items-center justify-center px-10 py-4 bg-[#25D366] text-white rounded-full hover:bg-[#1ebe57] transition-all duration-300 text-sm uppercase tracking-widest font-medium shadow-xl hover:-translate-y-1"
-                >
-                  Book on WhatsApp
-                </a>
-              </FadeIn>
-
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <div className="bg-[#fdfbf7] pb-24">
-        <FAQ faqs={faqs} />
-      </div>
     </>
   );
 }

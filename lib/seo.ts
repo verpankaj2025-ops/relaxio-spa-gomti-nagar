@@ -5,9 +5,9 @@ export function getLocalBusinessSchema() {
     "@type": ["Spa", "HealthAndBeautyBusiness", "LocalBusiness"],
     "name": "Relaxio Spa",
     "image": [
-  "https://relaxiospa.in/images/luxury-spa-gomti-nagar-lucknow.webp",
-  "https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.webp",
-  "https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.webp"
+  "https://relaxiospa.in/images/luxury-spa-gomti-nagar-lucknow.avif      ",
+  "https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.avif      ",
+  "https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.avif      "
 ],
     "@id": baseUrl,
     "url": baseUrl,

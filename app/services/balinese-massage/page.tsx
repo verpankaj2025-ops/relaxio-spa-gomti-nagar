@@ -30,7 +30,7 @@ export const metadata = {
     title: 'Best Balinese Massage in Gomti Nagar Lucknow | Relaxio Spa',
     description: 'Indulge in the best Balinese Massage in Gomti Nagar, Lucknow. A holistic, full-body treatment combining acupressure, aromatherapy, and deep relaxation.',
     url: '/services/balinese-massage',
-    images: ['https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.webp']
+    images: ['https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.avif']
   }
 };
 
@@ -97,23 +97,20 @@ const faqs = Array.isArray(allFaqs)
                   </div>
                 ))}
               </div>
+                     <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
 
-                 <FadeIn>
-                   <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
-                   <Image 
-                   src="/images/balinese-massage-gomti-nagar-lucknow.avif"
+               <Image 
+                   src="/images/balinese-massage-gomti-nagar-lucknow-spa.avif"
                    alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
                    fill
                    sizes="(max-width: 768px) 100vw, 1200px"
-                   quality={80}
+
                    className="object-cover brightness-95"
                    loading="lazy"
-                   />
-                </div>
-                </FadeIn>
-            
+                 />
+              </div>
               <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">
-                Why Relaxio is the Best Spa in Gomti Nagar
+                 Why Relaxio is the Best Spa in Gomti Nagar
               </h2>
               <p className="mb-6 leading-relaxed">
                 At Relaxio Spa, we believe that the environment is just as important as the therapy itself. Our luxury spa in Gomti Nagar Lucknow is designed to transport you to a state of absolute serenity. Our private therapy rooms are soundproofed, climate-controlled, and infused with calming scents.
