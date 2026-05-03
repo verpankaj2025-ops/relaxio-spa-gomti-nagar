@@ -31,15 +31,16 @@ const blogs = [
 export default function BlogPage() {
   return (
     <div>
-      &quot;Luxury Spa&quot;
+
 
     {/* 🔥 HERO SECTION (same as services pages) */}
 
-<section className="relative pt-32 pb-20 text-center text-white min-h-[400px]">
+<section className="relative h-[45vh] md:h-[60vh] text-center text-white overflow-hidden">
   
   <Image
     src="/images/spa.avif"
     fill
+    priority
     className="object-cover"
     alt="Luxury Spa in Gomti Nagar Lucknow"
     sizes="100vw"
