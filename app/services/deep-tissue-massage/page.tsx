@@ -11,7 +11,7 @@ async function getFAQs() {
   process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
 const res = await fetch(`${baseUrl}/api/faqs`, {
-  cache: "no-store",
+  next: { revalidate: 3600 },
 });
 
     return res.json();
