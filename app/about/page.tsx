@@ -15,7 +15,7 @@ export const metadata = {
     title: 'About Relaxio Spa | Best Luxury Spa in Gomti Nagar Lucknow',
     description: 'Learn about Relaxio Spa, the premier luxury wellness destination in Gomti Nagar, Lucknow. Discover our commitment to hygiene, privacy, and expert therapy.',
     url: '/about',
-    image: ['https://relaxiospa.in/images/spa-hero-lucknow.png']
+    image: ['https://relaxiospa.in/images/spa-about-gomti-nagar-lucknow.avif']
   }
 };
 
@@ -24,9 +24,12 @@ async function getFAQs() {
     const baseUrl =
       process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-    const res = await fetch(`${baseUrl}/api/faqs`, {
-      next: { revalidate: 3600 },
-    });
+    const res = await fetch(
+  `${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/api/faqs`,
+  {
+    next: { revalidate: 3600 },
+  }
+);
 
     return res.json();
   } catch (error) {
@@ -73,7 +76,7 @@ export default async function AboutPage() {
         "@type": "LocalBusiness",
 "name": "Relaxio Spa",
 "url": "https://relaxiospa.in",
-"image": "https://relaxiospa.in/images/spa-hero-lucknow.avif      ",
+"image": "https://relaxiospa.in/images/spa-about-gomti-nagar-lucknow.avif",
 "telephone": "+917081891995",
 "priceRange": "₹1499 - ₹8999",
 "address": {
@@ -94,8 +97,8 @@ export default async function AboutPage() {
   "dayOfWeek": [
     "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
   ],
-  "opens": "10:00",
-  "closes": "22:00"
+  "opens": "11:00",
+  "closes": "21:00"
 }]
       })
     }}

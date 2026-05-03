@@ -14,7 +14,11 @@ const res = await fetch(`${baseUrl}/api/faqs`, {
   next: { revalidate: 3600 },
 });
 
-    return res.json();
+    if (!res.ok) {
+  return [];
+}
+
+return res.json();
   } catch (error) {
     return [];
   }
