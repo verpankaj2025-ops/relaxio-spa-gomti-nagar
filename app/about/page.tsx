@@ -39,7 +39,6 @@ async function getFAQs() {
     return [];
   }
 }
-
 export default async function AboutPage() {
   
     const allFaqs = (await getFAQs()) || [];

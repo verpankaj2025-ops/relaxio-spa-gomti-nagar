@@ -65,7 +65,13 @@ const res = await fetch(`${baseUrl}/api/faqs`, {
   next: { revalidate: 3600 },
 });
 
-    return res.json();
+    const text = await res.text();
+
+try {
+  return JSON.parse(text);
+} catch {
+  return [];
+}
   } catch (error) {
     console.error("FAQ fetch error:", error);
     return [];
