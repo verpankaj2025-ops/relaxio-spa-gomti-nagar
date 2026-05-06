@@ -59,19 +59,17 @@ export const revalidate = 3600;
 async function getFAQs() {
   try {
     const baseUrl =
-  process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-const res = await fetch(`${baseUrl}/api/faqs`, {
-  next: { revalidate: 3600 },
-});
+    const res = await fetch(`${baseUrl}/api/faqs`, {
+      next: { revalidate: 3600 },
+    });
 
-    const text = await res.text();
+    if (!res.ok) {
+      return [];
+    }
 
-try {
-  return JSON.parse(text);
-} catch {
-  return [];
-}
+    return await res.json();
   } catch (error) {
     console.error("FAQ fetch error:", error);
     return [];

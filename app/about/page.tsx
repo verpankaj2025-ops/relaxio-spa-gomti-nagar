@@ -28,17 +28,17 @@ async function getFAQs() {
       next: { revalidate: 3600 },
     });
 
-    const text = await res.text();
-
-    try {
-      return JSON.parse(text);
-    } catch {
+    if (!res.ok) {
       return [];
     }
+
+    return await res.json();
   } catch (error) {
+    console.error("FAQ fetch error:", error);
     return [];
   }
 }
+
 export default async function AboutPage() {
   
     const allFaqs = (await getFAQs()) || [];

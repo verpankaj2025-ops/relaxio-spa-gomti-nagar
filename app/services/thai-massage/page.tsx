@@ -18,14 +18,9 @@ async function getFAQs() {
       return [];
     }
 
-    const text = await res.text();
-
-    try {
-      return JSON.parse(text);
-    } catch {
-      return [];
-    }
-  } catch {
+    return await res.json();
+  } catch (error) {
+    console.error("FAQ fetch error:", error);
     return [];
   }
 }
