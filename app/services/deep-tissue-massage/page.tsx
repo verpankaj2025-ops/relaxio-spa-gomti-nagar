@@ -8,17 +8,28 @@ import { CheckCircle2 } from 'lucide-react';
 async function getFAQs() {
   try {
     const baseUrl =
-  process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-const res = await fetch(`${baseUrl}/api/faqs`, {
-  next: { revalidate: 3600 },
-});
+    const res = await fetch(`${baseUrl}/api/faqs`, {
+      next: { revalidate: 3600 },
+    });
 
-    return res.json();
-  } catch (error) {
+    if (!res.ok) {
+      return [];
+    }
+
+    const text = await res.text();
+
+    try {
+      return JSON.parse(text);
+    } catch {
+      return [];
+    }
+  } catch {
     return [];
   }
 }
+
 export const metadata = {
   title: 'Best Deep Tissue Massage in Gomti Nagar Lucknow | Relaxio Spa',
   description: 'Get the best Deep Tissue Massage in Gomti Nagar, Lucknow. Ideal for chronic pain, muscle stiffness, and sports recovery. Book your session today.',

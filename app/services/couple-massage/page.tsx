@@ -11,10 +11,20 @@ async function getFAQs() {
       process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
     const res = await fetch(`${baseUrl}/api/faqs`, {
-      next: { revalidate: 3600 }
+      next: { revalidate: 3600 },
     });
 
-    return res.json();
+    if (!res.ok) {
+      return [];
+    }
+
+    const text = await res.text();
+
+    try {
+      return JSON.parse(text);
+    } catch {
+      return [];
+    }
   } catch {
     return [];
   }
