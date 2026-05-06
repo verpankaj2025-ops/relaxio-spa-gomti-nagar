@@ -40,7 +40,17 @@ async function getFAQs() {
       next: { revalidate: 3600 },
     });
 
-    return res.json();
+    if (!res.ok) {
+      return [];
+    }
+
+    const text = await res.text();
+
+    try {
+      return JSON.parse(text);
+    } catch {
+      return [];
+    }
   } catch {
     return [];
   }

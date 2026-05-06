@@ -8,18 +8,24 @@ import { CheckCircle2 } from 'lucide-react';
 async function getFAQs() {
   try {
     const baseUrl =
-  process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-const res = await fetch(`${baseUrl}/api/faqs`, {
-  next: { revalidate: 3600 },
-});
+    const res = await fetch(`${baseUrl}/api/faqs`, {
+      next: { revalidate: 3600 },
+    });
 
     if (!res.ok) {
-  return [];
-}
+      return [];
+    }
 
-return res.json();
-  } catch (error) {
+    const text = await res.text();
+
+    try {
+      return JSON.parse(text);
+    } catch {
+      return [];
+    }
+  } catch {
     return [];
   }
 }

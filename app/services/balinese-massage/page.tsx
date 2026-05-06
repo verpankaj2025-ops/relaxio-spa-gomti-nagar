@@ -13,7 +13,18 @@ async function getFAQs() {
 const res = await fetch(`${baseUrl}/api/faqs`, {
   next: { revalidate: 3600 },
 });
-  return res.json();
+
+if (!res.ok) {
+  return [];
+}
+
+  const text = await res.text();
+
+try {
+  return JSON.parse(text);
+} catch {
+  return [];
+}
   } catch {
     return [];
   }
