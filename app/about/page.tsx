@@ -24,19 +24,22 @@ async function getFAQs() {
     const baseUrl =
       process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-    const res = await fetch(
-  `${process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/api/faqs`,
-  {
-    next: { revalidate: 3600 },
-  }
-);
+    const res = await fetch(`${baseUrl}/api/faqs`, {
+      next: { revalidate: 3600 },
+    });
 
-    return res.json();
+    const text = await res.text();
+
+    try {
+      return JSON.parse(text);
+    } catch {
+      return [];
+    }
   } catch (error) {
-    console.error("FAQ fetch error:", error);
     return [];
   }
 }
+
 export default async function AboutPage() {
   
     const allFaqs = (await getFAQs()) || [];
