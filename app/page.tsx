@@ -18,6 +18,7 @@ import {
 
 import type { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa",
@@ -53,7 +54,6 @@ export const metadata: Metadata = {
   },
 };
 
-export const revalidate = 3600;
 async function getFAQs() {
   try {
     const baseUrl =
