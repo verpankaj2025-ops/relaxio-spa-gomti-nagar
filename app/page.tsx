@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
+
+import FAQ from '@/components/FAQ';
 
 import { getFAQSchema } from '@/lib/seo';
 
@@ -17,8 +18,6 @@ import {
 
 import type { Metadata } from "next";
 
-
-const FAQ = dynamic(() => import('@/components/FAQ'));
 
 export const metadata: Metadata = {
   title: "Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa",
