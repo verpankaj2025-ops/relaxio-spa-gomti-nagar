@@ -1,10 +1,20 @@
 "use client";
 
 import { useState } from "react";
-export default function FAQ({ faqs }) {
-  const [activeIndex, setActiveIndex] = useState(null);
 
-  const toggleFAQ = (index) => {
+type FAQItem = {
+  question: string;
+  answer: string;
+};
+
+type FAQProps = {
+  faqs?: FAQItem[];
+};
+
+export default function FAQ({ faqs = [] }: FAQProps) {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
@@ -17,7 +27,7 @@ export default function FAQ({ faqs }) {
         </h2>
 
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
+          {faqs?.map((faq, index) => (
             <div
               key={faq.question}
               className="border border-stone-200 rounded-xl overflow-hidden bg-white shadow-sm"
@@ -28,10 +38,11 @@ export default function FAQ({ faqs }) {
                 aria-controls={`faq-content-${index}`}
                 id={`faq-button-${index}`}
                 className="w-full text-left px-6 py-4 flex justify-between items-center"
-               >
+              >
                 <span className="text-lg font-medium text-stone-900">
                   {faq.question}
                 </span>
+
                 <span aria-hidden="true" className="text-xl">
                   {activeIndex === index ? "-" : "+"}
                 </span>
@@ -39,17 +50,18 @@ export default function FAQ({ faqs }) {
 
               {activeIndex === index && (
                 <div
-                   id={`faq-content-${index}`}
-                   role="region"
-                   aria-labelledby={`faq-button-${index}`}
-                   className="px-6 pb-4 text-stone-600"
-                  >
+                  id={`faq-content-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-button-${index}`}
+                  className="px-6 pb-4 text-stone-600"
+                >
                   {faq.answer}
                 </div>
               )}
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
