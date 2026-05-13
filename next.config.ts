@@ -19,21 +19,13 @@ const nextConfig: NextConfig = {
   },
 
   images: {
-    formats: ['image/avif', 'image/webp'],
-
-    qualities: [55, 60, 65, 70, 75, 80, 85, 90],
-
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-        
-        pathname: '/**',
-      },
-    ],
-  },
+  formats: ['image/avif', 'image/webp'],
+},
 
   output: 'standalone',
+  experimental: {
+  optimizePackageImports: ['lucide-react'],
+},
 
   webpack: (config, { dev }) => {
     if (dev && process.env.DISABLE_HMR === 'true') {

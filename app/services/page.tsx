@@ -1,12 +1,28 @@
+import type { Metadata } from 'next';
 import { faqs } from '@/lib/faqs';
 import Image from 'next/image';
 import Link from 'next/link';
 import FAQ from "@/components/FAQ";
 
-export const metadata = {
-  title: 'Our Spa Services',
-  description: 'Explore our premium spa services in Gomti Nagar, Lucknow including Thai, Balinese, and Deep Tissue massages.',
+export const metadata: Metadata = {
+  title: 'Luxury Spa Services in Gomti Nagar Lucknow | Relaxio Spa',
+  description: 'Explore luxury wellness therapies at Relaxio Spa including Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Massage, Jacuzzi, and Steam Bath in Gomti Nagar Lucknow.',
+
+alternates: {
+  canonical: '/services',
+},
+
+openGraph: {
+  title: 'Luxury Wellness Therapies | Relaxio Spa',
+  description:
+    'Explore luxury wellness therapies at Relaxio Spa including Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Massage, Jacuzzi, and Steam Bath in Gomti Nagar Lucknow.',
+  url: 'https://relaxiospa.in/services',
+  siteName: 'Relaxio Spa',
+  locale: 'en_IN',
+  type: 'website',
+},
 };
+
 
 export default async function ServicesPage() {
 
@@ -16,11 +32,11 @@ export default async function ServicesPage() {
 
   return (
     <>
-    <div className="pt-32 pb-24 bg-stone-50">
+    <div className="pt-28 pb-20 md:pt-32 md:pb-24 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-serif text-stone-900 mb-6">Our Premium Therapies</h1>
-          <p className="text-lg text-stone-600 max-w-2xl mx-auto font-light">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif text-stone-900 mb-6">Our Premium Therapies</h1>
+          <p className="text-base sm:text-lg text-stone-600 max-w-2xl mx-auto font-light leading-relaxed">
             Discover the perfect treatment for your body and mind. Our certified therapists customize each session to your specific needs.
           </p>
         </div>
@@ -28,14 +44,14 @@ export default async function ServicesPage() {
         <div className="space-y-24">
           {/* Deep Tissue */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] lg:h-[500px]">
+            <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
               <Image 
-  src="/images/deep-tissue-massage-gomti-nagar-lucknow.avif"
-  alt="Deep Tissue Massage in Gomti Nagar Lucknow"
-  fill
-  className="object-cover"
-  loading="lazy"
-/>
+                src="/images/deep-tissue-massage-gomti-nagar-lucknow.avif"
+                alt="Deep tissue wellness therapy at Relaxio Spa"
+                fill
+                className="object-cover"
+                loading="lazy"
+              />
             </div>
             <div>
               <h2 className="text-3xl font-serif text-stone-900 mb-4">Deep Tissue Massage</h2>
@@ -71,10 +87,10 @@ export default async function ServicesPage() {
                 Learn More & Book
               </Link>
             </div>
-            <div className="relative h-[400px] lg:h-[500px] order-1 lg:order-2">
+            <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
          <Image 
            src="/images/balinese-massage-gomti-nagar-lucknow.avif"
-           alt="Balinese Massage in Gomti Nagar Lucknow"
+           alt="Luxury Balinese massage therapy at Relaxio Spa"
            fill
            className="object-cover"
            loading="lazy"
@@ -84,10 +100,10 @@ export default async function ServicesPage() {
 
           {/* Thai Massage */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] lg:h-[500px]">
+            <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
               <Image 
   src="/images/thai-massage-gomti-nagar-lucknow.avif"
-  alt="Thai Massage in Gomti Nagar Lucknow"
+  alt="Relaxing Thai massage therapy at Relaxio Spa"
   fill
   className="object-cover"
   loading="lazy"
@@ -136,10 +152,10 @@ export default async function ServicesPage() {
     </Link>
   </div>
 
-  <div className="relative h-[400px] lg:h-[500px] order-1 lg:order-2">
+  <div className="relative h-[400px] lg:h-[500px] order-1 lg:order-2 overflow-hidden rounded-2xl">
     <Image
       src="/images/couple-massage-lucknow.avif"
-      alt="Couple Massage in Gomti Nagar Lucknow"
+      alt="Private couple wellness experience at Relaxio Spa"
       fill
       className="object-cover"
       loading="lazy"
@@ -150,10 +166,10 @@ export default async function ServicesPage() {
 {/* Jacuzzi & Steam Bath */}
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-  <div className="relative h-[400px] lg:h-[500px]">
+  <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
     <Image
       src="/images/jacuzzi-steam-bath-lucknow.avif"
-      alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow"
+      alt="Luxury jacuzzi and steam bath experience at Relaxio Spa"
       fill
       className="object-cover"
       loading="lazy"
@@ -191,7 +207,9 @@ export default async function ServicesPage() {
 </div>
 
     {/* 👇 FAQ SECTION */}
-    <FAQ faqs={servicesFaqs} />
+    <div className="mt-24">
+  <FAQ faqs={servicesFaqs} />
+</div>
   </>
 );
 }

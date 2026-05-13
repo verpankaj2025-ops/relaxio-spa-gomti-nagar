@@ -24,6 +24,12 @@ const playfair = Playfair_Display({
 });
 const SITE_URL = "https://relaxiospa.in";
 
+export const viewport = {
+  themeColor: "#d4af37",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   
@@ -36,29 +42,37 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa & Massage',
+    default: 'Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa',
     template: '%s | Relaxio Spa Gomti Nagar'
   },
 
-  description: 'Looking for the best spa in Gomti Nagar, Lucknow? Relaxio Spa offers premium Thai, Balinese, and Deep Tissue body massages near you. Book your session today!',
+  description: 'Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, private rooms, calming ambience, and professional massage experiences.',
 
   keywords: [
-  'Best Spa in Gomti Nagar Lucknow',
-  'Spa in Gomti Nagar Lucknow',
-  'Massage Spa in Lucknow',
-  'Luxury Spa in Lucknow',
-  'Body Massage near me',
+  'Luxury Wellness Spa Lucknow',
+  'Spa in Gomti Nagar',
   'Thai Massage Lucknow',
-  'Balinese Massage Lucknow',
-  'Deep Tissue Massage Lucknow',
-  'Couple Spa in Lucknow',
-  'Full Body Massage Lucknow',
-  'Spa near Patrakarpuram',
-  'Spa near Indira Nagar',
+  'Balinese Massage',
+  'Deep Tissue Massage',
+  'Couple Massage Spa',
+  'Wellness Spa Lucknow',
+  'Relaxation Therapy',
 ],
 
   alternates: {
   canonical: SITE_URL,
+},
+
+robots: {
+  index: true,
+  follow: true,
+  googleBot: {
+    index: true,
+    follow: true,
+    "max-video-preview": -1,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+  },
 },
 
   openGraph: {
@@ -66,11 +80,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: SITE_URL,
     siteName: 'Relaxio Spa',
-    title: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
-    description: 'Looking for the best spa in Gomti Nagar, Lucknow? Relaxio Spa offers premium Thai, Balinese, and Deep Tissue body massages near you.',
+    title: 'Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa',
+    description: 'Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, private rooms, calming ambience, and professional massage experiences.',
     images: [
       {
-        url: 'https://relaxiospa.in/images/spa.avif      ',
+        url: 'https://relaxiospa.in/images/spa.avif',
         width: 1200,
         height: 630,
         alt: 'Relaxio Spa Gomti Nagar Lucknow',
@@ -80,9 +94,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
-    description: 'Looking for the best spa in Gomti Nagar, Lucknow? Relaxio Spa offers premium Thai, Balinese, and Deep Tissue body massages near you.',
-    images: ['https://relaxiospa.in/images/spa.avif      '],
+    title: 'Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa',
+    description: 'Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, private rooms, calming ambience, and professional massage experiences.',
+    images: ['https://relaxiospa.in/images/spa.avif'],
   },
 };
 
@@ -95,7 +109,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script
   id="schema"
   type="application/ld+json"
-  strategy="lazyOnload"
+  strategy="afterInteractive"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",
@@ -105,7 +119,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       url: SITE_URL,
       telephone: "+917081891995",
       priceRange: "₹1499 - ₹8999",
-      image: `${SITE_URL}/images/luxury-spa-gomti-nagar-lucknow.avif      `,
+      image: `${SITE_URL}/images/luxury-spa-gomti-nagar-lucknow.avif`,
 
       address: {
         "@type": "PostalAddress",
@@ -135,12 +149,6 @@ hasMap:
   }
 ],
 
-aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.8",
-        reviewCount: "23"
-      },
-
 areaServed: [
   { "@type": "Place", name: "Gomti Nagar" },
   { "@type": "Place", name: "Lucknow" },
@@ -149,54 +157,7 @@ areaServed: [
   { "@type": "Place", name: "Patrakarpuram" },
   { "@type": "Place", name: "Chinhut" },
 ],
-
-      review: [
-        {
-          "@type": "Review",
-
-          itemReviewed: {
-            "@type": "Spa",
-            name: "Relaxio Spa"
-          },
-
-          author: {
-            "@type": "Person",
-            name: "Rahul Sharma"
-          },
-          
-          datePublished: "2026-05-01",
-
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: "5"
-          },
-
-          reviewBody: "Amazing experience and very relaxing environment."
-        },
-
-        {
-          "@type": "Review",
-
-          itemReviewed: {
-            "@type": "Spa",
-            name: "Relaxio Spa"
-          },
-
-          author: {
-            "@type": "Person",
-            name: "Priya Singh"
-          },
-
-          datePublished: "2026-05-01",
-          
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: "4"
-          },
-
-          reviewBody: "Professional therapists and great ambience."
-        }
-      ]
+  
     })
   }}
 />

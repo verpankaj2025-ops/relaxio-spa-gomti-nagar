@@ -1,33 +1,38 @@
 import ServiceHero from "@/components/services/ServiceHero";
 import Image from "next/image";
+import type { Metadata } from "next";
 import FAQ from "@/components/FAQ";
 import FadeIn from "@/components/ui/FadeIn";
 import { CheckCircle2 } from "lucide-react";
 import { getBreadcrumbSchema, getFAQSchema } from "@/lib/seo";
 
-export const dynamic = "force-dynamic";
-export const metadata = {
-  title: "Jacuzzi & Steam Bath in Gomti Nagar Lucknow | Relaxio Spa",
+
+export const metadata: Metadata = {
+  title: "Luxury Jacuzzi & Steam Bath Experience | Relaxio Spa",
   description:
-    "Experience luxury Jacuzzi and Steam Bath in Gomti Nagar Lucknow at Relaxio Spa. Premium wellness sessions for relaxation detox and stress relief.",
+    "Relax and recharge with premium Jacuzzi and Steam Bath wellness sessions at Relaxio Spa in Gomti Nagar Lucknow.",
   keywords: [
-    "Jacuzzi in Gomti Nagar Lucknow",
-    "Steam Bath in Lucknow",
-    "Luxury Spa in Gomti Nagar",
-    "Best Spa in Lucknow",
-    "Jacuzzi Spa Near Me"
-  ],
+  "Jacuzzi Lucknow",
+  "Steam Bath Lucknow",
+  "Luxury Spa Facilities",
+  "Wellness Spa",
+],
   alternates: {
     canonical: "/services/spa-facilities",
   },
   openGraph: {
     title: "Jacuzzi & Steam Bath in Gomti Nagar Lucknow | Relaxio Spa",
     description:
-      "Luxury Jacuzzi and Steam Bath sessions in Gomti Nagar Lucknow for complete relaxation wellness and detox.",
+  "Relax and recharge with premium Jacuzzi and Steam Bath wellness sessions at Relaxio Spa in Gomti Nagar Lucknow.",
     url: "/services/spa-facilities",
     images: [
-      "https://relaxiospa.in/images/jacuzzi-steam-bath-lucknow.avif"
-    ],
+  {
+    url: "https://relaxiospa.in/images/jacuzzi-steam-bath-lucknow.avif",
+    width: 1200,
+    height: 630,
+    alt: "Jacuzzi and Steam Bath at Relaxio Spa",
+  },
+],
   },
 };
 
@@ -74,28 +79,31 @@ export default async function SpaFacilitiesPage() {
   }}
 />
 
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify(getFAQSchema(faqs)),
-  }}
-/>
+{faqs.length > 0 && (
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(getFAQSchema(faqs)),
+    }}
+  />
+)}
+
 <ServiceHero
   title="Jacuzzi & Steam Bath in Gomti Nagar Lucknow"
   subtitle="Relax your body and mind with premium Jacuzzi and Steam Bath sessions at Relaxio Spa."
   image="/images/jacuzzi-steam-bath-lucknow.avif"
-  alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow"
+  alt="Luxury jacuzzi and steam bath experience at Relaxio Spa"
 />
 
       {/* MAIN CONTENT */}
-      <section className="py-24 bg-[#fdfbf7] content-auto">
+      <section className="py-24 bg-[#fdfbf7]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-none font-light text-stone-700">
 
             {/* Intro */}
             <div className="max-w-3xl mx-auto text-center mb-12">
               <p className="text-lg text-stone-600 leading-relaxed">
-                Experience luxury Jacuzzi and Steam Bath sessions at Relaxio Spa Gomti Nagar Lucknow. Relax your body, detox your skin, and enjoy complete wellness in a premium spa environment.
+                Experience relaxing Jacuzzi and Steam Bath wellness sessions at Relaxio Spa designed for comfort, relaxation, and rejuvenation.
               </p>
             </div>
 
@@ -136,7 +144,7 @@ export default async function SpaFacilitiesPage() {
                 <Image
 
                   src="/images/jacuzzi-steam-bath-lucknow.avif"
-                  alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow Relaxio Spa"
+                  alt="Luxury jacuzzi and steam bath experience at Relaxio Spa"
                   fill
                   sizes="100vw"
                   
@@ -220,6 +228,8 @@ export default async function SpaFacilitiesPage() {
                   <a
                     href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20Jacuzzi%20and%20Steam%20Bath"
                     aria-label="Book Jacuzzi and Steam Bath Appointment"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-all duration-300 text-sm uppercase tracking-widest font-medium w-full md:w-auto"
                   >
                     Book Your Appointment
@@ -229,7 +239,9 @@ export default async function SpaFacilitiesPage() {
               </FadeIn>
 
             {/* FAQ */}
+            <div className="mt-24">
               <FAQ faqs={faqs} />
+            </div>
             
           </div>
         </div>

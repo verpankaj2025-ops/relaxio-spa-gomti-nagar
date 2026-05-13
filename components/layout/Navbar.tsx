@@ -65,8 +65,6 @@ export default function Navbar() {
   Deep Tissue Massage
 </Link>
 
-{/* 👉 YAHAN SE PASTE KARO */}
-
 <Link 
   href="/services/couple-massage" 
   className="px-4 py-3 hover:bg-stone-50 rounded-md text-stone-700 hover:text-amber-600 transition-colors text-sm"
@@ -84,12 +82,12 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link 
-  href="/blog" 
-  className="text-stone-700 hover:text-amber-600 font-medium transition-colors text-sm uppercase tracking-widest"
->
-  Blog
-</Link>
+      <Link 
+        href="/blog" 
+        className="text-stone-700 hover:text-amber-600 font-medium transition-colors text-sm uppercase tracking-widest"
+      >
+        Wellness Journal
+      </Link>
 
           <Link href="/contact" className="text-stone-700 hover:text-amber-600 font-medium transition-colors text-sm uppercase tracking-widest">
             Contact
@@ -100,10 +98,10 @@ export default function Navbar() {
         <a 
           href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
           target="_blank" 
-          rel="noreferrer" 
+          rel="noopener noreferrer" 
           className="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-amber-500 text-stone-900 rounded-full hover:bg-amber-600 transition-colors text-sm uppercase tracking-widest font-medium shadow-sm"
         >
-          Book Now
+          Book Session
         </a>
 
         {/* Mobile Menu Toggle */}
@@ -137,12 +135,12 @@ export default function Navbar() {
             
             <div className="flex flex-col">
               <button 
-  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-  aria-expanded={isMobileServicesOpen}
-  aria-controls="mobile-services-menu"
-  aria-label="Toggle Services Menu"
-  className="flex items-center justify-between text-stone-800 text-lg font-medium hover:text-amber-600 transition-colors py-2 w-full text-left"
->
+           onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+           aria-expanded={isMobileServicesOpen}
+           aria-controls="mobile-services-menu"
+           aria-label="Toggle Services Menu"
+           className="flex items-center justify-between text-stone-800 text-lg font-medium hover:text-amber-600 transition-colors py-2 w-full text-left"
+         >
                 Services
                 <span
   className={`text-sm transition-transform duration-300 ${
@@ -155,9 +153,9 @@ export default function Navbar() {
               
               {isMobileServicesOpen && (
                 <div 
-  id="mobile-services-menu"
-  className="flex flex-col gap-2 pl-4 pt-2 pb-2 border-l-2 border-stone-100 ml-2 mt-2"
->
+              id="mobile-services-menu"
+              className="flex flex-col gap-2 pl-4 pt-2 pb-2 border-l-2 border-stone-100 ml-2 mt-2"
+        >
                   <Link 
                     href="/services/thai-massage" 
                     onClick={closeMenu} 
@@ -180,34 +178,32 @@ export default function Navbar() {
                     Deep Tissue Massage
                   </Link>
 
-{/* 👉 YAHAN ADD KARO */}
+                 <Link 
+                     href="/services/couple-massage" 
+                     onClick={closeMenu} 
+                     className="text-stone-600 py-2 hover:text-amber-600 transition-colors"
+                  >
+                     Couple Massage
+                 </Link>
 
-<Link 
-  href="/services/couple-massage" 
-  onClick={closeMenu} 
-  className="text-stone-600 py-2 hover:text-amber-600 transition-colors"
->
-  Couple Massage
-</Link>
-
-<Link 
-  href="/services/spa-facilities" 
-  onClick={closeMenu} 
-  className="text-stone-600 py-2 hover:text-amber-600 transition-colors"
->
-  Jacuzzi & Steam Bath
-</Link>
+                <Link 
+                    href="/services/spa-facilities" 
+                    onClick={closeMenu} 
+                    className="text-stone-600 py-2 hover:text-amber-600 transition-colors"
+                   >
+                    Jacuzzi & Steam Bath
+                      </Link>
                 </div>
               )}
             </div>
 
           <Link 
-  href="/blog" 
-  onClick={closeMenu} 
-  className="text-stone-800 text-lg font-medium hover:text-amber-600 transition-colors py-2"
->
-  Blog
-</Link>
+             href="/blog" 
+             onClick={closeMenu} 
+             className="text-stone-800 text-lg font-medium hover:text-amber-600 transition-colors py-2"
+           >
+              Wellness Journal
+             </Link>
 
             <Link 
               href="/contact" 
@@ -220,11 +216,11 @@ export default function Navbar() {
             <a 
               href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." 
               target="_blank" 
-              rel="noreferrer" 
+              rel="noopener noreferrer" 
               onClick={closeMenu}
               className="mt-4 flex items-center justify-center w-full py-3 bg-amber-500 text-stone-900 rounded-full text-sm uppercase tracking-widest font-medium shadow-md hover:bg-amber-600 transition-colors"
             >
-              Book Now
+              Book Session
             </a>
           </nav>
         </div>

@@ -12,7 +12,7 @@ export default function Footer() {
           </h3>
 
           <p className="mb-8 font-light leading-relaxed max-w-sm text-stone-400">
-            Relaxio Spa is the best spa in Gomti Nagar Lucknow offering Thai Massage, Balinese Massage, and Deep Tissue Massage. Book premium body massage near you with certified therapists for ultimate relaxation and pain relief.
+            Relaxio Spa offers peaceful wellness experiences with private rooms, relaxing therapies, and a calm luxury ambience in Gomti Nagar Lucknow.
           </p>
 
           <div className="flex gap-4">
@@ -43,12 +43,56 @@ export default function Footer() {
         <div>
           <h4 className="text-white text-lg font-serif mb-6 tracking-wide">Quick Links</h4>
           <ul className="space-y-4 font-light">
-            <li><Link href="/services/thai-massage">Thai Massage in Gomti Nagar Lucknow</Link></li>
-            <li><Link href="/services/balinese-massage">Balinese Massage in Gomti Nagar Lucknow</Link></li>
-            <li><Link href="/services/deep-tissue-massage">Deep Tissue Massage in Gomti Nagar Lucknow</Link></li>
-            <li><Link href="/">Best Spa in Gomti Nagar Lucknow</Link></li>
-            <li><Link href="/contact">Spa Near Me in Lucknow</Link></li>
-            <li><Link href="/about" className="hover:text-[#d4af37] transition-colors">About Our Spa</Link></li>
+            <li>
+  <Link
+    href="/services/thai-massage"
+    className="hover:text-[#d4af37] transition-colors"
+  >
+    Thai Massage
+  </Link>
+</li>
+
+<li>
+  <Link
+    href="/services/balinese-massage"
+    className="hover:text-[#d4af37] transition-colors"
+  >
+    Balinese Massage
+  </Link>
+</li>
+
+<li>
+  <Link
+    href="/services/deep-tissue-massage"
+    className="hover:text-[#d4af37] transition-colors"
+  >
+    Deep Tissue Massage
+  </Link>
+</li>
+
+<li>
+  <Link
+    href="/services/couple-massage"
+    className="hover:text-[#d4af37] transition-colors"
+  >
+    Couple Massage
+  </Link>
+</li>
+
+<li>
+  <Link
+    href="/blog"
+    className="hover:text-[#d4af37] transition-colors"
+  >
+    Wellness Journal
+  </Link>
+</li>
+
+<li>
+  <Link href="/about" className="hover:text-[#d4af37] transition-colors">
+    About Relaxio Spa
+  </Link>
+</li>
           </ul>
         </div>
 
@@ -56,8 +100,8 @@ export default function Footer() {
           <h4 className="text-white text-lg font-serif mb-6 tracking-wide">Visit Us</h4>
           <address className="not-italic space-y-4 font-light" itemScope itemType="https://schema.org/PostalAddress">
             <p>
-              <strong>Relaxio Spa Gomti Nagar Lucknow</strong><br />
-              <span itemProp="streetAddress">2nd Floor, 4/526, Vivek Khand 4,</span><br />
+            <strong>Relaxio Spa</strong><br />
+            <span itemProp="streetAddress">2nd Floor, 4/526, Vivek Khand 4,</span><br />
               <span itemProp="addressLocality">Gomti Nagar, Lucknow</span> <span itemProp="postalCode">226010</span>
             </p>
 
@@ -78,14 +122,16 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-stone-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-light">
-        <p>&copy; {new Date().getFullYear()} Relaxio Spa - Best Spa in Gomti Nagar Lucknow for Body Massage</p>
+        <p>&copy; {new Date().getFullYear()} Relaxio Spa. All rights reserved.</p>
 
         <div className="flex gap-6">
           <a 
-  href="https://wa.me/917081891995"
-  aria-label="Chat on WhatsApp"
+            href="https://wa.me/917081891995"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp"
             className="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white"
-          >
+           >
             <Phone aria-hidden="true" size={18} />
           </a>
         </div>

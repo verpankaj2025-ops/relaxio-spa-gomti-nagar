@@ -2,14 +2,14 @@ export function getLocalBusinessSchema() {
   const baseUrl = process.env.APP_URL || 'https://relaxiospa.in';
   return {
     "@context": "https://schema.org",
-    "@type": ["Spa", "HealthAndBeautyBusiness", "LocalBusiness"],
+    "@type": "Spa",
     "name": "Relaxio Spa",
     "image": [
-  "https://relaxiospa.in/images/luxury-spa-gomti-nagar-lucknow.avif      ",
-  "https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.avif      ",
-  "https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.avif      "
+  "https://relaxiospa.in/images/luxury-spa-gomti-nagar-lucknow.avif",
+  "https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.avif",
+  "https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.avif"
 ],
-    "@id": baseUrl,
+    "@id": `${baseUrl}/#spa`,
     "url": baseUrl,
     "telephone": "+917081891995",
     "priceRange": "₹1499 - ₹8999",
@@ -23,32 +23,30 @@ export function getLocalBusinessSchema() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 26.8500,
-      "longitude": 80.9499
+      "latitude": 26.8553677,
+      "longitude": 80.9985092
     },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
-      "opens": "11:00",
-      "closes": "21:00"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "128"
-    },
+    
+    "openingHoursSpecification": [
+  {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "11:00",
+    "closes": "21:00"
+  }
+],
+    
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61570999326665",
       "https://www.instagram.com/relaxio_spa_gomti_nagar",
-      "https://share.google/i1iBzhC5VmGDd0MhV",
     ]
   };
 }

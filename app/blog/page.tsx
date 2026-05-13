@@ -1,59 +1,34 @@
+import { getAllPosts } from "@/lib/blog";
 import Link from "next/link";
 import Image from "next/image";
 
-const blogs = [
-  {
-    title: "Best Spa in Gomti Nagar Lucknow",
-    slug: "best-spa-in-gomti-nagar-lucknow",
-  },
-  {
-    title: "Benefits of Thai Massage",
-    slug: "benefits-of-thai-massage",
-  },
-  {
-    title: "Couple Massage Benefits",
-    slug: "couple-massage-benefits",
-  },
-  {
-    title: "Body Massage Benefits",
-    slug: "body-massage-benefits",
-  },
-  {
-    title: "Thai vs Balinese Massage",
-    slug: "thai-vs-balinese-massage",
-  },
-  {
-    title: "Spa Near Me Lucknow",
-    slug: "spa-near-me-lucknow",
-  },
-];
-
 export default function BlogPage() {
+  const blogs = getAllPosts();
+
   return (
     <div>
 
 
     {/* 🔥 HERO SECTION (same as services pages) */}
 
-<section className="relative h-[45vh] md:h-[60vh] text-center text-white overflow-hidden">
+<section className="relative min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center text-center text-white overflow-hidden bg-stone-950">
   
   <Image
     src="/images/spa.avif"
     fill
-    priority
     className="object-cover"
-    alt="Luxury Spa in Gomti Nagar Lucknow"
+    alt="Luxury wellness spa experience at Relaxio Spa"
     sizes="100vw"
   />
 
   <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-  <div className="text-center px-4">
+  <div className="text-center px-4 sm:px-6 max-w-5xl mx-auto pt-28 pb-16">
   
-    <h1 className="text-4xl md:text-6xl font-serif text-white mb-4">
+    <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
       Relaxio Spa Blog
     </h1>
 
-    <p className="text-white/90 max-w-2xl mx-auto text-lg md:text-xl font-light">
+    <p className="text-base sm:text-lg md:text-xl text-stone-200 max-w-3xl mx-auto leading-relaxed font-light">
       Discover wellness tips, massage benefits, spa therapies, and relaxation guides from the best spa in Gomti Nagar Lucknow.
     </p>
   </div>
@@ -79,8 +54,8 @@ export default function BlogPage() {
 
   {/* SUBTEXT */}
   <p className="text-sm text-stone-500">
-    Discover expert spa tips & wellness insights
-  </p>
+  {blog.description}
+</p>
 
   {/* CTA */}
   <div className="mt-4 text-amber-600 text-sm font-medium">

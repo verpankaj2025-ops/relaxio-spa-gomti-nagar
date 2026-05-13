@@ -1,5 +1,6 @@
 import ServiceHero from "@/components/services/ServiceHero";
 import Image from 'next/image';
+import Link from "next/link";
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
 import FadeIn from '@/components/ui/FadeIn';
@@ -26,16 +27,17 @@ async function getFAQs() {
 }
 
 export const metadata = {
-  title: 'Best Balinese Massage in Gomti Nagar Lucknow | Relaxio Spa',
-  description: 'Indulge in the best Balinese Massage in Gomti Nagar, Lucknow. A holistic, full-body treatment combining acupressure, aromatherapy, and deep relaxation.',
-  keywords: ['Balinese Massage Lucknow', 'Best Spa in Gomti Nagar', 'Spa in Gomti Nagar Lucknow', 'Massage Spa in Lucknow', 'Body Massage near me'],
+  title: 'Balinese Massage Therapy | Relaxio Spa',
+  description:
+    'Experience relaxing Balinese massage therapy with aromatherapy, gentle pressure techniques, and deep wellness relaxation at Relaxio Spa.',
   alternates: {
-    canonical: '/services/balinese-massage',
+    canonical: 'https://relaxiospa.in/services/balinese-massage',
   },
   openGraph: {
-    title: 'Best Balinese Massage in Gomti Nagar Lucknow | Relaxio Spa',
-    description: 'Indulge in the best Balinese Massage in Gomti Nagar, Lucknow. A holistic, full-body treatment combining acupressure, aromatherapy, and deep relaxation.',
-    url: '/services/balinese-massage',
+    title: 'Balinese Massage Therapy | Relaxio Spa',
+    description:
+  'Experience relaxing Balinese massage therapy with aromatherapy, gentle pressure techniques, and deep wellness relaxation at Relaxio Spa.',
+    url: 'https://relaxiospa.in/services/balinese-massage',
     images: ['https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.avif']
   }
 };
@@ -69,14 +71,14 @@ const faqs = Array.isArray(allFaqs)
       {/* Hero Section */}
           <ServiceHero
             title="Balinese Massage in Gomti Nagar Lucknow"
-            subtitle="Relax your body and mind with luxury Balinese massage therapy at Relaxio Spa."
+            subtitle="Aromatherapy-based wellness therapy designed to relax the body, calm the mind, and reduce everyday stress."
             image="/images/balinese-massage-gomti-nagar-lucknow.avif"
-            alt="Balinese Massage in Gomti Nagar Lucknow"
+            alt="Luxury Balinese massage therapy at Relaxio Spa"
           />
 
       {/* Main Content */}
           <section className="pt-28 pb-24 bg-[#fdfbf7] content-auto">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-stone prose-base md:prose-lg max-w-none font-light text-stone-700">
 
               <h2 
@@ -84,7 +86,7 @@ const faqs = Array.isArray(allFaqs)
                 Incredible Benefits of Balinese Massage
                </h2>
               <p className="mb-6 leading-relaxed">
-              A Balinese massage is more than just a luxury; it is a therapeutic journey. If you are searching for a <strong>body massage near me</strong> that offers comprehensive healing, here is what you can expect:
+              Balinese massage combines aromatherapy, gentle stretching, and pressure techniques to create a deeply calming wellness experience.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {[
@@ -103,11 +105,12 @@ const faqs = Array.isArray(allFaqs)
                   </div>
                 ))}
               </div>
-                     <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
+                     <FadeIn>
+  <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
 
                <Image 
                    src="/images/balinese-massage-gomti-nagar-lucknow-spa.avif"
-                   alt="Balinese Massage Therapy in Gomti Nagar Lucknow Relaxio Spa"
+                   alt="Luxury Balinese massage therapy at Relaxio Spa"
                    fill
                    sizes="(max-width: 768px) 100vw, 1200px"
 
@@ -115,17 +118,18 @@ const faqs = Array.isArray(allFaqs)
                    loading="lazy"
                  />
               </div>
+              </FadeIn>
               <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">
-                 Why Relaxio is the Best Spa in Gomti Nagar
+                 Why Guests Love Our Balinese Therapy
               </h2>
               <p className="mb-6 leading-relaxed">
-                At Relaxio Spa, we believe that the environment is just as important as the therapy itself. Our luxury spa in Gomti Nagar Lucknow is designed to transport you to a state of absolute serenity. Our private therapy rooms are soundproofed, climate-controlled, and infused with calming scents.
+                At Relaxio Spa, we focus on creating a peaceful and comfortable wellness environment that supports deep relaxation and stress recovery.
               </p>
               <p className="mb-10 leading-relaxed">
-                Our therapists are certified experts in Balinese techniques. They understand how to read your body&apos;s tension points and adjust their pressure accordingly. We strictly maintain 100% hygiene, using fresh, high-quality linens and sanitized equipment for every guest. Experience the pinnacle of wellness and see why we are rated the top <strong>spa in Gomti Nagar Lucknow</strong>.
+                 Our therapists are certified experts in Balinese techniques. They understand how to identify body tension points and adjust pressure according to your comfort level. We maintain high hygiene standards using fresh premium-quality linens and sanitized equipment for every guest. Experience the pinnacle of wellness and discover why Relaxio Spa is known as a premium wellness destination.
               </p>
 
-              <div className="bg-white/95 backdrop-blur-sm p-10 rounded-3xl shadow-xl border border-stone-100 my-16">
+              <div className="bg-white/95 backdrop-blur-sm p-6 md:p-10 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-stone-100 my-16 max-w-6xl mx-auto">
                 <h2 className="font-serif text-3xl text-stone-900 mb-8 text-center">Balinese Massage Pricing</h2>
                 <div className="space-y-6">
                   <div className="flex justify-between items-center border-b border-stone-100 pb-6">
@@ -153,12 +157,63 @@ const faqs = Array.isArray(allFaqs)
                 <div className="mt-10 text-center">
                   <a 
                     href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Balinese%20Massage."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Book Balinese Massage Appointment" 
                     className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-colors duration-300 text-sm uppercase tracking-widest font-medium w-full md:w-auto">
                     Book Your Appointment
                   </a>
                 </div>
               </div>
+
+              <section className="mt-24">
+  <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-10">
+    Explore More Wellness Therapies
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <Link
+      href="/services/thai-massage"
+      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
+    >
+      <h3 className="text-2xl font-serif text-stone-900 mb-4">
+        Thai Massage
+      </h3>
+
+      <p className="text-stone-600 leading-relaxed">
+        Traditional stretching and pressure-based therapy designed to improve flexibility and body relaxation.
+      </p>
+    </Link>
+
+    <Link
+      href="/services/deep-tissue-massage"
+      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
+    >
+      <h3 className="text-2xl font-serif text-stone-900 mb-4">
+        Deep Tissue Massage
+      </h3>
+
+      <p className="text-stone-600 leading-relaxed">
+        Deep pressure therapy focused on muscle recovery, stiffness reduction, and chronic tension relief.
+      </p>
+    </Link>
+
+    <Link
+      href="/services/couple-massage"
+      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
+    >
+      <h3 className="text-2xl font-serif text-stone-900 mb-4">
+        Couple Massage
+      </h3>
+
+      <p className="text-stone-600 leading-relaxed">
+        Enjoy a relaxing private spa experience for couples with premium wellness therapies and peaceful ambiance.
+      </p>
+    </Link>
+
+  </div>
+</section>
 
                 <div className="mt-16">
                    <FAQ faqs={faqs} />

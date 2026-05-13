@@ -14,14 +14,13 @@ export default function ServiceHero({
   alt,
 }: ServiceHeroProps) {
   return (
-    <section className="relative h-[340px] md:h-[400px] lg:h-[440px] flex items-center justify-center overflow-hidden bg-stone-950">
+    <section className="relative min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden bg-stone-950">
 
       <div className="absolute inset-0 z-0">
         <Image
   src={image}
   alt={alt}
   fill
-  priority
   sizes="100vw"
   
   className="object-cover object-[center_65%]"
@@ -30,13 +29,13 @@ export default function ServiceHero({
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-28 pb-16">
 
-        <h1 className="text-2xl md:text-5xl lg:text-6xl font-serif text-white mb-4 leading-tight">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
           {title}
         </h1>
 
-        <p className="text-sm md:text-lg text-stone-300 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-stone-200 max-w-3xl mx-auto leading-relaxed font-light">
           {subtitle}
         </p>
 

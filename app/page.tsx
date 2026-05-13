@@ -3,9 +3,8 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
 import { getFAQSchema } from '@/lib/seo';
-import FadeIn from '@/components/ui/FadeIn';
+
 import {
-  Star,
   MapPin,
   Phone,
   Clock,
@@ -17,25 +16,25 @@ import {
 } from 'lucide-react';
 
 import type { Metadata } from "next";
-import Head from 'next/head';
+
 
 const FAQ = dynamic(() => import('@/components/FAQ'));
 
 export const metadata: Metadata = {
-  title: "Best Spa in Gomti Nagar Lucknow | Relaxio Spa",
+  title: "Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa",
 
   description:
-    "Relaxio Spa offers Thai, Balinese, Deep Tissue and Couple Massage in Gomti Nagar Lucknow. Book your spa session now.",
+  "Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, premium ambience, private rooms, and professional massage experiences.",
 
   alternates: {
     canonical: "https://relaxiospa.in",
   },
 
   openGraph: {
-    title: "Best Spa in Gomti Nagar Lucknow | Relaxio Spa",
+    title: "Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa",
 
     description:
-      "Relaxio Spa offers Thai, Balinese, Deep Tissue and Couple Massage in Gomti Nagar Lucknow.",
+      "Experience luxury wellness and relaxing spa therapies at Relaxio Spa in Gomti Nagar Lucknow with private rooms and professional therapists.",
 
     url: "https://relaxiospa.in",
 
@@ -84,58 +83,54 @@ const faqs = Array.isArray(allFaqs)
     )
   :[];
 
-  const reviews = [
-    { author: 'Priya S.', rating: 5, reviewBody: 'Absolutely the best spa in Gomti Nagar. The Balinese massage was incredibly relaxing. The hygiene and ambiance are top-notch.' },
-    { author: 'Rahul M.', rating: 5, reviewBody: 'I had severe back pain and opted for the Deep Tissue massage. The therapist was highly skilled. Highly recommended!' },
-    { author: 'Anjali & Vikram', rating: 5, reviewBody: 'We booked a couple\'s session for our anniversary. The private room, the oils, the service—everything felt like a 5-star luxury hotel.' },
-
-  ];
-
     return (
       <>
-        <Head>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(faqs)) }}
-          />
-        </Head>
+         {faqs.length > 0 && (
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(getFAQSchema(faqs)),
+    }}
+  />
+)}
         <main>
           
           {/* 1. HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
    <Image 
   src="/images/luxury-spa-gomti-nagar-lucknow.avif"
-  alt="Luxury spa in Gomti Nagar Lucknow Relaxio Spa premium massage room" 
+  alt="Luxury wellness spa experience at Relaxio Spa"
   fill 
   sizes="100vw"
-  quality={75}
   className="object-cover"
   priority
 />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+          <div className="absolute inset-0 bg-black/55" />
         </div>
         
            <div 
-             className="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
+             className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto pt-28 pb-16">
             <span className="text-[#ffd369] tracking-[0.3em] uppercase text-sm font-medium mb-6 block">
               Welcome to Relaxio Spa
             </span>
 
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight text-white mb-4">
-                  Best Spa in Gomti Nagar Lucknow
-                  <br />
-                  </h1>
+                  Luxury Wellness Spa in Gomti Nagar Lucknow                  
+                </h1>
 
                  <h2 className="text-lg md:text-2xl text-stone-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                      Experience the ultimate luxury massage spa in Lucknow. Relax, Rejuvenate, and Recharge with our premium therapies.
+                      Relaxio Spa offers private wellness therapies, calming spa ambience, and professionally guided massage experiences designed for relaxation and comfort.
                    </h2>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage." 
-                 className="px-10 py-4 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-colors duration-300 text-sm uppercase tracking-widest font-medium shadow-lg w-full sm:w-auto">
-                Book Now
-              </a>
+              <a 
+                href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-10 py-4 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-colors duration-300 text-sm uppercase tracking-widest font-medium shadow-lg w-full sm:w-auto">
+                Book Session
+             </a>
               <a href="tel:+917081891995" 
                  className="px-10 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-stone-900 transition-colors duration-300 text-sm uppercase tracking-widest font-medium w-full sm:w-auto">
                 Call Now
@@ -146,12 +141,12 @@ const faqs = Array.isArray(allFaqs)
       </section>
 
       {/* 2. SERVICES SECTION */}
-      <section className="py-32 bg-[#fdfbf7] content-auto">
+      <section className="py-32 bg-[#fdfbf7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
             <div className="text-center mb-20">
               <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Our Offerings</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">Premium Body Massage Near Me</h2>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">Luxury Spa Therapies</h2>
               <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
             </div>
               
@@ -160,42 +155,42 @@ const faqs = Array.isArray(allFaqs)
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {[
               {
-                title: 'Deep Tissue Massage Lucknow',
-                desc: 'Perfect for chronic pain relief and releasing deep muscle tension. The best deep tissue massage in Gomti Nagar',
+                title: 'Deep Tissue Massage',
+                desc: 'Firm-pressure wellness therapy focused on muscle recovery, body relaxation, and reducing everyday physical tension.',
                 img: '/images/deep-tissue-massage-gomti-nagar-lucknow.avif',
-                alt: 'Deep tissue massage in Gomti Nagar Lucknow for pain relief at Relaxio Spa',
+                alt: 'Deep tissue wellness therapy at Relaxio Spa',
                 link: '/services/deep-tissue-massage',
                 cta: 'Book Deep Tissue',
               },
               {
-                title: 'Balinese Massage Lucknow',
-                desc: 'A holistic, full-body treatment combining acupressure and aromatherapy for ultimate relaxation.',
+                title: 'Balinese Massage',
+                desc: 'Aromatherapy wellness therapy designed to calm the mind, relax the body, and reduce everyday stress.',
                 img: '/images/balinese-massage-gomti-nagar-lucknow.avif',
-                alt: 'Balinese massage in Gomti Nagar Lucknow with aromatherapy at Relaxio Spa',
+                alt: 'Luxury Balinese massage therapy at Relaxio Spa',
                 link: '/services/balinese-massage',
                 cta: 'Relax with Balinese',
               },
               {
-                title: 'Thai Massage Lucknow',
-                desc: 'An active therapy that improves flexibility and energy flow. Experience authentic Thai massage in Lucknow.',
+                title: 'Thai Massage',
+                desc: 'Traditional stretching and pressure-based therapy designed to improve flexibility and relaxation.',
                 img: '/images/thai-massage-gomti-nagar-lucknow.avif',
-                alt: 'Thai massage in Gomti Nagar Lucknow with stretching therapy at Relaxio Spa',
+                alt: 'Relaxing Thai massage therapy at Relaxio Spa',
                 link: '/services/thai-massage',
                 cta: 'Try Thai Massage',
               },
               {
-  title: 'Couple Massage Lucknow',
-  desc: 'Enjoy a romantic couple massage in Gomti Nagar with private rooms, expert therapists and luxury ambience.',
+  title: 'Couple Massage',
+  desc: 'Enjoy a relaxing wellness experience for couples with private rooms, calming ambience, and professional therapists.',
   img: '/images/couple-massage-lucknow.avif',
-  alt: 'Couple massage in Gomti Nagar Lucknow with private spa room at Relaxio Spa',
+  alt: 'Private couple wellness experience at Relaxio Spa',
   link: '/services/couple-massage',
   cta: 'Book Couple Spa',
 },
 {
-  title: 'Jacuzzi & Steam Bath Lucknow',
-  desc: 'Relax with jacuzzi and steam bath in Gomti Nagar for complete detox and luxury spa experience.',
+  title: 'Jacuzzi & Steam Bath',
+  desc: 'Relax your body and mind with steam therapy, warm jacuzzi sessions, and a peaceful wellness ambience.',
   img: '/images/jacuzzi-steam-bath-lucknow.avif',
-  alt: 'Jacuzzi and steam bath spa in Gomti Nagar Lucknow at Relaxio Spa',
+  alt: 'Luxury jacuzzi and steam bath experience at Relaxio Spa',
   link: '/services/spa-facilities',
   cta: 'Relax in Jacuzzi',
 },
@@ -211,7 +206,6 @@ const faqs = Array.isArray(allFaqs)
                       alt={service.alt}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      quality={70}
                       className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
                       loading="lazy"
                     />
@@ -232,59 +226,6 @@ const faqs = Array.isArray(allFaqs)
         </div>
       </section>
 
-      {/* 3. TESTIMONIALS SECTION */}
-      <section className="py-32 bg-stone-900 text-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-          
-          <Image 
-             src="/images/spa-texture-gomti-nagar.avif" 
-             alt="Relaxio Spa Gomti Nagar Lucknow ambiance luxury spa background" 
-             fill 
-             sizes="100vw"
-             quality={65}
-             className="object-cover"
-           />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
-            <div className="text-center mb-20">
-              <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Guest Experiences</span>
-              <h2 className="text-4xl md:text-5xl font-serif mb-6">
-                     What Our Clients Say
-                </h2>
-
-              <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
-            </div>
-              
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-             {reviews.map((review) => (
-                 <div
-                    key={review.author}
-                    className="bg-stone-800/50 p-10 rounded-2xl border border-stone-700/50 hover:border-[#d4af37]/50 transition-colors duration-300 h-full flex flex-col">
-                  
-                                    <div className="flex gap-1 mb-6">
-                    {[...Array(5)].map((_, j) => (
-                      <Star key={j} size={20} className="fill-[#d4af37] text-[#f2cc60]" />
-                    ))}
-                  </div>
-
-                  <p className="text-stone-300 mb-6">
-                    {review.reviewBody}
-                  </p>
-
-                  <div className="mt-auto">
-                    <h3 className="text-white font-medium">
-                      {review.author}
-                    </h3>
-                  </div>
-              </div>
-          ))}
-      </div>
-        </div>
-        
-      </section>
-
       {/* 4. PRICING SECTION */}
       <section className="py-32 bg-[#fdfbf7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -292,7 +233,7 @@ const faqs = Array.isArray(allFaqs)
             <div className="text-center mb-20">
               <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Transparent Pricing</span>
               <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
-                Massage Spa Packages in Lucknow
+                Wellness Therapy Packages
              </h2>
 
             <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
@@ -311,8 +252,12 @@ const faqs = Array.isArray(allFaqs)
                   <li>Premium Essential Oils</li>
                   <li>Shower Facility</li>
                 </ul>
-                <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20the%20Relaxation%20package." className="block w-full py-4 border border-stone-900 text-stone-900 rounded-full hover:bg-stone-900 hover:text-white transition-colors uppercase tracking-widest text-sm font-medium">
-                  Book Now
+                <a 
+                  href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20the%20Relaxation%20package." 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full py-4 border border-stone-900 text-stone-900 rounded-full hover:bg-stone-900 hover:text-white transition-colors uppercase tracking-widest text-sm font-medium">
+                  Book Session
                 </a>
               </div>
             
@@ -332,9 +277,13 @@ const faqs = Array.isArray(allFaqs)
                   <li>Premium Essential Oils</li>
                   <li>Shower & Steam Facility</li>
                 </ul>
-                <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20the%20Deep%20Healing%20package." className="block w-full py-4 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-colors uppercase tracking-widest text-sm font-medium shadow-lg">
-                  Book Now
-                </a>
+                <a 
+                  href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full py-4 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-colors uppercase tracking-widest text-sm font-medium shadow-lg">
+                  Book Session
+                 </a>
               </div>
             
 
@@ -350,8 +299,12 @@ const faqs = Array.isArray(allFaqs)
                   <li>Aromatherapy & Rose Petals</li>
                   <li>Private Shower Facility</li>
                 </ul>
-                <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20the%20Couples%20Retreat." className="block w-full py-4 border border-stone-900 text-stone-900 rounded-full hover:bg-stone-900 hover:text-white transition-colors uppercase tracking-widest text-sm font-medium">
-                  Book Now
+                <a 
+                  href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full py-4 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-colors uppercase tracking-widest text-sm font-medium shadow-lg">
+                  Book Session
                 </a>
               </div>
             
@@ -363,11 +316,11 @@ const faqs = Array.isArray(allFaqs)
   <div className="max-w-6xl mx-auto px-4 text-center">
 
     <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
-      Why Relaxio is the Best Spa in Gomti Nagar Lucknow
+      Why Guests Choose Relaxio Spa
     </h2>
 
     <p className="text-stone-600 max-w-2xl mx-auto mb-12 leading-relaxed">
-      Relaxio Spa is a premium luxury spa in Gomti Nagar Lucknow offering Thai, Balinese, Deep Tissue and Couple massage. Our trained therapists, hygienic private rooms and relaxing ambience make us the best body massage spa near you.
+      Relaxio Spa focuses on comfort, hygiene, privacy, and professional wellness experiences. Our peaceful ambience and trained therapists help guests relax, recover from stress, and enjoy a premium spa experience in Gomti Nagar Lucknow.
     </p>
 
     <div className="grid md:grid-cols-4 gap-6">
@@ -476,11 +429,11 @@ const faqs = Array.isArray(allFaqs)
                     <div>
                       <h3 className="text-xl font-serif text-stone-900 mb-2">Contact</h3>
                       <a
-  href="tel:+917081891995"
-  className="block text-stone-600 hover:text-[#d4af37] transition-colors"
->
-  +91 7081891995
-</a>
+                        href="tel:+917081891995"
+                        className="block text-stone-600 hover:text-[#d4af37] transition-colors"
+                       >
+                         +91 7081891995
+                        </a>
 
 <a
   href="mailto:hello@relaxiospa.in"
@@ -524,7 +477,7 @@ const faqs = Array.isArray(allFaqs)
         </div>
       </section>
 
-        <div className="mt-16">
+        <div className="mt-24">
           <FAQ faqs={faqs} />
         </div>
       </main>
