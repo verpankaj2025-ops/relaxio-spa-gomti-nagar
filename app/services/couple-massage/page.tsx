@@ -207,7 +207,7 @@ export default async function CoupleMassagePage() {
   </div>
 </FadeIn>
 
-  <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">Why Guests Choose Our Couple Wellness Experience
+  <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">Why Guests Choose Our Couple Wellness Experience
   </h2>
 
   <p className="mb-6 leading-relaxed">
@@ -233,7 +233,7 @@ export default async function CoupleMassagePage() {
   {/* 🔥 PREMIUM PRICING */}
 <div className="max-w-6xl mx-auto bg-white/95 backdrop-blur-sm rounded-[32px] shadow-xl border border-stone-100 px-6 md:px-10 py-12 my-20">
 
-  <h2 className="text-3xl md:text-4xl font-serif text-center text-stone-900 mb-12">
+  <h2 className="text-3xl md:text-amber-700xl font-serif text-center text-stone-900 mb-12">
     Couple Massage Pricing
   </h2>
 
@@ -306,7 +306,7 @@ export default async function CoupleMassagePage() {
 
   </div>
   <section className="mt-24">
-  <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-10">
+  <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-10">
     Explore More Wellness Therapies
   </h2>
 

@@ -22,7 +22,7 @@ export default function FAQ({ faqs = [] }: FAQProps) {
     <section className="py-24 bg-[#fdfbf7]">
       <div className="max-w-4xl mx-auto px-4">
 
-        <h2 className="text-3xl md:text-5xl text-[#f2cc60] font-serif text-center mb-12 text-stone-900">
+        <h2 className="text-3xl md:text-5xl text-amber-700 font-serif text-center mb-12">
           Frequently Asked Questions
         </h2>
 

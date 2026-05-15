@@ -81,7 +81,7 @@ const faqs = Array.isArray(allFaqs)
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-stone prose-base md:prose-lg max-w-none font-light text-stone-700">
               <h2 
-               className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">What Is Deep Tissue Massage?</h2>
+               className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">What Is Deep Tissue Massage?</h2>
               <p className="mb-6 leading-relaxed">
                 Deep tissue massage is designed for people experiencing muscle tightness, body stiffness, post-workout fatigue, and restricted movement caused by physical stress.
               </p>
@@ -105,7 +105,7 @@ const faqs = Array.isArray(allFaqs)
             </FadeIn>
 
               <h2 
-               className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">Why You Need a Deep Tissue Massage</h2>
+               className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">Why You Need a Deep Tissue Massage</h2>
               <p 
                 className="mb-6 leading-relaxed">
                 Many guests choose deep tissue massage to reduce muscle tightness, improve mobility, and support post-workout body recovery. This therapy is especially helpful for people with physically demanding routines or long hours of sitting.</p>
@@ -131,7 +131,7 @@ const faqs = Array.isArray(allFaqs)
                   </div>
 
               <h2 
-               className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">
+               className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">
                Why Guests Choose Our Deep Tissue Therapy
               </h2>
               <p className="mb-6 leading-relaxed">
@@ -184,7 +184,7 @@ const faqs = Array.isArray(allFaqs)
 </div>
 
 <section className="mt-24">
-  <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-10">
+  <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-10">
     Explore More Wellness Therapies
   </h2>
 

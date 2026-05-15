@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { faqs } from '@/lib/faqs';
+import { faqsData } from '@/lib/faqs';
 import Image from 'next/image';
 import Link from 'next/link';
 import FAQ from "@/components/FAQ";
@@ -26,9 +26,7 @@ openGraph: {
 
 export default async function ServicesPage() {
 
-  const servicesFaqs = faqs.filter(
-  (f) => f.page === "services"
-);
+  const servicesFaqs = faqsData.services;
 
   return (
     <>
@@ -36,7 +34,7 @@ export default async function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif text-stone-900 mb-6">Our Premium Therapies</h1>
-          <p className="text-base sm:text-lg text-stone-600 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-amber-700ase sm:text-lg text-stone-600 max-w-2xl mx-auto font-light leading-relaxed">
             Discover the perfect treatment for your body and mind. Our certified therapists customize each session to your specific needs.
           </p>
         </div>

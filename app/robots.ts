@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
     disallow: ['/api/'],
   },
 
-  sitemap: `${baseUrl}/sitemap.xml`,
-  host: baseUrl,
+  sitemap: `https://relaxiospa.in/sitemap.xml`,
+  host: `https://relaxiospa.in/`,
 };
 }

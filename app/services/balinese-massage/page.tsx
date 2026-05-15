@@ -82,7 +82,7 @@ const faqs = Array.isArray(allFaqs)
             <div className="prose prose-stone prose-base md:prose-lg max-w-none font-light text-stone-700">
 
               <h2 
-                className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">
+                className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">
                 Incredible Benefits of Balinese Massage
                </h2>
               <p className="mb-6 leading-relaxed">
@@ -119,7 +119,7 @@ const faqs = Array.isArray(allFaqs)
                  />
               </div>
               </FadeIn>
-              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">
+              <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">
                  Why Guests Love Our Balinese Therapy
               </h2>
               <p className="mb-6 leading-relaxed">
@@ -167,7 +167,7 @@ const faqs = Array.isArray(allFaqs)
               </div>
 
               <section className="mt-24">
-  <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-10">
+  <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-10">
     Explore More Wellness Therapies
   </h2>
 

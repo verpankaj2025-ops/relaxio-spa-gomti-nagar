@@ -143,7 +143,7 @@ export default async function AboutPage() {
 </h1>
 
 {/* 🔥 MAIN SEO PARAGRAPH (ADD THIS) */}
-<p className="text-base sm:text-lg md:text-xl text-stone-200 font-light max-w-3xl mx-auto leading-relaxed">
+<p className="text-amber-700ase sm:text-lg md:text-xl text-stone-200 font-light max-w-3xl mx-auto leading-relaxed">
   Relaxio Spa offers relaxing wellness therapies and a peaceful luxury spa experience in Gomti Nagar Lucknow.
 </p>
           </FadeIn>
@@ -157,7 +157,7 @@ export default async function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
             <FadeIn direction="right">
               <div>
-                <h2 className="text-3xl md:text-4xl font-serif text-stone-900 mb-6">Redefining Wellness in Gomti Nagar</h2>
+                <h2 className="text-3xl md:text-amber-700xl font-serif text-stone-900 mb-6">Redefining Wellness in Gomti Nagar</h2>
                 <div className="prose prose-stone font-light text-stone-700">
                   <p className="mb-6 leading-relaxed">
   Located in Gomti Nagar near Brijwasi Bakery, Relaxio Spa offers professional wellness therapies, relaxing body massages, and a peaceful luxury spa experience.
@@ -199,7 +199,7 @@ export default async function AboutPage() {
               <div className="relative z-10">
                 <div className="text-center mb-16">
                   <span className="text-[#d4af37] tracking-[0.18em] uppercase text-xs md:text-sm font-medium mb-5 block">The Relaxio Standard</span>
-                  <h2 className="text-4xl font-serif mb-6">Our Core Pillars</h2>
+                  <h2 className="text-amber-700xl font-serif mb-6">Our Core Pillars</h2>
                   <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
                 </div>
                 
@@ -233,7 +233,7 @@ export default async function AboutPage() {
           {/* Why Choose Us SEO Content */}
           <div className="max-w-4xl mx-auto">
             <FadeIn>
-              <h2 className="text-3xl md:text-4xl font-serif text-stone-900 mb-8 text-center">Why Guests Choose Relaxio Spa</h2>
+              <h2 className="text-3xl md:text-amber-700xl font-serif text-stone-900 mb-8 text-center">Why Guests Choose Relaxio Spa</h2>
               <div className="prose prose-stone font-light text-stone-700 max-w-none">
                 <p className="mb-6 leading-relaxed">
                   Choosing the right wellness center is crucial for your health and peace of mind. Relaxio Spa focuses on creating a safe, professional, and peaceful wellness experience for every guest. 

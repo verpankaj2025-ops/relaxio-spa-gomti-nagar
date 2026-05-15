@@ -8,20 +8,48 @@ import { CheckCircle2 } from 'lucide-react';
 
 async function getFAQs() {
   try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const res = await fetch(
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqjcqONpk-8NyLGN4e74KKzFsGp8SMgZvOZxtBinYLaTg7IDQG8-NwuOFgbzTDCMfLVvIAJTiYEiPx/pub?output=csv",
+      {
+        next: { revalidate: 3600 },
+      }
+    );
 
-    const res = await fetch(`${baseUrl}/api/faqs`, {
-      next: { revalidate: 3600 },
-    });
+    const text = await res.text();
 
-    if (!res.ok) {
-      return [];
-    }
+    const rows = text
+      .split("\n")
+      .slice(1)
+      .filter((row) => row.trim() !== "");
 
-    return await res.json();
+    const faqs = rows
+      .map((row) => {
+        const cols = row
+          .split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/)
+          .map((col) =>
+            col
+              .replace(/^"|"$/g, "")
+              .replace(/\r/g, "")
+              .trim()
+          );
+
+        return {
+          page: cols[0]?.toLowerCase() || "",
+          question: cols[1] || "",
+          answer: cols.slice(2).join(", ") || "",
+        };
+      })
+      .filter(
+        (faq) =>
+          faq.page &&
+          faq.question &&
+          faq.answer
+      );
+
+    return faqs;
+
   } catch (error) {
-    console.error("FAQ fetch error:", error);
+    console.error(error);
     return [];
   }
 }
@@ -82,7 +110,7 @@ const faqs = Array.isArray(allFaqs)
           <div className="prose prose-stone prose-base md:prose-lg max-w-none font-light text-stone-700">
             
               <h2 
-               className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">What is Authentic Thai Massage?</h2>
+               className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">What is Authentic Thai Massage?</h2>
               <p className="mb-6 leading-relaxed">
                 Thai massage is ideal for people looking to improve flexibility, reduce body stiffness, and experience deep stretching-based relaxation therapy. 
               </p>
@@ -104,7 +132,7 @@ const faqs = Array.isArray(allFaqs)
             </FadeIn>
 
               <h2 
-               className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">Top Benefits of Thai Massage</h2>
+               className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">Top Benefits of Thai Massage</h2>
               <p 
                className="mb-6 leading-relaxed">
                 At Relaxio Spa, every Thai massage session is designed to deliver physical relaxation and improved body flexibility.
@@ -127,7 +155,7 @@ const faqs = Array.isArray(allFaqs)
                 ))}
               </div>
             
-              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">Why Guests Choose Our Thai Therapy?</h2>
+              <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">Why Guests Choose Our Thai Therapy?</h2>
               <p className="mb-6 leading-relaxed">
                 Professional Thai therapy requires proper stretching techniques, trained therapists, and a calm wellness environment.
               </p>
@@ -174,7 +202,7 @@ const faqs = Array.isArray(allFaqs)
               </div>
 
               <section className="mt-24">
-  <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-10">
+  <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-10">
     Explore More Wellness Therapies
   </h2>
 

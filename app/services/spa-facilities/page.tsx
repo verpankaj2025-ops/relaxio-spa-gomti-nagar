@@ -108,7 +108,7 @@ export default async function SpaFacilitiesPage() {
             </div>
 
             {/* Benefits */}
-              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6 text-center">
+              <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6 text-center">
                 Incredible Benefits of Jacuzzi & Steam Bath
               </h2>
 
@@ -155,7 +155,7 @@ export default async function SpaFacilitiesPage() {
             </FadeIn>
 
             {/* Why Relaxio */}
-              <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6">
+              <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">
                 Why Relaxio is the Best Spa in Gomti Nagar
               </h2>
 

@@ -93,7 +93,7 @@ export default function ContactPage() {
           <FadeIn>
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Get in Touch</span>
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">Contact Relaxio Spa</h1>
-            <p className="text-base sm:text-lg md:text-xl text-stone-200 font-light max-w-3xl mx-auto leading-relaxed">
+            <p className="text-amber-700ase sm:text-lg md:text-xl text-stone-200 font-light max-w-3xl mx-auto leading-relaxed">
                Relaxio Spa welcomes guests in a calm and luxurious wellness environment in Gomti Nagar, Lucknow.
             </p>
           </FadeIn>

@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import FAQ from '@/components/FAQ';
-
 import { getFAQSchema } from '@/lib/seo';
+
+import { faqsData } from "@/lib/faqs";
 
 import {
   MapPin,
@@ -18,13 +18,17 @@ import {
 
 import type { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
+import dynamic from "next/dynamic";
+
+const FAQ = dynamic(() => import("@/components/FAQ"));
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa",
 
   description:
-  "Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, premium ambience, private rooms, and professional massage experiences.",
+    "Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, premium ambience, private rooms, and professional massage experiences.",
 
   alternates: {
     canonical: "https://relaxiospa.in",
@@ -54,63 +58,43 @@ export const metadata: Metadata = {
   },
 };
 
-async function getFAQs() {
-  try {
-    const baseUrl =
-  process.env.NEXT_PUBLIC_BASE_URL || "https://relaxiospa.in";
-
-    const res = await fetch(`${baseUrl}/api/faqs`, {
-      next: { revalidate: 3600 },
-    });
-
-    if (!res.ok) {
-      return [];
-    }
-
-    return await res.json();
-  } catch (error) {
-    console.error("FAQ fetch error:", error);
-    return [];
-  }
-}
-
 export default async function Home() {
-  const allFaqs = (await getFAQs()) || [];
-const faqs = Array.isArray(allFaqs)
-  ? allFaqs.filter(
-      (f) => f.page?.toLowerCase().trim() === "home"
-    )
-  :[];
 
-    return (
-      <>
-         {faqs.length > 0 && (
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify(getFAQSchema(faqs)),
-    }}
-  />
-)}
+  const faqs = faqsData.home || [];
+
+  return (
+    <>
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getFAQSchema(faqs)),
+          }}
+        />
+      )}
+
+      
         <main>
           
           {/* 1. HERO SECTION */}
       <section className="relative min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-   <Image 
+   <Image
   src="/images/luxury-spa-gomti-nagar-lucknow.avif"
   alt="Luxury wellness spa experience at Relaxio Spa"
-  fill 
-  sizes="100vw"
-  className="object-cover"
+  fill
   priority
+  fetchPriority="high"
+  sizes="100vw"
+  quality={50}
+  className="object-cover"
 />
           <div className="absolute inset-0 bg-black/55" />
         </div>
         
            <div 
              className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto pt-28 pb-16">
-            <span className="text-[#ffd369] tracking-[0.3em] uppercase text-sm font-medium mb-6 block">
+            <span className="text-amber-300 tracking-[0.3em] uppercase text-sm font-medium mb-6 block">
               Welcome to Relaxio Spa
             </span>
 
@@ -128,7 +112,7 @@ const faqs = Array.isArray(allFaqs)
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-10 py-4 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-colors duration-300 text-sm uppercase tracking-widest font-medium shadow-lg w-full sm:w-auto">
-                Book Session
+                Book Relaxation Package
              </a>
               <a href="tel:+917081891995" 
                  className="px-10 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-stone-900 transition-colors duration-300 text-sm uppercase tracking-widest font-medium w-full sm:w-auto">
@@ -144,7 +128,7 @@ const faqs = Array.isArray(allFaqs)
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
             <div className="text-center mb-20">
-              <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Our Offerings</span>
+              <span className="text-amber-700 tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Our Offerings</span>
               <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">Luxury Spa Therapies</h2>
               <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
             </div>
@@ -211,9 +195,9 @@ const faqs = Array.isArray(allFaqs)
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                   </div>
                   <div className="p-8 text-center relative bg-white -mt-10 mx-6 rounded-xl shadow-lg group-hover:-translate-y-1 transition-transform duration-500">
-                    <h3 className="text-2xl font-serif mb-3 text-stone-900 group-hover:text-[#f2cc60] transition-colors">{service.title}</h3>
+                    <h3 className="text-2xl font-serif mb-3 text-stone-900 group-hover:text-amber-700 transition-colors">{service.title}</h3>
                     <p className="text-stone-600 font-light mb-6 min-h-[72px]">{service.desc}</p>
-                    <span className="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium text-[#f2cc60]">
+                    <span className="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium text-amber-700">
                      {service.cta}
                      <ArrowRight size={16} />
                      </span>
@@ -230,7 +214,7 @@ const faqs = Array.isArray(allFaqs)
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center mb-20">
-              <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Transparent Pricing</span>
+              <span className="text-amber-700 tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Transparent Pricing</span>
               <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
                 Wellness Therapy Packages
              </h2>
@@ -256,7 +240,7 @@ const faqs = Array.isArray(allFaqs)
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-4 border border-stone-900 text-stone-900 rounded-full hover:bg-stone-900 hover:text-white transition-colors uppercase tracking-widest text-sm font-medium">
-                  Book Session
+                  Book Deep Healing
                 </a>
               </div>
             
@@ -281,7 +265,7 @@ const faqs = Array.isArray(allFaqs)
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-4 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-colors uppercase tracking-widest text-sm font-medium shadow-lg">
-                  Book Session
+                  Book Couple Retreat
                  </a>
               </div>
             
@@ -303,7 +287,7 @@ const faqs = Array.isArray(allFaqs)
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-4 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-colors uppercase tracking-widest text-sm font-medium shadow-lg">
-                  Book Session
+                  Book Couple Retreat
                 </a>
               </div>
             
@@ -326,7 +310,7 @@ const faqs = Array.isArray(allFaqs)
 
       <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
   <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
-    <ShieldCheck className="text-[#f2cc60]" size={28} />
+    <ShieldCheck className="text-amber-700" size={28} />
   </div>
 
   <h3 className="font-semibold mb-2 text-stone-900">
@@ -340,7 +324,7 @@ const faqs = Array.isArray(allFaqs)
 
       <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
   <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
-    <BedDouble className="text-[#f2cc60]" size={28} />
+    <BedDouble className="text-amber-700" size={28} />
   </div>
 
   <h3 className="font-semibold mb-2 text-stone-900">
@@ -354,7 +338,7 @@ const faqs = Array.isArray(allFaqs)
 
       <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
   <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
-    <Sparkles className="text-[#f2cc60]" size={28} />
+    <Sparkles className="text-amber-700" size={28} />
   </div>
 
   <h3 className="font-semibold mb-2 text-stone-900">
@@ -368,7 +352,7 @@ const faqs = Array.isArray(allFaqs)
 
       <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
   <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
-    <MessageCircle className="text-[#f2cc60]" size={28} />
+    <MessageCircle className="text-amber-700" size={28} />
   </div>
 
   <h3 className="font-semibold mb-2 text-stone-900">
@@ -391,13 +375,13 @@ const faqs = Array.isArray(allFaqs)
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
               <div>
-                <span className="text-[#f2cc60] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Find Us</span>
+                <span className="text-amber-700 tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Find Us</span>
                 <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-10">Visit Our Sanctuary in Gomti Nagar</h2>
                 
                 <div className="space-y-8">
                   <div className="flex items-start gap-6">
                     <div className="w-12 h-12 bg-[#fdfbf7] rounded-full flex items-center justify-center shrink-0">
-                      <MapPin className="text-[#f2cc60]" size={24} />
+                      <MapPin className="text-amber-700" size={24} />
                     </div>
                     <div>
                       <h3 className="text-xl font-serif text-stone-900 mb-2">Location</h3>
@@ -410,7 +394,7 @@ const faqs = Array.isArray(allFaqs)
 
                   <div className="flex items-start gap-6">
                     <div className="w-12 h-12 bg-[#fdfbf7] rounded-full flex items-center justify-center shrink-0">
-                      <Clock className="text-[#f2cc60]" size={24} />
+                      <Clock className="text-amber-700" size={24} />
                     </div>
                     <div>
                       <h3 className="text-xl font-serif text-stone-900 mb-2">Operating Hours</h3>
@@ -423,7 +407,7 @@ const faqs = Array.isArray(allFaqs)
 
                   <div className="flex items-start gap-6">
                     <div className="w-12 h-12 bg-[#fdfbf7] rounded-full flex items-center justify-center shrink-0">
-                      <Phone className="text-[#e0b94b]" size={24} />
+                      <Phone className="text-amber-700" size={24} />
                     </div>
                     <div>
                       <h3 className="text-xl font-serif text-stone-900 mb-2">Contact</h3>

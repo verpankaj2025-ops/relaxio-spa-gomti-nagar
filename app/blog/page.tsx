@@ -28,7 +28,7 @@ export default function BlogPage() {
       Relaxio Spa Blog
     </h1>
 
-    <p className="text-base sm:text-lg md:text-xl text-stone-200 max-w-3xl mx-auto leading-relaxed font-light">
+    <p className="text-amber-700ase sm:text-lg md:text-xl text-stone-200 max-w-3xl mx-auto leading-relaxed font-light">
       Discover wellness tips, massage benefits, spa therapies, and relaxation guides from the best spa in Gomti Nagar Lucknow.
     </p>
   </div>
