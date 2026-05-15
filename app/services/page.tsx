@@ -70,7 +70,7 @@ export default async function ServicesPage() {
 
           {/* Balinese */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
-            <div className="order-2 lg:order-1">
+            <div>
               <h2 className="text-3xl font-serif text-stone-900 mb-4">Balinese Massage</h2>
               <p className="text-stone-600 mb-6 font-light leading-relaxed">
                 A full-body, deep-tissue, holistic treatment. Balinese massage uses a combination of gentle stretches, acupressure, reflexology, and aromatherapy to stimulate the flow of blood, oxygen, and &quot;qi&quot; (energy) around your body, bringing a sense of wellbeing, calm, and deep relaxation.
