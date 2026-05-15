@@ -31,7 +31,7 @@ export default async function ServicesPage() {
   return (
     <>
     <div className="pt-28 pb-20 md:pt-32 md:pb-24 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif text-stone-900 mb-6">Our Premium Therapies</h1>
           <p className="text-stone-600 sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
@@ -41,7 +41,7 @@ export default async function ServicesPage() {
 
         <div className="space-y-24">
           {/* Deep Tissue */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
             <div className="relative w-full h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
               <Image 
                 src="/images/deep-tissue-massage-gomti-nagar-lucknow.avif"
@@ -69,7 +69,7 @@ export default async function ServicesPage() {
           </div>
 
           {/* Balinese */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
             <div className="order-2 lg:order-1">
               <h2 className="text-3xl font-serif text-stone-900 mb-4">Balinese Massage</h2>
               <p className="text-stone-600 mb-6 font-light leading-relaxed">
@@ -97,7 +97,7 @@ export default async function ServicesPage() {
           </div>
 
           {/* Thai Massage */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
             <div className="relative w-full h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
               <Image 
                  src="/images/thai-massage-gomti-nagar-lucknow.avif"
@@ -124,7 +124,7 @@ export default async function ServicesPage() {
             </div>
           </div>
           {/* Couple Massage */}
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
 
   <div className="order-2 lg:order-1">
     <h2 className="text-3xl font-serif text-stone-900 mb-4">
@@ -162,7 +162,7 @@ export default async function ServicesPage() {
         </div>
         
 {/* Jacuzzi & Steam Bath */}
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
 
   <div className="relative w-full h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
     <Image
@@ -198,16 +198,16 @@ export default async function ServicesPage() {
     </Link>
   </div>
 
+                    </div>
+
+        {/* 👇 FAQ SECTION */}
+        <div className="mt-24">
+          <FAQ faqs={servicesFaqs} />
+        </div>
+
       </div>
     </div>
-</div>
-
-</div>
-
-    {/* 👇 FAQ SECTION */}
-    <div className="mt-24">
-  <FAQ faqs={servicesFaqs} />
-</div>
+    </div>
   </>
 );
 }
