@@ -34,15 +34,15 @@ export default async function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif text-stone-900 mb-6">Our Premium Therapies</h1>
-          <p className="text-amber-700ase sm:text-lg text-stone-600 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-stone-600 sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
             Discover the perfect treatment for your body and mind. Our certified therapists customize each session to your specific needs.
           </p>
         </div>
 
         <div className="space-y-24">
           {/* Deep Tissue */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+            <div className="relative w-full h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
               <Image 
                 src="/images/deep-tissue-massage-gomti-nagar-lucknow.avif"
                 alt="Deep tissue wellness therapy at Relaxio Spa"
@@ -69,7 +69,7 @@ export default async function ServicesPage() {
           </div>
 
           {/* Balinese */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             <div className="order-2 lg:order-1">
               <h2 className="text-3xl font-serif text-stone-900 mb-4">Balinese Massage</h2>
               <p className="text-stone-600 mb-6 font-light leading-relaxed">
@@ -85,7 +85,7 @@ export default async function ServicesPage() {
                 Learn More & Book
               </Link>
             </div>
-            <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
+            <div className="relative w-full h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
          <Image 
            src="/images/balinese-massage-gomti-nagar-lucknow.avif"
            alt="Luxury Balinese massage therapy at Relaxio Spa"
@@ -97,15 +97,15 @@ export default async function ServicesPage() {
           </div>
 
           {/* Thai Massage */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+            <div className="relative w-full h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
               <Image 
-  src="/images/thai-massage-gomti-nagar-lucknow.avif"
-  alt="Relaxing Thai massage therapy at Relaxio Spa"
-  fill
-  className="object-cover"
-  loading="lazy"
-/>
+                 src="/images/thai-massage-gomti-nagar-lucknow.avif"
+                 alt="Relaxing Thai massage therapy at Relaxio Spa"
+                 fill
+                 className="object-cover"
+                 loading="lazy"
+               />
             </div>
             <div>
               <h2 className="text-3xl font-serif text-stone-900 mb-4">Thai Massage</h2>
@@ -124,7 +124,7 @@ export default async function ServicesPage() {
             </div>
           </div>
           {/* Couple Massage */}
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
   <div className="order-2 lg:order-1">
     <h2 className="text-3xl font-serif text-stone-900 mb-4">
@@ -150,7 +150,7 @@ export default async function ServicesPage() {
     </Link>
   </div>
 
-  <div className="relative h-[400px] lg:h-[500px] order-1 lg:order-2 overflow-hidden rounded-2xl">
+  <div className="relative w-full h-[400px] lg:h-[500px] order-1 lg:order-2 overflow-hidden rounded-2xl">
     <Image
       src="/images/couple-massage-lucknow.avif"
       alt="Private couple wellness experience at Relaxio Spa"
@@ -162,9 +162,9 @@ export default async function ServicesPage() {
         </div>
         
 {/* Jacuzzi & Steam Bath */}
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
 
-  <div className="relative h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
+  <div className="relative w-full h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
     <Image
       src="/images/jacuzzi-steam-bath-lucknow.avif"
       alt="Luxury jacuzzi and steam bath experience at Relaxio Spa"

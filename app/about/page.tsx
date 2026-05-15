@@ -143,7 +143,7 @@ export default async function AboutPage() {
 </h1>
 
 {/* 🔥 MAIN SEO PARAGRAPH (ADD THIS) */}
-<p className="text-amber-700ase sm:text-lg md:text-xl text-stone-200 font-light max-w-3xl mx-auto leading-relaxed">
+<p className="text-amber-700 sm:text-lg md:text-xl text-stone-200 font-light max-w-3xl mx-auto leading-relaxed">
   Relaxio Spa offers relaxing wellness therapies and a peaceful luxury spa experience in Gomti Nagar Lucknow.
 </p>
           </FadeIn>
