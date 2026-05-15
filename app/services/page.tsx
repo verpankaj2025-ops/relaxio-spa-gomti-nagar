@@ -126,7 +126,7 @@ export default async function ServicesPage() {
           {/* Couple Massage */}
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
 
-  <div className="order-2 lg:order-1">
+  <div>
     <h2 className="text-3xl font-serif text-stone-900 mb-4">
       Couple Massage
     </h2>
@@ -150,7 +150,7 @@ export default async function ServicesPage() {
     </Link>
   </div>
 
-  <div className="relative w-full h-[400px] lg:h-[500px] order-1 lg:order-2 overflow-hidden rounded-2xl">
+  <div className="relative w-full h-[400px] lg:h-[500px] overflow-hidden rounded-2xl">
     <Image
       src="/images/couple-massage-lucknow.avif"
       alt="Private couple wellness experience at Relaxio Spa"
