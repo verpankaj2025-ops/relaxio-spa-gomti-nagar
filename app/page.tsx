@@ -547,39 +547,111 @@ export default async function Home() {
   </div>
 </section>
 
-        {/* BLOG INTERNAL LINKS */}
+       {/* BLOG INTERNAL LINKS */}
 <section className="py-16 bg-white">
-  <div className="max-w-6xl mx-auto px-4">
 
-    <h3 className="text-3xl font-serif text-center mb-10">
+  <div className="max-w-7xl mx-auto px-4">
+
+    <h3 className="text-3xl font-serif text-center mb-12">
       Wellness & Spa Guides
     </h3>
 
-    <div className="grid md:grid-cols-3 gap-6">
+    <div className="grid md:grid-cols-3 gap-8">
 
-      <Link
-        href="/blog/thai-massage-benefits"
-        className="p-6 border rounded-xl hover:shadow-lg transition"
-      >
-        Benefits of Thai Massage
-      </Link>
+      {/* BLOG 1 */}
+      <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] overflow-hidden hover:shadow-xl transition-all duration-300">
 
-      <Link
-        href="/blog/deep-tissue-massage-benefits"
-        className="p-6 border rounded-xl hover:shadow-lg transition"
-      >
-        Deep Tissue Massage Benefits
-      </Link>
+        <img
+          src="/images/blog/best-spa-gomti-nagar.avif"
+          alt="Best Spa in Gomti Nagar Lucknow"
+          className="w-full h-64 object-cover"
+        />
 
-      <Link
-        href="/blog/best-spa-in-gomti-nagar"
-        className="p-6 border rounded-xl hover:shadow-lg transition"
-      >
-        Best Spa in Gomti Nagar Lucknow
-      </Link>
+        <div className="p-8">
+
+          <h4 className="font-serif text-3xl text-stone-900 leading-tight mb-4">
+            Best Spa in Gomti Nagar Lucknow
+          </h4>
+
+          <p className="text-stone-600 leading-relaxed mb-6">
+            Discover luxury wellness therapies, private spa rooms,
+            and premium relaxation experiences at Relaxio Spa.
+          </p>
+
+          <Link
+            href="/blog/best-spa-in-gomti-nagar"
+            className="inline-flex items-center justify-center border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white transition-all duration-300 px-6 py-3 rounded-full text-sm uppercase tracking-[0.2em]"
+          >
+            Read Article
+          </Link>
+
+        </div>
+      </div>
+
+      {/* BLOG 2 */}
+      <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] overflow-hidden hover:shadow-xl transition-all duration-300">
+
+        <img
+          src="/images/blog/deep-tissue-massage.avif"
+          alt="Deep Tissue Massage Benefits"
+          className="w-full h-64 object-cover"
+        />
+
+        <div className="p-8">
+
+          <h4 className="font-serif text-3xl text-stone-900 leading-tight mb-4">
+            Deep Tissue Massage Benefits
+          </h4>
+
+          <p className="text-stone-600 leading-relaxed mb-6">
+            Learn how deep tissue massage helps improve muscle recovery,
+            relaxation, and stress relief experiences.
+          </p>
+
+          <Link
+            href="/blog/deep-tissue-massage-benefits"
+            className="inline-flex items-center justify-center border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white transition-all duration-300 px-6 py-3 rounded-full text-sm uppercase tracking-[0.2em]"
+          >
+            Read Article
+          </Link>
+
+        </div>
+      </div>
+
+      {/* BLOG 3 */}
+      <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] overflow-hidden hover:shadow-xl transition-all duration-300">
+
+        <img
+          src="/images/blog/thai-massage.avif"
+          alt="Benefits of Thai Massage"
+          className="w-full h-64 object-cover"
+        />
+
+        <div className="p-8">
+
+          <h4 className="font-serif text-3xl text-stone-900 leading-tight mb-4">
+            Benefits of Thai Massage
+          </h4>
+
+          <p className="text-stone-600 leading-relaxed mb-6">
+            Explore wellness benefits of Thai massage including
+            flexibility improvement and stress relief.
+          </p>
+
+          <Link
+            href="/blog/thai-massage-benefits"
+            className="inline-flex items-center justify-center border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white transition-all duration-300 px-6 py-3 rounded-full text-sm uppercase tracking-[0.2em]"
+          >
+            Read Article
+          </Link>
+
+        </div>
+      </div>
 
     </div>
+
   </div>
+
 </section>
 
 <div className="mt-24">
