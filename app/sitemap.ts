@@ -68,5 +68,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-  ]
+
+    {
+  url: 'https://relaxiospa.in/blog',
+  lastModified: currentDate,
+  changeFrequency: 'weekly',
+  priority: 0.8,
+},
+
+{
+  url: 'https://relaxiospa.in/blog/thai-massage-benefits',
+  lastModified: currentDate,
+  changeFrequency: 'monthly',
+  priority: 0.7,
+},
+
+{
+  url: 'https://relaxiospa.in/blog/deep-tissue-massage-benefits',
+  lastModified: currentDate,
+  changeFrequency: 'monthly',
+  priority: 0.7,
+},
+
+{
+  url: 'https://relaxiospa.in/blog/best-spa-in-gomti-nagar',
+  lastModified: currentDate,
+  changeFrequency: 'monthly',
+  priority: 0.7,
+},
+ ]
 }
