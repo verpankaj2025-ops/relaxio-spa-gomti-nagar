@@ -209,15 +209,70 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* SEO INTERNAL LINKS SECTION */}
+<section className="py-20 bg-white border-t border-stone-100">
+  <div className="max-w-6xl mx-auto px-4">
+
+    <h2 className="text-3xl md:text-4xl font-serif text-stone-900 mb-6 text-center">
+      Explore Premium Spa Services in Gomti Nagar Lucknow
+    </h2>
+
+    <p className="text-stone-600 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+      Relaxio Spa offers professional wellness therapies including Thai massage,
+      Balinese massage, deep tissue massage, couple spa therapies, steam bath,
+      and luxury relaxation experiences in Gomti Nagar Lucknow.
+    </p>
+
+    <div className="grid md:grid-cols-2 gap-5 text-lg">
+
+      <Link
+        href="/services/thai-massage"
+        className="underline text-stone-800 hover:text-amber-700"
+      >
+        Thai Massage in Gomti Nagar Lucknow
+      </Link>
+
+      <Link
+        href="/services/balinese-massage"
+        className="underline text-stone-800 hover:text-amber-700"
+      >
+        Balinese Massage Spa in Lucknow
+      </Link>
+
+      <Link
+        href="/services/deep-tissue-massage"
+        className="underline text-stone-800 hover:text-amber-700"
+      >
+        Deep Tissue Massage Therapy in Gomti Nagar
+      </Link>
+
+      <Link
+        href="/services/couple-massage"
+        className="underline text-stone-800 hover:text-amber-700"
+      >
+        Couple Massage Spa in Lucknow
+      </Link>
+
+      <Link
+         href="/services/spa-facilities"
+         className="underline text-stone-800 hover:text-amber-700"
+       >
+         Jacuzzi & Steam Bath Spa in Lucknow
+       </Link>
+
+    </div>
+  </div>
+</section>
+
       {/* 4. PRICING SECTION */}
       <section className="py-32 bg-[#fdfbf7]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center mb-20">
               <span className="text-amber-700 tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Transparent Pricing</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
+              <h3 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
                 Wellness Therapy Packages
-             </h2>
+             </h3>
 
             <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
             </div>
@@ -460,10 +515,77 @@ export default async function Home() {
         </div>
       </section>
 
-        <div className="mt-24">
-          <FAQ faqs={faqs} />
-        </div>
-      </main>
-      </>
-    );
+      <section className="py-20 bg-[#fdfbf7]">
+  <div className="max-w-5xl mx-auto px-4">
+
+    <h2 className="text-3xl md:text-4xl font-serif text-stone-900 mb-6 text-center">
+      Luxury Wellness Spa in Gomti Nagar Lucknow
+    </h2>
+
+    <div className="space-y-6 text-stone-700 leading-relaxed text-lg">
+
+      <p>
+        Relaxio Spa is a premium wellness spa in Gomti Nagar Lucknow offering
+        professional massage therapies, peaceful ambience, private spa rooms,
+        and luxury wellness experiences for guests seeking relaxation and
+        stress relief.
+      </p>
+
+      <p>
+        Our wellness therapies include Thai massage, Balinese massage, deep
+        tissue massage, couple spa experiences, jacuzzi sessions, steam bath,
+        and premium relaxation packages designed for comfort and rejuvenation.
+      </p>
+
+      <p>
+        Guests visiting Relaxio Spa in Gomti Nagar appreciate our hygiene,
+        trained therapists, calming interiors, and private wellness spaces
+        designed for premium spa experiences in Lucknow.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+        {/* BLOG INTERNAL LINKS */}
+<section className="py-16 bg-white">
+  <div className="max-w-6xl mx-auto px-4">
+
+    <h2 className="text-3xl font-serif text-center mb-10">
+      Wellness & Spa Guides
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-6">
+
+      <Link
+        href="/blog/thai-massage-benefits"
+        className="p-6 border rounded-xl hover:shadow-lg transition"
+      >
+        Benefits of Thai Massage
+      </Link>
+
+      <Link
+        href="/blog/deep-tissue-massage-benefits"
+        className="p-6 border rounded-xl hover:shadow-lg transition"
+      >
+        Deep Tissue Massage Benefits
+      </Link>
+
+      <Link
+        href="/blog/best-spa-in-gomti-nagar"
+        className="p-6 border rounded-xl hover:shadow-lg transition"
+      >
+        Best Spa in Gomti Nagar Lucknow
+      </Link>
+
+    </div>
+  </div>
+</section>
+
+<div className="mt-24">
+  <FAQ faqs={faqs} />
+</div>
+</main>
+</>
+);
 }
