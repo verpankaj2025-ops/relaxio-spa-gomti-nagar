@@ -48,16 +48,18 @@ export default function FAQ({ faqs = [] }: FAQProps) {
                 </span>
               </button>
 
-              {activeIndex === index && (
-                <div
-                  id={`faq-content-${index}`}
-                  role="region"
-                  aria-labelledby={`faq-button-${index}`}
-                  className="px-6 pb-4 text-stone-600"
-                >
-                  {faq.answer}
-                </div>
-              )}
+          <div
+            id={`faq-content-${index}`}
+            role="region"
+            aria-labelledby={`faq-button-${index}`}
+            className={`overflow-hidden transition-all duration-200 ${
+               activeIndex === index
+                   ? "max-h-40 opacity-100 px-6 pb-4"
+                   : "max-h-0 opacity-0 px-6 pb-0"
+               }`}
+              >
+               <p className="text-stone-600">{faq.answer}</p>
+              </div>
             </div>
           ))}
         </div>

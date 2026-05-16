@@ -20,14 +20,15 @@ export async function getPost(slug: string) {
   const contentHtml = processedContent.toString();
 
   return {
-    slug,
-    contentHtml,
-    ...(data as {
-      title: string;
-      description: string;
-      keywords: string[];
-    }),
-  };
+  slug,
+  contentHtml,
+  ...(data as {
+    title: string;
+    description: string;
+    keywords: string[];
+    image?: string;
+  }),
+};
 }
 
 export function getAllPosts() {
@@ -43,9 +44,10 @@ export function getAllPosts() {
     const { data } = matter(fileContents);
 
     return {
-      slug,
-      title: data.title,
-      description: data.description,
-    };
+  slug,
+  title: data.title,
+  description: data.description,
+  image: data.image || "/images/spa.avif",
+};
   });
 }

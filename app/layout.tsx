@@ -8,19 +8,27 @@ import dynamic from 'next/dynamic';
 const Navbar = dynamic(() => import('@/components/layout/Navbar'));
 
 import Footer from '@/components/layout/Footer';
-import WhatsAppWidget from '@/components/layout/WhatsAppWidget';
-import CallWidget from '@/components/layout/CallWidget';
+
+const WhatsAppWidget = dynamic(
+  () => import('@/components/layout/WhatsAppWidget')
+);
+
+const CallWidget = dynamic(
+  () => import('@/components/layout/CallWidget')
+);
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
+  weight: ['400', '500', '600', '700'],
 });
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-serif',
   display: 'swap',
+  weight: ['400', '600', '700'],
 });
 const SITE_URL = "https://relaxiospa.in";
 

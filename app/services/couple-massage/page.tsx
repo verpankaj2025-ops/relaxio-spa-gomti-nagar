@@ -4,6 +4,9 @@ import Link from "next/link";
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
 import FadeIn from '@/components/ui/FadeIn';
+import PricingSection from "@/components/services/PricingSection";
+import ExploreMore from "@/components/services/ExploreMore";
+
 export const revalidate = 3600;
 
 async function getFAQs() {
@@ -230,129 +233,53 @@ export default async function CoupleMassagePage() {
   </p>
 </div>
 
-  {/* 🔥 PREMIUM PRICING */}
-<div className="max-w-6xl mx-auto bg-white/95 backdrop-blur-sm rounded-[32px] shadow-xl border border-stone-100 px-6 md:px-10 py-12 my-20">
+  <PricingSection
+  title="Couple Massage Packages"
+  description="Luxury couple wellness therapy with private spa rooms, peaceful ambience, and relaxing massage experience in Gomti Nagar Lucknow."
+  buttonText="Book Couple Massage"
+  whatsappMessage="Hi Relaxio Spa, I want Couple Massage. (Source: Couple Massage Page)"
+  packages={[
+    {
+      name: "Romantic Escape",
+      duration: "60 Minutes Therapy",
+      price: "₹2,999",
+    },
+    {
+      name: "Luxury Couple Retreat",
+      duration: "90 Minutes Therapy",
+      price: "₹3,999",
+      popular: true,
+    },
+    {
+      name: "Royal Couple Wellness",
+      duration: "120 Minutes Therapy",
+      price: "₹4,999",
+    },
+  ]}
+/>
 
-  <h2 className="text-3xl md:text-amber-700xl font-serif text-center text-stone-900 mb-12">
-    Couple Massage Pricing
-  </h2>
-
-  <div className="divide-y divide-stone-200">
-
-    {/* Package 1 */}
-    <div className="flex items-center justify-between py-6">
-      <div>
-        <h3 className="text-2xl font-serif text-stone-900">
-          Romantic Escape
-        </h3>
-
-        <p className="text-stone-500 mt-1">
-          60 Minutes
-        </p>
-      </div>
-
-      <p className="text-3xl text-[#d4af37] font-serif">
-        ₹2,999
-      </p>
-    </div>
-
-    {/* Package 2 */}
-    <div className="flex items-center justify-between py-6">
-      <div>
-        <h3 className="text-2xl font-serif text-stone-900">
-          Luxury Couple Retreat (Recommended)
-        </h3>
-
-        <p className="text-stone-500 mt-1">
-          90 Minutes
-        </p>
-      </div>
-
-      <p className="text-3xl text-[#d4af37] font-serif">
-        ₹3,999
-      </p>
-    </div>
-
-    {/* Package 3 */}
-    <div className="flex items-center justify-between py-6">
-      <div>
-        <h3 className="text-2xl font-serif text-stone-900">
-          Royal Couple Wellness
-        </h3>
-
-        <p className="text-stone-500 mt-1">
-          120 Minutes
-        </p>
-      </div>
-
-      <p className="text-3xl text-[#d4af37] font-serif">
-        ₹4,999
-      </p>
-    </div>
-
-  </div>
-
-  <div className="text-center mt-10">
-    <a
-      href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20Couple%20Massage"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Book Couple Massage on WhatsApp"
-      className="inline-flex items-center justify-center rounded-full bg-black px-10 py-4 text-sm uppercase tracking-[0.2em] text-white hover:bg-stone-800 transition-colors duration-300"
-    >
-      Book Couple Spa Appointment
-    </a>
-  </div>
-
-  </div>
-  <section className="mt-24">
-  <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-10">
-    Explore More Wellness Therapies
-  </h2>
-
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-    <Link
-      href="/services/thai-massage"
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
-    >
-      <h3 className="text-2xl font-serif text-stone-900 mb-4">
-        Thai Massage
-      </h3>
-
-      <p className="text-stone-600 leading-relaxed">
-        Traditional stretching and pressure-based therapy designed to improve flexibility and relaxation.
-      </p>
-    </Link>
-
-    <Link
-      href="/services/balinese-massage"
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
-    >
-      <h3 className="text-2xl font-serif text-stone-900 mb-4">
-        Balinese Massage
-      </h3>
-
-      <p className="text-stone-600 leading-relaxed">
-        Aromatherapy wellness therapy focused on stress relief and full-body relaxation.
-      </p>
-    </Link>
-
-    <Link
-      href="/services/deep-tissue-massage"
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
-    >
-      <h3 className="text-2xl font-serif text-stone-900 mb-4">
-        Deep Tissue Massage
-      </h3>
-
-      <p className="text-stone-600 leading-relaxed">
-        Firm-pressure wellness therapy focused on muscle recovery and mobility support.
-      </p>
-    </Link>
-
-  </div>
-</section>
+  <ExploreMore
+  therapies={[
+    {
+      title: "Balinese Massage",
+      href: "/services/balinese-massage",
+      description:
+        "Relaxing aromatherapy wellness therapy designed for stress relief and calmness.",
+    },
+    {
+      title: "Thai Massage",
+      href: "/services/thai-massage",
+      description:
+        "Traditional assisted stretching therapy designed for flexibility and body recovery.",
+    },
+    {
+      title: "Jacuzzi & Steam Bath",
+      href: "/services/spa-facilities",
+      description:
+        "Luxury steam and Jacuzzi wellness sessions for complete relaxation.",
+    },
+  ]}
+/>
 
 
   <div className="mt-16">

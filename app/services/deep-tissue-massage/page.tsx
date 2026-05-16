@@ -5,6 +5,8 @@ import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
 import FadeIn from '@/components/ui/FadeIn';
 import { CheckCircle2 } from 'lucide-react';
+import PricingSection from "@/components/services/PricingSection";
+import ExploreMore from "@/components/services/ExploreMore";
 
 async function getFAQs() {
   try {
@@ -141,96 +143,53 @@ const faqs = Array.isArray(allFaqs)
                 We combine firm-pressure massage techniques with a calm wellness environment to create a balanced and deeply relaxing recovery experience.
               </p>
 
-              <div 
-                className="bg-white/95 backdrop-blur-sm p-6 md:p-10 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-stone-100 my-16 max-w-6xl mx-auto">
-                <h2 
-                 className="font-serif text-3xl text-stone-900 mb-8 text-center">Deep Tissue Massage Pricing</h2>
-                <div 
-                  className="space-y-6">
-                  <div 
-                  className="flex justify-between items-center border-b border-stone-100 pb-6">
-                    <div>
-                      <h4 className="text-xl font-serif text-stone-900">Targeted Relief</h4>
-                      <p className="text-stone-500 text-sm">60 Minutes</p>
-                    </div>
-                    <div className="text-2xl font-serif text-[#d4af37]">₹2,999</div>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-stone-100 pb-6">
-                    <div>
-                      <h4 className="text-xl font-serif text-stone-900">Full Body Recovery (Recommended)</h4>
-                      <p className="text-stone-500 text-sm">90 Minutes</p>
-                    </div>
-                    <div className="text-2xl font-serif text-[#d4af37]">₹3,999</div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h4 className="text-xl font-serif text-stone-900">The Ultimate Overhaul</h4>
-                      <p className="text-stone-500 text-sm">120 Minutes</p>
-                    </div>
-                    <div className="text-2xl font-serif text-[#d4af37]">₹4,999</div>
-                  </div>
-                </div>
-                <div className="mt-10 text-center">
-  <a
-    href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Deep%20Tissue%20Massage."
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Book Deep Tissue Massage Appointment"
-    className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-colors duration-300 text-sm uppercase tracking-widest font-medium w-full md:w-auto"
-  >
-    Book Your Appointment
-  </a>
-</div>
-</div>
+              <PricingSection
+  title="Deep Tissue Massage Pricing"
+  description="Professional deep tissue wellness therapy designed to reduce muscle tension, improve mobility, and support full-body recovery in Gomti Nagar Lucknow."
+  buttonText="Book Deep Tissue Massage"
+  whatsappMessage="Hi Relaxio Spa, I want Deep Tissue Massage. (Source: Deep Tissue Page)"
+  packages={[
+    {
+      name: "Targeted Relief",
+      duration: "60 Minutes Therapy",
+      price: "₹2,999",
+    },
+    {
+      name: "Full Body Recovery",
+      duration: "90 Minutes Therapy",
+      price: "₹3,999",
+      popular: true,
+    },
+    {
+      name: "Ultimate Overhaul",
+      duration: "120 Minutes Therapy",
+      price: "₹4,999",
+    },
+  ]}
+/>
 
-<section className="mt-24">
-  <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-10">
-    Explore More Wellness Therapies
-  </h2>
-
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-    <Link
-      href="/services/thai-massage"
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
-    >
-      <h3 className="text-2xl font-serif text-stone-900 mb-4">
-        Thai Massage
-      </h3>
-
-      <p className="text-stone-600 leading-relaxed">
-        Traditional stretching and pressure-based therapy designed to improve flexibility and body relaxation.
-      </p>
-    </Link>
-
-    <Link
-      href="/services/balinese-massage"
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
-    >
-      <h3 className="text-2xl font-serif text-stone-900 mb-4">
-        Balinese Massage
-      </h3>
-
-      <p className="text-stone-600 leading-relaxed">
-        Aromatherapy wellness therapy focused on stress relief and full-body relaxation.
-      </p>
-    </Link>
-
-    <Link
-      href="/services/couple-massage"
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
-    >
-      <h3 className="text-2xl font-serif text-stone-900 mb-4">
-        Couple Massage
-      </h3>
-
-      <p className="text-stone-600 leading-relaxed">
-        Relax together with a peaceful private spa experience designed for couples.
-      </p>
-    </Link>
-
-  </div>
-</section>
+<ExploreMore
+  therapies={[
+    {
+      title: "Thai Massage",
+      href: "/services/thai-massage",
+      description:
+        "Traditional stretching therapy designed for flexibility, deep relaxation, and body recovery.",
+    },
+    {
+      title: "Balinese Massage",
+      href: "/services/balinese-massage",
+      description:
+        "Aromatherapy-based wellness therapy focused on stress relief and peaceful relaxation.",
+    },
+    {
+      title: "Couple Massage",
+      href: "/services/couple-massage",
+      description:
+        "Luxury private spa experience for couples with calming ambience and wellness therapies.",
+    },
+  ]}
+/>
 
 <div className="mt-16">
   <FAQ faqs={faqs} />

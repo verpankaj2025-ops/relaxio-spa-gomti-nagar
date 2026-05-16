@@ -4,6 +4,29 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
+const services = [
+  {
+    name: "Thai Massage",
+    href: "/services/thai-massage",
+  },
+  {
+    name: "Balinese Massage",
+    href: "/services/balinese-massage",
+  },
+  {
+    name: "Deep Tissue Massage",
+    href: "/services/deep-tissue-massage",
+  },
+  {
+    name: "Couple Massage",
+    href: "/services/couple-massage",
+  },
+  {
+    name: "Jacuzzi & Steam Bath",
+    href: "/services/spa-facilities",
+  },
+];
+
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
@@ -44,40 +67,15 @@ export default function Navbar() {
             </Link>
             <div className="absolute top-full left-0 hidden group-hover:block pt-2">
               <div className="bg-white shadow-xl rounded-lg border border-stone-100 p-2 w-64 flex flex-col">
-                <Link 
-  href="/services/thai-massage" 
-  className="px-4 py-3 hover:bg-stone-50 rounded-md text-stone-700 hover:text-amber-600 transition-colors text-sm"
->
-  Thai Massage
-</Link>
-
-<Link 
-  href="/services/balinese-massage" 
-  className="px-4 py-3 hover:bg-stone-50 rounded-md text-stone-700 hover:text-amber-600 transition-colors text-sm"
->
-  Balinese Massage
-</Link>
-
-<Link 
-  href="/services/deep-tissue-massage" 
-  className="px-4 py-3 hover:bg-stone-50 rounded-md text-stone-700 hover:text-amber-600 transition-colors text-sm"
->
-  Deep Tissue Massage
-</Link>
-
-<Link 
-  href="/services/couple-massage" 
-  className="px-4 py-3 hover:bg-stone-50 rounded-md text-stone-700 hover:text-amber-600 transition-colors text-sm"
->
-  Couple Massage
-</Link>
-
-<Link 
-  href="/services/spa-facilities" 
-  className="px-4 py-3 hover:bg-stone-50 rounded-md text-stone-700 hover:text-amber-600 transition-colors text-sm"
->
-  Jacuzzi & Steam Bath
-</Link>
+                {services.map((service) => (
+  <Link
+    key={service.href}
+    href={service.href}
+    className="px-4 py-3 hover:bg-stone-50 rounded-md text-stone-700 hover:text-amber-600 transition-colors text-sm"
+  >
+    {service.name}
+  </Link>
+))}
               </div>
             </div>
           </div>
@@ -156,43 +154,16 @@ export default function Navbar() {
               id="mobile-services-menu"
               className="flex flex-col gap-2 pl-4 pt-2 pb-2 border-l-2 border-stone-100 ml-2 mt-2"
         >
-                  <Link 
-                    href="/services/thai-massage" 
-                    onClick={closeMenu} 
-                    className="text-stone-600 py-2 hover:text-amber-600 transition-colors"
-                  >
-                    Thai Massage
-                  </Link>
-                  <Link 
-                    href="/services/balinese-massage" 
-                    onClick={closeMenu} 
-                    className="text-stone-600 py-2 hover:text-amber-600 transition-colors"
-                  >
-                    Balinese Massage
-                  </Link>
-                  <Link 
-                    href="/services/deep-tissue-massage" 
-                    onClick={closeMenu} 
-                    className="text-stone-600 py-2 hover:text-amber-600 transition-colors"
-                  >
-                    Deep Tissue Massage
-                  </Link>
-
-                 <Link 
-                     href="/services/couple-massage" 
-                     onClick={closeMenu} 
-                     className="text-stone-600 py-2 hover:text-amber-600 transition-colors"
-                  >
-                     Couple Massage
-                 </Link>
-
-                <Link 
-                    href="/services/spa-facilities" 
-                    onClick={closeMenu} 
-                    className="text-stone-600 py-2 hover:text-amber-600 transition-colors"
-                   >
-                    Jacuzzi & Steam Bath
-                      </Link>
+                  {services.map((service) => (
+  <Link
+    key={service.href}
+    href={service.href}
+    onClick={closeMenu}
+    className="text-stone-600 py-2 hover:text-amber-600 transition-colors"
+  >
+    {service.name}
+  </Link>
+))}
                 </div>
               )}
             </div>

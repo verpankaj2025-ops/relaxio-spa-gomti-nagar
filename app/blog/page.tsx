@@ -11,7 +11,7 @@ export default function BlogPage() {
 
     {/* 🔥 HERO SECTION (same as services pages) */}
 
-<section className="relative min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center text-center text-white overflow-hidden bg-stone-950">
+<section className="relative min-h-[55vh] md:min-h-[60vh] lg:min-h-[65vh] flex items-center justify-center text-center text-white overflow-hidden bg-stone-950">
   
   <Image
     src="/images/spa.avif"
@@ -41,42 +41,241 @@ export default function BlogPage() {
    </section>
 
       {/* 🔥 BLOG LIST */}
-      <section className="pb-20 max-w-3xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-6">
-          {blogs.map((blog) => (
-            <Link key={blog.slug} href={`/blog/${blog.slug}`}>
-              <div className="group p-6 bg-white/80 backdrop-blur rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer border border-stone-200 hover:border-amber-400">
+      <section className="relative -mt-16 z-20 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center px-4">
 
-  {/* TITLE */}
-  <h2 className="text-2xl font-serif mb-2 group-hover:text-amber-600 transition">
-    {blog.title}
-  </h2>
+  {blogs.map((blog) => (
+    
+    <div key={blog.slug} className="w-full flex justify-center">
 
-  {/* SUBTEXT */}
-  <p className="text-sm text-stone-500">
-  {blog.description}
-</p>
+      <Link href={`/blog/${blog.slug}`}>
+        
+        <div className="group relative overflow-hidden w-full max-w-[860px] bg-[#fffdf9] rounded-[32px] border border-stone-200/70 hover:border-amber-400/50 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer">
 
-  {/* CTA */}
-  <div className="mt-4 text-amber-600 text-sm font-medium">
-    Read More →
+  <div className="relative h-[320px] overflow-hidden">
+
+    <Image
+      src={blog.image || "/images/spa.avif"}
+      alt={blog.title}
+      fill
+      className="object-cover group-hover:scale-105 transition-transform duration-700"
+    />
+
+    <div className="absolute inset-0 bg-black/20" />
+
   </div>
 
-</div>
-            </Link>
-          ))}
+  <div className="p-12">
+
+          {/* TITLE */}
+          <h2 className="text-4xl md:text-6xl font-serif mb-4 leading-tight text-stone-900 group-hover:text-amber-600 transition-colors duration-300">
+            {blog.title}
+          </h2>
+
+          {/* SUBTEXT */}
+          <p className="text-stone-600 leading-relaxed text-lg max-w-2xl">
+            {blog.description}
+          </p>
+
+          {/* CTA */}
+          <div className="mt-8 inline-flex items-center justify-center rounded-full border border-amber-500 px-5 py-3 text-sm uppercase tracking-[0.18em] text-amber-600 font-semibold transition-all duration-300 group-hover:bg-amber-500 group-hover:text-white">
+             Read Article →
+            </div>
+          </div>
+
         </div>
-      </section>
-      
-      <div className="text-center mt-12">
-  <a
-    href="https://wa.me/917081891995?text=Hi%20I%20want%20to%20book%20a%20spa%20session"
-    target="_blank"
-    className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full shadow-lg transition"
-  >
-    Check Availability Now
-  </a>
+
+      </Link>
+
+    </div>
+
+  ))}
+
 </div>
+             
+      </section>
+
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+
+  <div className="text-center mb-16">
+
+    <span className="uppercase tracking-[0.3em] text-xs text-[#d4af37] font-medium">
+      Relaxio Wellness Journal
+    </span>
+
+    <h2 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4 leading-tight">
+      Wellness, Relaxation & Luxury Spa Insights
+    </h2>
+
+    <p className="text-stone-600 text-lg leading-relaxed max-w-3xl mx-auto mt-6">
+      Explore expert wellness tips, massage therapy benefits, body relaxation techniques, stress relief guides, and luxury spa experiences from Relaxio Spa in Gomti Nagar Lucknow.
+    </p>
+
+  </div>
+
+  <div className="grid md:grid-cols-2 gap-12">
+
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-[32px] p-10 shadow-sm">
+      
+      <h3 className="font-serif text-3xl text-stone-900 mb-6">
+        Why Wellness Content Matters
+      </h3>
+
+      <p className="text-stone-600 leading-relaxed mb-5">
+        Wellness education helps people understand the benefits of therapies like Thai massage, Balinese massage, deep tissue massage, aromatherapy, and stress relief treatments.
+      </p>
+
+      <p className="text-stone-600 leading-relaxed">
+        Our spa journal shares practical relaxation insights, wellness routines, and body recovery techniques designed for modern lifestyles in Lucknow.
+      </p>
+
+    </div>
+
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-[32px] p-10 shadow-sm">
+      
+      <h3 className="font-serif text-3xl text-stone-900 mb-6">
+        Luxury Spa Experience in Gomti Nagar
+      </h3>
+
+      <p className="text-stone-600 leading-relaxed mb-5">
+        Relaxio Spa offers professional wellness therapies, private spa rooms, couple spa sessions, jacuzzi facilities, and premium massage experiences in Gomti Nagar Lucknow.
+      </p>
+
+      <p className="text-stone-600 leading-relaxed">
+        Through our wellness journal, we aim to help visitors discover the best spa therapies for relaxation, stress management, and body rejuvenation.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+
+  <div className="text-center mb-16">
+
+    <span className="uppercase tracking-[0.3em] text-xs text-[#d4af37] font-medium">
+      Spa & Wellness FAQs
+    </span>
+
+    <h2 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4 leading-tight">
+      Frequently Asked Questions
+    </h2>
+
+  </div>
+
+  <div className="space-y-4 max-w-4xl mx-auto">
+
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-2xl p-6">
+      <h3 className="font-serif text-2xl text-stone-900 mb-4">
+        Which is the best spa in Gomti Nagar Lucknow?
+      </h3>
+
+      <p className="text-stone-600 leading-relaxed">
+        Relaxio Spa is known for premium wellness therapies, luxury spa ambience, private rooms, and professional massage experiences in Gomti Nagar Lucknow.
+      </p>
+    </div>
+
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-3xl p-8">
+      <h3 className="font-serif text-2xl text-stone-900 mb-4">
+        Which massage is best for stress relief?
+      </h3>
+
+      <p className="text-stone-600 leading-relaxed">
+        Thai massage, Balinese massage, and aromatherapy therapies are highly effective for relaxation, stress relief, and mental wellness.
+      </p>
+    </div>
+
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-3xl p-8">
+      <h3 className="font-serif text-2xl text-stone-900 mb-4">
+        Does Relaxio Spa offer couple spa sessions?
+      </h3>
+
+      <p className="text-stone-600 leading-relaxed">
+        Yes, Relaxio Spa offers luxury couple spa sessions, private wellness rooms, jacuzzi facilities, and relaxing spa experiences for couples in Lucknow.
+      </p>
+    </div>
+
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-3xl p-8">
+      <h3 className="font-serif text-2xl text-stone-900 mb-4">
+        What are the benefits of professional massage therapy?
+      </h3>
+
+      <p className="text-stone-600 leading-relaxed">
+        Professional massage therapies help improve blood circulation, reduce stress, relax muscles, improve sleep quality, and support overall wellness.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+
+  <div className="text-center mb-16">
+
+    <span className="uppercase tracking-[0.3em] text-xs text-[#d4af37] font-medium">
+      Featured Wellness Topics
+    </span>
+
+    <h2 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4">
+      Explore Spa & Wellness Insights
+    </h2>
+
+    <p className="text-stone-600 text-lg max-w-3xl mx-auto mt-6 leading-relaxed">
+      Discover wellness guides, relaxation therapies, body recovery techniques, and luxury spa experiences designed for modern lifestyles in Gomti Nagar Lucknow.
+    </p>
+
+  </div>
+  <div className="bg-[#fffdf9] border border-stone-200 rounded-[40px] p-10 md:p-16 shadow-sm">
+
+  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-xl transition-all duration-300">
+      <h3 className="font-serif text-2xl text-stone-900 mb-4">
+        Thai Massage Benefits
+      </h3>
+
+      <p className="text-stone-600 leading-relaxed">
+        Learn how traditional Thai massage helps improve flexibility, reduce stress, and support full-body wellness.
+      </p>
+    </div>
+
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-xl transition-all duration-300">
+      <h3 className="font-serif text-2xl text-stone-900 mb-4">
+        Stress Relief Therapies
+      </h3>
+
+      <p className="text-stone-600 leading-relaxed">
+        Explore wellness therapies designed for relaxation, stress management, improved sleep, and mental calmness.
+      </p>
+    </div>
+
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-xl transition-all duration-300">
+      <h3 className="font-serif text-2xl text-stone-900 mb-4">
+        Luxury Couple Spa
+      </h3>
+
+      <p className="text-stone-600 leading-relaxed">
+        Discover private couple spa sessions, jacuzzi experiences, and premium wellness treatments in Lucknow.
+      </p>
+    </div>
+        </div>
+
+    <div className="text-center mt-14">
+      <a
+        href="https://wa.me/917081891995?text=Hi%20I%20want%20to%20book%20a%20spa%20session"
+        target="_blank"
+        className="inline-flex items-center justify-center bg-stone-900 hover:bg-black text-white px-8 py-4 rounded-full transition-all duration-300 uppercase tracking-[0.2em] text-sm"
+      >
+        Book Your Spa Session
+      </a>
+    </div>
+  
+  </div>
+
+</section>
 
     </div>
   );

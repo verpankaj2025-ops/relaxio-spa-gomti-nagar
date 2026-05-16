@@ -5,6 +5,8 @@ import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
 import FadeIn from '@/components/ui/FadeIn';
 import { CheckCircle2 } from 'lucide-react';
+import PricingSection from "@/components/services/PricingSection";
+import ExploreMore from "@/components/services/ExploreMore";
 
 async function getFAQs() {
   try {
@@ -163,92 +165,53 @@ const faqs = Array.isArray(allFaqs)
                   Relaxio Spa focuses on comfort, hygiene, privacy, and authentic wellness experiences for every guest.
                 </p>
 
-              <div className="bg-white/95 backdrop-blur-sm p-6 md:p-10 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-stone-100 my-16 max-w-6xl mx-auto">
-                <h2 className="font-serif text-3xl text-stone-900 mb-8 text-center">Thai Massage Pricing</h2>
-                <div className="space-y-6">
-                  <div className="flex justify-between items-center border-b border-stone-100 pb-6">
-                    <div>
-                      <h4 className="text-xl font-serif text-stone-900">Express Stretch</h4>
-                      <p className="text-stone-500 text-sm">60 Minutes</p>
-                    </div>
-                    <div className="text-2xl font-serif text-[#d4af37]">₹2,499</div>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-stone-100 pb-6">
-                    <div>
-                      <h4 className="text-xl font-serif text-stone-900">Deep Healing (Recommended)</h4>
-                      <p className="text-stone-500 text-sm">90 Minutes</p>
-                    </div>
-                    <div className="text-2xl font-serif text-[#d4af37]">₹3,499</div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h4 className="text-xl font-serif text-stone-900">Ultimate Rejuvenation</h4>
-                      <p className="text-stone-500 text-sm">120 Minutes</p>
-                    </div>
-                    <div className="text-2xl font-serif text-[#d4af37]">₹4,499</div>
-                  </div>
-                </div>
-                <div className="mt-10 text-center">
-                  <a
-                     href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20Thai%20Massage.%20(Source:%20Thai%20Page)"
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     aria-label="Book Thai Massage Appointment"
-                     className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-colors duration-300 text-sm uppercase tracking-widest font-medium w-full md:w-auto"
-                   >
-                     Book Your Appointment
-                   </a>
-                </div>
-              </div>
+      <PricingSection
+  title="Thai Massage Packages"
+  description="Professional Thai massage therapy with stretching techniques, deep relaxation, and luxury wellness experience in Gomti Nagar Lucknow."
+  buttonText="Book Thai Massage"
+  whatsappMessage="Hi Relaxio Spa, I want Thai Massage. (Source: Thai Page)"
+  packages={[
+    {
+      name: "Express Stretch",
+      duration: "60 Minutes Therapy",
+      price: "₹2,499",
+    },
+    {
+      name: "Deep Healing",
+      duration: "90 Minutes Therapy",
+      price: "₹3,499",
+      popular: true,
+    },
+    {
+      name: "Ultimate Rejuvenation",
+      duration: "120 Minutes Therapy",
+      price: "₹4,499",
+    },
+  ]}
+/>
 
-              <section className="mt-24">
-  <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-10">
-    Explore More Wellness Therapies
-  </h2>
-
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-    <Link
-      href="/services/balinese-massage"
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
-    >
-      <h3 className="text-2xl font-serif text-stone-900 mb-4">
-        Balinese Massage
-      </h3>
-
-      <p className="text-stone-600 leading-relaxed">
-        Experience aromatherapy-based relaxation therapy designed for stress relief and peaceful body recovery.
-      </p>
-    </Link>
-
-    <Link
-      href="/services/deep-tissue-massage"
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
-    >
-      <h3 className="text-2xl font-serif text-stone-900 mb-4">
-        Deep Tissue Massage
-      </h3>
-
-      <p className="text-stone-600 leading-relaxed">
-        Deep pressure therapy focused on muscle recovery, stiffness reduction, and chronic tension relief.
-      </p>
-    </Link>
-
-    <Link
-      href="/services/couple-massage"
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
-    >
-      <h3 className="text-2xl font-serif text-stone-900 mb-4">
-        Couple Massage
-      </h3>
-
-      <p className="text-stone-600 leading-relaxed">
-        Enjoy a relaxing private spa experience for couples with premium wellness therapies and peaceful ambiance.
-      </p>
-    </Link>
-
-  </div>
-</section>
+              <ExploreMore
+  therapies={[
+    {
+      title: "Balinese Massage",
+      href: "/services/balinese-massage",
+      description:
+        "Experience aromatherapy-based relaxation therapy designed for stress relief and peaceful body recovery.",
+    },
+    {
+      title: "Deep Tissue Massage",
+      href: "/services/deep-tissue-massage",
+      description:
+        "Deep pressure therapy focused on muscle recovery, stiffness reduction, and chronic tension relief.",
+    },
+    {
+      title: "Couple Massage",
+      href: "/services/couple-massage",
+      description:
+        "Enjoy a relaxing private spa experience for couples with premium wellness therapies and peaceful ambience.",
+    },
+  ]}
+/>
 
             <div className="mt-16">
               <FAQ faqs={faqs} />

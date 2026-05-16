@@ -5,6 +5,8 @@ import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
 import FadeIn from '@/components/ui/FadeIn';
 import { CheckCircle2 } from 'lucide-react';
+import PricingSection from "@/components/services/PricingSection";
+import ExploreMore from "@/components/services/ExploreMore";
 
 async function getFAQs() {
   try {
@@ -129,91 +131,53 @@ const faqs = Array.isArray(allFaqs)
                  Our therapists are certified experts in Balinese techniques. They understand how to identify body tension points and adjust pressure according to your comfort level. We maintain high hygiene standards using fresh premium-quality linens and sanitized equipment for every guest. Experience the pinnacle of wellness and discover why Relaxio Spa is known as a premium wellness destination.
               </p>
 
-              <div className="bg-white/95 backdrop-blur-sm p-6 md:p-10 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-stone-100 my-16 max-w-6xl mx-auto">
-                <h2 className="font-serif text-3xl text-stone-900 mb-8 text-center">Balinese Massage Pricing</h2>
-                <div className="space-y-6">
-                  <div className="flex justify-between items-center border-b border-stone-100 pb-6">
-                    <div>
-                      <h4 className="text-xl font-serif text-stone-900">Serenity Session</h4>
-                      <p className="text-stone-500 text-sm">60 Minutes</p>
-                    </div>
-                    <div className="text-2xl font-serif text-[#d4af37]">₹2,499</div>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-stone-100 pb-6">
-                    <div>
-                      <h4 className="text-xl font-serif text-stone-900">Deep Relaxation (Recommended)</h4>
-                      <p className="text-stone-500 text-sm">90 Minutes</p>
-                    </div>
-                    <div className="text-2xl font-serif text-[#d4af37]">₹3,499</div>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h4 className="text-xl font-serif text-stone-900">The Royal Balinese</h4>
-                      <p className="text-stone-500 text-sm">120 Minutes</p>
-                    </div>
-                    <div className="text-2xl font-serif text-[#d4af37]">₹4,499</div>
-                  </div>
-                </div>
-                <div className="mt-10 text-center">
-                  <a 
-                    href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20a%20Balinese%20Massage."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Book Balinese Massage Appointment" 
-                    className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-colors duration-300 text-sm uppercase tracking-widest font-medium w-full md:w-auto">
-                    Book Your Appointment
-                  </a>
-                </div>
-              </div>
+              <PricingSection
+  title="Balinese Massage Packages"
+  description="Luxury Balinese massage therapy with aromatherapy oils, stress relief techniques, and deep relaxation wellness experience in Gomti Nagar Lucknow."
+  buttonText="Book Balinese Massage"
+  whatsappMessage="Hi Relaxio Spa, I want Balinese Massage. (Source: Balinese Page)"
+  packages={[
+    {
+      name: "Relaxation Therapy",
+      duration: "60 Minutes Therapy",
+      price: "₹2,499",
+    },
+    {
+      name: "Signature Balinese",
+      duration: "90 Minutes Therapy",
+      price: "₹3,499",
+      popular: true,
+    },
+    {
+      name: "Royal Wellness Ritual",
+      duration: "120 Minutes Therapy",
+      price: "₹4,499",
+    },
+  ]}
+/>
 
-              <section className="mt-24">
-  <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-10">
-    Explore More Wellness Therapies
-  </h2>
-
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-    <Link
-      href="/services/thai-massage"
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
-    >
-      <h3 className="text-2xl font-serif text-stone-900 mb-4">
-        Thai Massage
-      </h3>
-
-      <p className="text-stone-600 leading-relaxed">
-        Traditional stretching and pressure-based therapy designed to improve flexibility and body relaxation.
-      </p>
-    </Link>
-
-    <Link
-      href="/services/deep-tissue-massage"
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
-    >
-      <h3 className="text-2xl font-serif text-stone-900 mb-4">
-        Deep Tissue Massage
-      </h3>
-
-      <p className="text-stone-600 leading-relaxed">
-        Deep pressure therapy focused on muscle recovery, stiffness reduction, and chronic tension relief.
-      </p>
-    </Link>
-
-    <Link
-      href="/services/couple-massage"
-      className="bg-white border border-stone-200 rounded-2xl p-6 hover:border-[#d4af37] hover:shadow-lg transition-all"
-    >
-      <h3 className="text-2xl font-serif text-stone-900 mb-4">
-        Couple Massage
-      </h3>
-
-      <p className="text-stone-600 leading-relaxed">
-        Enjoy a relaxing private spa experience for couples with premium wellness therapies and peaceful ambiance.
-      </p>
-    </Link>
-
-  </div>
-</section>
+              <ExploreMore
+  therapies={[
+    {
+      title: "Thai Massage",
+      href: "/services/thai-massage",
+      description:
+        "Traditional stretching therapy designed for flexibility and deep body relaxation.",
+    },
+    {
+      title: "Deep Tissue Massage",
+      href: "/services/deep-tissue-massage",
+      description:
+        "Firm-pressure wellness therapy focused on muscle recovery and stiffness relief.",
+    },
+    {
+      title: "Jacuzzi & Steam Bath",
+      href: "/services/spa-facilities",
+      description:
+        "Luxury Jacuzzi and steam wellness sessions designed for relaxation and rejuvenation.",
+    },
+  ]}
+/>
 
                 <div className="mt-16">
                    <FAQ faqs={faqs} />

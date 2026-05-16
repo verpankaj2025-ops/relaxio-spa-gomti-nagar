@@ -5,6 +5,8 @@ import FAQ from "@/components/FAQ";
 import FadeIn from "@/components/ui/FadeIn";
 import { CheckCircle2 } from "lucide-react";
 import { getBreadcrumbSchema, getFAQSchema } from "@/lib/seo";
+import PricingSection from "@/components/services/PricingSection";
+import ExploreMore from "@/components/services/ExploreMore";
 
 
 export const metadata: Metadata = {
@@ -167,76 +169,53 @@ export default async function SpaFacilitiesPage() {
                 Whether you want to relax after a long day, prepare your body before massage therapy, or enjoy a complete wellness session, Relaxio Spa offers one of the best Jacuzzi and Steam Bath experiences in Gomti Nagar Lucknow.
               </p>
             
-            {/* Pricing */}
-            <FadeIn>
-              <div className="bg-white p-10 rounded-3xl shadow-lg border border-stone-100 my-16">
-                <h2 className="font-serif text-3xl text-stone-900 mb-8 text-center">
-                  Jacuzzi & Steam Bath Pricing
-                </h2>
+            <PricingSection
+  title="Jacuzzi & Steam Bath Packages"
+  description="Luxury Jacuzzi and steam bath wellness sessions with premium spa ambience, deep relaxation, and rejuvenating comfort in Gomti Nagar Lucknow."
+  buttonText="Book Jacuzzi & Steam Bath"
+  whatsappMessage="Hi Relaxio Spa, I want Jacuzzi & Steam Bath. (Source: Spa Facilities Page)"
+  packages={[
+    {
+      name: "Relaxation Session",
+      duration: "30 Minutes Session",
+      price: "₹999",
+    },
+    {
+      name: "Luxury Wellness Session",
+      duration: "60 Minutes Session",
+      price: "₹3,499",
+      popular: true,
+    },
+    {
+      name: "Complete Spa Experience",
+      duration: "Jacuzzi + Steam Bath + Massage",
+      price: "₹5,999",
+    },
+  ]}
+/>
 
-                <div className="space-y-6">
-                  <div className="flex justify-between items-center border-b border-stone-100 pb-6">
-                    <div>
-                      <h4 className="text-xl font-serif text-stone-900">
-                        Relaxation Session
-                      </h4>
-
-                      <p className="text-stone-500 text-sm">
-                        30 Minutes
-                      </p>
-                    </div>
-
-                    <div className="text-2xl font-serif text-[#d4af37]">
-                      ₹999
-                    </div>
-                  </div>
-
-                  <div className="flex justify-between items-center border-b border-stone-100 pb-6">
-                    <div>
-                      <h4 className="text-xl font-serif text-stone-900">
-                        Luxury Wellness Session
-                      </h4>
-
-                      <p className="text-stone-500 text-sm">
-                        60 Minutes
-                      </p>
-                    </div>
-
-                    <div className="text-2xl font-serif text-[#d4af37]">
-                      ₹3,499
-                    </div>
-                  </div>
-
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h4 className="text-xl font-serif text-stone-900">
-                        Complete Spa Experience
-                      </h4>
-
-                      <p className="text-stone-500 text-sm">
-                        Jacuzzi + Steam Bath + Massage
-                      </p>
-                    </div>
-
-                    <div className="text-2xl font-serif text-[#d4af37]">
-                      ₹5,999
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-10 text-center">
-                  <a
-                    href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20Jacuzzi%20and%20Steam%20Bath"
-                    aria-label="Book Jacuzzi and Steam Bath Appointment"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-all duration-300 text-sm uppercase tracking-widest font-medium w-full md:w-auto"
-                  >
-                    Book Your Appointment
-                  </a>
-                </div>
-              </div>
-              </FadeIn>
+<ExploreMore
+  therapies={[
+    {
+      title: "Deep Tissue Massage",
+      href: "/services/deep-tissue-massage",
+      description:
+        "Deep muscle recovery therapy designed to reduce stiffness and physical stress.",
+    },
+    {
+      title: "Balinese Massage",
+      href: "/services/balinese-massage",
+      description:
+        "Luxury aromatherapy massage designed for calmness and peaceful wellness.",
+    },
+    {
+      title: "Couple Massage",
+      href: "/services/couple-massage",
+      description:
+        "Private wellness spa experience for couples with premium ambience and therapies.",
+    },
+  ]}
+/>
 
             {/* FAQ */}
             <div className="mt-24">
