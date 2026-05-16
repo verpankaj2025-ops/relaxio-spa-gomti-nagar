@@ -353,9 +353,9 @@ export default async function Home() {
       <section className="py-24 bg-white">
   <div className="max-w-6xl mx-auto px-4 text-center">
 
-    <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
+    <h3 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
       Why Guests Choose Relaxio Spa
-    </h2>
+    </h3>
 
     <p className="text-stone-600 max-w-2xl mx-auto mb-12 leading-relaxed">
       Relaxio Spa focuses on comfort, hygiene, privacy, and professional wellness experiences. Our peaceful ambience and trained therapists help guests relax, recover from stress, and enjoy a premium spa experience in Gomti Nagar Lucknow.
@@ -431,7 +431,7 @@ export default async function Home() {
             
               <div>
                 <span className="text-amber-700 tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Find Us</span>
-                <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-10">Visit Our Sanctuary in Gomti Nagar</h2>
+                <h3 className="text-4xl md:text-5xl font-serif text-stone-900 mb-10">Visit Our Sanctuary in Gomti Nagar</h3>
                 
                 <div className="space-y-8">
                   <div className="flex items-start gap-6">
@@ -551,9 +551,9 @@ export default async function Home() {
 <section className="py-16 bg-white">
   <div className="max-w-6xl mx-auto px-4">
 
-    <h2 className="text-3xl font-serif text-center mb-10">
+    <h3 className="text-3xl font-serif text-center mb-10">
       Wellness & Spa Guides
-    </h2>
+    </h3>
 
     <div className="grid md:grid-cols-3 gap-6">
 

@@ -1,11 +1,69 @@
 import { getAllPosts } from "@/lib/blog";
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
+import { getFAQSchema } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Relaxio Spa Blog | Wellness & Massage Guides in Gomti Nagar Lucknow",
+
+  description:
+    "Explore massage therapy benefits, wellness tips, relaxation guides, and luxury spa insights from Relaxio Spa in Gomti Nagar Lucknow.",
+
+  alternates: {
+    canonical: "https://relaxiospa.in/blog",
+  },
+
+  openGraph: {
+    title:
+      "Relaxio Spa Blog | Wellness & Massage Guides in Gomti Nagar Lucknow",
+
+    description:
+      "Discover wellness guides, Thai massage benefits, spa therapies, and relaxation tips from Relaxio Spa.",
+
+    url: "https://relaxiospa.in/blog",
+
+    siteName: "Relaxio Spa",
+
+    images: [
+      {
+        url: "https://relaxiospa.in/images/spa.avif",
+        width: 1200,
+        height: 630,
+        alt: "Relaxio Spa Blog",
+      },
+    ],
+
+    locale: "en_IN",
+    type: "website",
+  },
+};
 
 export default function BlogPage() {
   const blogs = getAllPosts();
 
+  const faqs = [
+  {
+    question: "Which is the best spa in Gomti Nagar Lucknow?",
+    answer:
+      "Relaxio Spa offers premium wellness therapies, luxury ambience, private rooms, and professional massage experiences.",
+  },
+  {
+    question: "Which massage is best for stress relief?",
+    answer:
+      "Thai massage, Balinese massage, and aromatherapy therapies are highly effective for relaxation and stress relief.",
+  },
+];
+
   return (
+  <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(getFAQSchema(faqs)),
+      }}
+    />
+
     <div>
 
 
@@ -24,9 +82,9 @@ export default function BlogPage() {
   <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
   <div className="text-center px-4 sm:px-6 max-w-5xl mx-auto pt-28 pb-16">
   
-    <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
+    <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
       Relaxio Spa Blog
-    </h1>
+    </h2>
 
     <p className="text-amber-700 sm:text-lg md:text-xl text-stone-200 max-w-3xl mx-auto leading-relaxed font-light">
       Discover wellness tips, massage benefits, spa therapies, and relaxation guides from the best spa in Gomti Nagar Lucknow.
@@ -42,13 +100,16 @@ export default function BlogPage() {
 
       {/* 🔥 BLOG LIST */}
       <section className="relative -mt-16 z-20 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center px-4">
+        <div className="grid md:grid-cols-2 gap-10">
 
   {blogs.map((blog) => (
     
-    <div key={blog.slug} className="w-full flex justify-center">
+    <div key={blog.slug}>
 
-      <Link href={`/blog/${blog.slug}`}>
+      <Link
+  href={`/blog/${blog.slug}`}
+  prefetch={true}
+>
         
         <div className="group relative overflow-hidden w-full max-w-[860px] bg-[#fffdf9] rounded-[32px] border border-stone-200/70 hover:border-amber-400/50 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer">
 
@@ -80,7 +141,7 @@ export default function BlogPage() {
           {/* CTA */}
           <div className="mt-8 inline-flex items-center justify-center rounded-full border border-amber-500 px-5 py-3 text-sm uppercase tracking-[0.18em] text-amber-600 font-semibold transition-all duration-300 group-hover:bg-amber-500 group-hover:text-white">
              Read Article →
-            </div>
+                     </div>
           </div>
 
         </div>
@@ -103,9 +164,9 @@ export default function BlogPage() {
       Relaxio Wellness Journal
     </span>
 
-    <h2 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4 leading-tight">
+    <h3 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4 leading-tight">
       Wellness, Relaxation & Luxury Spa Insights
-    </h2>
+    </h3>
 
     <p className="text-stone-600 text-lg leading-relaxed max-w-3xl mx-auto mt-6">
       Explore expert wellness tips, massage therapy benefits, body relaxation techniques, stress relief guides, and luxury spa experiences from Relaxio Spa in Gomti Nagar Lucknow.
@@ -151,6 +212,31 @@ export default function BlogPage() {
 
 </section>
 
+<section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+
+  <div className="space-y-6 text-lg leading-relaxed text-stone-700">
+
+    <h2 className="font-serif text-4xl text-stone-900">
+      Spa Wellness & Massage Therapy Guides in Lucknow
+    </h2>
+
+    <p>
+      Relaxio Spa shares wellness insights, massage therapy benefits,
+      stress relief techniques, and luxury spa guidance for guests
+      seeking premium wellness experiences in Gomti Nagar Lucknow.
+    </p>
+
+    <p>
+      Our wellness blog covers Thai massage benefits, Balinese massage
+      therapies, deep tissue massage recovery techniques, couple spa
+      experiences, and luxury relaxation sessions designed for comfort
+      and rejuvenation.
+    </p>
+
+  </div>
+
+</section>
+
 <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
 
   <div className="text-center mb-16">
@@ -159,9 +245,9 @@ export default function BlogPage() {
       Spa & Wellness FAQs
     </span>
 
-    <h2 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4 leading-tight">
+    <h3 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4 leading-tight">
       Frequently Asked Questions
-    </h2>
+    </h3>
 
   </div>
 
@@ -232,51 +318,105 @@ export default function BlogPage() {
 
   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
 
+    {/* CARD 1 */}
     <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-xl transition-all duration-300">
+
       <h3 className="font-serif text-2xl text-stone-900 mb-4">
         Thai Massage Benefits
       </h3>
 
       <p className="text-stone-600 leading-relaxed">
-        Learn how traditional Thai massage helps improve flexibility, reduce stress, and support full-body wellness.
+        Learn how traditional Thai massage helps improve flexibility,
+        reduce stress, and support full-body wellness.
       </p>
+
+      <p className="mt-6">
+        <Link
+          href="/services/thai-massage"
+          className="underline text-amber-700"
+        >
+          Explore Thai Massage Service
+        </Link>
+      </p>
+
+      <p className="mt-4">
+  <Link
+    href="/services/balinese-massage"
+    className="underline text-amber-700"
+  >
+    Explore Balinese Massage
+  </Link>
+</p>
+
     </div>
 
+    {/* CARD 2 */}
     <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-xl transition-all duration-300">
+
       <h3 className="font-serif text-2xl text-stone-900 mb-4">
         Stress Relief Therapies
       </h3>
 
       <p className="text-stone-600 leading-relaxed">
-        Explore wellness therapies designed for relaxation, stress management, improved sleep, and mental calmness.
+        Explore wellness therapies designed for relaxation,
+        stress management, improved sleep, and mental calmness.
       </p>
+
+      <p className="mt-6">
+  <Link
+    href="/services/deep-tissue-massage"
+    className="underline text-amber-700"
+  >
+    Explore Deep Tissue Massage
+  </Link>
+</p>
+
     </div>
 
+    {/* CARD 3 */}
     <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-xl transition-all duration-300">
+
       <h3 className="font-serif text-2xl text-stone-900 mb-4">
         Luxury Couple Spa
       </h3>
 
       <p className="text-stone-600 leading-relaxed">
-        Discover private couple spa sessions, jacuzzi experiences, and premium wellness treatments in Lucknow.
+        Discover private couple spa sessions, jacuzzi experiences,
+        and premium wellness treatments in Lucknow.
       </p>
-    </div>
-        </div>
 
-    <div className="text-center mt-14">
-      <a
-        href="https://wa.me/917081891995?text=Hi%20I%20want%20to%20book%20a%20spa%20session"
-        target="_blank"
-        className="inline-flex items-center justify-center bg-stone-900 hover:bg-black text-white px-8 py-4 rounded-full transition-all duration-300 uppercase tracking-[0.2em] text-sm"
-      >
-        Book Your Spa Session
-      </a>
+      <p className="mt-6">
+        <Link
+          href="/services/couple-massage"
+          className="underline text-amber-700"
+        >
+          Explore Couple Massage Service
+        </Link>
+      </p>
+
     </div>
-  
+
   </div>
+
+  {/* BUTTON */}
+  <div className="text-center mt-14">
+
+    <a
+      href="https://wa.me/917081891995?text=Hi%20I%20want%20to%20book%20a%20spa%20session"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center bg-stone-900 hover:bg-black text-white px-8 py-4 rounded-full transition-all duration-300 uppercase tracking-[0.2em] text-sm"
+    >
+      Book Your Spa Session
+    </a>
+
+  </div>
+
+</div>
 
 </section>
 
     </div>
+    </>
   );
 }
