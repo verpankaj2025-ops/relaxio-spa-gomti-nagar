@@ -3,15 +3,15 @@ import { Facebook, Instagram, Twitter, Phone } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-950 text-stone-400 py-20 border-t border-stone-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="bg-stone-950 text-stone-400 py-14 md:py-16 border-t border-stone-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
         
         <div className="md:col-span-2">
-          <h3 className="text-3xl font-serif text-white mb-6 tracking-wide">
+          <h3 className="text-3xl font-serif text-white mb-4 tracking-wide">
             Relaxio Spa<span className="text-[#d4af37]">.</span>
           </h3>
 
-          <p className="mb-8 font-light leading-relaxed max-w-sm text-stone-400">
+          <p className="mb-6 font-light leading-relaxed max-w-sm text-stone-400">
             Relaxio Spa offers peaceful wellness experiences with private rooms, relaxing therapies, and a calm luxury ambience in Gomti Nagar Lucknow.
           </p>
 
@@ -122,7 +122,7 @@ export default function Footer() {
       </div>
 
       {/* SEO INTERNAL LINKS */}
-<div className="border-t border-stone-800 mt-16 pt-10">
+<div className="border-t border-stone-800 mt-12 pt-8">
 
   <div className="max-w-7xl mx-auto px-4">
 
@@ -183,7 +183,7 @@ export default function Footer() {
 
     </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-stone-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-light">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-stone-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-light">
         <p>&copy; {new Date().getFullYear()} Relaxio Spa. All rights reserved.</p>
 
         <div className="flex gap-6">

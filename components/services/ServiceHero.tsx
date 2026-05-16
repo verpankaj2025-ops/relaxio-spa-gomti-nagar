@@ -14,7 +14,7 @@ export default function ServiceHero({
   alt,
 }: ServiceHeroProps) {
   return (
-    <section className="relative min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden bg-stone-950">
+    <section className="relative min-h-[60vh] md:min-h-[72vh] lg:min-h-[82vh] flex items-center justify-center overflow-hidden bg-stone-950">
 
       <div className="absolute inset-0 z-0">
         <Image
@@ -23,19 +23,21 @@ export default function ServiceHero({
   fill
   sizes="100vw"
   
-  className="object-cover object-[center_65%]"
+  className="object-cover object-[center_65%] scale-[1.02]"
 />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/70" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-28 pb-16">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-24 pb-12">
 
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
+        <div className="w-20 h-px bg-[#d4af37] mx-auto mb-8 opacity-80" />
+         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-serif text-white mb-6 leading-[1.05]
+                                                                                                    tracking-[-0.03em]">
           {title}
         </h1>
 
-        <p className="text-amber-700 sm:text-lg md:text-xl text-stone-200 max-w-3xl mx-auto leading-relaxed font-light">
+        <p className="text-base sm:text-lg md:text-xl text-stone-200/90 max-w-3xl mx-auto leading-relaxed font-light">
           {subtitle}
         </p>
 

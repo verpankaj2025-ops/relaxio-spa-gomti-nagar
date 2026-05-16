@@ -63,7 +63,7 @@ export default function Navbar() {
               href="/services" 
               className="flex items-center gap-1 text-stone-700 hover:text-amber-600 font-medium transition-colors py-2 text-sm uppercase tracking-widest"
             >
-              Services <span className="text-xs group-hover:rotate-180 transition-transform duration-300">⌄</span>
+              Services <span className="text-xs group-hover:rotate-180 transition-transform duration-200">⌄</span>
             </Link>
             <div className="absolute top-full left-0 hidden group-hover:block pt-2">
               <div className="bg-white shadow-xl rounded-lg border border-stone-100 p-2 w-64 flex flex-col">
@@ -108,7 +108,11 @@ export default function Navbar() {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Mobile Menu"
         >
-          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {isMobileMenuOpen ? (
+  <X strokeWidth={1.75} size={26} />
+) : (
+  <Menu strokeWidth={1.75} size={26} />
+)}
         </button>
       </div>
 
@@ -141,7 +145,7 @@ export default function Navbar() {
          >
                 Services
                 <span
-  className={`text-sm transition-transform duration-300 ${
+  className={`text-sm transition-transform duration-200 ${
     isMobileServicesOpen ? 'rotate-180' : ''
   }`}
 >

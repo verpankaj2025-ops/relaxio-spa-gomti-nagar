@@ -19,10 +19,10 @@ export default function FAQ({ faqs = [] }: FAQProps) {
   };
 
   return (
-    <section className="py-24 bg-[#fdfbf7]">
+    <section className="py-16 md:py-20 bg-[#fdfbf7]">
       <div className="max-w-4xl mx-auto px-4">
 
-        <h2 className="text-3xl md:text-5xl text-amber-700 font-serif text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-serif text-stone-900 text-center mb-10 leading-tight tracking-[-0.02em]">
           Frequently Asked Questions
         </h2>
 
@@ -30,20 +30,20 @@ export default function FAQ({ faqs = [] }: FAQProps) {
           {faqs?.map((faq, index) => (
             <div
               key={faq.question}
-              className="border border-stone-200 rounded-xl overflow-hidden bg-white shadow-sm"
+              className="border border-stone-200/80 rounded-2xl overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
             >
               <button
                 onClick={() => toggleFAQ(index)}
                 aria-expanded={activeIndex === index}
                 aria-controls={`faq-content-${index}`}
                 id={`faq-button-${index}`}
-                className="w-full text-left px-6 py-4 flex justify-between items-center"
+                className="w-full text-left px-6 py-5 flex justify-between items-center gap-6"
               >
-                <span className="text-lg font-medium text-stone-900">
+                <span className="text-base md:text-lg font-medium text-stone-900 leading-relaxed">
                   {faq.question}
                 </span>
 
-                <span aria-hidden="true" className="text-xl">
+                <span aria-hidden="true" className="text-lg text-[#b9912f] shrink-0">
                   {activeIndex === index ? "-" : "+"}
                 </span>
               </button>

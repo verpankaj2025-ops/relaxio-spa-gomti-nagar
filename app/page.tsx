@@ -77,7 +77,7 @@ export default async function Home() {
         <main>
           
           {/* 1. HERO SECTION */}
-      <section className="relative min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[65vh] md:min-h-[75vh] lg:min-h-[82vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
    <Image
   src="/images/luxury-spa-gomti-nagar-lucknow.avif"
@@ -89,7 +89,7 @@ export default async function Home() {
   quality={50}
   className="object-cover"
 />
-          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-black/45" />
         </div>
         
            <div 
@@ -111,11 +111,11 @@ export default async function Home() {
                 href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-10 py-4 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-colors duration-300 text-sm uppercase tracking-widest font-medium shadow-lg w-full sm:w-auto">
+                className="px-10 py-4 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-colors duration-200 text-sm uppercase tracking-widest font-medium shadow-lg w-full sm:w-auto">
                 Book Relaxation Package
              </a>
               <a href="tel:+917081891995" 
-                 className="px-10 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-stone-900 transition-colors duration-300 text-sm uppercase tracking-widest font-medium w-full sm:w-auto">
+                 className="px-10 py-4 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-stone-900 transition-colors duration-200 text-sm uppercase tracking-widest font-medium w-full sm:w-auto">
                 Call Now
               </a>
             </div>
@@ -183,13 +183,13 @@ export default async function Home() {
                     key={service.title}
                     href={service.link} 
                     className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 border border-stone-100">
-                  <div className="relative h-96 overflow-hidden">
+                  <div className="relative h-80 md:h-96 overflow-hidden">
                     <Image 
                       src={service.img} 
                       alt={service.alt}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                      className="object-cover group-hover:scale-[1.01] transition-transform duration-300"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
@@ -566,6 +566,7 @@ export default async function Home() {
            alt="Best Spa in Gomti Nagar Lucknow"
            width={800}
            height={500}
+           quality={55}
            className="w-full h-64 object-cover"
          />
 
@@ -598,6 +599,7 @@ export default async function Home() {
            alt="Deep Tissue Massage Benefits"
            width={800}
            height={500}
+           quality={55}
            className="w-full h-64 object-cover"
          />
 

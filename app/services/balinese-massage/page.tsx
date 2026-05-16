@@ -80,11 +80,11 @@ const faqs = Array.isArray(allFaqs)
 
       {/* Main Content */}
           <section className="pt-28 pb-24 bg-[#fdfbf7] content-auto">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="prose prose-stone prose-base md:prose-lg max-w-none font-light text-stone-700">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-none font-light text-stone-700">
 
               <h2 
-                className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">
+                className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">
                 Incredible Benefits of Balinese Massage
                </h2>
               <p className="mb-6 leading-relaxed">
@@ -101,35 +101,48 @@ const faqs = Array.isArray(allFaqs)
                   "Restores the body's natural energy balance",
                   "Alleviates symptoms of depression and stress"
                 ].map((benefit, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
+            <div
+              key={idx}
+              className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-stone-100 shadow-sm hover:shadow-md transition-shadow duration-300"
+             >
                   <CheckCircle2 className="text-[#d4af37] shrink-0 mt-1" size={20} />
                   <span className="text-stone-700">{benefit}</span>
                   </div>
                 ))}
               </div>
-                     <FadeIn>
-  <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl">
+        <FadeIn>
+          <div className="my-16 relative h-[350px] md:h-[450px] rounded-[32px] overflow-hidden shadow-xl">
 
-               <Image 
-                   src="/images/balinese-massage-gomti-nagar-lucknow-spa.avif"
-                   alt="Luxury Balinese massage therapy at Relaxio Spa"
-                   fill
-                   sizes="(max-width: 768px) 100vw, 1200px"
+             <Image 
+             src="/images/balinese-massage-gomti-nagar-lucknow-spa.avif"
+             alt="Luxury Balinese massage therapy at Relaxio Spa"
+             fill
+             sizes="(max-width: 768px) 100vw, 1200px"
+             className="object-cover brightness-95"
+             loading="lazy"
+           />
 
-                   className="object-cover brightness-95"
-                   loading="lazy"
-                 />
-              </div>
-              </FadeIn>
-              <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+
+        </div>
+      </FadeIn>
+              <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">
                  Why Guests Love Our Balinese Therapy
               </h2>
               <p className="mb-6 leading-relaxed">
                 At Relaxio Spa, we focus on creating a peaceful and comfortable wellness environment that supports deep relaxation and stress recovery.
               </p>
-              <p className="mb-10 leading-relaxed">
-                 Our therapists are certified experts in Balinese techniques. They understand how to identify body tension points and adjust pressure according to your comfort level. We maintain high hygiene standards using fresh premium-quality linens and sanitized equipment for every guest. Experience the pinnacle of wellness and discover why Relaxio Spa is known as a premium wellness destination.
-              </p>
+              <div className="space-y-6 mb-10">
+
+  <p className="leading-relaxed">
+    Our therapists are certified experts in Balinese techniques. They understand how to identify body tension points and adjust pressure according to your comfort level.
+  </p>
+
+  <p className="leading-relaxed">
+    We maintain high hygiene standards using fresh premium-quality linens and sanitized equipment for every guest. Experience the pinnacle of wellness and discover why Relaxio Spa is known as a premium wellness destination.
+  </p>
+
+</div>
 
               <PricingSection
   title="Balinese Massage Packages"

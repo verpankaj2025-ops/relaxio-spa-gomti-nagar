@@ -14,7 +14,7 @@ export default function ExploreMore({
   therapies,
 }: ExploreMoreProps) {
   return (
-    <section className="mt-24">
+    <section className="mt-28 pt-10 border-t border-stone-100">
 
       <div className="text-center mb-10">
 
@@ -35,18 +35,20 @@ export default function ExploreMore({
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {therapies.map((therapy, index) => (
-          <Link
-            key={index}
-            href={therapy.href}
-            prefetch={true}
-            className="group bg-[#fffdf9] backdrop-blur-sm border border-stone-200/60 rounded-3xl p-8 min-h-[260px] flex flex-col justify-between hover:border-[#d4af37]/50 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 no-underline"
-          >
+            <Link
+              key={index}
+              href={therapy.href}
+              prefetch={true}
+              className="group relative bg-white border border-stone-200/70 rounded-[32px] p-8 min-h-[280px] flex flex-col justify-between overflow-hidden hover:border-[#d4af37]/40 hover:shadow-[0_15px_50px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 no-underline"
+            >
 
-            <h3 className="text-2xl font-serif text-stone-900 mb-4 group-hover:text-[#d4af37] transition-colors no-underline">
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              <h3 className="text-[2rem] leading-tight tracking-[-0.02em] font-serif text-stone-900 mb-4 group-hover:text-[#d4af37] transition-colors no-underline">
               {therapy.title}
             </h3>
 
-            <p className="text-stone-600 leading-relaxed text-base no-underline max-w-[90%]">
+            <p className="text-stone-600 leading-relaxed text-base no-underline max-w-full">
               {therapy.description}
             </p>
 

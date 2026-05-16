@@ -21,14 +21,14 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '600'],
 });
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-serif',
   display: 'swap',
-  weight: ['400', '600', '700'],
+  weight: ['600', '700'],
 });
 const SITE_URL = "https://relaxiospa.in";
 

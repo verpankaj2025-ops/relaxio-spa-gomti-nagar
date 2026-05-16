@@ -108,33 +108,43 @@ const faqs = Array.isArray(allFaqs)
 
       {/* Main Content */}
       <section className="pt-28 pb-24 bg-[#fdfbf7] content-auto">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-stone prose-base md:prose-lg max-w-none font-light text-stone-700">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-none font-light text-stone-700">
             
               <h2 
-               className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">What is Authentic Thai Massage?</h2>
+               className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">What is Authentic Thai Massage?</h2>
               <p className="mb-6 leading-relaxed">
                 Thai massage is ideal for people looking to improve flexibility, reduce body stiffness, and experience deep stretching-based relaxation therapy. 
               </p>
-              <p className="mb-10 leading-relaxed">
-                Unlike traditional Western massages that require you to undress and use oils, a Thai massage is performed while you are fully clothed in loose, comfortable attire. The treatment takes place on a premium padded mat on the floor, allowing our expert therapists to use their body weight to apply deep, rhythmic pressure along your body&apos;s energy lines (known as Sen lines).</p>
+              <div className="space-y-6 mb-10">
+
+                 <p className="leading-relaxed">
+                    Unlike traditional Western massages that require oils, Thai massage is performed while you remain comfortably clothed in loose attire.
+                  </p>
+
+                  <p className="leading-relaxed">
+                    The therapy takes place on a premium padded mat, allowing therapists to apply rhythmic stretching and pressure techniques designed to improve flexibility, circulation, and relaxation.
+                   </p>
+
+                </div>
 
             <FadeIn>
-              <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+  <div className="my-16 relative h-[350px] md:h-[450px] rounded-[32px] overflow-hidden shadow-xl">
                 <Image
                   src="/images/thai-massage-gomti-nagar-lucknow-spa.avif"
                   alt="Relaxing Thai massage therapy at Relaxio Spa"
   fill
   sizes="(max-width: 768px) 100vw, 1200px"
-  quality={75}
+  quality={55}
   className="object-cover brightness-95"
   loading="lazy"
 />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
             </FadeIn>
 
               <h2 
-               className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">Top Benefits of Thai Massage</h2>
+               className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">Top Benefits of Thai Massage</h2>
               <p 
                className="mb-6 leading-relaxed">
                 At Relaxio Spa, every Thai massage session is designed to deliver physical relaxation and improved body flexibility.
@@ -150,20 +160,24 @@ const faqs = Array.isArray(allFaqs)
                   "Reduces stress and promotes deep relaxation",
                   "Clears energy blockages in the body"
                 ].map((benefit, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
+                  <div
+                    key={idx}
+                    className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-stone-100 shadow-sm hover:shadow-md transition-shadow duration-300"
+                   >
                     <CheckCircle2 className="text-[#d4af37] shrink-0 mt-1" size={20} />
                     <span className="text-stone-700">{benefit}</span>
                   </div>
                 ))}
               </div>
             
-              <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">Why Guests Choose Our Thai Therapy?</h2>
+              <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">Why Guests Choose Our Thai Therapy?</h2>
               <p className="mb-6 leading-relaxed">
                 Professional Thai therapy requires proper stretching techniques, trained therapists, and a calm wellness environment.
               </p>
               <p className="mb-10 leading-relaxed">
                   Relaxio Spa focuses on comfort, hygiene, privacy, and authentic wellness experiences for every guest.
                 </p>
+          <div className="w-24 h-px bg-[#d4af37] my-16 mx-auto" />
 
       <PricingSection
   title="Thai Massage Packages"
@@ -189,6 +203,7 @@ const faqs = Array.isArray(allFaqs)
     },
   ]}
 />
+     <div className="w-24 h-px bg-[#d4af37] my-16 mx-auto" />
 
               <ExploreMore
   therapies={[
