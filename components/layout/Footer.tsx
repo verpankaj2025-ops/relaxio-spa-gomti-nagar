@@ -121,6 +121,68 @@ export default function Footer() {
 
       </div>
 
+      {/* SEO INTERNAL LINKS */}
+<div className="border-t border-stone-800 mt-16 pt-10">
+
+  <div className="max-w-7xl mx-auto px-4">
+
+    <h3 className="text-xl font-serif text-white mb-6">
+      Popular Wellness Services
+    </h3>
+
+    <div className="grid md:grid-cols-3 gap-4 text-sm">
+
+      <Link
+        href="/services/thai-massage"
+        className="text-stone-400 hover:text-amber-400 transition-colors"
+      >
+        Thai Massage in Gomti Nagar Lucknow
+      </Link>
+
+      <Link
+        href="/services/balinese-massage"
+        className="text-stone-400 hover:text-amber-400 transition-colors"
+      >
+        Balinese Massage Therapy in Lucknow
+      </Link>
+
+      <Link
+        href="/services/deep-tissue-massage"
+        className="text-stone-400 hover:text-amber-400 transition-colors"
+      >
+        Deep Tissue Massage in Gomti Nagar
+      </Link>
+
+      <Link
+        href="/services/couple-massage"
+        className="text-stone-400 hover:text-amber-400 transition-colors"
+      >
+        Couple Spa in Lucknow
+      </Link>
+
+      <Link
+        href="/services/spa-facilities"
+        className="text-stone-400 hover:text-amber-400 transition-colors"
+      >
+        Jacuzzi & Steam Bath Spa
+      </Link>
+
+      <Link
+        href="/blog"
+        className="text-stone-400 hover:text-amber-400 transition-colors"
+      >
+        Wellness & Spa Blog
+      </Link>
+
+      <Link
+        href="/blog/best-spa-in-gomti-nagar"
+        className="text-stone-400 hover:text-amber-400 transition-colors"
+       >
+        Best Spa in Gomti Nagar Lucknow
+      </Link>
+
+    </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-stone-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-light">
         <p>&copy; {new Date().getFullYear()} Relaxio Spa. All rights reserved.</p>
 
@@ -136,6 +198,13 @@ export default function Footer() {
           </a>
         </div>
       </div>
+
+      
+
+  </div>
+
+</div>
+
     </footer>
   );
 }

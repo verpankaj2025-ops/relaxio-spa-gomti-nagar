@@ -561,11 +561,13 @@ export default async function Home() {
       {/* BLOG 1 */}
       <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] overflow-hidden hover:shadow-xl transition-all duration-300">
 
-        <img
-          src="/images/blog/best-spa-gomti-nagar.avif"
-          alt="Best Spa in Gomti Nagar Lucknow"
-          className="w-full h-64 object-cover"
-        />
+        <Image
+           src="/images/blog/best-spa-gomti-nagar.avif"
+           alt="Best Spa in Gomti Nagar Lucknow"
+           width={800}
+           height={500}
+           className="w-full h-64 object-cover"
+         />
 
         <div className="p-8">
 
@@ -591,11 +593,13 @@ export default async function Home() {
       {/* BLOG 2 */}
       <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] overflow-hidden hover:shadow-xl transition-all duration-300">
 
-        <img
-          src="/images/blog/deep-tissue-massage.avif"
-          alt="Deep Tissue Massage Benefits"
-          className="w-full h-64 object-cover"
-        />
+        <Image
+           src="/images/blog/deep-tissue-massage.avif"
+           alt="Deep Tissue Massage Benefits"
+           width={800}
+           height={500}
+           className="w-full h-64 object-cover"
+         />
 
         <div className="p-8">
 
@@ -621,11 +625,13 @@ export default async function Home() {
       {/* BLOG 3 */}
       <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] overflow-hidden hover:shadow-xl transition-all duration-300">
 
-        <img
-          src="/images/blog/thai-massage.avif"
-          alt="Benefits of Thai Massage"
-          className="w-full h-64 object-cover"
-        />
+        <Image
+           src="/images/blog/thai-massage.avif"
+           alt="Benefits of Thai Massage"
+           width={800}
+           height={500}
+           className="w-full h-64 object-cover"
+         />
 
         <div className="p-8">
 
