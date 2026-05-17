@@ -36,7 +36,7 @@ export default async function ServicesPage() {
 
   <div className="w-16 h-px bg-[#d4af37] mx-auto mb-5 opacity-80" />
 
-  <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-stone-900 mb-4 leading-[1.08] tracking-[-0.02em]">
+  <h1 className="text-3xl sm:text-3xl md:text-4xl font-serif text-stone-900 mb-4 leading-[1.08] tracking-[-0.02em]">
     Our Premium Therapies
   </h1>
 

@@ -164,7 +164,7 @@ export default function BlogPage() {
       Relaxio Wellness Journal
     </span>
 
-    <h3 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4 leading-tight">
+    <h3 className="font-serif text-3xl md:text-4xl text-stone-900 mt-4 leading-tight">
       Wellness, Relaxation & Luxury Spa Insights
     </h3>
 
@@ -245,7 +245,7 @@ export default function BlogPage() {
       Spa & Wellness FAQs
     </span>
 
-    <h3 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4 leading-tight">
+    <h3 className="font-serif text-3xl md:text-4xl text-stone-900 mt-4 leading-tight">
       Frequently Asked Questions
     </h3>
 
@@ -305,7 +305,7 @@ export default function BlogPage() {
       Featured Wellness Topics
     </span>
 
-    <h2 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4">
+    <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mt-4">
       Explore Spa & Wellness Insights
     </h2>
 

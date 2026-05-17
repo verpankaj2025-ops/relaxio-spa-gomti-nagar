@@ -93,8 +93,8 @@ export default async function Home() {
   fill
   priority
   fetchPriority="high"
-  quality={40}
-  sizes="100vw"
+  quality={32}
+  sizes="(max-width:768px) 100vw, 1920px"
   className="object-cover"
 />
           <div className="absolute inset-0 bg-black/55" />
@@ -189,7 +189,7 @@ export default async function Home() {
                 <Link
                     key={service.title}
                     href={service.link} 
-                    className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-500 border border-stone-100">
+                    className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 border border-stone-100">
                   <div className="relative h-64 md:h-72 overflow-hidden">
                     <Image 
                        src={service.img} 
@@ -203,7 +203,7 @@ export default async function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 to-transparent opacity-50" />
                   </div>
                   <div className="p-6 text-center relative bg-white -mt-8 mx-4 rounded-2xl shadow-lg group-hover:-translate-y-1 transition-transform duration-500">
-                    <h3 className="text-[30px] tracking-[-0.02em] font-serif mb-3 text-stone-900 group-hover:text-amber-700 transition-colors">{service.title}</h3>
+                    <h3 className="text-2xl md:text-[30px] tracking-[-0.02em] font-serif mb-3 text-stone-900 group-hover:text-amber-700 transition-colors">{service.title}</h3>
                     <p className="text-stone-600 font-light mb-6 min-h-[72px]">{service.desc}</p>
                     <span className="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium text-amber-700">
                      {service.cta}
@@ -278,7 +278,7 @@ export default async function Home() {
             
             <div className="text-center mb-20">
               <span className="text-amber-700 tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Transparent Pricing</span>
-              <h3 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
+              <h3 className="text-3xl md:text-4xl font-serif text-stone-900 mb-6">
                 Wellness Therapy Packages
              </h3>
 
@@ -289,7 +289,7 @@ export default async function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Basic */}
             
-              <div className="group relative overflow-hidden bg-white p-8 rounded-[28px] border border-stone-200/80 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)]">
+              <div className="group relative overflow-hidden bg-white p-8 rounded-[28px] border border-stone-200/80 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
   
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                   <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-3xl rotate-12"></div>
@@ -315,7 +315,7 @@ export default async function Home() {
 
             {/* Premium (Highlighted) */}
             
-              <div className="group relative bg-stone-900 p-12 rounded-[32px] border border-[#d4af37]/80 text-center md:-translate-y-2 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_30px_80px_rgba(0,0,0,0.25)]">
+              <div className="group relative bg-stone-900 p-12 rounded-[32px] border border-[#d4af37]/80 text-center md:-translate-y-2 transition-all duration-500 hover:-translate-y-3 hover:shadow-xl">
               
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#d4af37] text-stone-900 px-6 py-2 rounded-full text-xs uppercase tracking-[0.25em] font-medium shadow-[0_10px_30px_rgba(212,175,55,0.35)] z-20">
                     Most Popular
@@ -346,13 +346,13 @@ export default async function Home() {
 
             {/* Couple */}
             
-              <div className="group relative overflow-hidden bg-white p-10 rounded-[28px] border border-stone-200/80 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(0,0,0,0.08)]">
+              <div className="group relative overflow-hidden bg-white p-10 rounded-[28px] border border-stone-200/80 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
 
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                   <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-3xl rotate-12"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-amber-100/20"></div>
                 </div>
-                <h3 className="text-[30px] tracking-[-0.02em] font-serif text-stone-900 mb-2">Couple&apos;s Retreat</h3>
+                <h3 className="text-2xl md:text-[30px] tracking-[-0.02em] font-serif text-stone-900 mb-2">Couple&apos;s Retreat</h3>
                 <p className="text-stone-500 font-light mb-8">90 Minutes Session</p>
                 <div className="text-5xl tracking-[-0.03em] font-serif text-stone-900 mb-8">₹6,499</div>
                 <ul className="space-y-4 mb-10 text-stone-600 font-light">
@@ -374,78 +374,127 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="py-18 md:py-20 bg-white">
-  <div className="max-w-6xl mx-auto px-4 text-center">
+      <section className="py-20 md:py-28 bg-white overflow-hidden">
 
-    <h3 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">
-      Why Guests Choose Relaxio Spa
-    </h3>
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-    <p className="text-stone-600 max-w-2xl mx-auto mb-12 leading-relaxed">
-      Relaxio Spa focuses on comfort, hygiene, privacy, and professional wellness experiences. Our peaceful ambience and trained therapists help guests relax, recover from stress, and enjoy a premium spa experience in Gomti Nagar Lucknow.
+    {/* TOP LABEL */}
+    <span className="text-amber-700 tracking-[0.35em] uppercase text-[11px] font-medium mb-5 block">
+      Why Clients Return
+    </span>
+
+    {/* HEADING */}
+    <h2 className="text-3xl md:text-5xl font-serif tracking-[-0.03em] text-stone-900 leading-tight mb-6">
+      Designed for Comfort, Privacy & Wellness
+    </h2>
+
+    {/* DIVIDER */}
+    <div className="w-20 h-[2px] bg-[#d4af37] mx-auto mb-8"></div>
+
+    {/* DESCRIPTION */}
+    <p className="text-stone-600 max-w-3xl mx-auto leading-relaxed text-base md:text-lg font-light mb-16">
+      Relaxio Spa combines luxury ambience, private wellness spaces, and professionally guided therapies to create a calm and rejuvenating spa experience in Gomti Nagar Lucknow.
     </p>
 
-    <div className="grid md:grid-cols-4 gap-4">
+    {/* CARDS */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-      <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
-  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
-    <ShieldCheck className="text-amber-700" size={28} />
-  </div>
+      {/* CARD 1 */}
+      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-500 overflow-hidden">
 
-  <h3 className="font-semibold mb-2 text-stone-900">
-    Expert Therapists
-  </h3>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-  <p className="text-sm text-stone-600">
-    Highly trained professionals
-  </p>
-</div>
+        <div className="relative z-10">
 
-      <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
-  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
-    <BedDouble className="text-amber-700" size={28} />
-  </div>
+          <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-[#d4af37]/10 flex items-center justify-center border border-[#d4af37]/20">
+            <ShieldCheck className="text-amber-700" size={30} />
+          </div>
 
-  <h3 className="font-semibold mb-2 text-stone-900">
-    Private Rooms
-  </h3>
+          <h3 className="text-xl font-serif text-stone-900 mb-3">
+            Professional Therapists
+          </h3>
 
-  <p className="text-sm text-stone-600">
-    Complete privacy & comfort
-  </p>
-</div>
+          <p className="text-sm text-stone-600 leading-relaxed">
+            Trained wellness professionals focused on comfort, relaxation, and personalized spa experiences.
+          </p>
 
-      <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
-  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
-    <Sparkles className="text-amber-700" size={28} />
-  </div>
+        </div>
 
-  <h3 className="font-semibold mb-2 text-stone-900">
-    Luxury Ambience
-  </h3>
+      </div>
 
-  <p className="text-sm text-stone-600">
-    Premium spa experience
-  </p>
-</div>
+      {/* CARD 2 */}
+      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-500 overflow-hidden">
 
-      <div className="p-6 bg-[#fdfbf7] rounded-xl text-center border border-stone-100">
-  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#d4af37]/10 flex items-center justify-center">
-    <MessageCircle className="text-amber-700" size={28} />
-  </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-  <h3 className="font-semibold mb-2 text-stone-900">
-    Easy Booking
-  </h3>
+        <div className="relative z-10">
 
-  <p className="text-sm text-stone-600">
-    WhatsApp & call support
-  </p>
-</div>
+          <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-[#d4af37]/10 flex items-center justify-center border border-[#d4af37]/20">
+            <BedDouble className="text-amber-700" size={30} />
+          </div>
+
+          <h3 className="text-xl font-serif text-stone-900 mb-3">
+            Private Wellness Rooms
+          </h3>
+
+          <p className="text-sm text-stone-600 leading-relaxed">
+            Peaceful private rooms designed for relaxation, comfort, and a premium wellness experience.
+          </p>
+
+        </div>
+
+      </div>
+
+      {/* CARD 3 */}
+      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-500 overflow-hidden">
+
+        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+        <div className="relative z-10">
+
+          <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-[#d4af37]/10 flex items-center justify-center border border-[#d4af37]/20">
+            <Sparkles className="text-amber-700" size={30} />
+          </div>
+
+          <h3 className="text-xl font-serif text-stone-900 mb-3">
+            Luxury Ambience
+          </h3>
+
+          <p className="text-sm text-stone-600 leading-relaxed">
+            Elegant interiors, calming atmosphere, and wellness-focused spaces for complete relaxation.
+          </p>
+
+        </div>
+
+      </div>
+
+      {/* CARD 4 */}
+      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-500 overflow-hidden">
+
+        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+        <div className="relative z-10">
+
+          <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-[#d4af37]/10 flex items-center justify-center border border-[#d4af37]/20">
+            <MessageCircle className="text-amber-700" size={30} />
+          </div>
+
+          <h3 className="text-xl font-serif text-stone-900 mb-3">
+            Quick Reservations
+          </h3>
+
+          <p className="text-sm text-stone-600 leading-relaxed">
+            Easy booking support through WhatsApp and direct call assistance for a smooth experience.
+          </p>
+
+        </div>
+
+      </div>
 
     </div>
 
   </div>
+
 </section>
 
       {/* 5. LOCATION SECTION */}
@@ -455,7 +504,7 @@ export default async function Home() {
             
               <div>
                 <span className="text-amber-700 tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Find Us</span>
-                <h3 className="text-4xl md:text-5xl font-serif text-stone-900 mb-10">Visit Our Sanctuary in Gomti Nagar</h3>
+                <h3 className="text-3xl md:text-4xl font-serif text-stone-900 mb-10">Visit Our Sanctuary in Gomti Nagar</h3>
                 
                 <div className="space-y-8">
                   <div className="flex items-start gap-6">
@@ -538,101 +587,117 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="py-20 md:py-32 bg-[#fdfbf7] border-t border-stone-100 overflow-hidden">
+      <section className="py-24 md:py-32 bg-[#f8f5ef] border-t border-stone-200/60 overflow-hidden relative">
 
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* SOFT BACKGROUND GLOW */}
+  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-amber-100/20 blur-3xl rounded-full pointer-events-none"></div>
 
-    <div className="grid lg:grid-cols-2 gap-0 items-center rounded-[40px] overflow-hidden border border-stone-200/70 shadow-[0_20px_60px_rgba(0,0,0,0.06)] bg-white">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-      {/* IMAGE SIDE */}
-      <div className="relative h-[420px] md:h-[620px]">
+    <div className="rounded-[40px] border border-stone-200/70 bg-white shadow-xl overflow-hidden">
 
-        <Image
-          src="/images/luxury-spa-gomti-nagar-lucknow.avif"
-          alt="Luxury wellness spa ambience at Relaxio Spa"
-          fill
-          loading="lazy"
-          quality={40}
-          sizes="50vw"
-          className="object-cover"
-        />
+      {/* TOP CONTENT */}
+      <div className="px-8 md:px-16 lg:px-24 pt-16 md:pt-24 text-center">
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+        {/* LABEL */}
+        <span className="text-amber-700 tracking-[0.35em] uppercase text-[11px] font-medium mb-6 block">
+          Premium Wellness Destination
+        </span>
 
-        {/* FLOATING BADGE */}
-        <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg border border-white/40">
+        {/* HEADING */}
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-stone-900 leading-[1.05] tracking-[-0.04em] max-w-4xl mx-auto mb-8">
+          A Calm Escape for Relaxation & Wellness
+        </h2>
 
-          <span className="block text-xs uppercase tracking-[0.25em] text-amber-700 mb-1">
-            Relaxio Spa
-          </span>
+        {/* DIVIDER */}
+        <div className="w-20 h-[2px] bg-[#d4af37] mx-auto mb-10"></div>
 
-          <p className="text-stone-900 font-medium leading-snug">
-            Luxury Wellness Experience <br />
-            in Gomti Nagar Lucknow
+        {/* PARAGRAPHS */}
+        <div className="max-w-3xl mx-auto space-y-7 text-stone-600 leading-relaxed text-[17px] md:text-lg font-light">
+
+          <p>
+            Relaxio Spa offers a peaceful wellness experience designed for guests seeking relaxation, comfort, and premium spa therapies in Gomti Nagar Lucknow.
+          </p>
+
+          <p>
+            From calming Balinese therapies and deep tissue massage to couple spa experiences, jacuzzi sessions, and steam wellness rituals, every experience is thoughtfully designed to help guests unwind from everyday stress.
+          </p>
+
+          <p>
+            Elegant interiors, private wellness suites, soothing ambience, and professionally guided therapies create a refined spa experience focused on privacy, rejuvenation, and complete relaxation.
           </p>
 
         </div>
 
       </div>
 
-      {/* CONTENT SIDE */}
-      <div className="p-8 md:p-16 lg:p-20">
+      {/* FEATURE GRID */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-8 md:p-14 lg:p-20">
 
-        <span className="text-amber-700 tracking-[0.3em] uppercase text-xs font-medium mb-6 block">
-          Premium Wellness Destination
-        </span>
+        {/* CARD 1 */}
+        <div className="group rounded-[30px] border border-stone-200/70 bg-[#fcfaf6] p-8 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
 
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-stone-900 leading-[1.05] tracking-[-0.03em] mb-8">
-          Luxury Wellness Spa in Gomti Nagar Lucknow
-        </h2>
+          <span className="text-[11px] uppercase tracking-[0.3em] text-amber-700 font-medium block mb-5">
+            Private Comfort
+          </span>
 
-        <div className="w-20 h-[2px] bg-[#d4af37] mb-10"></div>
+          <h3 className="text-2xl font-serif text-stone-900 mb-4">
+            Private Spa Suites
+          </h3>
 
-        <div className="space-y-7 text-stone-600 leading-relaxed text-lg font-light">
-
-          <p>
-            Relaxio Spa is a premium wellness spa in Gomti Nagar Lucknow offering
-            professional massage therapies, peaceful ambience, private spa rooms,
-            and luxury wellness experiences for guests seeking relaxation and
-            stress relief.
-          </p>
-
-          <p>
-            Our wellness therapies include Thai massage, Balinese massage, deep
-            tissue massage, couple spa experiences, jacuzzi sessions, steam bath,
-            and premium relaxation packages designed for comfort and rejuvenation.
-          </p>
-
-          <p>
-            Guests visiting Relaxio Spa in Gomti Nagar appreciate our hygiene,
-            trained therapists, calming interiors, and private wellness spaces
-            designed for premium spa experiences in Lucknow.
+          <p className="text-stone-600 leading-relaxed text-sm">
+            Quiet wellness spaces thoughtfully designed for peaceful and uninterrupted relaxation experiences.
           </p>
 
         </div>
 
-        {/* TRUST POINTS */}
-        <div className="grid grid-cols-2 gap-4 mt-12">
+        {/* CARD 2 */}
+        <div className="group rounded-[30px] border border-stone-200/70 bg-[#fcfaf6] p-8 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
 
-          <div className="border border-stone-200 rounded-2xl p-5 bg-[#fcfaf6]">
-            <h3 className="text-stone-900 font-medium mb-1">
-              Private Rooms
-            </h3>
-            <p className="text-sm text-stone-500">
-              Calm & premium ambience
-            </p>
-          </div>
+          <span className="text-[11px] uppercase tracking-[0.3em] text-amber-700 font-medium block mb-5">
+            Signature Therapies
+          </span>
 
-          <div className="border border-stone-200 rounded-2xl p-5 bg-[#fcfaf6]">
-            <h3 className="text-stone-900 font-medium mb-1">
-              Luxury Therapies
-            </h3>
-            <p className="text-sm text-stone-500">
-              Wellness-focused experiences
-            </p>
-          </div>
+          <h3 className="text-2xl font-serif text-stone-900 mb-4">
+            Premium Wellness Rituals
+          </h3>
+
+          <p className="text-stone-600 leading-relaxed text-sm">
+            Luxury massage therapies carefully curated for comfort, rejuvenation, and stress relief.
+          </p>
 
         </div>
+
+        {/* CARD 3 */}
+        <div className="group rounded-[30px] border border-stone-200/70 bg-[#fcfaf6] p-8 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+
+          <span className="text-[11px] uppercase tracking-[0.3em] text-amber-700 font-medium block mb-5">
+            Relaxing Ambience
+          </span>
+
+          <h3 className="text-2xl font-serif text-stone-900 mb-4">
+            Calm Luxury Experience
+          </h3>
+
+          <p className="text-stone-600 leading-relaxed text-sm">
+            Elegant interiors and peaceful wellness spaces designed to create a calming spa atmosphere.
+          </p>
+
+        </div>
+
+      </div>
+
+      {/* BOTTOM CTA */}
+      <div className="px-8 md:px-16 pb-16 md:pb-20 text-center">
+
+        <a
+          href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center px-10 py-4 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-all duration-300 hover:shadow-lg uppercase tracking-[0.2em] text-sm font-medium"
+        >
+          Book Your Wellness Session
+        </a>
 
       </div>
 
@@ -647,7 +712,7 @@ export default async function Home() {
 
   <div className="max-w-7xl mx-auto px-4">
 
-    <h3 className="text-[30px] tracking-[-0.02em] font-serif text-center mb-12">
+    <h3 className="text-2xl md:text-[30px] tracking-[-0.02em] font-serif text-center mb-12">
       Wellness & Spa Guides
     </h3>
     <p className="text-stone-500 text-lg mt-4 mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -657,7 +722,7 @@ export default async function Home() {
     <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
 
       {/* BLOG 1 */}
-      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition-all duration-500">
+      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-xl transition-all duration-500">
 
         <Image
            src="/images/blog/best-spa-gomti-nagar.avif"
@@ -665,7 +730,7 @@ export default async function Home() {
            width={800}
            height={500}
            quality={40}
-           className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+           className="w-full h-52 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105"
          />
          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
 
@@ -697,7 +762,7 @@ export default async function Home() {
       </div>
 
       {/* BLOG 2 */}
-      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition-all duration-500">
+      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-xl transition-all duration-500">
 
         <Image
            src="/images/blog/deep-tissue-massage.avif"
@@ -705,7 +770,7 @@ export default async function Home() {
            width={800}
            height={500}
            quality={40}
-           className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+           className="w-full h-52 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105"
          />
          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
 
@@ -737,7 +802,7 @@ export default async function Home() {
       </div>
 
       {/* BLOG 3 */}
-      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition-all duration-500">
+      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-xl transition-all duration-500">
 
         <Image
           src="/images/blog/thai-massage.avif"
@@ -746,7 +811,7 @@ export default async function Home() {
           height={500}
           quality={40}
           loading="lazy"
-          className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-52 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
 

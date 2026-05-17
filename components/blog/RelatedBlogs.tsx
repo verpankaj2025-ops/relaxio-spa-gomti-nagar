@@ -21,7 +21,7 @@ export default function RelatedBlogs({ currentSlug }: Props) {
           Related Wellness Articles
         </span>
 
-        <h2 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4">
+        <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mt-4">
           Continue Exploring Wellness Insights
         </h2>
 

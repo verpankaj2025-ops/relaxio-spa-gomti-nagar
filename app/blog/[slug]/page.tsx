@@ -76,7 +76,7 @@ export default async function BlogPost({
     }}
   />
     <article className="max-w-4xl mx-auto px-4 py-24">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-stone-900 mb-10 leading-tight">
+      <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif text-stone-900 mb-10 leading-tight">
         {post.title}
       </h1>
 

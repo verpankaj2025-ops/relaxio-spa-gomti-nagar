@@ -66,7 +66,7 @@ export default function PricingSection({
               </p>
             </div>
 
-            <div className="text-4xl md:text-5xl tracking-[-0.03em] font-serif text-[#d4af37]">
+            <div className="text-3xl md:text-4xl tracking-[-0.03em] font-serif text-[#d4af37]">
               {pkg.price}
             </div>
 

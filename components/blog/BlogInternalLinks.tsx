@@ -31,7 +31,7 @@ export default function BlogInternalLinks() {
           Relaxio Spa Services
         </span>
 
-        <h2 className="font-serif text-4xl md:text-5xl text-stone-900 mt-4">
+        <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mt-4">
           Explore Wellness Therapies
         </h2>
 
