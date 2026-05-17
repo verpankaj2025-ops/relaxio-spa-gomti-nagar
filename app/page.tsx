@@ -577,7 +577,7 @@ export default async function Home() {
   fill
   loading="lazy"
   quality={40}
-  sizes="100vw"
+  sizes="(max-width:768px) 100vw, 50vw"
   className="object-cover"
 />
     
