@@ -3,6 +3,11 @@ import bundleAnalyzer from '@next/bundle-analyzer';
 
 const securityHeaders = [
   {
+  key: 'Content-Security-Policy',
+  value:
+    "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:;",
+  },
+  {
     key: 'X-Frame-Options',
     value: 'SAMEORIGIN',
   },
@@ -43,22 +48,25 @@ const nextConfig: NextConfig = {
 
   images: {
   formats: ['image/avif', 'image/webp'],
+  minimumCacheTTL: 31536000,
+  deviceSizes: [640, 768, 1024, 1280, 1600],
+  imageSizes: [16, 32, 48, 64, 96],
 },
 
-  output: 'standalone',
   experimental: {
-  optimizePackageImports: ['lucide-react'],
+  optimizePackageImports: [
+  'lucide-react',
+  'lodash-es',
+],
 },
 
   webpack: (config, { dev }) => {
-    if (dev && process.env.DISABLE_HMR === 'true') {
-      config.watchOptions = {
-        ignored: /.*/,
-      };
-    }
+  if (!dev) {
+    config.optimization.minimize = true;
+  }
 
-    return config;
-  },
+  return config;
+},
 
 async headers() {
   return [

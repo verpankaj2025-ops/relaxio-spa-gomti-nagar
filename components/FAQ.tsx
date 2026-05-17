@@ -30,36 +30,40 @@ export default function FAQ({ faqs = [] }: FAQProps) {
           {faqs?.map((faq, index) => (
             <div
               key={faq.question}
-              className="border border-stone-200/80 rounded-2xl overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
+              className="border border-stone-200/80 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-all duration-300"
             >
               <button
                 onClick={() => toggleFAQ(index)}
                 aria-expanded={activeIndex === index}
                 aria-controls={`faq-content-${index}`}
                 id={`faq-button-${index}`}
-                className="w-full text-left px-6 py-5 flex justify-between items-center gap-6"
+                className="w-full text-left px-6 py-4 flex justify-between items-center"
               >
-                <span className="text-base md:text-lg font-medium text-stone-900 leading-relaxed">
+                <span className="text-lg font-medium text-stone-900">
                   {faq.question}
                 </span>
 
-                <span aria-hidden="true" className="text-lg text-[#b9912f] shrink-0">
+                <span aria-hidden="true" className={`text-xl transition-transform duration-300 ${
+                     activeIndex === index ? "rotate-180" : ""
+                   }`}>
                   {activeIndex === index ? "-" : "+"}
                 </span>
               </button>
 
-          <div
-            id={`faq-content-${index}`}
-            role="region"
-            aria-labelledby={`faq-button-${index}`}
-            className={`overflow-hidden transition-all duration-200 ${
-               activeIndex === index
-                   ? "max-h-40 opacity-100 px-6 pb-4"
-                   : "max-h-0 opacity-0 px-6 pb-0"
-               }`}
-              >
-               <p className="text-stone-600">{faq.answer}</p>
-              </div>
+        <div
+          id={`faq-content-${index}`}
+          role="region"
+          aria-labelledby={`faq-button-${index}`}
+          className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          activeIndex === index
+          ? "max-h-96 opacity-100"
+          : "max-h-0 opacity-0"
+          }`}
+           >
+           <p className="px-6 pb-5 text-stone-600 leading-relaxed">
+           {faq.answer}
+          </p>
+           </div>
             </div>
           ))}
         </div>

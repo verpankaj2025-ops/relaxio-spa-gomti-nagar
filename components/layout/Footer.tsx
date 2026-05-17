@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Twitter, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -15,32 +15,10 @@ export default function Footer() {
             Relaxio Spa offers peaceful wellness experiences with private rooms, relaxing therapies, and a calm luxury ambience in Gomti Nagar Lucknow.
           </p>
 
-          <div className="flex gap-4">
-            <div
-  role="img"
-  aria-label="Instagram coming soon"
-  className="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center opacity-50 cursor-not-allowed"
->
-  <Instagram aria-hidden="true" size={18} />
-</div>
-            <div
-  role="img"
-  aria-label="Facebook coming soon"
-  className="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center opacity-50 cursor-not-allowed"
->
-  <Facebook aria-hidden="true" size={18} />
-</div>
-            <div
-  role="img"
-  aria-label="Twitter coming soon"
-  className="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center opacity-50 cursor-not-allowed"
->
-  <Twitter aria-hidden="true" size={18} />
-</div>
-          </div>
+          <div className="flex gap-4"></div>
         </div>
 
-        <div>
+          <div>
           <h4 className="text-white text-lg font-serif mb-6 tracking-wide">Quick Links</h4>
           <ul className="space-y-4 font-light">
             <li>
@@ -130,7 +108,7 @@ export default function Footer() {
       Popular Wellness Services
     </h3>
 
-    <div className="grid md:grid-cols-3 gap-4 text-sm">
+    <div className="space-y-2 text-sm">
 
       <Link
         href="/services/thai-massage"

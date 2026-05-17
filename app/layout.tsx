@@ -2,12 +2,10 @@ import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
-
+import Navbar from '@/components/layout/Navbar';
 import dynamic from 'next/dynamic';
 
-const Navbar = dynamic(() => import('@/components/layout/Navbar'));
-
-import Footer from '@/components/layout/Footer';
+const Footer = dynamic(() => import('@/components/layout/Footer'));
 
 const WhatsAppWidget = dynamic(
   () => import('@/components/layout/WhatsAppWidget')
@@ -17,20 +15,19 @@ const CallWidget = dynamic(
   () => import('@/components/layout/CallWidget')
 );
 
+const SITE_URL = "https://relaxiospa.in";
+
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-sans',
+  variable: '--font-inter',
   display: 'swap',
-  weight: ['400', '600'],
 });
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  variable: '--font-serif',
+  variable: '--font-playfair',
   display: 'swap',
-  weight: ['600', '700'],
 });
-const SITE_URL = "https://relaxiospa.in";
 
 export const viewport = {
   themeColor: "#d4af37",
@@ -110,14 +107,14 @@ robots: {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN" className={`${inter.variable} ${playfair.variable} scroll-smooth`}>
+    <html lang="en-IN" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-sans bg-[#fdfbf7] text-stone-900 antialiased selection:bg-[#d4af37]/30" suppressHydrationWarning>
 
         {/* ✅ FINAL FIXED SCHEMA */}
         <Script
   id="schema"
   type="application/ld+json"
-  strategy="afterInteractive"
+  strategy="beforeInteractive"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",
@@ -173,7 +170,7 @@ areaServed: [
 <Script
   id="website-schema"
   type="application/ld+json"
-  strategy="afterInteractive"
+  strategy="lazyOnload"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",

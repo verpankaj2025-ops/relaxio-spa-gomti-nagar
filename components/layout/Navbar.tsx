@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 const services = [
   {
@@ -65,8 +65,8 @@ export default function Navbar() {
             >
               Services <span className="text-xs group-hover:rotate-180 transition-transform duration-200">⌄</span>
             </Link>
-            <div className="absolute top-full left-0 hidden group-hover:block pt-2">
-              <div className="bg-white shadow-xl rounded-lg border border-stone-100 p-2 w-64 flex flex-col">
+            <div className="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-150 pt-2">
+              <div className="bg-white shadow-lg rounded-lg border border-stone-100 p-2 w-64 flex flex-col">
                 {services.map((service) => (
   <Link
     key={service.href}
@@ -82,12 +82,12 @@ export default function Navbar() {
 
       <Link 
         href="/blog" 
-        className="text-stone-700 hover:text-amber-600 font-medium transition-colors text-sm uppercase tracking-widest"
+        className="text-stone-700 hover:text-amber-600 font-medium transition-colors text-sm uppercase tracking-widest py-2 px-2"
       >
         Wellness Journal
       </Link>
 
-          <Link href="/contact" className="text-stone-700 hover:text-amber-600 font-medium transition-colors text-sm uppercase tracking-widest">
+          <Link href="/contact" className="text-stone-700 hover:text-amber-600 font-medium transition-colors text-sm uppercase tracking-widest py-2 px-2">
             Contact
           </Link>
         </nav>
@@ -109,7 +109,7 @@ export default function Navbar() {
           aria-label="Toggle Mobile Menu"
         >
           {isMobileMenuOpen ? (
-  <X strokeWidth={1.75} size={26} />
+  <span className="text-2xl">×</span>
 ) : (
   <Menu strokeWidth={1.75} size={26} />
 )}
@@ -146,8 +146,8 @@ export default function Navbar() {
                 Services
                 <span
   className={`text-sm transition-transform duration-200 ${
-    isMobileServicesOpen ? 'rotate-180' : ''
-  }`}
+  isMobileServicesOpen ? 'rotate-180' : ''
+}`}
 >
   ⌄
 </span>
@@ -193,7 +193,7 @@ export default function Navbar() {
               target="_blank" 
               rel="noopener noreferrer" 
               onClick={closeMenu}
-              className="mt-4 flex items-center justify-center w-full py-3 bg-amber-500 text-stone-900 rounded-full text-sm uppercase tracking-widest font-medium shadow-md hover:bg-amber-600 transition-colors"
+              className="mt-4 flex items-center justify-center w-full py-3 px-1 bg-amber-500 text-stone-900 rounded-full text-sm uppercase tracking-widest font-medium shadow-md hover:bg-amber-600 transition-colors"
             >
               Book Session
             </a>
