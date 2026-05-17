@@ -106,7 +106,7 @@ export default async function Home() {
                  Welcome to Relaxio Spa
                </span>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif leading-[1.05] tracking-[-0.03em] text-white mb-4">
+            <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-5xl font-serif leading-[1.05] tracking-[-0.03em] text-white mb-4">
                   Luxury Wellness Spa in Gomti Nagar Lucknow                  
                 </h1>
 
@@ -189,7 +189,7 @@ export default async function Home() {
                 <Link
                     key={service.title}
                     href={service.link} 
-                    className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500 border border-stone-100">
+                    className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-500 border border-stone-100">
                   <div className="relative h-64 md:h-72 overflow-hidden">
                     <Image 
                        src={service.img} 
@@ -289,10 +289,10 @@ export default async function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Basic */}
             
-              <div className="group relative overflow-hidden bg-white p-8 rounded-[28px] border border-stone-200/80 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+              <div className="group relative overflow-hidden bg-white p-8 rounded-[28px] border border-stone-200/80 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-lg">
   
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-3xl rotate-12"></div>
+                  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-2xl rotate-12"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-amber-100/20"></div>
                  </div>
                 <h3 className="text-2xl font-serif text-stone-900 mb-2">Relaxation</h3>
@@ -315,14 +315,14 @@ export default async function Home() {
 
             {/* Premium (Highlighted) */}
             
-              <div className="group relative bg-stone-900 p-12 rounded-[32px] border border-[#d4af37]/80 text-center md:-translate-y-2 transition-all duration-500 hover:-translate-y-3 hover:shadow-xl">
+              <div className="group relative bg-stone-900 p-12 rounded-[32px] border border-[#d4af37]/80 text-center md:-translate-y-2 transition-all duration-500 hover:-translate-y-3 hover:shadow-lg">
               
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#d4af37] text-stone-900 px-6 py-2 rounded-full text-xs uppercase tracking-[0.25em] font-medium shadow-[0_10px_30px_rgba(212,175,55,0.35)] z-20">
                     Most Popular
                  </div>
 
                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                   <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/10 blur-3xl rotate-12"></div>
+                   <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/10 blur-2xl rotate-12"></div>
                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-amber-500/10"></div>
                  </div>
                 <h3 className="text-2xl font-serif text-white mb-2">Deep Healing</h3>
@@ -346,10 +346,10 @@ export default async function Home() {
 
             {/* Couple */}
             
-              <div className="group relative overflow-hidden bg-white p-10 rounded-[28px] border border-stone-200/80 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+              <div className="group relative overflow-hidden bg-white p-10 rounded-[28px] border border-stone-200/80 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-lg">
 
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-3xl rotate-12"></div>
+                  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-2xl rotate-12"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-amber-100/20"></div>
                 </div>
                 <h3 className="text-2xl md:text-[30px] tracking-[-0.02em] font-serif text-stone-900 mb-2">Couple&apos;s Retreat</h3>
@@ -400,7 +400,7 @@ export default async function Home() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
       {/* CARD 1 */}
-      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-500 overflow-hidden">
+      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-500 overflow-hidden">
 
         <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -423,7 +423,7 @@ export default async function Home() {
       </div>
 
       {/* CARD 2 */}
-      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-500 overflow-hidden">
+      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-500 overflow-hidden">
 
         <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -446,7 +446,7 @@ export default async function Home() {
       </div>
 
       {/* CARD 3 */}
-      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-500 overflow-hidden">
+      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-500 overflow-hidden">
 
         <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -469,7 +469,7 @@ export default async function Home() {
       </div>
 
       {/* CARD 4 */}
-      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-500 overflow-hidden">
+      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-500 overflow-hidden">
 
         <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -590,11 +590,11 @@ export default async function Home() {
       <section className="py-24 md:py-32 bg-[#f8f5ef] border-t border-stone-200/60 overflow-hidden relative">
 
   {/* SOFT BACKGROUND GLOW */}
-  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-amber-100/20 blur-3xl rounded-full pointer-events-none"></div>
+  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-amber-100/20 blur-2xl rounded-full pointer-events-none"></div>
 
   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-    <div className="rounded-[40px] border border-stone-200/70 bg-white shadow-xl overflow-hidden">
+    <div className="rounded-[40px] border border-stone-200/70 bg-white shadow-lg overflow-hidden">
 
       {/* TOP CONTENT */}
       <div className="px-8 md:px-16 lg:px-24 pt-16 md:pt-24 text-center">
@@ -605,7 +605,7 @@ export default async function Home() {
         </span>
 
         {/* HEADING */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-stone-900 leading-[1.05] tracking-[-0.04em] max-w-4xl mx-auto mb-8">
+        <h2 className="text-3xl md:text-5xl lg:text-5xl font-serif text-stone-900 leading-[1.05] tracking-[-0.04em] max-w-4xl mx-auto mb-8">
           A Calm Escape for Relaxation & Wellness
         </h2>
 
@@ -722,7 +722,7 @@ export default async function Home() {
     <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
 
       {/* BLOG 1 */}
-      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-xl transition-all duration-500">
+      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-lg transition-all duration-500">
 
         <Image
            src="/images/blog/best-spa-gomti-nagar.avif"
@@ -734,7 +734,7 @@ export default async function Home() {
          />
          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
 
-  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-3xl rotate-12"></div>
+  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-2xl rotate-12"></div>
 
   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-amber-100/20"></div>
 
@@ -762,7 +762,7 @@ export default async function Home() {
       </div>
 
       {/* BLOG 2 */}
-      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-xl transition-all duration-500">
+      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-lg transition-all duration-500">
 
         <Image
            src="/images/blog/deep-tissue-massage.avif"
@@ -774,7 +774,7 @@ export default async function Home() {
          />
          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
 
-  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-3xl rotate-12"></div>
+  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-2xl rotate-12"></div>
 
   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-amber-100/20"></div>
 
@@ -802,7 +802,7 @@ export default async function Home() {
       </div>
 
       {/* BLOG 3 */}
-      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-xl transition-all duration-500">
+      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-lg transition-all duration-500">
 
         <Image
           src="/images/blog/thai-massage.avif"
@@ -815,7 +815,7 @@ export default async function Home() {
         />
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
 
-           <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-3xl rotate-12"></div>
+           <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-2xl rotate-12"></div>
 
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-amber-100/20"></div>
 

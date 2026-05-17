@@ -47,7 +47,7 @@ export default function BlogInternalLinks() {
           <Link
             key={link.href}
             href={link.href}
-            className="group bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            className="group bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
           >
 
             <h3 className="font-serif text-2xl text-stone-900 mb-4 group-hover:text-amber-600 transition-colors">

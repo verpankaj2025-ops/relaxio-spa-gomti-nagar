@@ -7,7 +7,7 @@ export default function WhatsAppWidget() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp with Relaxio Spa"
-      className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:bg-[#1ebe57] transition-all duration-200 hover:scale-105 active:scale-95 flex items-center justify-center group"
+      className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#1ebe57] transition-all duration-200 hover:scale-105 active:scale-95 flex items-center justify-center group"
     >
       <MessageCircle aria-hidden="true" size={28} />
 

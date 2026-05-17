@@ -106,7 +106,7 @@ export default function ContactPage() {
             
             {/* Contact Info */}
             <FadeIn direction="right">
-              <div className="bg-white p-10 md:p-14 rounded-3xl shadow-xl border border-stone-100 h-full">
+              <div className="bg-white p-10 md:p-14 rounded-3xl shadow-lg border border-stone-100 h-full">
                 <h2 className="text-3xl font-serif text-stone-900 mb-10">Reach Our Wellness Team</h2>
                 
                 <div className="space-y-10">
@@ -188,7 +188,7 @@ export default function ContactPage() {
 
             {/* Map */}
 <FadeIn direction="left">
-  <div className="h-full min-h-[500px] w-full rounded-3xl overflow-hidden shadow-xl relative">
+  <div className="h-full min-h-[500px] w-full rounded-3xl overflow-hidden shadow-lg relative">
 
     {/* 👇 पूरा map clickable */}
     <a

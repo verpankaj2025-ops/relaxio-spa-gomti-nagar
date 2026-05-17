@@ -319,7 +319,7 @@ export default function BlogPage() {
   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
 
     {/* CARD 1 */}
-    <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-xl transition-all duration-300">
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-lg transition-all duration-300">
 
       <h3 className="font-serif text-2xl text-stone-900 mb-4">
         Thai Massage Benefits
@@ -351,7 +351,7 @@ export default function BlogPage() {
     </div>
 
     {/* CARD 2 */}
-    <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-xl transition-all duration-300">
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-lg transition-all duration-300">
 
       <h3 className="font-serif text-2xl text-stone-900 mb-4">
         Stress Relief Therapies
@@ -374,7 +374,7 @@ export default function BlogPage() {
     </div>
 
     {/* CARD 3 */}
-    <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-xl transition-all duration-300">
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-lg transition-all duration-300">
 
       <h3 className="font-serif text-2xl text-stone-900 mb-4">
         Luxury Couple Spa

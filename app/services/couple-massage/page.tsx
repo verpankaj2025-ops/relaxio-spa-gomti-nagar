@@ -198,7 +198,7 @@ export default async function CoupleMassagePage() {
   </div>
 
   <FadeIn>
-  <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+  <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
     <Image
        src="/images/couple-massage-lucknow-spa.avif"
        alt="Private couple massage experience at Relaxio Spa"

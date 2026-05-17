@@ -111,7 +111,7 @@ const faqs = Array.isArray(allFaqs)
                 ))}
               </div>
         <FadeIn>
-          <div className="my-16 relative h-[350px] md:h-[450px] rounded-[32px] overflow-hidden shadow-xl">
+          <div className="my-16 relative h-[350px] md:h-[450px] rounded-[32px] overflow-hidden shadow-lg">
 
              <Image 
              src="/images/balinese-massage-gomti-nagar-lucknow-spa.avif"
