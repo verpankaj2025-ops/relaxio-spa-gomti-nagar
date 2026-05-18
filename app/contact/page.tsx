@@ -73,7 +73,7 @@ export default function ContactPage() {
 />
       
       {/* Header Section */}
-      <section className="relative min-h-[62vh] md:min-h-[72vh] lg:min-h-[90vh] flex items-center justify-center text-center overflow-hidden bg-stone-950">
+      <section className="relative min-h-[62vh] md:min-h-[72vh] flex items-center justify-center text-center overflow-hidden bg-stone-950">
 
   {/* Background Image */}
   <div className="absolute inset-0">
@@ -92,7 +92,7 @@ export default function ContactPage() {
   <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-20 pb-10">
           <FadeIn>
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Get in Touch</span>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">Contact Relaxio Spa</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-serif text-white mb-6 leading-tight">Contact Relaxio Spa</h1>
             <p className="text-amber-700 sm:text-lg md:text-xl text-stone-200 font-light max-w-3xl mx-auto leading-relaxed">
                Relaxio Spa welcomes guests in a calm and luxurious wellness environment in Gomti Nagar, Lucknow.
             </p>
@@ -101,7 +101,7 @@ export default function ContactPage() {
       </section>
 
       <section className="py-24 bg-[#fdfbf7]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
             {/* Contact Info */}
@@ -186,28 +186,42 @@ export default function ContactPage() {
               </div>
             </FadeIn>
 
-            {/* Map */}
+     {/* Location Preview */}
 <FadeIn direction="left">
-  <div className="h-full min-h-[500px] w-full rounded-3xl overflow-hidden shadow-lg relative">
+  <div className="h-full min-h-[500px] w-full rounded-3xl overflow-hidden shadow-lg relative group">
 
-    {/* 👇 पूरा map clickable */}
     <a
       href="https://www.google.com/maps/dir/?api=1&destination=26.8553677,80.9985092"
       target="_blank"
       rel="noopener noreferrer"
       className="absolute inset-0 z-10"
+      aria-label="Open Relaxio Spa location in Google Maps"
     ></a>
 
-    {/* 👇 Map */}
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5152049774847!2d80.9985092!3d26.855367700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be336e4d8fa9f%3A0x6a5eb278f8c99c28!2sRelaxio%20Spa%20Gomti%20Nagar%20Lucknow!5e0!3m2!1sen!2sin!4v1776642592306!5m2!1sen!2sin"
-      width="100%"
-      height="100%"
-      style={{ border: 0, filter: 'grayscale(100%) contrast(1.1) opacity(0.9)' }}
+    <Image
+      src="/images/google-map-preview.webp"
+      alt="Relaxio Spa Gomti Nagar Lucknow location map"
+      fill
       loading="lazy"
-      title="Relaxio Spa Location"
-      className="pointer-events-none"
-    ></iframe>
+      quality={32}
+      sizes="(max-width: 768px) 100vw, 50vw"
+      className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+    />
+
+    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-300"></div>
+
+    <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-lg">
+      <div className="flex items-center gap-3 mb-2">
+        <MapPin className="text-[#d4af37]" size={22} />
+        <h3 className="text-lg font-serif text-stone-900">
+          Relaxio Spa Gomti Nagar
+        </h3>
+      </div>
+
+      <p className="text-stone-600 text-sm leading-relaxed">
+        2nd Floor, Vivek Khand 4, Gomti Nagar, Lucknow
+      </p>
+    </div>
 
   </div>
 </FadeIn>            
