@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/blog/thai-massage-benefits",
+      "destination": "/blog/best-thai-massage-benefits-lucknow",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {

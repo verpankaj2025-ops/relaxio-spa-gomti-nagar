@@ -18,13 +18,15 @@ export default function ServiceHero({
 
       <div className="absolute inset-0 z-0">
         <Image
-  src={image}
-  alt={alt}
-  fill
-  sizes="100vw"
-  
-  className="object-cover object-[center_65%] scale-[1.02]"
-/>
+          src={image}
+          alt={alt}
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          quality={40}
+          className="object-cover object-[center_65%] scale-[1.02]"
+        />
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/70" />
       </div>

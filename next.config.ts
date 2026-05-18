@@ -58,12 +58,6 @@ const nextConfig: NextConfig = {
 },
 
   experimental: {
-  optimizePackageImports: [
-    'lucide-react',
-    'lodash-es',
-    'framer-motion',
-  ],
-
   optimizeCss: true,
 },
 
@@ -91,8 +85,21 @@ async headers() {
         },
       ],
     },
+    {
+      source: '/_next/static/:path*',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
+    },
   ];
 },
+
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 };
 
 export default withBundleAnalyzer(nextConfig);

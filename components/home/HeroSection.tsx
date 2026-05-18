@@ -7,16 +7,15 @@ export default function HeroSection() {
       <div className="absolute inset-0 -z-10">
 
         <Image
-  src="/images/luxury-spa-gomti-nagar-lucknow.avif"
-  alt="Luxury wellness spa experience at Relaxio Spa"
-  width={1920}
-  height={1080}
-  priority
-  fetchPriority="high"
-  quality={32}
-  sizes="100vw"
-  className="h-full w-full object-cover"
-/>
+          src="/images/luxury-spa-gomti-nagar-lucknow.avif"
+          alt="Luxury wellness spa experience at Relaxio Spa"
+          fill
+          priority
+          fetchPriority="high"
+          quality={40}
+          sizes="100vw"
+          className="object-cover"
+        />
 
         <div className="absolute inset-0 bg-black/55" />
       </div>

@@ -1,18 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
-import Script from 'next/script';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
-import dynamic from 'next/dynamic';
 import Footer from '@/components/layout/Footer';
-
-const WhatsAppWidget = dynamic(
-  () => import('@/components/layout/WhatsAppWidget')
-);
-
-const CallWidget = dynamic(
-  () => import('@/components/layout/CallWidget')
-);
+import WhatsAppWidget from '@/components/layout/WhatsAppWidget';
+import CallWidget from '@/components/layout/CallWidget';
 
 const SITE_URL = "https://relaxiospa.in";
 
@@ -20,12 +12,16 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
+  adjustFontFallback: true,
+  preload: true,
 });
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-playfair',
   display: 'swap',
+  adjustFontFallback: true,
+  preload: true,
 });
 
 export const viewport = {
@@ -109,11 +105,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-IN" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-sans bg-[#fdfbf7] text-stone-900 antialiased selection:bg-[#d4af37]/30" suppressHydrationWarning>
 
-        {/* ✅ FINAL FIXED SCHEMA */}
-        <Script
-  id="schema"
+        <script
   type="application/ld+json"
-  strategy="afterInteractive"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",
@@ -166,10 +159,8 @@ areaServed: [
   }}
 />
 
-<Script
-  id="website-schema"
+<script
   type="application/ld+json"
-  strategy="lazyOnload"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",

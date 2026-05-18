@@ -1,9 +1,9 @@
+import { faqsData } from "@/lib/faqs";
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
-import FadeIn from '@/components/ui/FadeIn';
 import FAQ from '@/components/FAQ';
-import { ShieldCheck, Sparkles, HeartHandshake } from 'lucide-react';
+import { IconHeartHandshake, IconShieldCheck, IconSparkles } from '@/components/icons';
 
 export const metadata: Metadata = {
   title: 'About Relaxio Spa | Luxury Wellness Spa in Gomti Nagar Lucknow',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   'Relaxio Spa',
 ],
   alternates: {
-    canonical: '/about',
+    canonical: 'https://relaxiospa.in/about',
   },
   openGraph: {
     title: 'About Relaxio Spa | Luxury Wellness Spa in Gomti Nagar Lucknow',
@@ -32,41 +32,9 @@ export const metadata: Metadata = {
   }
 };
 
-async function getFAQs() {
-  try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+export default function AboutPage() {
 
-    const res = await fetch(`${baseUrl}/api/faqs`, {
-      next: { revalidate: 3600 },
-    });
-
-    if (!res.ok) {
-      return [];
-    }
-
-    return await res.json();
-  } catch (error) {
-    console.error("FAQ fetch error:", error);
-    return [];
-  }
-}
-
-export default async function AboutPage() {
-  
-    const allFaqs = (await getFAQs()) || [];
-
-  const faqs = Array.isArray(allFaqs)
-  ? allFaqs.filter((f) => {
-      const page = f.page?.toLowerCase().trim();
-
-      return (
-        page === "about" ||
-        page === "about-us" ||
-        page === "about page"
-      );
-    })
-  : [];
+  const faqs = faqsData.about || [];
 
   const breadcrumbs = [
     { name: 'Home', item: '/' },
@@ -74,8 +42,8 @@ export default async function AboutPage() {
   ];
 
   return (
+    <>
 
-      <>
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
@@ -130,19 +98,21 @@ export default async function AboutPage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[62vh] md:min-h-[72vh] flex items-center justify-center overflow-hidden bg-stone-950">
-        <div className="absolute inset-0 z-0">
-  <Image 
-    src="/images/spa-about-gomti-nagar-lucknow.avif"
-    alt="Luxury spa interior in Gomti Nagar Lucknow Relaxio Spa massage center"
-    fill
-    className="object-cover scale-[1.02]"
-  />
+
+  <div className="absolute inset-0 z-0">
+    <Image 
+      src="/images/spa-about-gomti-nagar-lucknow.avif"
+      alt="Luxury spa interior in Gomti Nagar Lucknow Relaxio Spa massage center"
+      fill
+      className="object-cover scale-[1.02]"
+      priority
+    />
 
   {/* Light overlay */}
   <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/70" />
-</div>
+  </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 pb-10">
-          <FadeIn>
+          
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Our Story</span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium text-white mb-6 leading-tight">
   Luxury Wellness Spa in Gomti Nagar Lucknow <br/>
@@ -153,7 +123,7 @@ export default async function AboutPage() {
 <p className="text-stone-200 sm:text-lg md:text-xl font-light max-w-3xl mx-auto leading-relaxed">
   Relaxio Spa offers relaxing wellness therapies and a peaceful luxury spa experience in Gomti Nagar Lucknow.
 </p>
-          </FadeIn>
+          
         </div>
       </section>
 
@@ -162,7 +132,7 @@ export default async function AboutPage() {
           
           {/* Story Section */}
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-20 items-center mb-40">
-            <FadeIn direction="right">
+            
               <div>
                 <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-6">Redefining Wellness in Gomti Nagar</h2>
                 <div className="space-y-6 text-[17px] leading-relaxed text-stone-600 font-light max-w-2xl">
@@ -177,8 +147,8 @@ export default async function AboutPage() {
                   </p>
                 </div>
               </div>
-            </FadeIn>
-            <FadeIn direction="left">
+            
+            
               <div className="relative h-[600px] rounded-[36px] overflow-hidden shadow-xl border border-stone-200/60">
                 <Image 
                    src="/images/massage-therapy-lucknow.avif"
@@ -188,7 +158,7 @@ export default async function AboutPage() {
                    loading="lazy"
                   />
               </div>
-            </FadeIn>
+            
           </div>
 
           {/* Premium Philosophy */}
@@ -239,7 +209,7 @@ export default async function AboutPage() {
 </div>
 
           {/* Core Pillars */}
-          <FadeIn>
+          
             <div className="bg-gradient-to-br from-stone-950 via-stone-900 to-stone-950 text-stone-50 py-24 px-8 md:px-16 rounded-[40px] shadow-2xl mb-32 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                 <Image 
@@ -260,21 +230,21 @@ export default async function AboutPage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
                   <div className="text-center">
                     <div className="w-20 h-20 mx-auto bg-[#d4af37]/10 rounded-full flex items-center justify-center mb-6">
-                      <ShieldCheck className="text-[#d4af37]" size={32} />
+                      <IconShieldCheck className="text-[#d4af37]" size={32} />
                     </div>
                     <h3 className="text-2xl font-serif mb-4">Certified Therapists</h3>
                     <p className="text-stone-400 font-light leading-relaxed">Every therapist undergoes rigorous training and certification to ensure you receive authentic, effective treatments tailored to your body&apos;s needs.</p>
                   </div>
                   <div className="text-center">
                     <div className="w-20 h-20 mx-auto bg-[#d4af37]/10 rounded-full flex items-center justify-center mb-6">
-                      <HeartHandshake className="text-[#d4af37]" size={32} />
+                      <IconHeartHandshake className="text-[#d4af37]" size={32} />
                     </div>
                     <h3 className="text-2xl font-serif mb-4">Absolute Privacy</h3>
                     <p className="text-stone-400 font-light leading-relaxed">Your comfort is our priority. We provide completely private, sound-insulated therapy rooms for undisturbed peace and tranquility.</p>
                   </div>
                   <div className="text-center">
                     <div className="w-20 h-20 mx-auto bg-[#d4af37]/10 rounded-full flex items-center justify-center mb-6">
-                      <Sparkles className="text-[#d4af37]" size={32} />
+                      <IconSparkles className="text-[#d4af37]" size={32} />
                     </div>
                     <h3 className="text-2xl font-serif mb-4">Premium Hygiene</h3>
                     <p className="text-stone-400 font-light leading-relaxed">We maintain strict, hospital-grade sanitization protocols. Fresh linens, sterilized equipment, and pristine shower facilities are guaranteed for every guest.</p>
@@ -282,11 +252,11 @@ export default async function AboutPage() {
                 </div>
               </div>
             </div>
-          </FadeIn>
+          
 
           {/* Why Choose Us SEO Content */}
           <div className="max-w-5xl mx-auto text-center">
-            <FadeIn>
+            
               <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-8 text-center">Why Guests Choose Relaxio Spa</h2>
               <div className="text-stone-600 font-light max-w-3xl mx-auto">
                 <p className="mb-6 leading-relaxed">
@@ -337,7 +307,7 @@ export default async function AboutPage() {
       </div>
       </div>
       
-    </FadeIn>
+    
   </div>
 
           </div>

@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { getBreadcrumbSchema } from '@/lib/seo';
-import FadeIn from '@/components/ui/FadeIn';
-import { MapPin, Phone, Clock, Mail } from 'lucide-react';
+import { IconClock, IconMail, IconMapPin, IconPhone } from '@/components/icons';
 
 export const metadata: Metadata = {
   title: 'Contact Relaxio Spa | Luxury Wellness Spa in Gomti Nagar Lucknow',
@@ -77,26 +76,29 @@ export default function ContactPage() {
 
   {/* Background Image */}
   <div className="absolute inset-0">
-  <Image 
-  src="/images/spa-contact-gomti-nagar-lucknow.avif"
-  alt="Spa interior Gomti Nagar Lucknow Relaxio Spa"
-  fill
-  sizes="100vw"
-  className="object-cover object-[center_80%]"
-/>
+  <Image
+    src="/images/spa-contact-gomti-nagar-lucknow.avif"
+    alt="Spa interior Gomti Nagar Lucknow Relaxio Spa"
+    fill
+    priority
+    fetchPriority="high"
+    sizes="100vw"
+    quality={40}
+    className="object-cover object-[center_80%]"
+  />
 
   <div className="absolute inset-0 bg-black/70" />
 </div>
 
   {/* Content */}
   <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-20 pb-10">
-          <FadeIn>
+          
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Get in Touch</span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-serif text-white mb-6 leading-tight">Contact Relaxio Spa</h1>
             <p className="text-amber-700 sm:text-lg md:text-xl text-stone-200 font-light max-w-3xl mx-auto leading-relaxed">
                Relaxio Spa welcomes guests in a calm and luxurious wellness environment in Gomti Nagar, Lucknow.
             </p>
-          </FadeIn>
+          
         </div>
       </section>
 
@@ -105,14 +107,14 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
             {/* Contact Info */}
-            <FadeIn direction="right">
+            
               <div className="bg-white p-10 md:p-14 rounded-3xl shadow-lg border border-stone-100 h-full">
                 <h2 className="text-3xl font-serif text-stone-900 mb-10">Reach Our Wellness Team</h2>
                 
                 <div className="space-y-10">
                   <div className="flex items-start gap-6">
                     <div className="w-14 h-14 bg-[#fdfbf7] rounded-full flex items-center justify-center shrink-0">
-                      <MapPin className="text-[#d4af37]" size={28} />
+                      <IconMapPin className="text-[#d4af37]" size={28} />
                     </div>
                     <div>
                       <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-2">Address</h3>
@@ -126,7 +128,7 @@ export default function ContactPage() {
                   
                   <div className="flex items-start gap-6">
                     <div className="w-14 h-14 bg-[#fdfbf7] rounded-full flex items-center justify-center shrink-0">
-                      <Clock className="text-[#d4af37]" size={28} />
+                      <IconClock className="text-[#d4af37]" size={28} />
                     </div>
                     <div>
                       <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-2">Operating Hours</h3>
@@ -139,7 +141,7 @@ export default function ContactPage() {
 
                   <div className="flex items-start gap-6">
                     <div className="w-14 h-14 bg-[#fdfbf7] rounded-full flex items-center justify-center shrink-0">
-                      <Phone className="text-[#d4af37]" size={28} />
+                      <IconPhone className="text-[#d4af37]" size={28} />
                     </div>
                     <div>
                       <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-2">Phone</h3>
@@ -154,7 +156,7 @@ export default function ContactPage() {
 
                   <div className="flex items-start gap-6">
                     <div className="w-14 h-14 bg-[#fdfbf7] rounded-full flex items-center justify-center shrink-0">
-                      <Mail className="text-[#d4af37]" size={28} />
+                      <IconMail className="text-[#d4af37]" size={28} />
                     </div>
                     <div>
                       <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-2">Email</h3>
@@ -184,10 +186,10 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-            </FadeIn>
+            
 
      {/* Location Preview */}
-<FadeIn direction="left">
+
   <div className="h-full min-h-[500px] w-full rounded-3xl overflow-hidden shadow-lg relative group">
 
     <a
@@ -210,9 +212,9 @@ export default function ContactPage() {
 
     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-300"></div>
 
-    <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-lg">
+    <div className="absolute bottom-6 left-6 right-6 bg-white/95 rounded-2xl p-5 shadow-lg">
       <div className="flex items-center gap-3 mb-2">
-        <MapPin className="text-[#d4af37]" size={22} />
+        <IconMapPin className="text-[#d4af37]" size={22} />
         <h3 className="text-lg font-serif text-stone-900">
           Relaxio Spa Gomti Nagar
         </h3>
@@ -224,7 +226,7 @@ export default function ContactPage() {
     </div>
 
   </div>
-</FadeIn>            
+            
           </div>
         </div>
       </section>

@@ -77,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 },
 
 {
-  url: 'https://relaxiospa.in/blog/thai-massage-benefits',
+  url: 'https://relaxiospa.in/blog/best-thai-massage-benefits-lucknow',
   lastModified: currentDate,
   changeFrequency: 'monthly',
   priority: 0.7,

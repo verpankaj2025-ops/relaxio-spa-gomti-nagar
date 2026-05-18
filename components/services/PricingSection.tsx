@@ -21,7 +21,7 @@ export default function PricingSection({
   packages,
 }: PricingSectionProps) {
   return (
-    <div className="bg-white/95 backdrop-blur-sm border border-stone-200/70 rounded-[36px] p-6 md:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.06)] my-20 max-w-5xl mx-auto overflow-hidden relative">
+    <div className="bg-white/95 border border-stone-200/70 rounded-[36px] p-6 md:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.06)] my-20 max-w-5xl mx-auto overflow-hidden relative">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/60 to-transparent" />
 
       <div className="text-center mb-6">

@@ -1,60 +1,13 @@
+import { faqsData } from "@/lib/faqs";
 import ServiceHero from "@/components/services/ServiceHero";
 import Image from 'next/image';
 import Link from "next/link";
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
-import FadeIn from '@/components/ui/FadeIn';
-import { CheckCircle2 } from 'lucide-react';
+import { IconCheckCircle } from '@/components/icons';
 import PricingSection from "@/components/services/PricingSection";
 import ExploreMore from "@/components/services/ExploreMore";
 
-async function getFAQs() {
-  try {
-    const res = await fetch(
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vRqjcqONpk-8NyLGN4e74KKzFsGp8SMgZvOZxtBinYLaTg7IDQG8-NwuOFgbzTDCMfLVvIAJTiYEiPx/pub?output=csv",
-      {
-        next: { revalidate: 3600 },
-      }
-    );
-
-    const text = await res.text();
-
-    const rows = text
-      .split("\n")
-      .slice(1)
-      .filter((row) => row.trim() !== "");
-
-    const faqs = rows
-      .map((row) => {
-        const cols = row
-          .split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/)
-          .map((col) =>
-            col
-              .replace(/^"|"$/g, "")
-              .replace(/\r/g, "")
-              .trim()
-          );
-
-        return {
-          page: cols[0]?.toLowerCase() || "",
-          question: cols[1] || "",
-          answer: cols.slice(2).join(", ") || "",
-        };
-      })
-      .filter(
-        (faq) =>
-          faq.page &&
-          faq.question &&
-          faq.answer
-      );
-
-    return faqs;
-
-  } catch (error) {
-    console.error(error);
-    return [];
-  }
-}
 
 export const metadata = {
   title: 'Luxury Thai Massage Therapy | Relaxio Spa',
@@ -72,20 +25,14 @@ export const metadata = {
   }
 };
 
-export default async function ThaiMassagePage() {
+export default function ThaiMassagePage() {
   const breadcrumbs = [
     { name: 'Home', item: '/' },
     { name: 'Services', item: '/services' },
     { name: 'Thai Massage', item: '/services/thai-massage' }
   ];
 
-  const allFaqs = (await getFAQs()) || [];
-
-const faqs = Array.isArray(allFaqs)
-  ? allFaqs.filter(
-      (f) => f.page?.toLowerCase().trim() === "thai"
-    )
-  : [];
+  const faqs = faqsData.thai || [];
 
   return (
     <>
@@ -128,7 +75,7 @@ const faqs = Array.isArray(allFaqs)
 
                 </div>
 
-            <FadeIn>
+            
   <div className="my-16 relative h-[350px] md:h-[450px] rounded-[32px] overflow-hidden shadow-lg">
                 <Image
                   src="/images/thai-massage-gomti-nagar-lucknow-spa.avif"
@@ -141,7 +88,7 @@ const faqs = Array.isArray(allFaqs)
 />
   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
-            </FadeIn>
+            
 
               <h2 
                className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">Top Benefits of Thai Massage</h2>
@@ -164,7 +111,7 @@ const faqs = Array.isArray(allFaqs)
                     key={idx}
                     className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-stone-100 shadow-sm hover:shadow-md transition-shadow duration-300"
                    >
-                    <CheckCircle2 className="text-[#d4af37] shrink-0 mt-1" size={20} />
+                    <IconCheckCircle className="shrink-0 mt-1" size={20} />
                     <span className="text-stone-700">{benefit}</span>
                   </div>
                 ))}

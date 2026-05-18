@@ -1,32 +1,12 @@
+import { faqsData } from "@/lib/faqs";
 import ServiceHero from "@/components/services/ServiceHero";
 import Image from 'next/image';
 import Link from "next/link";
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
-import FadeIn from '@/components/ui/FadeIn';
-import { CheckCircle2 } from 'lucide-react';
+import { IconCheckCircle } from '@/components/icons';
 import PricingSection from "@/components/services/PricingSection";
 import ExploreMore from "@/components/services/ExploreMore";
-
-async function getFAQs() {
-  try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-
-    const res = await fetch(`${baseUrl}/api/faqs`, {
-      next: { revalidate: 3600 },
-    });
-
-    if (!res.ok) {
-      return [];
-    }
-
-    return await res.json();
-  } catch (error) {
-    console.error("FAQ fetch error:", error);
-    return [];
-  }
-}
 
 export const metadata = {
   title: 'Balinese Massage Therapy | Relaxio Spa',
@@ -44,20 +24,14 @@ export const metadata = {
   }
 };
 
-export default async function BalineseMassagePage() {
+export default function BalineseMassagePage() {
   const breadcrumbs = [
     { name: 'Home', item: '/' },
     { name: 'Services', item: '/services' },
     { name: 'Balinese Massage', item: '/services/balinese-massage' }
   ];
 
-  const allFaqs = (await getFAQs()) || [];
-
-const faqs = Array.isArray(allFaqs)
-  ? allFaqs.filter(
-      (f) => f.page?.toLowerCase().trim() === "balinese"
-    )
-  : [];
+  const faqs = faqsData.balinese || [];
 
   return (
     <>
@@ -105,12 +79,12 @@ const faqs = Array.isArray(allFaqs)
               key={idx}
               className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-stone-100 shadow-sm hover:shadow-md transition-shadow duration-300"
              >
-                  <CheckCircle2 className="text-[#d4af37] shrink-0 mt-1" size={20} />
+                  <IconCheckCircle className="shrink-0 mt-1" size={20} />
                   <span className="text-stone-700">{benefit}</span>
                   </div>
                 ))}
               </div>
-        <FadeIn>
+        
           <div className="my-16 relative h-[350px] md:h-[450px] rounded-[32px] overflow-hidden shadow-lg">
 
              <Image 
@@ -125,7 +99,7 @@ const faqs = Array.isArray(allFaqs)
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
 
         </div>
-      </FadeIn>
+      
               <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">
                  Why Guests Love Our Balinese Therapy
               </h2>

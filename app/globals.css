@@ -1,2 +1,121 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+/* Reusable hover glow — replaces nested blur/gradient wrapper divs (lower GPU cost) */
+.card-surface {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  background:
+    radial-gradient(ellipse 45% 35% at 0% 0%, rgb(255 255 255 / 0.38), transparent 72%),
+    linear-gradient(to bottom right, rgb(255 255 255 / 0.22), transparent 45%, rgb(254 243 199 / 0.22));
+}
+
+.group:hover .card-surface::before,
+.card-surface:hover::before,
+.card-surface:focus-within::before {
+  opacity: 1;
+}
+
+.card-surface-dark::before {
+  background:
+    radial-gradient(ellipse 45% 35% at 0% 0%, rgb(255 255 255 / 0.12), transparent 72%),
+    linear-gradient(to bottom right, rgb(255 255 255 / 0.06), transparent 45%, rgb(245 158 11 / 0.12));
+}
+
+.media-hover-glow {
+  position: relative;
+}
+
+.media-hover-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  background:
+    radial-gradient(ellipse 45% 35% at 0% 0%, rgb(255 255 255 / 0.32), transparent 72%),
+    linear-gradient(to bottom right, rgb(255 255 255 / 0.18), transparent 50%, rgb(254 243 199 / 0.18));
+}
+
+.group:hover .media-hover-glow::after {
+  opacity: 1;
+}
+
+.section-ambient-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 20rem;
+  height: 20rem;
+  transform: translateX(-50%);
+  pointer-events: none;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgb(254 243 199 / 0.14) 0%, transparent 68%);
+}
+
+.icon-badge {
+  width: 4rem;
+  height: 4rem;
+  margin-inline: auto;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: rgb(212 175 55 / 0.1);
+  border: 1px solid rgb(212 175 55 / 0.2);
+}
+
+.icon-ring {
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: #fdfbf7;
+}
+
+/* CSS-only mobile nav toggle icons */
+.nav-mobile:not([open]) .nav-icon-close {
+  display: none;
+}
+
+.nav-mobile[open] .nav-icon-open {
+  display: none;
+}
+
+/* Disable hover scale on touch devices (compositing cost) */
+@media (hover: none) {
+  .hover-scale-off-touch {
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-surface::before,
+  .media-hover-glow::after {
+    transition: none;
+  }
+
+  .group:hover .media-hover-glow img,
+  .group-hover\:scale-105 {
+    transform: none !important;
+  }
+}

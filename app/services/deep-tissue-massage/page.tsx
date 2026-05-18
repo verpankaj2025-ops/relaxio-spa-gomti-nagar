@@ -1,32 +1,14 @@
+import { faqsData } from "@/lib/faqs";
 import ServiceHero from "@/components/services/ServiceHero";
 import Image from 'next/image';
 import Link from "next/link";
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
-import FadeIn from '@/components/ui/FadeIn';
-import { CheckCircle2 } from 'lucide-react';
+import { IconCheckCircle } from '@/components/icons';
 import PricingSection from "@/components/services/PricingSection";
 import ExploreMore from "@/components/services/ExploreMore";
 
-async function getFAQs() {
-  try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-    const res = await fetch(`${baseUrl}/api/faqs`, {
-      next: { revalidate: 3600 },
-    });
-
-    if (!res.ok) {
-      return [];
-    }
-
-    return await res.json();
-  } catch (error) {
-    console.error("FAQ fetch error:", error);
-    return [];
-  }
-}
 
 export const metadata = {
   title: 'Deep Tissue Wellness Therapy | Relaxio Spa',
@@ -44,30 +26,29 @@ export const metadata = {
   }
 };
 
-export default async function DeepTissueMassagePage() {
+export default function DeepTissueMassagePage() {
   const breadcrumbs = [
     { name: 'Home', item: '/' },
     { name: 'Services', item: '/services' },
     { name: 'Deep Tissue Massage', item: '/services/deep-tissue-massage' }
   ];
 
-  const allFaqs = (await getFAQs()) || [];
+  const faqs = faqsData["deep-tissue"] || [];
 
-const faqs = Array.isArray(allFaqs)
-  ? allFaqs.filter(
-      (f) => f.page?.toLowerCase().trim() === "deep-tissue"
-    )
-  : [];
-
-  return (
+   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbSchema(breadcrumbs)) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getBreadcrumbSchema(breadcrumbs))
+        }}
       />
+
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(faqs)) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getFAQSchema(faqs))
+        }}
       />
       
       {/* Hero Section */}
@@ -91,7 +72,7 @@ const faqs = Array.isArray(allFaqs)
                 Unlike a standard relaxation massage, deep tissue therapy uses slow, deliberate strokes and firm pressure. Our highly trained therapists focus on the inner layers of your muscles, tendons, and fascia. By physically breaking down adhesions (bands of painful, rigid tissue), this massage restores normal movement and helps reduce physical discomfort.
               </p>
 
-            <FadeIn>
+            
               <div 
                 className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
@@ -104,7 +85,7 @@ const faqs = Array.isArray(allFaqs)
                   loading="lazy"
                 />
               </div>
-            </FadeIn>
+            
 
               <h2 
                className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">Why You Need a Deep Tissue Massage</h2>
@@ -124,7 +105,7 @@ const faqs = Array.isArray(allFaqs)
                   "Encourages overall physical relaxation",
                 ].map((benefit, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="text-[#d4af37] shrink-0 mt-1" size={20} 
+                    <IconCheckCircle className="shrink-0 mt-1" size={20} 
                     />
                     <span 
                      className="text-stone-700">{benefit}</span>

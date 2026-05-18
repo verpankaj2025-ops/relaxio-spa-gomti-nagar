@@ -2,8 +2,6 @@ import { getPost } from "@/lib/blog";
 import ExploreMore from "@/components/services/ExploreMore";
 import BlogInternalLinks from "@/components/blog/BlogInternalLinks";
 import RelatedBlogs from "@/components/blog/RelatedBlogs";
-import Script from "next/script";
-
 type Params = Promise<{ slug: string }>;
 
 export async function generateMetadata({
@@ -46,8 +44,7 @@ export default async function BlogPost({
 
   return (
     <>
-  <Script
-    id="blog-schema"
+  <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
       __html: JSON.stringify({
@@ -75,7 +72,7 @@ export default async function BlogPost({
       }),
     }}
   />
-    <article className="max-w-4xl mx-auto px-4 py-24">
+    <article className="max-w-4xl mx-auto px-4 py-24 content-auto">
       <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif text-stone-900 mb-10 leading-tight">
         {post.title}
       </h1>

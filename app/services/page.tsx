@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Explore luxury wellness therapies at Relaxio Spa including Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Massage, Jacuzzi, and Steam Bath in Gomti Nagar Lucknow.',
 
 alternates: {
-  canonical: '/services',
+  canonical: 'https://relaxiospa.in/services',
 },
 
 openGraph: {

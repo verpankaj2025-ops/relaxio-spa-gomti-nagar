@@ -1,33 +1,13 @@
+import { faqsData } from "@/lib/faqs";
 import ServiceHero from "@/components/services/ServiceHero";
 import Image from "next/image";
 import Link from "next/link";
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
-import FadeIn from '@/components/ui/FadeIn';
 import PricingSection from "@/components/services/PricingSection";
 import ExploreMore from "@/components/services/ExploreMore";
 
 export const revalidate = 3600;
-
-async function getFAQs() {
-  try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-
-    const res = await fetch(`${baseUrl}/api/faqs`, {
-      next: { revalidate: 3600 },
-    });
-
-    if (!res.ok) {
-      return [];
-    }
-
-    return await res.json();
-  } catch (error) {
-    console.error("FAQ fetch error:", error);
-    return [];
-  }
-}
 
 export const metadata = {
   title:
@@ -55,7 +35,7 @@ export const metadata = {
   },
 };
 
-export default async function CoupleMassagePage() {
+export default function CoupleMassagePage() {
 
     const breadcrumbs = [
     { name: 'Home', item: '/' },
@@ -63,18 +43,11 @@ export default async function CoupleMassagePage() {
     { name: 'Couple Massage', item: '/services/couple-massage' }
   ];
 
-  const allFaqs = (await getFAQs()) || [];
-
-  const faqs = Array.isArray(allFaqs)
-    ? allFaqs.filter(
-        (f) => f.page?.toLowerCase().trim() === "couple-massage"
-      )
-    : [];
+  const faqs = faqsData["couple-massage"] || [];
 
   return (
     <>
-
-          <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbSchema(breadcrumbs)) }}
       />
@@ -197,7 +170,7 @@ export default async function CoupleMassagePage() {
 </div>
   </div>
 
-  <FadeIn>
+  
   <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
     <Image
        src="/images/couple-massage-lucknow-spa.avif"
@@ -208,7 +181,7 @@ export default async function CoupleMassagePage() {
        loading="lazy"
      />
   </div>
-</FadeIn>
+
 
   <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">Why Guests Choose Our Couple Wellness Experience
   </h2>

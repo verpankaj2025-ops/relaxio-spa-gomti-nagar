@@ -1,9 +1,9 @@
+import { faqsData } from "@/lib/faqs";
 import ServiceHero from "@/components/services/ServiceHero";
 import Image from "next/image";
 import type { Metadata } from "next";
 import FAQ from "@/components/FAQ";
-import FadeIn from "@/components/ui/FadeIn";
-import { CheckCircle2 } from "lucide-react";
+import { IconCheckCircle } from "@/components/icons";
 import { getBreadcrumbSchema, getFAQSchema } from "@/lib/seo";
 import PricingSection from "@/components/services/PricingSection";
 import ExploreMore from "@/components/services/ExploreMore";
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   "Wellness Spa",
 ],
   alternates: {
-    canonical: "/services/spa-facilities",
+    canonical: "https://relaxiospa.in/services/spa-facilities",
   },
   openGraph: {
     title: "Jacuzzi & Steam Bath in Gomti Nagar Lucknow | Relaxio Spa",
@@ -38,39 +38,14 @@ export const metadata: Metadata = {
   },
 };
 
-async function getFAQs() {
-  try {
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-
-    const res = await fetch(`${baseUrl}/api/faqs`, {
-      next: { revalidate: 3600 },
-    });
-
-    if (!res.ok) {
-      return [];
-    }
-
-    return await res.json();
-  } catch (error) {
-    console.error("FAQ fetch error:", error);
-    return [];
-  }
-}
-
-export default async function SpaFacilitiesPage() {
+export default function SpaFacilitiesPage() {
   const breadcrumbs = [
   { name: "Home", item: "/" },
   { name: "Services", item: "/services" },
   { name: "Spa Facilities", item: "/services/spa-facilities" },
 ];
-  const allFaqs = (await getFAQs()) || [];
 
-  const faqs = Array.isArray(allFaqs)
-    ? allFaqs.filter(
-        (f) => f.page?.toLowerCase().trim() === "spa-facilities"
-      )
-    : [];
+const faqs = faqsData["spa-facilities"] || [];
 
   return (
     <>
@@ -129,19 +104,23 @@ export default async function SpaFacilitiesPage() {
                   "Helps improve sleep quality",
                   "Provides a luxury wellness experience",
                 ].map((benefit, idx) => (
-                  <div key={idx} className="flex items-start gap-3">
-                    <CheckCircle2
-                      className="text-[#d4af37] shrink-0 mt-1"
-                      size={20}
-                    />
+                  <div
+                      key={idx}
+                      className="group rounded-3xl border border-stone-200 bg-white/90 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                     >
+                    <div className="h-10 w-10 rounded-full bg-[#d4af37]/10 flex items-center justify-center shrink-0">
+  <IconCheckCircle size={18} />
+</div>
 
-                    <span className="text-stone-700">{benefit}</span>
+                    <span className="text-stone-700 leading-relaxed">
+  {benefit}
+</span>
                   </div>
                 ))}
               </div>
             
             {/* Center Image */}
-            <FadeIn>
+            
               <div className="my-16 relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-lg">
                 <Image
 
@@ -154,7 +133,7 @@ export default async function SpaFacilitiesPage() {
                   loading="lazy"
                  />
               </div>
-            </FadeIn>
+            
 
             {/* Why Relaxio */}
               <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">
@@ -216,6 +195,24 @@ export default async function SpaFacilitiesPage() {
     },
   ]}
 />
+
+<div className="rounded-[32px] bg-stone-900 text-white p-8 md:p-12 text-center mb-20 mt-20">
+  <h2 className="font-serif text-3xl md:text-5xl mb-6">
+    Relax, Detox & Rejuvenate
+  </h2>
+
+  <p className="text-stone-300 max-w-2xl mx-auto leading-relaxed mb-8">
+    Enjoy luxury Jacuzzi and steam wellness sessions designed
+    for stress recovery, muscle relaxation, and peaceful rejuvenation.
+  </p>
+
+  <a
+    href="https://wa.me/917081891995"
+    className="inline-flex items-center justify-center rounded-full bg-[#d4af37] px-8 py-4 text-stone-900 font-medium hover:scale-105 transition-transform duration-300"
+  >
+    Book Wellness Session
+  </a>
+</div>
 
             {/* FAQ */}
             <div className="mt-24">
