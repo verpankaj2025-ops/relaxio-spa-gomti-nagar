@@ -107,7 +107,7 @@ const faqs = Array.isArray(allFaqs)
 />
 
       {/* Main Content */}
-      <section className="pt-28 pb-24 bg-[#fdfbf7] content-auto">
+      <section className="pt-20 pb-10 bg-[#fdfbf7] content-auto">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-none font-light text-stone-700">
             

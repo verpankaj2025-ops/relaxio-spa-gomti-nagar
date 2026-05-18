@@ -129,7 +129,7 @@ export default async function AboutPage() {
   />
 
       {/* Hero Section */}
-      <section className="relative min-h-[78vh] md:min-h-[92vh] flex items-center justify-center overflow-hidden bg-stone-950">
+      <section className="relative min-h-[62vh] md:min-h-[72vh] flex items-center justify-center overflow-hidden bg-stone-950">
         <div className="absolute inset-0 z-0">
   <Image 
     src="/images/spa-about-gomti-nagar-lucknow.avif"
@@ -141,10 +141,10 @@ export default async function AboutPage() {
   {/* Light overlay */}
   <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/70" />
 </div>
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-28 pb-16">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 pb-10">
           <FadeIn>
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Our Story</span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-medium text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium text-white mb-6 leading-tight">
   Luxury Wellness Spa in Gomti Nagar Lucknow <br/>
   <span className="italic text-stone-300 font-light">Relaxio Spa</span>
 </h1>

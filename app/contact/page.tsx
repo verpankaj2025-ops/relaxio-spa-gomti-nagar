@@ -73,7 +73,7 @@ export default function ContactPage() {
 />
       
       {/* Header Section */}
-      <section className="relative min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center text-center overflow-hidden bg-stone-950">
+      <section className="relative min-h-[62vh] md:min-h-[72vh] lg:min-h-[90vh] flex items-center justify-center text-center overflow-hidden bg-stone-950">
 
   {/* Background Image */}
   <div className="absolute inset-0">
@@ -89,7 +89,7 @@ export default function ContactPage() {
 </div>
 
   {/* Content */}
-  <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-28 pb-16">
+  <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-20 pb-10">
           <FadeIn>
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Get in Touch</span>
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">Contact Relaxio Spa</h1>

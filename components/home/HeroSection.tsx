@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="min-h-[44vh] md:min-h-[54vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden relative">
+    <section className="relative h-[62vh] md:h-[72vh] flex items-center justify-center overflow-hidden">
 
       <div className="absolute inset-0 z-0">
 

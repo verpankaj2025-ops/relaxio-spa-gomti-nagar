@@ -30,7 +30,7 @@ export default async function ServicesPage() {
 
   return (
     <>
-    <div className="pt-28 pb-20 md:pt-32 md:pb-24 bg-stone-50">
+    <div className="pt-20 pb-10 md:pt-32 md:pb-24 bg-stone-50">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-10">
 

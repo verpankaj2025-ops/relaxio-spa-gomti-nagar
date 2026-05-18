@@ -80,7 +80,7 @@ export default function BlogPage() {
   />
 
   <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-  <div className="text-center px-4 sm:px-6 max-w-5xl mx-auto pt-28 pb-16">
+  <div className="text-center px-4 sm:px-6 max-w-5xl mx-auto 0 pb-10">
   
     <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
       Relaxio Spa Blog
