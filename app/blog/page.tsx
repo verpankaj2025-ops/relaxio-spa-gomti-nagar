@@ -111,7 +111,7 @@ export default function BlogPage() {
   prefetch={true}
 >
         
-        <div className="group relative overflow-hidden w-full max-w-[860px] bg-[#fffdf9] rounded-[32px] border border-stone-200/70 hover:border-amber-400/50 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 cursor-pointer">
+        <div className="group relative overflow-hidden w-full max-w-[860px] bg-[#fffdf9] rounded-[32px] border border-stone-200/70 hover:border-amber-400/50 shadow-lg hover:shadow-2xl hover:shadow-md transition-all duration-300 cursor-pointer">
 
   <div className="relative h-[320px] overflow-hidden">
 
@@ -119,7 +119,7 @@ export default function BlogPage() {
       src={blog.image || "/images/spa.avif"}
       alt={blog.title}
       fill
-      className="object-cover group-hover:scale-105 transition-transform duration-700"
+      className="object-cover group-hover:scale-105 transition-transform duration-300"
     />
 
     <div className="absolute inset-0 bg-black/20" />

@@ -1,5 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from "next/dynamic";
+
+const BlogSection = dynamic(
+  () => import("@/components/home/BlogSection")
+);
 
 import { getFAQSchema } from '@/lib/seo';
 
@@ -18,7 +23,11 @@ import {
 
 import type { Metadata } from "next";
 
-import dynamic from "next/dynamic";
+import HeroSection from "@/components/home/HeroSection";
+
+
+
+
 
 const FAQ = dynamic(() => import("@/components/FAQ"), {
   loading: () => (
@@ -83,53 +92,8 @@ export default async function Home() {
 
       
         <main>
-          
-          {/* 1. HERO SECTION */}
-      <section className="min-h-[44vh] md:min-h-[54vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden relative">
-        <div className="absolute inset-0 z-0">
-   <Image
-  src="/images/luxury-spa-gomti-nagar-lucknow.avif"
-  alt="Luxury wellness spa experience at Relaxio Spa"
-  fill
-  priority
-  fetchPriority="high"
-  quality={32}
-  sizes="(max-width:768px) 100vw, 1920px"
-  className="object-cover"
-/>
-          <div className="absolute inset-0 bg-black/55" />
-        </div>
-        
-           <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20 pb-10">
+          <HeroSection />
 
-               <span className="text-amber-300 tracking-[0.3em] uppercase text-[11px] font-medium mb-6 block">
-                 Welcome to Relaxio Spa
-               </span>
-
-            <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-5xl font-serif leading-[1.05] tracking-[-0.03em] text-white mb-4">
-                  Luxury Wellness Spa in Gomti Nagar Lucknow                  
-                </h1>
-
-                 <h2 className="text-base md:text-xl text-stone-300 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-                      Relaxio Spa offers private wellness therapies, calming spa ambience, and professionally guided massage experiences designed for relaxation and comfort.
-                   </h2>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-3.5 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-all duration-300 hover:shadow-lg text-sm uppercase tracking-widest font-medium shadow-lg w-full sm:w-auto">
-                Book Relaxation Package
-             </a>
-              <a href="tel:+917081891995" 
-                 className="px-8 py-3.5 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-stone-900 transition-all duration-300 hover:shadow-lg text-sm uppercase tracking-[0.18em] font-medium w-full sm:w-auto">
-                Call Now
-              </a>
-            </div>
-            </div>
-          
-      </section>
 
       {/* 2. SERVICES SECTION */}
       <section className="py-16 md:py-20 bg-[#fdfbf7]">
@@ -189,7 +153,7 @@ export default async function Home() {
                 <Link
                     key={service.title}
                     href={service.link} 
-                    className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-500 border border-stone-100">
+                    className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 border border-stone-100">
                   <div className="relative h-64 md:h-72 overflow-hidden">
                     <Image 
                        src={service.img} 
@@ -202,7 +166,7 @@ export default async function Home() {
                      />
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 to-transparent opacity-50" />
                   </div>
-                  <div className="p-6 text-center relative bg-white -mt-8 mx-4 rounded-2xl shadow-lg group-hover:-translate-y-1 transition-transform duration-500">
+                  <div className="p-6 text-center relative bg-white -mt-8 mx-4 rounded-2xl shadow-lg group-hover:shadow-lg transition-transform duration-300">
                     <h3 className="text-2xl md:text-[30px] tracking-[-0.02em] font-serif mb-3 text-stone-900 group-hover:text-amber-700 transition-colors">{service.title}</h3>
                     <p className="text-stone-600 font-light mb-6 min-h-[72px]">{service.desc}</p>
                     <span className="inline-flex items-center gap-2 text-sm uppercase tracking-widest font-medium text-amber-700">
@@ -289,10 +253,10 @@ export default async function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Basic */}
             
-              <div className="group relative overflow-hidden bg-white p-8 rounded-[28px] border border-stone-200/80 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-lg">
+              <div className="group relative overflow-hidden bg-white p-8 rounded-[28px] border border-stone-200/80 text-center transition-all duration-300 hover:shadow-lg">
   
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-2xl rotate-12"></div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-lg rotate-12"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-amber-100/20"></div>
                  </div>
                 <h3 className="text-2xl font-serif text-stone-900 mb-2">Relaxation</h3>
@@ -315,14 +279,14 @@ export default async function Home() {
 
             {/* Premium (Highlighted) */}
             
-              <div className="group relative bg-stone-900 p-12 rounded-[32px] border border-[#d4af37]/80 text-center md:-translate-y-2 transition-all duration-500 hover:-translate-y-3 hover:shadow-lg">
+              <div className="group relative bg-stone-900 p-12 rounded-[32px] border border-[#d4af37]/80 text-center md:-translate-y-2 transition-all duration-300 hover:shadow-lg hover:shadow-lg">
               
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#d4af37] text-stone-900 px-6 py-2 rounded-full text-xs uppercase tracking-[0.25em] font-medium shadow-[0_10px_30px_rgba(212,175,55,0.35)] z-20">
                     Most Popular
                  </div>
 
-                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                   <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/10 blur-2xl rotate-12"></div>
+                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                   <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/10 blur-lg rotate-12"></div>
                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-amber-500/10"></div>
                  </div>
                 <h3 className="text-2xl font-serif text-white mb-2">Deep Healing</h3>
@@ -346,10 +310,10 @@ export default async function Home() {
 
             {/* Couple */}
             
-              <div className="group relative overflow-hidden bg-white p-10 rounded-[28px] border border-stone-200/80 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-lg">
+              <div className="group relative overflow-hidden bg-white p-10 rounded-[28px] border border-stone-200/80 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
 
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-2xl rotate-12"></div>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-lg rotate-12"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-amber-100/20"></div>
                 </div>
                 <h3 className="text-2xl md:text-[30px] tracking-[-0.02em] font-serif text-stone-900 mb-2">Couple&apos;s Retreat</h3>
@@ -400,9 +364,9 @@ export default async function Home() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
       {/* CARD 1 */}
-      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-500 overflow-hidden">
+      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:shadow-lg transition-all duration-300 overflow-hidden">
 
-        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
         <div className="relative z-10">
 
@@ -423,9 +387,9 @@ export default async function Home() {
       </div>
 
       {/* CARD 2 */}
-      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-500 overflow-hidden">
+      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:shadow-lg transition-all duration-300 overflow-hidden">
 
-        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
         <div className="relative z-10">
 
@@ -446,9 +410,9 @@ export default async function Home() {
       </div>
 
       {/* CARD 3 */}
-      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-500 overflow-hidden">
+      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:shadow-lg transition-all duration-300 overflow-hidden">
 
-        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
         <div className="relative z-10">
 
@@ -469,9 +433,9 @@ export default async function Home() {
       </div>
 
       {/* CARD 4 */}
-      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:-translate-y-2 hover:shadow-lg transition-all duration-500 overflow-hidden">
+      <div className="group relative rounded-[28px] border border-stone-200/80 bg-[#fcfaf6] p-8 text-center hover:shadow-lg transition-all duration-300 overflow-hidden">
 
-        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-amber-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
         <div className="relative z-10">
 
@@ -590,7 +554,7 @@ export default async function Home() {
       <section className="py-24 md:py-32 bg-[#f8f5ef] border-t border-stone-200/60 overflow-hidden relative">
 
   {/* SOFT BACKGROUND GLOW */}
-  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-amber-100/20 blur-2xl rounded-full pointer-events-none"></div>
+  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[320px] h-[320px] bg-amber-100/10 blur-lg rounded-full pointer-events-none"></div>
 
   <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -635,7 +599,7 @@ export default async function Home() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 p-8 md:p-14 lg:p-20">
 
         {/* CARD 1 */}
-        <div className="group rounded-[30px] border border-stone-200/70 bg-[#fcfaf6] p-8 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+        <div className="group rounded-[30px] border border-stone-200/70 bg-[#fcfaf6] p-8 hover:shadow-lg hover:shadow-lg transition-all duration-300">
 
           <span className="text-[11px] uppercase tracking-[0.3em] text-amber-700 font-medium block mb-5">
             Private Comfort
@@ -652,7 +616,7 @@ export default async function Home() {
         </div>
 
         {/* CARD 2 */}
-        <div className="group rounded-[30px] border border-stone-200/70 bg-[#fcfaf6] p-8 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+        <div className="group rounded-[30px] border border-stone-200/70 bg-[#fcfaf6] p-8 hover:shadow-lg hover:shadow-lg transition-all duration-300">
 
           <span className="text-[11px] uppercase tracking-[0.3em] text-amber-700 font-medium block mb-5">
             Signature Therapies
@@ -669,7 +633,7 @@ export default async function Home() {
         </div>
 
         {/* CARD 3 */}
-        <div className="group rounded-[30px] border border-stone-200/70 bg-[#fcfaf6] p-8 hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
+        <div className="group rounded-[30px] border border-stone-200/70 bg-[#fcfaf6] p-8 hover:shadow-lg hover:shadow-lg transition-all duration-300">
 
           <span className="text-[11px] uppercase tracking-[0.3em] text-amber-700 font-medium block mb-5">
             Relaxing Ambience
@@ -707,148 +671,9 @@ export default async function Home() {
 
 </section>
 
-       {/* BLOG INTERNAL LINKS */}
-<section className="py-16 bg-white">
+      <BlogSection />
 
-  <div className="max-w-7xl mx-auto px-4">
-
-    <h3 className="text-2xl md:text-[30px] tracking-[-0.02em] font-serif text-center mb-12">
-      Wellness & Spa Guides
-    </h3>
-    <p className="text-stone-500 text-lg mt-4 mb-10 max-w-2xl mx-auto leading-relaxed">
-  Explore wellness insights, massage therapy benefits, and premium spa experiences designed for relaxation and rejuvenation.
-</p>
-
-    <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
-
-      {/* BLOG 1 */}
-      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-lg transition-all duration-500">
-
-        <Image
-           src="/images/blog/best-spa-gomti-nagar.avif"
-           alt="Best Spa in Gomti Nagar Lucknow"
-           width={800}
-           height={500}
-           quality={40}
-           className="w-full h-52 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105"
-         />
-         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-
-  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-2xl rotate-12"></div>
-
-  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-amber-100/20"></div>
-
-</div>
-
-        <div className="p-8">
-
-          <h4 className="font-serif text-[30px] tracking-[-0.02em] text-stone-900 leading-tight mb-4">
-            Best Spa in Gomti Nagar Lucknow
-          </h4>
-
-          <p className="text-stone-600 leading-relaxed mb-6">
-            Discover luxury wellness therapies, private spa rooms,
-            and premium relaxation experiences at Relaxio Spa.
-          </p>
-
-          <Link
-            href="/blog/best-spa-in-gomti-nagar"
-            className="inline-flex items-center justify-center border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white transition-colors duration-200 px-6 py-3 rounded-full text-sm uppercase tracking-[0.2em]"
-          >
-            Read Article
-          </Link>
-
-        </div>
-      </div>
-
-      {/* BLOG 2 */}
-      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-lg transition-all duration-500">
-
-        <Image
-           src="/images/blog/deep-tissue-massage.avif"
-           alt="Deep Tissue Massage Benefits"
-           width={800}
-           height={500}
-           quality={40}
-           className="w-full h-52 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105"
-         />
-         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-
-  <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-2xl rotate-12"></div>
-
-  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-amber-100/20"></div>
-
-</div>
-
-        <div className="p-8">
-
-          <h4 className="font-serif text-[30px] tracking-[-0.02em] text-stone-900 leading-tight mb-4">
-            Deep Tissue Massage Benefits
-          </h4>
-
-          <p className="text-stone-600 leading-relaxed mb-6">
-            Learn how deep tissue massage helps improve muscle recovery,
-            relaxation, and stress relief experiences.
-          </p>
-
-          <Link
-            href="/blog/deep-tissue-massage-benefits"
-            className="inline-flex items-center justify-center border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white transition-colors duration-200 px-6 py-3 rounded-full text-sm uppercase tracking-[0.2em]"
-          >
-            Read Article
-          </Link>
-
-        </div>
-      </div>
-
-      {/* BLOG 3 */}
-      <div className="group relative overflow-hidden bg-[#fffdf9] border border-stone-200/80 rounded-[30px] hover:-translate-y-2 hover:shadow-lg transition-all duration-500">
-
-        <Image
-          src="/images/blog/thai-massage.avif"
-          alt="Benefits of Thai Massage"
-          width={800}
-          height={500}
-          quality={40}
-          loading="lazy"
-          className="w-full h-52 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-
-           <div className="absolute -top-24 -left-24 w-56 h-56 bg-white/40 blur-2xl rotate-12"></div>
-
-            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-amber-100/20"></div>
-
-         </div>
-
-        <div className="p-8">
-
-          <h4 className="font-serif text-[30px] tracking-[-0.02em] text-stone-900 leading-tight mb-4">
-            Benefits of Thai Massage
-          </h4>
-
-          <p className="text-stone-600 leading-relaxed mb-6">
-            Explore wellness benefits of Thai massage including
-            flexibility improvement and stress relief.
-          </p>
-
-          <Link
-            href="/blog/thai-massage-benefits"
-            className="inline-flex items-center justify-center border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white transition-all duration-300 hover:shadow-lg px-6 py-3 rounded-full text-sm uppercase tracking-[0.2em]"
-          >
-            Read Article
-          </Link>
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<div className="mt-24">
+<div className="mt-16">
   <FAQ faqs={faqs} />
 </div>
 </main>

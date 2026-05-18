@@ -49,20 +49,29 @@ const nextConfig: NextConfig = {
   images: {
   formats: ['image/avif', 'image/webp'],
   minimumCacheTTL: 31536000,
+
   deviceSizes: [640, 768, 1024, 1280, 1600],
   imageSizes: [16, 32, 48, 64, 96],
+
+  dangerouslyAllowSVG: false,
+  contentDispositionType: 'attachment',
 },
 
   experimental: {
   optimizePackageImports: [
-  'lucide-react',
-  'lodash-es',
-],
+    'lucide-react',
+    'lodash-es',
+    'framer-motion',
+  ],
 },
 
   webpack: (config, { dev }) => {
   if (!dev) {
     config.optimization.minimize = true;
+
+    config.optimization.splitChunks = {
+      chunks: 'all',
+    };
   }
 
   return config;
@@ -72,7 +81,23 @@ async headers() {
   return [
     {
       source: '/(.*)',
-      headers: securityHeaders,
+      headers: [
+        ...securityHeaders,
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
+    },
+
+    {
+      source: '/:all*(svg|jpg|jpeg|png|webp|avif|gif|ico)',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
     },
   ];
 },

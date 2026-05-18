@@ -210,7 +210,7 @@ export default async function CoupleMassagePage() {
   </div>
 </FadeIn>
 
-  <h2 className="font-serif text-3xl md:text-amber-700xl text-stone-900 mb-6">Why Guests Choose Our Couple Wellness Experience
+  <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">Why Guests Choose Our Couple Wellness Experience
   </h2>
 
   <p className="mb-6 leading-relaxed">

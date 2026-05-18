@@ -57,10 +57,17 @@ export default async function AboutPage() {
     const allFaqs = (await getFAQs()) || [];
 
   const faqs = Array.isArray(allFaqs)
-    ? allFaqs.filter(
-        (f) => f.page?.toLowerCase().trim() === "about"
-      )
-    : [];
+  ? allFaqs.filter((f) => {
+      const page = f.page?.toLowerCase().trim();
+
+      return (
+        page === "about" ||
+        page === "about-us" ||
+        page === "about page"
+      );
+    })
+  : [];
+
   const breadcrumbs = [
     { name: 'Home', item: '/' },
     { name: 'About Us', item: '/about' }
@@ -122,46 +129,46 @@ export default async function AboutPage() {
   />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden bg-stone-950">
+      <section className="relative min-h-[78vh] md:min-h-[92vh] flex items-center justify-center overflow-hidden bg-stone-950">
         <div className="absolute inset-0 z-0">
   <Image 
     src="/images/spa-about-gomti-nagar-lucknow.avif"
     alt="Luxury spa interior in Gomti Nagar Lucknow Relaxio Spa massage center"
     fill
-    className="object-cover"
+    className="object-cover scale-[1.02]"
   />
 
   {/* Light overlay */}
-  <div className="absolute inset-0 bg-black/50" />
+  <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/70" />
 </div>
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-28 pb-16">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-28 pb-16">
           <FadeIn>
             <span className="text-[#d4af37] tracking-[0.2em] uppercase text-sm font-medium mb-4 block">Our Story</span>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-medium text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-medium text-white mb-6 leading-tight">
   Luxury Wellness Spa in Gomti Nagar Lucknow <br/>
   <span className="italic text-stone-300 font-light">Relaxio Spa</span>
 </h1>
 
 {/* 🔥 MAIN SEO PARAGRAPH (ADD THIS) */}
-<p className="text-amber-700 sm:text-lg md:text-xl text-stone-200 font-light max-w-3xl mx-auto leading-relaxed">
+<p className="text-stone-200 sm:text-lg md:text-xl font-light max-w-3xl mx-auto leading-relaxed">
   Relaxio Spa offers relaxing wellness therapies and a peaceful luxury spa experience in Gomti Nagar Lucknow.
 </p>
           </FadeIn>
         </div>
       </section>
 
-      <div className="py-24 bg-[#fdfbf7]">
+      <div className="py-28 bg-gradient-to-b from-[#fdfbf7] to-[#f8f5ef]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Story Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-20 items-center mb-40">
             <FadeIn direction="right">
               <div>
-                <h2 className="text-3xl md:text-amber-700xl font-serif text-stone-900 mb-6">Redefining Wellness in Gomti Nagar</h2>
-                <div className="prose prose-stone font-light text-stone-700">
+                <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-6">Redefining Wellness in Gomti Nagar</h2>
+                <div className="space-y-6 text-[17px] leading-relaxed text-stone-600 font-light max-w-2xl">
                   <p className="mb-6 leading-relaxed">
-  Located in Gomti Nagar near Brijwasi Bakery, Relaxio Spa offers professional wellness therapies, relaxing body massages, and a peaceful luxury spa experience.
-</p>
+                     Located in Gomti Nagar near Brijwasi Bakery, Relaxio Spa offers professional wellness therapies, relaxing body massages, and a peaceful luxury spa experience.
+                  </p>
                   <p className="mb-6 leading-relaxed">
                     We believe that a spa experience should be more than just a massage; it should be a holistic journey that rejuvenates the mind, body, and soul. That is why we obsess over every detail—from the ambient lighting and calming aromas to the premium quality of our massage oils.
                   </p>
@@ -172,38 +179,85 @@ export default async function AboutPage() {
               </div>
             </FadeIn>
             <FadeIn direction="left">
-              <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-[600px] rounded-[36px] overflow-hidden shadow-xl border border-stone-200/60">
                 <Image 
-  src="/images/massage-therapy-lucknow.avif"
-  alt="Professional Massage Therapy in Gomti Nagar Lucknow"
-  fill
-  className="object-cover"
-  loading="lazy"
-/>
+                   src="/images/massage-therapy-lucknow.avif"
+                   alt="Professional Massage Therapy in Gomti Nagar Lucknow"
+                   fill
+                   className="object-cover"
+                   loading="lazy"
+                  />
               </div>
             </FadeIn>
           </div>
 
+          {/* Premium Philosophy */}
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-40">
+
+  <div className="rounded-[32px] border border-stone-200/70 bg-white p-10 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+    <span className="text-[11px] uppercase tracking-[0.3em] text-amber-700 font-medium block mb-5">
+      Calm Atmosphere
+    </span>
+
+    <h3 className="text-2xl font-serif text-stone-900 mb-5">
+      Peaceful Wellness Spaces
+    </h3>
+
+    <p className="text-stone-600 leading-relaxed">
+      Soft lighting, calming aromas, and thoughtfully designed interiors create a peaceful environment focused on relaxation.
+    </p>
+  </div>
+
+  <div className="rounded-[32px] border border-stone-200/70 bg-white p-10 shadow-sm">
+    <span className="text-[11px] uppercase tracking-[0.3em] text-amber-700 font-medium block mb-5">
+      Luxury Therapies
+    </span>
+
+    <h3 className="text-2xl font-serif text-stone-900 mb-5">
+      Personalized Wellness
+    </h3>
+
+    <p className="text-stone-600 leading-relaxed">
+      Every therapy is designed to support relaxation, stress relief, comfort, and rejuvenation for a balanced wellness experience.
+    </p>
+  </div>
+
+  <div className="rounded-[32px] border border-stone-200/70 bg-white p-10 shadow-sm">
+    <span className="text-[11px] uppercase tracking-[0.3em] text-amber-700 font-medium block mb-5">
+      Private Comfort
+    </span>
+
+    <h3 className="text-2xl font-serif text-stone-900 mb-5">
+      Quiet Spa Suites
+    </h3>
+
+    <p className="text-stone-600 leading-relaxed">
+      Relaxio Spa focuses on privacy, peaceful wellness spaces, and a calm premium experience for every guest.
+    </p>
+  </div>
+
+</div>
+
           {/* Core Pillars */}
           <FadeIn>
-            <div className="bg-stone-900 text-stone-50 py-24 px-8 md:px-16 rounded-3xl shadow-2xl mb-32 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-stone-950 via-stone-900 to-stone-950 text-stone-50 py-24 px-8 md:px-16 rounded-[40px] shadow-2xl mb-32 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                 <Image 
-  src="/images/spa-texture-gomti-nagar.avif"
-  alt="Spa ambiance background"
-  fill
-  className="object-cover"
-  loading="lazy"
-/>
+                   src="/images/spa-texture-gomti-nagar.avif"
+                   alt="Spa ambiance background"
+                   fill
+                   className="object-cover"
+                   loading="lazy"
+                  />
               </div>
               <div className="relative z-10">
                 <div className="text-center mb-16">
                   <span className="text-[#d4af37] tracking-[0.18em] uppercase text-xs md:text-sm font-medium mb-5 block">The Relaxio Standard</span>
-                  <h2 className="text-amber-700xl font-serif mb-6">Our Core Pillars</h2>
+                  <h2 className="text-3xl md:text-5xl font-serif mb-6">Our Core Pillars</h2>
                   <div className="w-20 h-0.5 bg-[#d4af37] mx-auto"></div>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
                   <div className="text-center">
                     <div className="w-20 h-20 mx-auto bg-[#d4af37]/10 rounded-full flex items-center justify-center mb-6">
                       <ShieldCheck className="text-[#d4af37]" size={32} />
@@ -231,21 +285,45 @@ export default async function AboutPage() {
           </FadeIn>
 
           {/* Why Choose Us SEO Content */}
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto text-center">
             <FadeIn>
-              <h2 className="text-3xl md:text-amber-700xl font-serif text-stone-900 mb-8 text-center">Why Guests Choose Relaxio Spa</h2>
-              <div className="prose prose-stone font-light text-stone-700 max-w-none">
+              <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-8 text-center">Why Guests Choose Relaxio Spa</h2>
+              <div className="text-stone-600 font-light max-w-3xl mx-auto">
                 <p className="mb-6 leading-relaxed">
                   Choosing the right wellness center is crucial for your health and peace of mind. Relaxio Spa focuses on creating a safe, professional, and peaceful wellness experience for every guest. 
                 </p>
                 <p className="mb-6 leading-relaxed">
-  Relaxio Spa offers professional therapies designed for deep relaxation, comfort, and rejuvenation in a peaceful luxury environment.
-</p>
+                   Relaxio Spa offers professional therapies designed for deep relaxation, comfort, and rejuvenation in a peaceful luxury environment.
+                </p>
                 <div className="mt-8 text-center">
-  <p>
-    Explore our <a href="/services" className="underline underline-offset-4">massage services </a> 
-     or <a href="/contact" className="underline underline-offset-4">contact us</a> to book your session.
-  </p>
+               <p>
+                  Explore our <a href="/services" className="underline underline-offset-4">massage services </a> 
+                  or <a href="/contact" className="underline underline-offset-4">contact us</a> to book your session.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mt-14 mb-14">
+
+  <div className="rounded-[28px] border border-stone-200/70 bg-white p-8 text-left shadow-sm">
+    <h3 className="text-2xl font-serif text-stone-900 mb-4">
+      Wellness-Focused Environment
+    </h3>
+
+    <p className="text-stone-600 leading-relaxed">
+      Relaxio Spa creates a peaceful and professional atmosphere designed for comfort, relaxation, and stress relief.
+    </p>
+  </div>
+
+  <div className="rounded-[28px] border border-stone-200/70 bg-white p-8 text-left shadow-sm">
+    <h3 className="text-2xl font-serif text-stone-900 mb-4">
+      Premium Guest Experience
+    </h3>
+
+    <p className="text-stone-600 leading-relaxed">
+      From hygiene and privacy to professional wellness therapies, every detail is focused on providing a refined spa experience.
+    </p>
+  </div>
+
 </div>
 
           <div className="mt-12 text-center">
@@ -265,7 +343,7 @@ export default async function AboutPage() {
           </div>
              </div>
 
-      <div className="bg-[#fdfbf7] py-24">
+      <div className="bg-[#f8f5ef] py-28 border-t border-stone-200/50">
         <FAQ faqs={faqs} />
       </div>
 
