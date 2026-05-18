@@ -92,7 +92,7 @@ export default async function BlogPost({
   prose-p:text-stone-700
   prose-p:leading-relaxed
   prose-p:text-[17px]
-  prose-a:text-amber-600
+  prose-a:text-amber-800
   prose-a:no-underline
   hover:prose-a:text-amber-700
   prose-strong:text-stone-900

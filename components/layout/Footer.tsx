@@ -39,7 +39,11 @@ export default function Footer() {
           <ul className="space-y-4 font-light">
             {footerLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} prefetch={false} className="hover:text-[#d4af37] transition-colors">
+                <Link
+                  href={link.href}
+                  prefetch={false}
+                  className="inline-flex min-h-[44px] items-center py-2 hover:text-[#d4af37] transition-colors"
+                >
                   {link.label}
                 </Link>
               </li>
@@ -95,7 +99,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
-              className="w-10 h-10 rounded-full border border-stone-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white"
+              className="min-h-11 min-w-11 rounded-full border border-stone-800 flex items-center justify-center hover:bg-[#25D366] hover:text-white"
             >
               <IconPhone className="text-current" size={18} />
             </a>

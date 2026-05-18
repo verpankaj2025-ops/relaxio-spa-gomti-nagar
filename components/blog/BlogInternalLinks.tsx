@@ -27,7 +27,7 @@ export default function BlogInternalLinks() {
 
       <div className="text-center mb-12">
 
-        <span className="uppercase tracking-[0.3em] text-xs text-[#d4af37] font-medium">
+        <span className="uppercase tracking-[0.3em] text-xs text-amber-900 font-medium">
           Relaxio Spa Services
         </span>
 
@@ -58,7 +58,7 @@ export default function BlogInternalLinks() {
               {link.description}
             </p>
 
-            <div className="mt-8 text-sm uppercase tracking-[0.2em] text-amber-600 font-semibold">
+            <div className="mt-8 text-sm uppercase tracking-[0.2em] text-amber-800 font-semibold">
               Explore Therapy →
             </div>
 

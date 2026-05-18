@@ -69,7 +69,7 @@ export default async function ServicesPage() {
                 <li>✓ Breaks up scar tissue</li>
                 <li>✓ Rehabilitates injured muscles</li>
               </ul>
-              <Link href="/services/deep-tissue-massage" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-[#b9912f] hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md">
+              <Link href="/services/deep-tissue-massage" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-amber-900 hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md">
                 <span>Explore Therapy</span>
 
 <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -92,7 +92,7 @@ export default async function ServicesPage() {
                 <li>✓ Relieves joint pain</li>
                 <li>✓ Boosts mood with aromatherapy</li>
               </ul>
-              <Link href="/services/balinese-massage" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-[#b9912f] hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md">
+              <Link href="/services/balinese-massage" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-amber-900 hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md">
                 <span>Explore Therapy</span>
 
 <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -133,7 +133,7 @@ export default async function ServicesPage() {
                 <li>✓ Boosts energy levels</li>
                 <li>✓ Reduces stress and anxiety</li>
               </ul>
-              <Link href="/services/thai-massage" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-[#b9912f] hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md">
+              <Link href="/services/thai-massage" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-amber-900 hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md">
                 <span>Explore Therapy</span>
 
 <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -163,7 +163,7 @@ export default async function ServicesPage() {
 
     <Link
       href="/services/couple-massage"
-      className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-[#b9912f] hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md"
+      className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-amber-900 hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md"
     >
       <span>Explore Therapy</span>
 
@@ -215,7 +215,7 @@ export default async function ServicesPage() {
 
     <Link
       href="/services/spa-facilities"
-      className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-[#b9912f] hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md"
+      className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-amber-900 hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md"
     >
       <>
   <span>Explore Therapy</span>

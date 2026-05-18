@@ -70,7 +70,7 @@ export default function PricingSection() {
                     Most Popular
                   </div>
                   <h3 className="relative z-[1] text-2xl font-serif text-white mb-2">{pkg.name}</h3>
-                  <p className="relative z-[1] text-stone-400 font-light mb-8">{pkg.duration}</p>
+                  <p className="relative z-[1] text-stone-300 font-light mb-8">{pkg.duration}</p>
                   <div className="relative z-[1] text-5xl font-serif text-white mb-8">{pkg.price}</div>
                   <ul className="relative z-[1] space-y-4 mb-10 text-stone-300 font-light">
                     {pkg.features.map((f) => (
@@ -81,6 +81,7 @@ export default function PricingSection() {
                     href={`https://wa.me/917081891995?text=${pkg.waText}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`${pkg.cta} — ${pkg.name} package`}
                     className={`relative z-[1] ${pkg.buttonClass}`}
                   >
                     {pkg.cta}
@@ -95,7 +96,7 @@ export default function PricingSection() {
                 className="group card-surface bg-white p-8 rounded-[28px] border border-stone-200/80 text-center transition-shadow duration-300 hover:shadow-lg"
               >
                 <h3 className="relative z-[1] text-2xl font-serif text-stone-900 mb-2">{pkg.name}</h3>
-                <p className="relative z-[1] text-stone-500 font-light mb-8">{pkg.duration}</p>
+                <p className="relative z-[1] text-stone-600 font-light mb-8">{pkg.duration}</p>
                 <div className="relative z-[1] text-5xl tracking-[-0.03em] font-serif text-stone-900 mb-8">
                   {pkg.price}
                 </div>

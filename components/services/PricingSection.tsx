@@ -25,7 +25,7 @@ export default function PricingSection({
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/60 to-transparent" />
 
       <div className="text-center mb-6">
-        <span className="uppercase tracking-[0.3em] text-xs text-[#d4af37] font-medium">
+        <span className="uppercase tracking-[0.3em] text-xs text-amber-900 font-medium">
           Relaxio Spa Pricing
         </span>
 
@@ -51,7 +51,7 @@ export default function PricingSection({
           >
 
             {pkg.popular && (
-              <span className="absolute -top-3 right-4 bg-[#d4af37] text-white text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">
+              <span className="absolute -top-3 right-4 bg-stone-900 text-amber-200 text-[10px] uppercase tracking-widest px-3 py-1 rounded-full">
                 Most Popular
               </span>
             )}
@@ -61,12 +61,12 @@ export default function PricingSection({
                 {pkg.name}
               </h3>
 
-              <p className="text-sm text-stone-500 mt-1">
+              <p className="text-sm text-stone-600 mt-1">
                 {pkg.duration}
               </p>
             </div>
 
-            <div className="text-3xl md:text-4xl tracking-[-0.03em] font-serif text-[#d4af37]">
+            <div className="text-3xl md:text-4xl tracking-[-0.03em] font-serif text-amber-900">
               {pkg.price}
             </div>
 
@@ -77,7 +77,7 @@ export default function PricingSection({
 
       <div className="mt-8 text-center">
 
-        <p className="text-sm text-stone-500 mb-5">
+        <p className="text-sm text-stone-600 mb-5">
           Private luxury rooms • Professional wellness therapy • Premium spa ambience
         </p>
 

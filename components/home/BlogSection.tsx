@@ -38,7 +38,7 @@ export default function BlogSection() {
         <h3 className="text-2xl md:text-[30px] tracking-[-0.02em] font-serif text-center mb-12">
           Wellness & Spa Guides
         </h3>
-        <p className="text-stone-500 text-lg mt-4 mb-10 max-w-2xl mx-auto leading-relaxed text-center">
+        <p className="text-stone-600 text-lg mt-4 mb-10 max-w-2xl mx-auto leading-relaxed text-center">
           Explore wellness insights, massage therapy benefits, and premium spa experiences designed for relaxation and rejuvenation.
         </p>
 
@@ -69,6 +69,7 @@ export default function BlogSection() {
                 <Link
                   href={post.href}
                   prefetch={false}
+                  aria-label={`Read article: ${post.title}`}
                   className="inline-flex items-center justify-center border border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white transition-colors duration-200 px-6 py-3 rounded-full text-sm uppercase tracking-[0.2em]"
                 >
                   Read Article

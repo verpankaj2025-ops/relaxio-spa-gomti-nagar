@@ -17,7 +17,7 @@ export default function RelatedBlogs({ currentSlug }: Props) {
 
       <div className="text-center mb-14">
 
-        <span className="uppercase tracking-[0.3em] text-xs text-[#d4af37] font-medium">
+        <span className="uppercase tracking-[0.3em] text-xs text-amber-900 font-medium">
           Related Wellness Articles
         </span>
 
@@ -48,7 +48,7 @@ export default function RelatedBlogs({ currentSlug }: Props) {
               {blog.description}
             </p>
 
-            <div className="mt-8 text-sm uppercase tracking-[0.2em] text-amber-600 font-semibold">
+            <div className="mt-8 text-sm uppercase tracking-[0.2em] text-amber-800 font-semibold">
               Read Article →
             </div>
 

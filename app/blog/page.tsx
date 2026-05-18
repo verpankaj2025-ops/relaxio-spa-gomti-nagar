@@ -139,7 +139,7 @@ export default function BlogPage() {
           </p>
 
           {/* CTA */}
-          <div className="mt-8 inline-flex items-center justify-center rounded-full border border-amber-500 px-5 py-3 text-sm uppercase tracking-[0.18em] text-amber-600 font-semibold transition-all duration-300 group-hover:bg-amber-500 group-hover:text-white">
+          <div className="mt-8 inline-flex items-center justify-center rounded-full border border-amber-700 px-5 py-3 text-sm uppercase tracking-[0.18em] text-amber-800 font-semibold transition-all duration-300 group-hover:bg-amber-700 group-hover:text-white">
              Read Article →
                      </div>
           </div>
@@ -160,7 +160,7 @@ export default function BlogPage() {
 
   <div className="text-center mb-16">
 
-    <span className="uppercase tracking-[0.3em] text-xs text-[#d4af37] font-medium">
+    <span className="uppercase tracking-[0.3em] text-xs text-amber-900 font-medium">
       Relaxio Wellness Journal
     </span>
 
@@ -241,7 +241,7 @@ export default function BlogPage() {
 
   <div className="text-center mb-16">
 
-    <span className="uppercase tracking-[0.3em] text-xs text-[#d4af37] font-medium">
+    <span className="uppercase tracking-[0.3em] text-xs text-amber-900 font-medium">
       Spa & Wellness FAQs
     </span>
 
@@ -301,7 +301,7 @@ export default function BlogPage() {
 
   <div className="text-center mb-16">
 
-    <span className="uppercase tracking-[0.3em] text-xs text-[#d4af37] font-medium">
+    <span className="uppercase tracking-[0.3em] text-xs text-amber-900 font-medium">
       Featured Wellness Topics
     </span>
 

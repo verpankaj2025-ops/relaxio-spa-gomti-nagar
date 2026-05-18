@@ -117,7 +117,7 @@ export default function ContactPage() {
                       <IconMapPin className="text-[#d4af37]" size={28} />
                     </div>
                     <div>
-                      <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-2">Address</h3>
+                      <h3 className="text-sm uppercase tracking-widest text-stone-600 font-medium mb-2">Address</h3>
                       <p className="text-stone-700 font-light text-lg leading-relaxed">
                         2nd Floor, 4/526, Vivek Khand 4,<br />
                         Gomti Nagar, Lucknow<br />
@@ -131,7 +131,7 @@ export default function ContactPage() {
                       <IconClock className="text-[#d4af37]" size={28} />
                     </div>
                     <div>
-                      <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-2">Operating Hours</h3>
+                      <h3 className="text-sm uppercase tracking-widest text-stone-600 font-medium mb-2">Operating Hours</h3>
                       <p className="text-stone-700 font-light text-lg leading-relaxed">
                         Monday - Sunday<br />
                         11:00 AM - 9:00 PM
@@ -144,7 +144,7 @@ export default function ContactPage() {
                       <IconPhone className="text-[#d4af37]" size={28} />
                     </div>
                     <div>
-                      <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-2">Phone</h3>
+                      <h3 className="text-sm uppercase tracking-widest text-stone-600 font-medium mb-2">Phone</h3>
                       <a
                         href="tel:+917081891995"
                         className="text-stone-700 font-light text-lg leading-relaxed underline underline-offset-4"
@@ -159,7 +159,7 @@ export default function ContactPage() {
                       <IconMail className="text-[#d4af37]" size={28} />
                     </div>
                     <div>
-                      <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-2">Email</h3>
+                      <h3 className="text-sm uppercase tracking-widest text-stone-600 font-medium mb-2">Email</h3>
                       <a
                         href="mailto:hello@relaxiospa.in"
                         className="text-stone-700 font-light text-lg leading-relaxed underline underline-offset-4"
@@ -170,7 +170,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="pt-8 border-t border-stone-100">
-                    <h3 className="text-sm uppercase tracking-widest text-stone-400 font-medium mb-4">Direct Booking</h3>
+                    <h3 className="text-sm uppercase tracking-widest text-stone-600 font-medium mb-4">Direct Booking</h3>
                     
                     <p className="text-stone-600 font-light mb-6">
                       We prefer WhatsApp for instant confirmations and personalized service.
@@ -180,7 +180,7 @@ export default function ContactPage() {
                     <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment."
                       target="_blank"
                       rel="noopener noreferrer"
-                       className="inline-flex items-center justify-center px-10 py-4 bg-[#25D366] text-white rounded-full hover:bg-[#1ebe57] transition-all duration-300 text-sm uppercase tracking-widest font-medium w-full sm:w-auto shadow-lg hover:-translate-y-1">
+                       className="inline-flex items-center justify-center px-10 py-4 bg-[#25D366] text-stone-900 rounded-full hover:bg-[#1ebe57] transition-all duration-300 text-sm uppercase tracking-widest font-medium w-full sm:w-auto shadow-lg hover:-translate-y-1">
                       Book Spa Appointment on WhatsApp
                     </a>
                   </div>

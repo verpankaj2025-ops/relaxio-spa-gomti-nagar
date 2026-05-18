@@ -18,7 +18,7 @@ export default function ExploreMore({
 
       <div className="text-center mb-10">
 
-        <span className="uppercase tracking-[0.3em] text-xs text-[#d4af37] font-medium">
+        <span className="uppercase tracking-[0.3em] text-xs text-amber-900 font-medium">
           Relaxio Spa Services
         </span>
 

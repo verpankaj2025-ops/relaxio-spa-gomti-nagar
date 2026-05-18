@@ -12,7 +12,7 @@ const navLinkClass =
   'text-stone-700 hover:text-amber-600 font-medium transition-colors text-sm uppercase tracking-widest';
 
 const mobileLinkClass =
-  'text-stone-800 text-lg font-medium hover:text-amber-600 transition-colors py-2 block';
+  'text-stone-800 text-lg font-medium hover:text-amber-600 transition-colors py-3 min-h-11 flex items-center';
 
 export default function Navbar() {
   return (
@@ -81,7 +81,7 @@ export default function Navbar() {
         {/* CSS-only mobile menu — no client JS */}
         <details className="md:hidden relative nav-mobile">
           <summary
-            className="list-none p-2 text-stone-900 cursor-pointer [&::-webkit-details-marker]:hidden"
+            className="list-none min-h-11 min-w-11 flex items-center justify-center text-stone-900 cursor-pointer [&::-webkit-details-marker]:hidden"
             aria-label="Open navigation menu"
           >
             <span className="nav-icon-open text-2xl leading-none" aria-hidden="true">
@@ -114,7 +114,7 @@ export default function Navbar() {
                       key={service.href}
                       href={service.href}
                       prefetch={false}
-                      className="text-stone-600 py-2 hover:text-amber-600 transition-colors"
+                      className="text-stone-600 py-3 min-h-11 flex items-center hover:text-amber-600 transition-colors"
                     >
                       {service.name}
                     </Link>

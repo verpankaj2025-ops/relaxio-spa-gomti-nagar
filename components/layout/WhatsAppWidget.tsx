@@ -5,7 +5,7 @@ export default function WhatsAppWidget() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp with Relaxio Spa"
-      className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#1ebe57] transition-colors duration-200 flex items-center justify-center group"
+      className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 bg-[#25D366] text-stone-900 min-h-11 min-w-11 p-3 rounded-full shadow-lg hover:bg-[#1ebe57] transition-colors duration-200 flex items-center justify-center group"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
