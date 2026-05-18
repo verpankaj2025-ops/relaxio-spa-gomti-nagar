@@ -2,27 +2,28 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[62vh] md:h-[72vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[62vh] md:min-h-[72vh] overflow-hidden">
 
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 -z-10">
 
         <Image
-          src="/images/luxury-spa-gomti-nagar-lucknow.avif"
-          alt="Luxury wellness spa experience at Relaxio Spa"
-          fill
-          priority
-          fetchPriority="high"
-          quality={32}
-          sizes="100vw"
-          className="object-cover"
-        />
+  src="/images/luxury-spa-gomti-nagar-lucknow.avif"
+  alt="Luxury wellness spa experience at Relaxio Spa"
+  width={1920}
+  height={1080}
+  priority
+  fetchPriority="high"
+  quality={32}
+  sizes="100vw"
+  className="h-full w-full object-cover"
+/>
 
         <div className="absolute inset-0 bg-black/55" />
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20 pb-10">
+      <div className="relative z-10 flex min-h-[62vh] md:min-h-[72vh] flex-col items-center justify-center text-center px-4 sm:px-6 max-w-4xl mx-auto pt-20 pb-10">
 
-        <span className="text-amber-300 tracking-[0.3em] uppercase text-[11px] font-medium mb-6 block">
+        <span className="text-amber-300 tracking-[0.18em] uppercase text-[11px] font-medium mb-6 block">
           Welcome to Relaxio Spa
         </span>
 
@@ -42,14 +43,14 @@ export default function HeroSection() {
             href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage."
             target="_blank"
             rel="noopener noreferrer"
-            className="h-12 px-8 flex items-center justify-center bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-all duration-300 text-sm uppercase tracking-widest font-medium shadow-lg w-full sm:w-auto"
+            className="h-12 px-8 flex items-center justify-center bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-colors duration-300 text-sm uppercase tracking-widest font-medium shadow-lg w-full sm:w-auto"
           >
             Book Relaxation Package
           </a>
 
           <a
             href="tel:+917081891995"
-            className="h-12 px-8 flex items-center justify-center bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-stone-900 transition-all duration-300 text-sm uppercase tracking-[0.18em] font-medium w-full sm:w-auto"
+            className="h-12 px-8 flex items-center justify-center bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-stone-900 transition-colors duration-300 text-sm uppercase tracking-[0.18em] font-medium w-full sm:w-auto"
           >
             Call Now
           </a>
