@@ -63,15 +63,13 @@ const nextConfig: NextConfig = {
     'lodash-es',
     'framer-motion',
   ],
+
+  optimizeCss: true,
 },
 
   webpack: (config, { dev }) => {
   if (!dev) {
     config.optimization.minimize = true;
-
-    config.optimization.splitChunks = {
-      chunks: 'all',
-    };
   }
 
   return config;
@@ -80,15 +78,9 @@ const nextConfig: NextConfig = {
 async headers() {
   return [
     {
-      source: '/(.*)',
-      headers: [
-        ...securityHeaders,
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable',
-        },
-      ],
-    },
+  source: '/(.*)',
+  headers: securityHeaders,
+},
 
     {
       source: '/:all*(svg|jpg|jpeg|png|webp|avif|gif|ico)',

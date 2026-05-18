@@ -112,49 +112,49 @@ export default function Footer() {
 
       <Link
         href="/services/thai-massage"
-        className="text-stone-400 hover:text-amber-400 transition-colors"
+        className="text-stone-400 hover:text-amber-400 transition-colors inline-flex min-h-[44px] items-center py-2"
       >
         Thai Massage in Gomti Nagar Lucknow
       </Link>
 
       <Link
         href="/services/balinese-massage"
-        className="text-stone-400 hover:text-amber-400 transition-colors"
+        className="text-stone-400 hover:text-amber-400 transition-colors inline-flex min-h-[44px] items-center py-2"
       >
         Balinese Massage Therapy in Lucknow
       </Link>
 
       <Link
         href="/services/deep-tissue-massage"
-        className="text-stone-400 hover:text-amber-400 transition-colors"
+        className="text-stone-400 hover:text-amber-400 transition-colors inline-flex min-h-[44px] items-center py-2"
       >
         Deep Tissue Massage in Gomti Nagar
       </Link>
 
       <Link
         href="/services/couple-massage"
-        className="text-stone-400 hover:text-amber-400 transition-colors"
+        className="text-stone-400 hover:text-amber-400 transition-colors inline-flex min-h-[44px] items-center py-2"
       >
         Couple Spa in Lucknow
       </Link>
 
       <Link
         href="/services/spa-facilities"
-        className="text-stone-400 hover:text-amber-400 transition-colors"
+        className="text-stone-400 hover:text-amber-400 transition-colors inline-flex min-h-[44px] items-center py-2"
       >
         Jacuzzi & Steam Bath Spa
       </Link>
 
       <Link
         href="/blog"
-        className="text-stone-400 hover:text-amber-400 transition-colors"
+        className="text-stone-400 hover:text-amber-400 transition-colors inline-flex min-h-[44px] items-center py-2"
       >
         Wellness & Spa Blog
       </Link>
 
       <Link
         href="/blog/best-spa-in-gomti-nagar"
-        className="text-stone-400 hover:text-amber-400 transition-colors"
+        className="text-stone-400 hover:text-amber-400 transition-colors inline-flex min-h-[44px] items-center py-2"
        >
         Best Spa in Gomti Nagar Lucknow
       </Link>

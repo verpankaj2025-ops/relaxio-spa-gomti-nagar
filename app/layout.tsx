@@ -4,8 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import dynamic from 'next/dynamic';
-
-const Footer = dynamic(() => import('@/components/layout/Footer'));
+import Footer from '@/components/layout/Footer';
 
 const WhatsAppWidget = dynamic(
   () => import('@/components/layout/WhatsAppWidget')
@@ -114,7 +113,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script
   id="schema"
   type="application/ld+json"
-  strategy="beforeInteractive"
+  strategy="afterInteractive"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify({
       "@context": "https://schema.org",
