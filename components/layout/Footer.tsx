@@ -22,7 +22,7 @@ const seoLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-950 text-stone-400 py-14 md:py-16 border-t border-stone-900">
+    <footer className="bg-stone-950 text-stone-400 py-14 md:py-16 border-t border-stone-900 content-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
           <h3 className="text-3xl font-serif text-white mb-4 tracking-wide">

@@ -9,7 +9,7 @@ type FAQProps = {
 
 export default function FAQ({ faqs = [] }: FAQProps) {
   return (
-    <section className="py-16 md:py-20 bg-[#fdfbf7]">
+    <section className="py-16 md:py-20 bg-[#fdfbf7] content-auto">
       <div className="max-w-4xl mx-auto px-4">
 
         <h2 className="text-3xl md:text-4xl font-serif text-stone-900 text-center mb-10 leading-tight tracking-[-0.02em]">
