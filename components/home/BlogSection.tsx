@@ -41,9 +41,13 @@ export default function BlogSection() {
         <p className="text-stone-600 text-lg mt-4 mb-10 max-w-2xl mx-auto leading-relaxed text-center">
           Explore wellness insights, massage therapy benefits, and premium spa experiences designed for relaxation and rejuvenation.
         </p>
-        <p className="text-center text-sm text-stone-600 mb-10">
+        <p className="mx-auto mb-12 max-w-fit rounded-full border border-stone-200/70 bg-[#fcfaf6] px-5 py-3 text-center text-xs sm:text-sm text-stone-600 shadow-sm">
           Want more topic-specific guidance?{" "}
-          <Link href="/blog" prefetch={false} className="text-amber-800 underline underline-offset-4">
+          <Link
+            href="/blog"
+            prefetch={false}
+            className="font-medium text-amber-800 underline decoration-amber-700/50 underline-offset-4"
+          >
             Browse the full Wellness Journal
           </Link>
           .

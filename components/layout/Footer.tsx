@@ -37,14 +37,14 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white text-lg font-serif mb-6 tracking-wide">Quick Links</h4>
-          <ul className="space-y-4 font-light">
+          <h4 className="text-white text-lg font-serif mb-5 tracking-wide">Quick Links</h4>
+          <ul className="space-y-1.5 font-light">
             {footerLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   prefetch={false}
-                  className="inline-flex min-h-[44px] items-center py-2 hover:text-[#d4af37] transition-colors"
+                  className="inline-flex min-h-[38px] items-center py-1.5 hover:text-[#d4af37] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -80,14 +80,14 @@ export default function Footer() {
 
       <div className="border-t border-stone-800 mt-12 pt-8">
         <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-xl font-serif text-white mb-6">Popular Wellness Services</h3>
-          <nav className="space-y-2 text-sm" aria-label="Footer services">
+          <h3 className="text-xl font-serif text-white mb-5">Popular Wellness Services</h3>
+          <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm" aria-label="Footer services">
             {seoLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 prefetch={false}
-                className="text-stone-400 hover:text-amber-400 transition-colors inline-flex min-h-[44px] items-center py-2"
+                className="text-stone-400 hover:text-amber-400 transition-colors inline-flex min-h-[36px] items-center py-1 leading-relaxed"
               >
                 {link.label}
               </Link>
