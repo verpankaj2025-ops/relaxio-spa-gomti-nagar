@@ -90,7 +90,7 @@ const locationRows = [
   },
 ];
 
-export default async function Home() {
+export default function Home() {
   const faqs = faqsData.home || [];
 
   return (

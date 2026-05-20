@@ -1,12 +1,13 @@
 import fs from "fs";
 import path from "path";
+import { cache } from "react";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "content/blog");
 
-export async function getPost(slug: string) {
+export const getPost = cache(async (slug: string) => {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
 
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -29,9 +30,9 @@ export async function getPost(slug: string) {
     image?: string;
   }),
 };
-}
+});
 
-export function getAllPosts() {
+export const getAllPosts = cache(() => {
   const fileNames = fs.readdirSync(postsDirectory);
 
   return fileNames.map((fileName) => {
@@ -50,4 +51,4 @@ export function getAllPosts() {
   image: data.image || "/images/spa.avif",
 };
   });
-}
+});
