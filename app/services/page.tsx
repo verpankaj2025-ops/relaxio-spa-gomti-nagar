@@ -244,7 +244,7 @@ export default function ServicesPage() {
 
   </div>
 
-  <FAQ faqs={servicesFaqs} />
+  <FAQ faqs={servicesFaqs} showHeading={false} defaultOpenFirstItem />
 
 </div>
       </div>

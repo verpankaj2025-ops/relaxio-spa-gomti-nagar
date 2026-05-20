@@ -5,21 +5,30 @@ type FAQItem = {
 
 type FAQProps = {
   faqs?: FAQItem[];
+  showHeading?: boolean;
+  defaultOpenFirstItem?: boolean;
 };
 
-export default function FAQ({ faqs = [] }: FAQProps) {
+export default function FAQ({
+  faqs = [],
+  showHeading = true,
+  defaultOpenFirstItem = false,
+}: FAQProps) {
   return (
     <section className="py-16 md:py-20 bg-[#fdfbf7] content-auto">
       <div className="max-w-4xl mx-auto px-4">
 
-        <h2 className="text-3xl md:text-4xl font-serif text-stone-900 text-center mb-10 leading-tight tracking-[-0.02em]">
-          Frequently Asked Questions
-        </h2>
+        {showHeading && (
+          <h2 className="text-3xl md:text-4xl font-serif text-stone-900 text-center mb-10 leading-tight tracking-[-0.02em]">
+            Frequently Asked Questions
+          </h2>
+        )}
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <details
               key={faq.question}
+              open={defaultOpenFirstItem && index === 0}
               className="group border border-stone-200/80 rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300 open:shadow-md"
             >
               <summary className="w-full text-left px-6 py-4 flex justify-between items-center cursor-pointer list-none [&::-webkit-details-marker]:hidden">
