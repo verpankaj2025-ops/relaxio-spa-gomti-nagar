@@ -152,6 +152,12 @@ export default function ContactPage() {
                        >
                          +91 7081891995
                        </a>
+                      <a
+                        href="tel:+919455671995"
+                        className="block mt-2 text-stone-700 font-light text-lg leading-relaxed underline underline-offset-4"
+                      >
+                        +91 9455671995
+                      </a>
                     </div>
                   </div>
 
@@ -189,7 +195,7 @@ export default function ContactPage() {
                     </p>
                    
 
-                    <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment."
+                    <a href="https://wa.me/919455671995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment."
                       target="_blank"
                       rel="noopener noreferrer"
                        className="inline-flex items-center justify-center px-10 py-4 bg-[#25D366] text-stone-900 rounded-full hover:bg-[#1ebe57] transition-all duration-300 text-sm uppercase tracking-widest font-medium w-full sm:w-auto shadow-lg hover:-translate-y-1">

@@ -1,7 +1,7 @@
 export default function WhatsAppWidget() {
   return (
     <a
-      href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20found%20you%20through%20your%20website%20and%20want%20to%20book%20a%20spa%20session."
+      href="https://wa.me/919455671995?text=Hi%20Relaxio%20Spa,%20I%20found%20you%20through%20your%20website%20and%20want%20to%20book%20a%20spa%20session."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp with Relaxio Spa"

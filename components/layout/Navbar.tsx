@@ -70,7 +70,7 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment."
+          href="https://wa.me/919455671995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment."
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-amber-500 text-stone-900 rounded-full hover:bg-amber-600 transition-colors text-sm uppercase tracking-widest font-medium shadow-sm"
@@ -130,7 +130,7 @@ export default function Navbar() {
               </Link>
 
               <a
-                href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment."
+                href="https://wa.me/919455671995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 flex items-center justify-center w-full py-3 px-1 bg-amber-500 text-stone-900 rounded-full text-sm uppercase tracking-widest font-medium shadow-md hover:bg-amber-600 transition-colors"

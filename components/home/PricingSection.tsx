@@ -78,7 +78,7 @@ export default function PricingSection() {
                     ))}
                   </ul>
                   <a
-                    href={`https://wa.me/917081891995?text=${pkg.waText}`}
+                    href={`https://wa.me/919455671995?text=${pkg.waText}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${pkg.cta} — ${pkg.name} package`}
@@ -106,7 +106,7 @@ export default function PricingSection() {
                   ))}
                 </ul>
                 <a
-                  href={`https://wa.me/917081891995?text=${pkg.waText}`}
+                  href={`https://wa.me/919455671995?text=${pkg.waText}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`relative z-[1] ${pkg.buttonClass}`}

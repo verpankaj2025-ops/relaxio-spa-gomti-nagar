@@ -79,6 +79,9 @@ const locationRows = [
         <a href="tel:+917081891995" className="block text-stone-600 hover:text-[#d4af37] transition-colors">
           +91 7081891995
         </a>
+        <a href="tel:+919455671995" className="block mt-2 text-stone-600 hover:text-[#d4af37] transition-colors">
+          +91 9455671995
+        </a>
         <a
           href="mailto:hello@relaxiospa.in"
           className="block mt-2 text-stone-600 hover:text-[#d4af37] transition-colors"
@@ -311,7 +314,7 @@ export default function Home() {
 
             <div className="px-8 md:px-16 pb-16 md:pb-20 text-center">
               <a
-                href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage."
+                href="https://wa.me/919455671995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-10 py-4 bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-all duration-300 hover:shadow-lg uppercase tracking-[0.2em] text-sm font-medium"

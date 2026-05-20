@@ -310,7 +310,7 @@ export default function AboutPage() {
 
           <div className="mt-12 text-center">
          <a 
-           href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20wellness%20session."
+           href="https://wa.me/919455671995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20wellness%20session."
            target="_blank"
            rel="noopener noreferrer"
            className="inline-block px-10 py-4 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-all duration-300 text-sm uppercase tracking-widest font-medium">

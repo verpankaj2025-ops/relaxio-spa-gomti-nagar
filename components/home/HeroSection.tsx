@@ -39,7 +39,7 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
 
           <a
-            href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage."
+            href="https://wa.me/919455671995?text=Hi%20Relaxio%20Spa,%20I%20want%20to%20book%20a%20massage."
             target="_blank"
             rel="noopener noreferrer"
             className="h-12 px-8 flex items-center justify-center bg-[#d4af37] text-stone-900 rounded-full hover:bg-[#c19b2e] transition-colors duration-300 text-sm uppercase tracking-widest font-medium shadow-lg w-full sm:w-auto"

@@ -402,7 +402,7 @@ export default function BlogPage() {
   <div className="text-center mt-14">
 
     <a
-      href="https://wa.me/917081891995?text=Hi%20I%20want%20to%20book%20a%20spa%20session"
+      href="https://wa.me/919455671995?text=Hi%20I%20want%20to%20book%20a%20spa%20session"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center justify-center bg-stone-900 hover:bg-black text-white px-8 py-4 rounded-full transition-all duration-300 uppercase tracking-[0.2em] text-sm"

@@ -65,7 +65,7 @@ export default function Footer() {
               <span itemProp="postalCode">226010</span>
             </p>
             <p>Open Daily: 11:00 AM - 9:00 PM</p>
-            <p className="pt-2">
+            <div className="pt-2 space-y-2">
               <a
                 href="tel:+917081891995"
                 className="text-[#d4af37] hover:text-white transition-colors font-medium text-lg"
@@ -73,7 +73,13 @@ export default function Footer() {
               >
                 Call Now: +91 7081891995
               </a>
-            </p>
+              <a
+                href="tel:+919455671995"
+                className="block text-stone-300 hover:text-white transition-colors font-medium"
+              >
+                +91 9455671995
+              </a>
+            </div>
           </address>
         </div>
       </div>
@@ -97,7 +103,7 @@ export default function Footer() {
           <div className="mt-10 pt-6 border-t border-stone-900 flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-light">
             <p>&copy; {new Date().getFullYear()} Relaxio Spa. All rights reserved.</p>
             <a
-              href="https://wa.me/917081891995"
+              href="https://wa.me/919455671995"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"

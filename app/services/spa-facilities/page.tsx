@@ -216,7 +216,7 @@ const faqs = faqsData["spa-facilities"] || [];
   </p>
 
   <a
-    href="https://wa.me/917081891995"
+    href="https://wa.me/919455671995"
     className="inline-flex items-center justify-center rounded-full bg-[#d4af37] px-8 py-4 text-stone-900 font-medium hover:scale-105 transition-transform duration-300"
   >
     Book Wellness Session
