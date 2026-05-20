@@ -2,12 +2,14 @@ import Link from 'next/link';
 import { IconPhone } from '@/components/icons';
 
 const footerLinks = [
+  { href: '/services', label: 'All Spa Services' },
   { href: '/services/thai-massage', label: 'Thai Massage' },
   { href: '/services/balinese-massage', label: 'Balinese Massage' },
   { href: '/services/deep-tissue-massage', label: 'Deep Tissue Massage' },
   { href: '/services/couple-massage', label: 'Couple Massage' },
   { href: '/blog', label: 'Wellness Journal' },
   { href: '/about', label: 'About Relaxio Spa' },
+  { href: '/contact', label: 'Contact Relaxio Spa' },
 ];
 
 const seoLinks = [

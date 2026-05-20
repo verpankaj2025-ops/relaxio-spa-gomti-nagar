@@ -231,6 +231,14 @@ export default function CoupleMassagePage() {
   ]}
 />
 
+  <p className="text-center text-sm text-stone-600 mb-12">
+    Planning a relaxing spa visit together?{" "}
+    <Link href="/blog" className="text-amber-800 underline underline-offset-4">
+      Read our Wellness Journal
+    </Link>{" "}
+    for local spa insights and booking ideas before choosing your couple experience.
+  </p>
+
   <ExploreMore
   therapies={[
     {

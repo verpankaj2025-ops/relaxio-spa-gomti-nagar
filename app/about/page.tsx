@@ -1,5 +1,6 @@
 import { faqsData } from "@/lib/faqs";
 import Image from 'next/image';
+import Link from "next/link";
 import type { Metadata } from 'next';
 import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
 import FAQ from '@/components/FAQ';
@@ -144,6 +145,17 @@ export default function AboutPage() {
                   </p>
                   <p className="leading-relaxed">
                     Today, Relaxio Spa is trusted by professionals, couples, and wellness enthusiasts seeking a peaceful and premium wellness experience in Lucknow.
+                  </p>
+                  <p className="leading-relaxed">
+                    Explore our{" "}
+                    <Link href="/services" className="text-amber-800 underline underline-offset-4">
+                      spa services
+                    </Link>{" "}
+                    to compare therapies, or visit the{" "}
+                    <Link href="/blog" className="text-amber-800 underline underline-offset-4">
+                      Wellness Journal
+                    </Link>{" "}
+                    for massage benefits, relaxation tips, and local wellness guidance.
                   </p>
                 </div>
               </div>

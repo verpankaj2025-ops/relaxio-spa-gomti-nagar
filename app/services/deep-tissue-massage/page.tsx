@@ -149,6 +149,21 @@ export default function DeepTissueMassagePage() {
   ]}
 />
 
+<p className="text-center text-sm text-stone-600 mb-12">
+  Want more recovery guidance first?{" "}
+  <Link
+    href="/blog/deep-tissue-massage-benefits"
+    className="text-amber-800 underline underline-offset-4"
+  >
+    Read our deep tissue massage benefits guide
+  </Link>{" "}
+  or browse the{" "}
+  <Link href="/blog" className="text-amber-800 underline underline-offset-4">
+    Wellness Journal
+  </Link>
+  .
+</p>
+
 <ExploreMore
   therapies={[
     {

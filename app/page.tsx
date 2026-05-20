@@ -175,6 +175,13 @@ export default function Home() {
               </Link>
             ))}
           </nav>
+          <p className="mt-6 text-center text-sm text-stone-600">
+            Looking for the full service menu?{" "}
+            <Link href="/services" prefetch={false} className="text-amber-800 underline underline-offset-4">
+              Explore all spa services in Gomti Nagar Lucknow
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

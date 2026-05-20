@@ -1,6 +1,7 @@
 import { faqsData } from "@/lib/faqs";
 import ServiceHero from "@/components/services/ServiceHero";
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
 import FAQ from "@/components/FAQ";
 import { IconCheckCircle } from "@/components/icons";
@@ -172,6 +173,14 @@ const faqs = faqsData["spa-facilities"] || [];
     },
   ]}
 />
+
+<p className="text-center text-sm text-stone-600 mb-12">
+  Want to compare wellness experiences before booking?{" "}
+  <Link href="/blog" className="text-amber-800 underline underline-offset-4">
+    Browse our spa and massage guides
+  </Link>{" "}
+  for relaxation ideas, service comparisons, and local wellness tips.
+</p>
 
 <ExploreMore
   therapies={[

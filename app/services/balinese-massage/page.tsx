@@ -143,6 +143,14 @@ export default function BalineseMassagePage() {
   ]}
 />
 
+              <p className="text-center text-sm text-stone-600 mb-12">
+                Looking for more spa wellness insights?{" "}
+                <Link href="/blog" className="text-amber-800 underline underline-offset-4">
+                  Explore the Wellness Journal
+                </Link>{" "}
+                for relaxation tips, massage guides, and local spa advice before you book.
+              </p>
+
               <ExploreMore
   therapies={[
     {

@@ -150,6 +150,20 @@ export default function ThaiMassagePage() {
     },
   ]}
 />
+     <p className="text-center text-sm text-stone-600 mb-12">
+       Want to learn before booking?{" "}
+       <Link
+         href="/blog/best-thai-massage-benefits-lucknow"
+         className="text-amber-800 underline underline-offset-4"
+       >
+         Read our Thai massage benefits guide
+       </Link>{" "}
+       or explore the{" "}
+       <Link href="/blog" className="text-amber-800 underline underline-offset-4">
+         Wellness Journal
+       </Link>
+       .
+     </p>
      <div className="w-24 h-px bg-[#d4af37] my-16 mx-auto" />
 
               <ExploreMore

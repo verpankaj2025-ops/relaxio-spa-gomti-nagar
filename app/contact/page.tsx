@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from "next/link";
 import type { Metadata } from 'next';
 import { getBreadcrumbSchema } from '@/lib/seo';
 import { IconClock, IconMail, IconMapPin, IconPhone } from '@/components/icons';
@@ -175,7 +176,18 @@ export default function ContactPage() {
                     <p className="text-stone-600 font-light mb-6">
                       We prefer WhatsApp for instant confirmations and personalized service.
                     </p>
-                  
+                    <p className="text-stone-600 font-light mb-6 text-sm leading-relaxed">
+                      You can also review our{" "}
+                      <Link href="/services" className="text-amber-800 underline underline-offset-4">
+                        spa services
+                      </Link>{" "}
+                      or browse the{" "}
+                      <Link href="/blog" className="text-amber-800 underline underline-offset-4">
+                        Wellness Journal
+                      </Link>{" "}
+                      before booking.
+                    </p>
+                   
 
                     <a href="https://wa.me/917081891995?text=Hi%20Relaxio%20Spa,%20I%20would%20like%20to%20book%20an%20appointment."
                       target="_blank"

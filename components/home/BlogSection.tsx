@@ -41,6 +41,13 @@ export default function BlogSection() {
         <p className="text-stone-600 text-lg mt-4 mb-10 max-w-2xl mx-auto leading-relaxed text-center">
           Explore wellness insights, massage therapy benefits, and premium spa experiences designed for relaxation and rejuvenation.
         </p>
+        <p className="text-center text-sm text-stone-600 mb-10">
+          Want more topic-specific guidance?{" "}
+          <Link href="/blog" prefetch={false} className="text-amber-800 underline underline-offset-4">
+            Browse the full Wellness Journal
+          </Link>
+          .
+        </p>
 
         <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
           {posts.map((post) => (
