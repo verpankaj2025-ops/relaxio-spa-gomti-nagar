@@ -10,7 +10,7 @@ import ExploreMore from "@/components/services/ExploreMore";
 
 
 export const metadata = {
-  title: 'Luxury Thai Massage Therapy | Relaxio Spa',
+  title: 'Thai Massage in Gomti Nagar Lucknow',
   description: 
      'Experience authentic Thai massage therapy at Relaxio Spa in Gomti Nagar Lucknow with assisted stretching, pressure techniques, and deep relaxation.',
   alternates: {
@@ -118,6 +118,47 @@ export default function ThaiMassagePage() {
               </div>
             
               <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">Why Guests Choose Our Thai Therapy?</h2>
+              <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6 mt-16">
+Who Should Get Thai Massage?
+</h2>
+
+<p className="mb-6 leading-relaxed">
+Thai massage is suitable for office professionals, fitness enthusiasts,
+travellers, and individuals experiencing body stiffness due to long sitting
+hours. Regular sessions may help improve flexibility and support overall
+wellness.
+</p>
+
+<h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6 mt-16">
+Thai Massage vs Deep Tissue Massage
+</h2>
+
+<p className="mb-6 leading-relaxed">
+Thai massage focuses on stretching, flexibility, and energy flow, while deep
+tissue massage focuses on deeper muscle layers and chronic tension relief.
+Both therapies provide unique wellness benefits depending on individual
+needs.
+</p>
+
+<h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6 mt-16">
+After Your Thai Massage Session
+</h2>
+
+<p className="mb-6 leading-relaxed">
+Guests are encouraged to stay hydrated, rest adequately, and avoid intense
+physical activity immediately after a Thai massage session to maximize
+relaxation benefits.
+</p>
+
+<h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6 mt-16">
+How Often Should You Get Thai Massage?
+</h2>
+
+<p className="mb-6 leading-relaxed">
+Many guests enjoy Thai massage every few weeks as part of their wellness
+routine. Frequency may vary depending on lifestyle, stress levels, and
+personal wellness goals.
+</p>
               <p className="mb-6 leading-relaxed">
                 Professional Thai therapy requires proper stretching techniques, trained therapists, and a calm wellness environment.
               </p>

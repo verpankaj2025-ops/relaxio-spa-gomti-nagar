@@ -326,6 +326,34 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-16 bg-white">
+  <div className="max-w-5xl mx-auto px-4">
+    <h2 className="text-3xl font-serif text-center mb-8">
+      Popular Spa Services in Gomti Nagar Lucknow
+    </h2>
+
+    <div className="flex flex-wrap justify-center gap-4">
+
+      <Link href="/services/thai-massage">
+        Thai Massage in Gomti Nagar Lucknow
+      </Link>
+
+      <Link href="/services/balinese-massage">
+        Balinese Massage in Lucknow
+      </Link>
+
+      <Link href="/services/deep-tissue-massage">
+        Deep Tissue Massage in Gomti Nagar
+      </Link>
+
+      <Link href="/services/couple-massage">
+        Couple Massage in Lucknow
+      </Link>
+
+    </div>
+  </div>
+</section>
+
       <BlogSection />
 
       <div className="mt-16 content-auto">

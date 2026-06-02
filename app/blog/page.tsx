@@ -69,7 +69,7 @@ export default function BlogPage() {
 
     {/* 🔥 HERO SECTION (same as services pages) */}
 
-<section className="relative min-h-[55vh] md:min-h-[60vh] lg:min-h-[65vh] flex items-center justify-center text-center text-white overflow-hidden bg-stone-950">
+<section className="relative min-h-[35vh] md:min-h-[40vh] flex items-center justify-center text-center text-white overflow-hidden bg-stone-950">
   
   <Image
     src="/images/spa.avif"
@@ -100,7 +100,7 @@ export default function BlogPage() {
 
       {/* 🔥 BLOG LIST */}
       <section className="relative -mt-16 z-20 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
 
   {blogs.map((blog) => (
     
@@ -111,9 +111,9 @@ export default function BlogPage() {
   prefetch={true}
 >
         
-        <div className="group relative overflow-hidden w-full max-w-[860px] bg-[#fffdf9] rounded-[32px] border border-stone-200/70 hover:border-amber-400/50 shadow-lg hover:shadow-2xl hover:shadow-md transition-all duration-300 cursor-pointer">
+        <div className="group relative overflow-hidden w-full bg-[#fffdf9] rounded-[32px] border border-stone-200/70 hover:border-amber-400/50 shadow-lg hover:shadow-2xl hover:shadow-md transition-all duration-300 cursor-pointer">
 
-  <div className="relative h-[320px] overflow-hidden">
+  <div className="relative h-56 overflow-hidden">
 
     <Image
       src={blog.image || "/images/spa.avif"}
@@ -126,17 +126,29 @@ export default function BlogPage() {
 
   </div>
 
-  <div className="p-12">
+  <div className="p-6">
 
-          {/* TITLE */}
-          <h2 className="text-4xl md:text-6xl font-serif mb-4 leading-tight text-stone-900 group-hover:text-amber-600 transition-colors duration-300">
-            {blog.title}
-          </h2>
+  <div className="text-xs uppercase tracking-[0.2em] text-amber-700 mb-3">
+    Wellness Guide
+  </div>
 
-          {/* SUBTEXT */}
-          <p className="text-stone-600 leading-relaxed text-lg max-w-2xl">
-            {blog.description}
-          </p>
+  <h2
+    className="
+      font-serif
+      text-2xl
+      md:text-3xl
+      mb-3
+      leading-tight
+      line-clamp-2
+      text-stone-900
+    "
+  >
+    {blog.title}
+  </h2>
+
+  <p className="text-stone-600 leading-relaxed text-sm line-clamp-3">
+    {blog.description}
+  </p>
 
           {/* CTA */}
           <div className="mt-8 inline-flex items-center justify-center rounded-full border border-amber-700 px-5 py-3 text-sm uppercase tracking-[0.18em] text-amber-800 font-semibold transition-all duration-300 group-hover:bg-amber-700 group-hover:text-white">
@@ -302,11 +314,11 @@ export default function BlogPage() {
   <div className="text-center mb-16">
 
     <span className="uppercase tracking-[0.3em] text-xs text-amber-900 font-medium">
-      Featured Wellness Topics
+      Wellness & Massage Therapy Guides
     </span>
 
     <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mt-4">
-      Explore Spa & Wellness Insights
+      Learn More About Luxury Spa Therapies
     </h2>
 
     <p className="text-stone-600 text-lg max-w-3xl mx-auto mt-6 leading-relaxed">
@@ -316,13 +328,27 @@ export default function BlogPage() {
   </div>
   <div className="bg-[#fffdf9] border border-stone-200 rounded-[40px] p-10 md:p-16 shadow-sm">
 
-  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
     {/* CARD 1 */}
-    <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-lg transition-all duration-300">
+<div
+  className="
+  lg:col-span-3
+  bg-gradient-to-br
+  from-[#fffdf9]
+  to-[#f8f5ef]
+  border
+  border-stone-200
+  rounded-[36px]
+  p-10
+  hover:shadow-lg
+  transition-all
+  duration-300
+  "
+>
 
       <h3 className="font-serif text-2xl text-stone-900 mb-4">
-        Thai Massage Benefits
+        Traditional Thai Massage Benefits
       </h3>
 
       <p className="text-stone-600 leading-relaxed">
@@ -333,7 +359,15 @@ export default function BlogPage() {
       <p className="mt-6">
         <Link
           href="/services/thai-massage"
-          className="underline text-amber-700"
+          className="
+          inline-flex
+          items-center
+          mt-2
+          text-amber-700
+          font-medium
+          hover:text-amber-900
+          transition-colors
+          "
         >
           Explore Thai Massage Service
         </Link>
@@ -351,7 +385,7 @@ export default function BlogPage() {
     </div>
 
     {/* CARD 2 */}
-    <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-lg transition-all duration-300">
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-[24px] p-7 hover:shadow-lg transition-all duration-300">
 
       <h3 className="font-serif text-2xl text-stone-900 mb-4">
         Stress Relief Therapies
@@ -374,7 +408,7 @@ export default function BlogPage() {
     </div>
 
     {/* CARD 3 */}
-    <div className="bg-[#fffdf9] border border-stone-200 rounded-[28px] p-8 hover:shadow-lg transition-all duration-300">
+    <div className="bg-[#fffdf9] border border-stone-200 rounded-[24px] p-7 hover:shadow-lg transition-all duration-300">
 
       <h3 className="font-serif text-2xl text-stone-900 mb-4">
         Luxury Couple Spa

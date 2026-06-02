@@ -7,17 +7,26 @@ const links = [
     description:
       "Traditional stretching therapy designed for flexibility and full-body relaxation.",
   },
+
   {
     title: "Deep Tissue Massage",
     href: "/services/deep-tissue-massage",
     description:
       "Professional deep-pressure wellness therapy for stress relief and muscle recovery.",
   },
+
   {
     title: "Balinese Massage",
     href: "/services/balinese-massage",
     description:
       "Luxury aromatherapy massage designed for calmness, relaxation, and wellness.",
+  },
+
+  {
+    title: "All Spa Services",
+    href: "/services",
+    description:
+      "Explore all wellness therapies, couple massage, jacuzzi and luxury spa experiences.",
   },
 ];
 
@@ -41,7 +50,7 @@ export default function BlogInternalLinks() {
 
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
         {links.map((link) => (
           <Link
