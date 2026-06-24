@@ -22,6 +22,9 @@ export const metadata = {
     description:
      'Experience deep tissue massage therapy designed to reduce muscle tension, improve flexibility, and support full-body recovery at Relaxio Spa.',
     url: 'https://relaxiospa.in/services/deep-tissue-massage',
+    siteName: 'Relaxio Spa',
+    locale: 'en_IN',
+    type: 'website',
     images: ['https://relaxiospa.in/images/deep-tissue-massage-gomti-nagar-lucknow.avif']
   }
 };
@@ -66,8 +69,8 @@ export default function DeepTissueMassagePage() {
               <h2 
                className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">What Is Deep Tissue Massage?</h2>
               <p className="mb-6 leading-relaxed">
-                Deep tissue massage is designed for people experiencing muscle tightness, body stiffness, post-workout fatigue, and restricted movement caused by physical stress.
-              </p>
+                 Deep Tissue Massage in Gomti Nagar Lucknow is ideal for individuals experiencing muscle tightness, body stiffness, post-workout fatigue, and restricted movement caused by physical stress, long working hours, or intense physical activity.
+               </p>
               <p className="mb-10 leading-relaxed">
                 Unlike a standard relaxation massage, deep tissue therapy uses slow, deliberate strokes and firm pressure. Our highly trained therapists focus on the inner layers of your muscles, tendons, and fascia. By physically breaking down adhesions (bands of painful, rigid tissue), this massage restores normal movement and helps reduce physical discomfort.
               </p>
@@ -89,9 +92,9 @@ export default function DeepTissueMassagePage() {
 
               <h2 
                className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">Why You Need a Deep Tissue Massage</h2>
-              <p 
-                className="mb-6 leading-relaxed">
-                Many guests choose deep tissue massage to reduce muscle tightness, improve mobility, and support post-workout body recovery. This therapy is especially helpful for people with physically demanding routines or long hours of sitting.</p>
+              <p className="mb-6 leading-relaxed">
+                 Many guests choose Deep Tissue Massage in Lucknow to reduce muscle tightness, improve mobility, support post-workout recovery, and relieve discomfort caused by prolonged sitting, travel, fitness training, or physically demanding lifestyles.
+              </p>
                 <div 
                  className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {[
@@ -121,7 +124,7 @@ export default function DeepTissueMassagePage() {
                 Performing a deep tissue massage requires extensive anatomical knowledge and physical skill. At Relaxio Spa, our therapists are certified experts in deep tissue modalities. We don&apos;t just apply hard pressure; we apply <em>smart</em> pressure, targeting the exact source of your discomfort.
               </p>
               <p className="mb-10 leading-relaxed">
-                We combine firm-pressure massage techniques with a calm wellness environment to create a balanced and deeply relaxing recovery experience.
+                We combine professional deep tissue massage techniques with a calm wellness environment to create a balanced recovery experience focused on muscle relaxation, improved mobility, and overall physical well-being.
               </p>
 
               <PricingSection

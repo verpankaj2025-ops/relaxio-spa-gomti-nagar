@@ -1,7 +1,15 @@
 import { MetadataRoute } from 'next'
+import { getAllPosts } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date()
+
+  const blogs = getAllPosts().map((post) => ({
+    url: `https://relaxiospa.in/blog/${post.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
 
   return [
     {
@@ -76,25 +84,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   priority: 0.8,
 },
 
-{
-  url: 'https://relaxiospa.in/blog/best-thai-massage-benefits-lucknow',
-  lastModified: currentDate,
-  changeFrequency: 'monthly',
-  priority: 0.7,
-},
-
-{
-  url: 'https://relaxiospa.in/blog/deep-tissue-massage-benefits',
-  lastModified: currentDate,
-  changeFrequency: 'monthly',
-  priority: 0.7,
-},
-
-{
-  url: 'https://relaxiospa.in/blog/best-spa-in-gomti-nagar',
-  lastModified: currentDate,
-  changeFrequency: 'monthly',
-  priority: 0.7,
-},
- ]
+...blogs,
+]
 }

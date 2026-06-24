@@ -22,14 +22,36 @@ export async function generateMetadata({
       canonical: `https://relaxiospa.in/blog/${slug}`,
     },
 
-    openGraph: {
-      title: post.title,
-      description: post.description,
-      url: `https://relaxiospa.in/blog/${slug}`,
-      siteName: "Relaxio Spa",
-      locale: "en_IN",
-      type: "article",
+openGraph: {
+  title: post.title,
+  description: post.description,
+  url: `https://relaxiospa.in/blog/${slug}`,
+  siteName: "Relaxio Spa",
+  locale: "en_IN",
+  type: "article",
+
+  images: [
+    {
+      url: post.image
+        ? `https://relaxiospa.in${post.image}`
+        : "https://relaxiospa.in/images/spa.avif",
+      width: 1200,
+      height: 630,
+      alt: post.title,
     },
+  ],
+},
+
+   twitter: {
+  card: "summary_large_image",
+  title: post.title,
+  description: post.description,
+  images: [
+    post.image
+      ? `https://relaxiospa.in${post.image}`
+      : "https://relaxiospa.in/images/spa.avif",
+  ],
+},
   };
 }
 
@@ -68,10 +90,13 @@ export default async function BlogPost({
           "@type": "WebPage",
           "@id": `https://relaxiospa.in/blog/${slug}`,
         },
-        image: "https://relaxiospa.in/images/spa.avif",
-      }),
-    }}
-  />
+        image:
+          post.image
+            ? `https://relaxiospa.in${post.image}`
+            : "https://relaxiospa.in/images/spa.avif",
+         }),
+        }}
+      />
     <article className="max-w-4xl mx-auto px-4 py-24 content-auto">
       <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif text-stone-900 mb-10 leading-tight">
         {post.title}

@@ -20,6 +20,9 @@ export const metadata = {
     description:
   'Experience relaxing Balinese massage therapy with aromatherapy, gentle pressure techniques, and deep wellness relaxation at Relaxio Spa.',
     url: 'https://relaxiospa.in/services/balinese-massage',
+    siteName: 'Relaxio Spa',
+    locale: 'en_IN',
+    type: 'website',
     images: ['https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.avif']
   }
 };
@@ -62,7 +65,7 @@ export default function BalineseMassagePage() {
                 Incredible Benefits of Balinese Massage
                </h2>
               <p className="mb-6 leading-relaxed">
-              Balinese massage combines aromatherapy, gentle stretching, and pressure techniques to create a deeply calming wellness experience.
+                 Balinese Massage in Gomti Nagar Lucknow combines aromatherapy oils, gentle stretching, and therapeutic pressure techniques to create a deeply relaxing wellness experience that helps reduce stress, improve circulation, and support overall well-being.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {[
@@ -104,17 +107,17 @@ export default function BalineseMassagePage() {
                  Why Guests Love Our Balinese Therapy
               </h2>
               <p className="mb-6 leading-relaxed">
-                At Relaxio Spa, we focus on creating a peaceful and comfortable wellness environment that supports deep relaxation and stress recovery.
+                 At Relaxio Spa, our Balinese Massage therapy is designed for guests seeking relaxation, stress relief, and a premium wellness experience in Gomti Nagar Lucknow with professionally guided massage techniques and calming aromatherapy.
               </p>
               <div className="space-y-6 mb-10">
 
-  <p className="leading-relaxed">
-    Our therapists are certified experts in Balinese techniques. They understand how to identify body tension points and adjust pressure according to your comfort level.
-  </p>
+               <p className="leading-relaxed">
+                  Our trained therapists understand traditional Balinese Massage techniques and personalize each session according to your comfort level, helping reduce muscle tension, mental fatigue, and everyday stress.
+                </p>
 
-  <p className="leading-relaxed">
-    We maintain high hygiene standards using fresh premium-quality linens and sanitized equipment for every guest. Experience the pinnacle of wellness and discover why Relaxio Spa is known as a premium wellness destination.
-  </p>
+                <p className="leading-relaxed">
+                   We maintain high hygiene standards using fresh premium-quality linens and sanitized equipment for every guest. Experience the pinnacle of wellness and discover why Relaxio Spa is known as a premium wellness destination.
+                </p>
 
 </div>
 

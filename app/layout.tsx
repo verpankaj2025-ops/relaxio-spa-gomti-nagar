@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
-import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import WhatsAppWidget from '@/components/layout/WhatsAppWidget';
@@ -42,9 +41,9 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: 'Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa',
-    template: '%s | Relaxio Spa Gomti Nagar'
-  },
+  default: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
+  template: '%s'
+},
 
   description: 'Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, private rooms, calming ambience, and professional massage experiences.',
 

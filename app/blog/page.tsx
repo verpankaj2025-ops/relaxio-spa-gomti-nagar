@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Relaxio Spa Blog | Wellness & Massage Guides in Gomti Nagar Lucknow",
 
   description:
-    "Explore massage therapy benefits, wellness tips, relaxation guides, and luxury spa insights from Relaxio Spa in Gomti Nagar Lucknow.",
+"Read spa, massage and wellness guides from Relaxio Spa in Gomti Nagar Lucknow. Learn relaxation and therapy benefits.",
 
   alternates: {
     canonical: "https://relaxiospa.in/blog",

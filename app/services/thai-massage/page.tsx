@@ -21,6 +21,9 @@ export const metadata = {
     description:
        'Experience authentic Thai massage therapy with assisted stretching, deep relaxation, and professional wellness techniques at Relaxio Spa.',
     url: 'https://relaxiospa.in/services/thai-massage',
+    siteName: 'Relaxio Spa',
+    locale: 'en_IN',
+    type: 'website',
     images: ['https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.avif'],
   }
 };
@@ -61,7 +64,7 @@ export default function ThaiMassagePage() {
               <h2 
                className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">What is Authentic Thai Massage?</h2>
               <p className="mb-6 leading-relaxed">
-                Thai massage is ideal for people looking to improve flexibility, reduce body stiffness, and experience deep stretching-based relaxation therapy. 
+                Thai Massage in Gomti Nagar Lucknow is ideal for people looking to improve flexibility, reduce body stiffness, support muscle recovery, and experience a traditional stretching-based wellness therapy that promotes deep relaxation and overall well-being.
               </p>
               <div className="space-y-6 mb-10">
 
@@ -70,7 +73,7 @@ export default function ThaiMassagePage() {
                   </p>
 
                   <p className="leading-relaxed">
-                    The therapy takes place on a premium padded mat, allowing therapists to apply rhythmic stretching and pressure techniques designed to improve flexibility, circulation, and relaxation.
+                     At Relaxio Spa, our Thai Massage therapy combines assisted stretching, rhythmic pressure techniques, and traditional wellness practices designed to improve flexibility, circulation, mobility, and relaxation for guests visiting from Gomti Nagar and across Lucknow.
                    </p>
 
                 </div>
@@ -94,7 +97,7 @@ export default function ThaiMassagePage() {
                className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">Top Benefits of Thai Massage</h2>
               <p 
                className="mb-6 leading-relaxed">
-                At Relaxio Spa, every Thai massage session is designed to deliver physical relaxation and improved body flexibility.
+                At Relaxio Spa, every Thai Massage session is designed to deliver physical relaxation, improved flexibility, stress relief, and a premium wellness experience for guests looking for professional massage therapy in Lucknow.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 mb-12">
                 {[

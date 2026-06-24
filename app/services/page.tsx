@@ -6,7 +6,8 @@ import FAQ from "@/components/FAQ";
 
 export const metadata: Metadata = {
   title: 'Luxury Spa Services in Gomti Nagar Lucknow | Relaxio Spa',
-  description: 'Explore luxury wellness therapies at Relaxio Spa including Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Massage, Jacuzzi, and Steam Bath in Gomti Nagar Lucknow.',
+  description:
+'Explore Thai massage, Balinese massage, deep tissue therapy, couple spa, jacuzzi and steam bath services in Gomti Nagar Lucknow.',
 
 alternates: {
   canonical: 'https://relaxiospa.in/services',

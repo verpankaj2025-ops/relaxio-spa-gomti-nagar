@@ -28,6 +28,20 @@ const links = [
     description:
       "Explore all wellness therapies, couple massage, jacuzzi and luxury spa experiences.",
   },
+
+  {
+  title: "Couple Massage",
+  href: "/services/couple-massage",
+  description:
+    "Private wellness experience for couples with luxury spa ambience and relaxation therapies.",
+},
+
+{
+  title: "Jacuzzi & Steam Bath",
+  href: "/services/spa-facilities",
+  description:
+    "Luxury Jacuzzi and Steam Bath wellness sessions for relaxation and rejuvenation.",
+},
 ];
 
 export default function BlogInternalLinks() {

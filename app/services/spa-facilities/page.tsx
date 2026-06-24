@@ -23,20 +23,34 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://relaxiospa.in/services/spa-facilities",
   },
+  
   openGraph: {
-    title: "Jacuzzi & Steam Bath in Gomti Nagar Lucknow | Relaxio Spa",
-    description:
-  "Relax and recharge with premium Jacuzzi and Steam Bath wellness sessions at Relaxio Spa in Gomti Nagar Lucknow.",
-    url: "/services/spa-facilities",
-    images: [
-  {
-    url: "https://relaxiospa.in/images/jacuzzi-steam-bath-lucknow.avif",
-    width: 1200,
-    height: 630,
-    alt: "Jacuzzi and Steam Bath at Relaxio Spa",
-  },
-],
-  },
+  title: "Jacuzzi & Steam Bath in Gomti Nagar Lucknow | Relaxio Spa",
+
+  description:
+    "Relax and recharge with premium Jacuzzi and Steam Bath wellness sessions at Relaxio Spa in Gomti Nagar Lucknow.",
+
+  url:
+    "https://relaxiospa.in/services/spa-facilities",
+
+  siteName:
+    "Relaxio Spa",
+
+  locale:
+    "en_IN",
+
+  type:
+    "website",
+
+  images: [
+      {
+        url: "https://relaxiospa.in/images/jacuzzi-steam-bath-lucknow.avif",
+        width: 1200,
+        height: 630,
+        alt: "Jacuzzi and Steam Bath at Relaxio Spa",
+      },
+  ],
+},
 };
 
 export default function SpaFacilitiesPage() {
@@ -81,8 +95,8 @@ const faqs = faqsData["spa-facilities"] || [];
             {/* Intro */}
             <div className="max-w-3xl mx-auto text-center mb-12">
               <p className="text-lg text-stone-600 leading-relaxed">
-                Experience relaxing Jacuzzi and Steam Bath wellness sessions at Relaxio Spa designed for comfort, relaxation, and rejuvenation.
-              </p>
+                 Experience Jacuzzi and Steam Bath in Gomti Nagar Lucknow at Relaxio Spa, designed for relaxation, stress relief, muscle recovery, and complete wellness rejuvenation in a luxury spa environment.
+               </p>
             </div>
 
             {/* Benefits */}
@@ -91,8 +105,8 @@ const faqs = faqsData["spa-facilities"] || [];
               </h2>
 
               <p className="mb-10 leading-relaxed text-center max-w-3xl mx-auto">
-                Jacuzzi and Steam Bath therapies are more than just luxury spa facilities; they are powerful wellness experiences that help your body relax, detoxify, and recover from daily stress and fatigue.
-              </p>
+                 Jacuzzi and Steam Bath therapies help relax muscles, improve circulation, reduce stress, support detoxification, and create a premium wellness experience for guests seeking relaxation in Lucknow.
+               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {[
@@ -142,8 +156,8 @@ const faqs = faqsData["spa-facilities"] || [];
               </h2>
 
               <p className="mb-6 leading-relaxed">
-                At Relaxio Spa, we provide premium Jacuzzi and Steam Bath facilities designed for complete body relaxation and wellness. Our luxury spa environment, hygienic facilities, and peaceful ambience create the perfect experience for stress relief and rejuvenation.
-              </p>
+                 At Relaxio Spa, our Jacuzzi and Steam Bath facilities are designed to provide complete body relaxation, stress relief, and a luxury wellness experience for guests visiting Gomti Nagar and other areas of Lucknow.
+               </p>
 
               <p className="mb-10 leading-relaxed">
                 Whether you want to relax after a long day, prepare your body before massage therapy, or enjoy a complete wellness session, Relaxio Spa offers one of the best Jacuzzi and Steam Bath experiences in Gomti Nagar Lucknow.

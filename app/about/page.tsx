@@ -8,7 +8,8 @@ import { IconHeartHandshake, IconShieldCheck, IconSparkles } from '@/components/
 
 export const metadata: Metadata = {
   title: 'About Relaxio Spa | Luxury Wellness Spa in Gomti Nagar Lucknow',
-  description: 'Learn about Relaxio Spa, the premier luxury wellness destination in Gomti Nagar, Lucknow. Discover our commitment to hygiene, privacy, and expert therapy.',
+  description:
+'Learn about Relaxio Spa, a trusted spa in Gomti Nagar Lucknow known for hygiene, privacy, professional therapists and wellness treatments.',
   keywords: [
   'Luxury Wellness Spa',
   'Spa in Gomti Nagar',

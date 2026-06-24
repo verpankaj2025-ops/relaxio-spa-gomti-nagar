@@ -27,14 +27,12 @@ export default function HeroSection() {
         </span>
 
         <h1 className="text-3xl sm:text-3xl md:text-5xl lg:text-5xl font-serif leading-[1.05] tracking-[-0.03em] text-white mb-4">
-          Luxury Wellness Spa in Gomti Nagar Lucknow
+          Best Spa in Gomti Nagar Lucknow
         </h1>
 
         <h2 className="text-base md:text-xl text-stone-300 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-          Relaxio Spa offers private wellness therapies, calming spa ambience,
-          and professionally guided massage experiences designed for relaxation
-          and comfort.
-        </h2>
+           Relaxio Spa is a trusted spa in Lucknow and massage centre in Gomti Nagar offering Thai Massage, Balinese Massage, Deep Tissue Therapy, Couple Spa Experiences, Jacuzzi, Steam Bath and luxury wellness treatments.
+         </h2>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
 

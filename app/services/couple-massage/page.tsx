@@ -18,16 +18,28 @@ export const metadata = {
 
 
   openGraph: {
-    title:
-      "Luxury Couple Wellness Experience | Relaxio Spa",
+  title:
+    "Luxury Couple Wellness Experience | Relaxio Spa",
 
-    description:
-      "Enjoy a private couple wellness experience with relaxing massage therapies and peaceful spa rooms at Relaxio Spa.",
+  description:
+    "Enjoy a private couple wellness experience with relaxing massage therapies and peaceful spa rooms at Relaxio Spa.",
 
-    images: [
-      "https://relaxiospa.in/images/couple-massage-lucknow.avif",
-    ],
-  },
+  url:
+    "https://relaxiospa.in/services/couple-massage",
+
+  siteName:
+    "Relaxio Spa",
+
+  locale:
+    "en_IN",
+
+  type:
+    "website",
+
+  images: [
+    "https://relaxiospa.in/images/couple-massage-lucknow.avif",
+  ],
+},
 
   alternates: {
     canonical:
@@ -93,9 +105,9 @@ export default function CoupleMassagePage() {
     <div className="prose prose-stone prose-base md:prose-lg max-w-none font-light text-stone-700">
 
       <div className="max-w-4xl mx-auto text-center mb-12">
-  <p className="text-lg text-stone-600 leading-relaxed">
-    Enjoy a peaceful couple wellness experience with private spa rooms, calming ambience, and professionally guided massage therapies designed for relaxation and comfort.
-  </p>
+            <p className="text-lg text-stone-600 leading-relaxed">
+              Couple Massage in Gomti Nagar Lucknow offers partners a private wellness experience with relaxing massage therapies, peaceful spa rooms, calming ambience, and professionally guided treatments designed for relaxation, comfort, and quality time together.
+             </p>
 </div>
 <p className="text-stone-600 leading-relaxed mt-6">
   Couples can enjoy calming spa therapies in private rooms designed for comfort, relaxation, and peaceful shared experiences.
@@ -106,9 +118,9 @@ export default function CoupleMassagePage() {
     Why Couples Enjoy Wellness Therapy Together
   </h2>
 
-  <p className="text-stone-600 max-w-2xl mx-auto mb-8">
-    Couple wellness therapy creates a peaceful environment where both guests can relax together, reduce stress, and enjoy a calming spa experience.
-  </p>
+              <p className="text-stone-600 max-w-2xl mx-auto mb-8">
+                 Couple Massage therapy helps partners relax together, reduce stress, reconnect emotionally, and enjoy a premium spa experience in a peaceful and private wellness environment.
+               </p>
 
     <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl mx-auto text-left text-stone-700">
 
@@ -186,9 +198,9 @@ export default function CoupleMassagePage() {
   <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">Why Guests Choose Our Couple Wellness Experience
   </h2>
 
-  <p className="mb-6 leading-relaxed">
-    At Relaxio Spa, we focus on creating a peaceful and comfortable environment where couples can relax together and enjoy premium wellness therapies in complete privacy.
-  </p>
+              <p className="mb-6 leading-relaxed">
+                At Relaxio Spa, our Couple Massage experience is designed for partners seeking relaxation, privacy, and premium wellness therapies in Gomti Nagar Lucknow with dedicated couple spa rooms and calming ambience.
+               </p>
 
   <p className="mb-10 leading-relaxed">
      Our therapists provide synchronized wellness therapies using premium oils, calming music, and hygienic spa standards to create a deeply relaxing experience for couples. Whether you are visiting for relaxation, celebration, or peaceful quality time together, Relaxio Spa offers a comfortable and private wellness environment.

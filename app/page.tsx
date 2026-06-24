@@ -25,7 +25,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: 'Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa',
   description:
-    'Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, premium ambience, private rooms, and professional massage experiences.',
+'Best spa in Gomti Nagar Lucknow offering Thai massage, Balinese massage, deep tissue therapy, couple spa, jacuzzi and wellness treatments.',
   alternates: {
     canonical: 'https://relaxiospa.in',
   },
@@ -204,8 +204,7 @@ export default function Home() {
           </h2>
           <div className="w-20 h-[2px] bg-[#d4af37] mx-auto mb-8" />
           <p className="text-stone-600 max-w-3xl mx-auto leading-relaxed text-base md:text-lg font-light mb-16">
-            Relaxio Spa combines luxury ambience, private wellness spaces, and professionally guided therapies to create
-            a calm and rejuvenating spa experience in Gomti Nagar Lucknow.
+             Relaxio Spa is one of the most trusted spa destinations in Gomti Nagar Lucknow, offering professional massage therapies, private wellness rooms, premium spa experiences and complete relaxation treatments for individuals and couples.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -282,13 +281,10 @@ export default function Home() {
               <div className="w-20 h-[2px] bg-[#d4af37] mx-auto mb-10" />
               <div className="max-w-3xl mx-auto space-y-7 text-stone-600 leading-relaxed text-[17px] md:text-lg font-light">
                 <p>
-                  Relaxio Spa offers a peaceful wellness experience designed for guests seeking relaxation, comfort, and
-                  premium spa therapies in Gomti Nagar Lucknow.
+                   Relaxio Spa is recognized as one of the best spa destinations in Gomti Nagar Lucknow, offering Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Spa experiences, Jacuzzi sessions and wellness therapies designed for complete relaxation and rejuvenation.
                 </p>
                 <p>
-                  From calming Balinese therapies and deep tissue massage to couple spa experiences, jacuzzi sessions, and
-                  steam wellness rituals, every experience is thoughtfully designed to help guests unwind from everyday
-                  stress.
+                   Whether you are looking for a body massage in Lucknow, a relaxing spa session, or a premium wellness experience, our professional therapists provide personalized treatments focused on stress relief, relaxation and overall well-being.
                 </p>
                 <p>
                   Elegant interiors, private wellness suites, soothing ambience, and professionally guided therapies create
