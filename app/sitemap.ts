@@ -78,6 +78,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     {
+url: 'https://relaxiospa.in/spa-in-indira-nagar-lucknow',
+lastModified: currentDate,
+changeFrequency: 'weekly',
+priority: 0.8,
+},
+
+{
+url: 'https://relaxiospa.in/spa-in-aliganj-lucknow',
+lastModified: currentDate,
+changeFrequency: 'weekly',
+priority: 0.7,
+},
+
+{
+url: 'https://relaxiospa.in/spa-in-chinhat-lucknow',
+lastModified: currentDate,
+changeFrequency: 'weekly',
+priority: 0.7,
+},
+
+{
+url: 'https://relaxiospa.in/spa-in-hazratganj-lucknow',
+lastModified: currentDate,
+changeFrequency: 'weekly',
+priority: 0.7,
+},
+
+{
+url: 'https://relaxiospa.in/spa-in-mahanagar-lucknow',
+lastModified: currentDate,
+changeFrequency: 'weekly',
+priority: 0.7,
+},
+
+{
+url: 'https://relaxiospa.in/spa-in-gomti-nagar-extension-lucknow',
+lastModified: currentDate,
+changeFrequency: 'weekly',
+priority: 0.7,
+},
+
+{
+url: 'https://relaxiospa.in/spa-near-faizabad-road-lucknow',
+lastModified: currentDate,
+changeFrequency: 'weekly',
+priority: 0.7,
+},
+
+
+    {
       url: 'https://relaxiospa.in/privacy-policy',
       lastModified: currentDate,
       changeFrequency: 'monthly',

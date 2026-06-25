@@ -194,6 +194,80 @@ export default function Home() {
 
       <PricingSection />
 
+      <section className="py-16 bg-[#fcfaf6] border-y border-stone-100">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+```
+<div className="text-center mb-10">
+  <h2 className="text-3xl md:text-4xl font-serif text-stone-900 mb-4">
+    Areas We Serve Across Lucknow
+  </h2>
+
+  <p className="text-stone-600 max-w-3xl mx-auto">
+    Relaxio Spa welcomes guests from Gomti Nagar, Indira Nagar,
+    Chinhat, Hazratganj, Mahanagar, Faizabad Road and nearby areas
+    looking for premium wellness experiences and professional
+    massage therapies.
+  </p>
+</div>
+
+<div className="flex flex-wrap justify-center gap-3">
+
+  <Link
+    href="/spa-in-indira-nagar-lucknow"
+    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+  >
+    Spa in Indira Nagar
+  </Link>
+
+  <Link
+    href="/spa-in-aliganj-lucknow"
+    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+  >
+    Spa in Aliganj
+  </Link>
+
+  <Link
+    href="/spa-in-chinhat-lucknow"
+    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+  >
+    Spa in Chinhat
+  </Link>
+
+  <Link
+    href="/spa-in-hazratganj-lucknow"
+    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+  >
+    Spa in Hazratganj
+  </Link>
+
+  <Link
+    href="/spa-in-mahanagar-lucknow"
+    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+  >
+    Spa in Mahanagar
+  </Link>
+
+  <Link
+    href="/spa-in-gomti-nagar-extension-lucknow"
+    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+  >
+    Spa in Gomti Nagar Extension
+  </Link>
+
+  <Link
+    href="/spa-near-faizabad-road-lucknow"
+    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+  >
+    Spa Near Faizabad Road
+  </Link>
+
+</div>
+```
+
+  </div>
+</section>
+
       <section className="py-20 md:py-28 bg-white content-auto">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-amber-700 tracking-[0.35em] uppercase text-[11px] font-medium mb-5 block">

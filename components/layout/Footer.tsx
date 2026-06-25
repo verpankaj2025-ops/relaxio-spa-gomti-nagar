@@ -89,6 +89,43 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4">
           <h3 className="text-xl font-serif text-white mb-5">Popular Wellness Services</h3>
           <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm" aria-label="Footer services">
+            <div className="mt-10">
+              <h3 className="text-xl font-serif text-white mb-5">
+                Spa Near Popular Areas
+              </h3>
+
+              <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                <Link href="/spa-in-indira-nagar-lucknow" className="text-stone-300 hover:text-amber-400">
+                  Spa in Indira Nagar
+                </Link>
+
+                <Link href="/spa-in-aliganj-lucknow" className="text-stone-300 hover:text-amber-400">
+                  Spa in Aliganj
+                </Link>
+
+                <Link href="/spa-in-chinhat-lucknow" className="text-stone-300 hover:text-amber-400">
+                  Spa in Chinhat
+                </Link>
+
+                <Link href="/spa-in-hazratganj-lucknow" className="text-stone-300 hover:text-amber-400">
+                  Spa in Hazratganj
+                </Link>
+
+                <Link href="/spa-in-mahanagar-lucknow" className="text-stone-300 hover:text-amber-400">
+                  Spa in Mahanagar
+                </Link>
+
+                <Link href="/spa-in-gomti-nagar-extension-lucknow" className="text-stone-300 hover:text-amber-400">
+                  Spa in Gomti Nagar Extension
+                </Link>
+
+                <Link href="/spa-near-faizabad-road-lucknow" className="text-stone-300 hover:text-amber-400">
+                  Spa Near Faizabad Road
+                </Link>
+
+              </div>
+            </div>
+
             {seoLinks.map((link) => (
               <Link
                 key={link.href}
