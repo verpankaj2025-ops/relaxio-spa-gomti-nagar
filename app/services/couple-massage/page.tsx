@@ -11,18 +11,18 @@ export const revalidate = 3600;
 
 export const metadata = {
   title:
-    "Luxury Couple Wellness Experience | Relaxio Spa",
+"Couple Massage in Gomti Nagar Lucknow | Relaxio Spa",
 
   description:
-    "Enjoy a private couple wellness experience with relaxing massage therapies, peaceful spa rooms, and premium wellness services at Relaxio Spa.",
+"Experience Couple Massage in Gomti Nagar Lucknow at Relaxio Spa. Enjoy private spa rooms, relaxing wellness therapies, luxury ambience, and a peaceful couple spa experience.",
 
 
   openGraph: {
   title:
-    "Luxury Couple Wellness Experience | Relaxio Spa",
+  "Couple Massage in Gomti Nagar Lucknow | Relaxio Spa",
 
   description:
-    "Enjoy a private couple wellness experience with relaxing massage therapies and peaceful spa rooms at Relaxio Spa.",
+  "Experience Couple Massage in Gomti Nagar Lucknow at Relaxio Spa. Enjoy private spa rooms, relaxing wellness therapies, luxury ambience, and a peaceful couple spa experience.",
 
   url:
     "https://relaxiospa.in/services/couple-massage",
@@ -195,7 +195,8 @@ export default function CoupleMassagePage() {
   </div>
 
 
-  <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">Why Guests Choose Our Couple Wellness Experience
+  <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">
+      Why Guests Choose Our Couple Wellness Experience
   </h2>
 
               <p className="mb-6 leading-relaxed">
@@ -216,6 +217,47 @@ export default function CoupleMassagePage() {
   <p className="text-stone-600 mt-4">
     Certified Therapists • Luxury Ambience • Hygienic Couple Spa Rooms
   </p>
+
+  <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">
+Who Should Choose Couple Massage?
+</h2>
+
+<p className="mb-10 leading-relaxed">
+Couple Massage in Gomti Nagar Lucknow is ideal for partners looking to relax together and enjoy quality wellness time. Many couples choose this experience for anniversaries, birthdays, special occasions, date experiences, or simply to take a break from busy schedules.
+
+The therapy allows both partners to enjoy relaxing treatments in the same private room while maintaining a calm and peaceful atmosphere. It is a popular option for couples seeking comfort, stress relief, and a memorable spa experience together.
+</p>
+
+<h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">
+What Happens During a Couple Massage Session?
+</h2>
+
+<p className="mb-10 leading-relaxed">
+Every Couple Massage session at Relaxio Spa begins with a brief consultation to understand guest preferences and comfort levels. Couples are then guided to a private spa room where therapists prepare the wellness experience.
+
+The session includes synchronized therapies performed side by side in a peaceful environment. Premium oils, relaxing music, and a comfortable setting help create a calming atmosphere designed for relaxation and shared wellness.
+</p>
+
+<h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">
+Benefits of Couple Massage
+</h2>
+
+<p className="mb-10 leading-relaxed">
+Couple Massage provides both physical relaxation and emotional connection. Many couples enjoy the opportunity to disconnect from daily stress and spend uninterrupted time together in a peaceful environment.
+
+The experience encourages relaxation, reduces stress, promotes comfort, and helps create positive shared memories. It is often chosen as part of a wellness lifestyle focused on balance and well-being.
+</p>
+
+<h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">
+Why Relaxio Spa is a Preferred Choice for Couples
+</h2>
+
+<p className="mb-10 leading-relaxed">
+Relaxio Spa offers private couple spa rooms, professional therapists, hygienic facilities, and a luxury wellness environment designed specifically for guest comfort. Our team focuses on privacy, relaxation, and personalized service.
+
+Located in Gomti Nagar Lucknow, Relaxio Spa provides a peaceful destination where couples can enjoy wellness therapies together in a comfortable and welcoming atmosphere.
+</p>
+
 </div>
 
   <PricingSection

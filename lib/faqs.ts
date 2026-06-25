@@ -105,12 +105,39 @@ export const faqsData = {
 ],
 
   "couple-massage": [
-    {
-      question: "What is Couple Massage?",
-      answer:
-        "Couple massage is a relaxing spa therapy where two people receive massage treatments together in a private luxury room.",
-    },
-  ],
+  {
+    question: "What is Couple Massage?",
+    answer: "Couple Massage is a wellness experience where two people receive relaxing spa therapies together in the same private room.",
+  },
+  {
+    question: "Who should choose Couple Massage?",
+    answer: "Couple Massage is ideal for partners, spouses, newly married couples, and individuals celebrating special occasions together.",
+  },
+  {
+    question: "Do both guests receive therapy at the same time?",
+    answer: "Yes, both guests receive synchronized wellness therapies side by side in the same private spa room.",
+  },
+  {
+    question: "Is Couple Massage suitable for anniversaries and birthdays?",
+    answer: "Yes, many guests choose Couple Massage experiences for anniversaries, birthdays, date experiences, and special celebrations.",
+  },
+  {
+    question: "How long does a Couple Massage session last?",
+    answer: "Sessions are available in 60-minute, 90-minute, and 120-minute options at Relaxio Spa Gomti Nagar Lucknow.",
+  },
+  {
+    question: "What are the benefits of Couple Massage?",
+    answer: "Benefits include relaxation, stress reduction, quality time together, emotional connection, and a peaceful wellness experience.",
+  },
+  {
+    question: "Do you provide private couple spa rooms?",
+    answer: "Yes, Relaxio Spa provides private rooms designed specifically for couple wellness experiences.",
+  },
+  {
+    question: "What is the price of Couple Massage in Gomti Nagar Lucknow?",
+    answer: "Couple Massage packages start from ₹2,999 and are available in multiple duration options.",
+  },
+],
 
   "spa-facilities": [
     {
