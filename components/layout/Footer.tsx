@@ -24,13 +24,13 @@ const seoLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-950 text-stone-400 py-14 md:py-16 border-t border-stone-900 content-auto">
+    <footer className="bg-stone-950 text-stone-300 py-14 md:py-16 border-t border-stone-900 content-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
           <h3 className="text-3xl font-serif text-white mb-4 tracking-wide">
             Relaxio Spa<span className="text-[#d4af37]">.</span>
           </h3>
-          <p className="mb-6 font-light leading-relaxed max-w-sm text-stone-400">
+          <p className="mb-6 font-light leading-relaxed max-w-sm text-stone-300">
             Relaxio Spa offers peaceful wellness experiences with private rooms, relaxing therapies, and a calm luxury
             ambience in Gomti Nagar Lucknow.
           </p>
@@ -94,7 +94,7 @@ export default function Footer() {
                 key={link.href}
                 href={link.href}
                 prefetch={false}
-                className="text-stone-400 hover:text-amber-400 transition-colors inline-flex min-h-[36px] items-center py-1 leading-relaxed"
+                className="text-stone-300 hover:text-amber-400 transition-colors inline-flex min-h-[36px] items-center py-1 leading-relaxed"
               >
                 {link.label}
               </Link>
