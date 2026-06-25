@@ -22,7 +22,42 @@ export const faqsData = {
     {
       question: "What is Thai Massage?",
       answer:
-        "Thai Massage is a traditional healing therapy that combines stretching acupressure and body relaxation techniques to reduce stress and improve flexibility.",
+        "Thai Massage is a traditional wellness therapy that combines assisted stretching, rhythmic pressure techniques, and body movement to support flexibility and relaxation.",
+    },
+    {
+      question: "Who should get Thai Massage?",
+      answer:
+        "Thai Massage is suitable for office professionals, fitness enthusiasts, travelers, and individuals experiencing stiffness, reduced flexibility, or physical fatigue.",
+    },
+    {
+      question: "What are the benefits of Thai Massage?",
+      answer:
+        "Benefits may include improved flexibility, better mobility, reduced muscle tension, stress relief, enhanced circulation, and overall physical relaxation.",
+    },
+    {
+      question: "Does Thai Massage use oil?",
+      answer:
+        "Traditional Thai Massage is typically performed without oil and focuses on stretching, pressure techniques, and assisted body movements.",
+    },
+    {
+      question: "How long does a Thai Massage session last?",
+      answer:
+        "Thai Massage sessions at Relaxio Spa are available in 60-minute, 90-minute, and 120-minute durations.",
+    },
+    {
+      question: "Is Thai Massage suitable for first-time spa guests?",
+      answer:
+        "Yes, Thai Massage can be suitable for first-time guests, especially those looking to improve flexibility and experience a traditional stretching-based wellness therapy.",
+    },
+    {
+      question: "How often should I get Thai Massage?",
+      answer:
+        "Many guests choose Thai Massage every few weeks as part of a wellness routine. Frequency depends on lifestyle, activity level, and personal goals.",
+    },
+    {
+      question: "What is the price of Thai Massage in Gomti Nagar Lucknow?",
+      answer:
+        "Thai Massage packages at Relaxio Spa start from ₹2,499 and are available in multiple session durations.",
     },
   ],
 
