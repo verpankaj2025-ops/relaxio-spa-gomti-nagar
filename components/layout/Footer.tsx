@@ -14,22 +14,12 @@ const footerLinks = [
 
 const seoLinks = [
   { href: '/services/thai-massage', label: 'Thai Massage in Gomti Nagar Lucknow' },
-
   { href: '/services/balinese-massage', label: 'Balinese Massage Therapy in Lucknow' },
-
-  { href: '/services/deep-tissue-massage', label: 'Deep Tissue Massage in Gomti Nagar Lucknow' },
-
+  { href: '/services/deep-tissue-massage', label: 'Deep Tissue Massage in Gomti Nagar' },
   { href: '/services/couple-massage', label: 'Couple Spa in Lucknow' },
-
-  { href: '/services/spa-facilities', label: 'Jacuzzi & Steam Bath Spa in Lucknow' },
-
+  { href: '/services/spa-facilities', label: 'Jacuzzi & Steam Bath Spa' },
   { href: '/blog', label: 'Wellness & Spa Blog' },
-
   { href: '/blog/best-spa-in-gomti-nagar', label: 'Best Spa in Gomti Nagar Lucknow' },
-
-  { href: '/', label: 'Luxury Spa in Lucknow' },
-
-  { href: '/contact', label: 'Massage Centre in Gomti Nagar' },
 ];
 
 export default function Footer() {
@@ -85,7 +75,8 @@ export default function Footer() {
               </a>
               <a
                 href="tel:+919455671995"
-                className="block text-stone-300 hover:text-white transition-colors font-medium"
+                className="text-[#d4af37] hover:text-white transition-colors font-medium text-lg"
+                itemProp="telephone"
               >
                 +91 9455671995
               </a>
