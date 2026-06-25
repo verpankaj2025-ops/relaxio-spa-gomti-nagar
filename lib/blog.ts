@@ -35,20 +35,25 @@ export const getPost = cache(async (slug: string) => {
 export const getAllPosts = cache(() => {
   const fileNames = fs.readdirSync(postsDirectory);
 
-  return fileNames.map((fileName) => {
-    const slug = fileName.replace(/\.md$/, "");
+  return fileNames
+    .map((fileName) => {
+      const slug = fileName.replace(/\.md$/, "");
 
-    const fullPath = path.join(postsDirectory, fileName);
+      const fullPath = path.join(postsDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, "utf8");
 
-    const fileContents = fs.readFileSync(fullPath, "utf8");
+      const { data } = matter(fileContents);
 
-    const { data } = matter(fileContents);
-
-    return {
-  slug,
-  title: data.title,
-  description: data.description,
-  image: data.image || "/images/spa.avif",
-};
-  });
+      return {
+        slug,
+        title: data.title,
+        description: data.description,
+        image: data.image || "/images/spa.avif",
+      };
+    })
+    .filter(
+      (post) =>
+        post.title &&
+        post.description
+    );
 });
