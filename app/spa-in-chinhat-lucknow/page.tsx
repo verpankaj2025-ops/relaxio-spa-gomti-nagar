@@ -19,8 +19,56 @@ type: "website",
 },
 };
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Which is the best spa near Chinhat Lucknow?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Relaxio Spa is a premium wellness destination near Chinhat offering Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Spa, Jacuzzi and Steam Bath facilities."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "How far is Relaxio Spa from Chinhat?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Relaxio Spa is conveniently accessible from Chinhat and nearby areas."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer Couple Spa packages?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, we offer Couple Spa experiences along with premium wellness therapies."
+      }
+    },
+    {
+      "@type": "Question",
+      name: "Is advance booking available?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, guests can reserve their preferred time slot in advance."
+      }
+    }
+  ]
+};
+
 export default function SpaChinhatPage() {
-return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-auto px-4">
+return (
+<>
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(faqSchema),
+  }}
+/>
+
+<section className="py-24 bg-[#fdfbf7]">
 
 
     <h1 className="font-serif text-4xl md:text-6xl mb-8">
@@ -94,8 +142,52 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
       </Link>
     </div>
 
+  <h2 className="font-serif text-3xl mb-6 mt-12">
+  Frequently Asked Questions
+</h2>
+
+<div className="space-y-6">
+  <div>
+    <h3 className="font-semibold text-xl">
+      Which is the best spa near Chinhat Lucknow?
+    </h3>
+    <p className="text-stone-700 mt-2">
+      Relaxio Spa offers Thai Massage, Balinese Massage, Deep Tissue Massage,
+      Couple Spa, Jacuzzi and Steam Bath facilities.
+    </p>
   </div>
+
+  <div>
+    <h3 className="font-semibold text-xl">
+      How far is Relaxio Spa from Chinhat?
+    </h3>
+    <p className="text-stone-700 mt-2">
+      Relaxio Spa is easily accessible from Chinhat and surrounding areas.
+    </p>
+  </div>
+
+  <div>
+    <h3 className="font-semibold text-xl">
+      Do you offer Couple Spa packages?
+    </h3>
+    <p className="text-stone-700 mt-2">
+      Yes, we offer premium Couple Spa experiences.
+    </p>
+  </div>
+
+  <div>
+    <h3 className="font-semibold text-xl">
+      Is advance booking available?
+    </h3>
+    <p className="text-stone-700 mt-2">
+      Yes, advance booking is recommended for preferred timings.
+    </p>
+  </div>
+
+  </div>
+  
 </section>
+</>
 
 );
 }
