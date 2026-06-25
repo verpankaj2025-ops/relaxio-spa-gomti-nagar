@@ -159,8 +159,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               ],
 
               sameAs: [
-                "https://www.instagram.com/YOUR_INSTAGRAM_USERNAME",
-                "https://www.facebook.com/YOUR_FACEBOOK_PAGE"
+                "https://www.instagram.com/relaxio_spa_lko/",
+                "https://www.facebook.com/profile.php?id=61589844524555"
               ],
 
             })
