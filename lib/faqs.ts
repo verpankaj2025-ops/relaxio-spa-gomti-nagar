@@ -27,12 +27,47 @@ export const faqsData = {
   ],
 
   "deep-tissue": [
-    {
-      question: "What is deep tissue massage and who should try it?",
-      answer:
-        "Deep tissue massage at Relaxio Spa Gomti Nagar Lucknow is a therapeutic treatment that targets deeper layers of muscles to relieve chronic pain stiffness and tension.",
-    },
-  ],
+  {
+    question: "What is Deep Tissue Massage?",
+    answer:
+      "Deep Tissue Massage is a therapeutic massage technique that focuses on deeper layers of muscles and connective tissues. It helps reduce muscle tightness, improve mobility, and support overall physical recovery.",
+  },
+  {
+    question: "Who should choose Deep Tissue Massage?",
+    answer:
+      "Deep Tissue Massage is suitable for office professionals, gym enthusiasts, athletes, travelers, and individuals experiencing muscle stiffness, tension, or post-workout fatigue.",
+  },
+  {
+    question: "Is Deep Tissue Massage painful?",
+    answer:
+      "Deep Tissue Massage uses firm pressure but should remain comfortable. Therapists adjust pressure according to individual comfort levels and wellness goals.",
+  },
+  {
+    question: "How long does a Deep Tissue Massage session last?",
+    answer:
+      "At Relaxio Spa Gomti Nagar Lucknow, Deep Tissue Massage sessions are available in 60-minute, 90-minute, and 120-minute durations.",
+  },
+  {
+    question: "What are the benefits of Deep Tissue Massage?",
+    answer:
+      "Benefits include improved circulation, reduced muscle tension, better flexibility, enhanced mobility, stress reduction, and support for physical recovery.",
+  },
+  {
+    question: "How often should I get a Deep Tissue Massage?",
+    answer:
+      "The frequency depends on lifestyle and wellness goals. Many guests choose sessions every two to four weeks to maintain flexibility and physical comfort.",
+  },
+  {
+    question: "What should I do after a Deep Tissue Massage session?",
+    answer:
+      "Guests are encouraged to stay hydrated, rest if needed, and follow any wellness recommendations provided by the therapist after the session.",
+  },
+  {
+    question: "What is the price of Deep Tissue Massage in Gomti Nagar Lucknow?",
+    answer:
+      "Deep Tissue Massage pricing at Relaxio Spa starts from ₹2,999 for 60 minutes, ₹3,999 for 90 minutes, and ₹4,999 for 120 minutes.",
+  },
+],
 
   balinese: [
     {
