@@ -32,48 +32,48 @@ export const viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  
+
   icons: {
-  icon: "/favicon.ico",
-},
+    icon: "/favicon.ico",
+  },
 
   verification: {
     google: "fqsDy4r5bvC7t2LFbPsXD_h6SqzwN4GMD6ihrS1sDog",
   },
 
   title: {
-  default: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
-  template: '%s'
-},
+    default: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
+    template: '%s'
+  },
 
   description: 'Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, private rooms, calming ambience, and professional massage experiences.',
 
   keywords: [
-  'Luxury Wellness Spa Lucknow',
-  'Spa in Gomti Nagar',
-  'Thai Massage Lucknow',
-  'Balinese Massage',
-  'Deep Tissue Massage',
-  'Couple Massage Spa',
-  'Wellness Spa Lucknow',
-  'Relaxation Therapy',
-],
+    'Luxury Wellness Spa Lucknow',
+    'Spa in Gomti Nagar',
+    'Thai Massage Lucknow',
+    'Balinese Massage',
+    'Deep Tissue Massage',
+    'Couple Massage Spa',
+    'Wellness Spa Lucknow',
+    'Relaxation Therapy',
+  ],
 
   alternates: {
-  canonical: SITE_URL,
-},
+    canonical: SITE_URL,
+  },
 
-robots: {
-  index: true,
-  follow: true,
-  googleBot: {
+  robots: {
     index: true,
     follow: true,
-    "max-video-preview": -1,
-    "max-image-preview": "large",
-    "max-snippet": -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
-},
 
   openGraph: {
     type: 'website',
@@ -106,77 +106,85 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-sans bg-[#fdfbf7] text-stone-900 antialiased selection:bg-[#d4af37]/30" suppressHydrationWarning>
 
         <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Spa",
-      "@id": `${SITE_URL}/#spa`,
-      name: "Relaxio Spa",
-      url: SITE_URL,
-      telephone: "+917081891995",
-      priceRange: "₹1499 - ₹8999",
-      image: `${SITE_URL}/images/luxury-spa-gomti-nagar-lucknow.avif`,
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Spa",
+              "@id": `${SITE_URL}/#spa`,
+              name: "Relaxio Spa",
+              url: SITE_URL,
+              telephone: [
+                "+917081891995",
+                "+919455671995"
+              ],
+              priceRange: "₹1499 - ₹8999",
+              image: `${SITE_URL}/images/luxury-spa-gomti-nagar-lucknow.avif`,
 
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "2nd Floor, 4/526, Vivek Khand 4",
-        addressLocality: "Lucknow",
-        addressRegion: "UP",
-        postalCode: "226010",
-        addressCountry: "IN"
-      },
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "2nd Floor, 4/526, Vivek Khand 4",
+                addressLocality: "Lucknow",
+                addressRegion: "UP",
+                postalCode: "226010",
+                addressCountry: "IN"
+              },
 
-      geo: {
-  "@type": "GeoCoordinates",
-  latitude: 26.8553677,
-  longitude: 80.9985092
-},
-hasMap:
-  "https://www.google.com/maps/dir/?api=1&destination=26.8553677,80.9985092",
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 26.8553677,
+                longitude: 80.9985092
+              },
+              hasMap:
+                "https://www.google.com/maps/dir/?api=1&destination=26.8553677,80.9985092",
 
-      openingHoursSpecification: [
-  {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
-    ],
-    opens: "11:00",
-    closes: "21:00"
-  }
-],
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+                  ],
+                  opens: "11:00",
+                  closes: "21:00"
+                }
+              ],
 
-areaServed: [
-  { "@type": "Place", name: "Gomti Nagar" },
-  { "@type": "Place", name: "Lucknow" },
-  { "@type": "Place", name: "Vivek Khand" },
-  { "@type": "Place", name: "Indira Nagar" },
-  { "@type": "Place", name: "Patrakarpuram" },
-  { "@type": "Place", name: "Chinhut" },
-],
-  
-    })
-  }}
-/>
+              areaServed: [
+                { "@type": "Place", name: "Gomti Nagar" },
+                { "@type": "Place", name: "Lucknow" },
+                { "@type": "Place", name: "Vivek Khand" },
+                { "@type": "Place", name: "Indira Nagar" },
+                { "@type": "Place", name: "Patrakarpuram" },
+                { "@type": "Place", name: "Chinhut" },
+              ],
 
-<script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": `${SITE_URL}/#website`,
-      url: SITE_URL,
-      name: "Relaxio Spa",
-      
-      inLanguage: "en-IN",
-      
-      about: {
-  "@id": `${SITE_URL}/#spa`
-}
-    })
-  }}
-/>
+              sameAs: [
+                "https://www.instagram.com/YOUR_INSTAGRAM_USERNAME",
+                "https://www.facebook.com/YOUR_FACEBOOK_PAGE"
+              ],
+
+            })
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": `${SITE_URL}/#website`,
+              url: SITE_URL,
+              name: "Relaxio Spa",
+
+              inLanguage: "en-IN",
+
+              about: {
+                "@id": `${SITE_URL}/#spa`
+              }
+            })
+          }}
+        />
 
         <Navbar />
         <main className="min-h-screen">

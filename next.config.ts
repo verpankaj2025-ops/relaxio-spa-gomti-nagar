@@ -53,6 +53,8 @@ const nextConfig: NextConfig = {
   deviceSizes: [640, 768, 1024, 1280, 1600],
   imageSizes: [16, 32, 48, 64, 96],
 
+  qualities: [40, 55, 60, 75, 80, 90],
+
   dangerouslyAllowSVG: false,
   contentDispositionType: 'attachment',
 },
