@@ -78,12 +78,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     {
-  url: 'https://relaxiospa.in/blog',
-  lastModified: currentDate,
-  changeFrequency: 'weekly',
-  priority: 0.8,
-},
+      url: 'https://relaxiospa.in/privacy-policy',
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.4,
+    },
 
-...blogs,
-]
+    {
+      url: 'https://relaxiospa.in/terms-of-service',
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.4,
+    },
+
+    {
+      url: 'https://relaxiospa.in/terms-and-conditions',
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.4,
+    },
+
+    {
+      url: 'https://relaxiospa.in/user-data-deletion',
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.4,
+    },
+
+    {
+      url: 'https://relaxiospa.in/blog',
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+
+    ...blogs,
+  ]
 }
