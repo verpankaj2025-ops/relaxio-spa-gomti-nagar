@@ -17,7 +17,7 @@ import {
   wellnessHighlights,
   whyChooseCards,
 } from '@/lib/home-content';
-import { getFAQSchema } from '@/lib/seo';
+import { getFAQSchema, getLocalBusinessSchema, getWebsiteSchema } from '@/lib/seo';
 import { faqsData } from '@/lib/faqs';
 
 export const revalidate = 3600;
@@ -25,7 +25,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: 'Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa',
   description:
-'Best spa in Gomti Nagar Lucknow offering Thai massage, Balinese massage, deep tissue therapy, couple spa, jacuzzi and wellness treatments.',
+    'Best spa in Gomti Nagar Lucknow offering Thai massage, Balinese massage, deep tissue therapy, couple spa, jacuzzi and wellness treatments.',
   alternates: {
     canonical: 'https://relaxiospa.in',
   },
@@ -106,6 +106,20 @@ export default function Home() {
           }}
         />
       )}
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getLocalBusinessSchema())
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getWebsiteSchema())
+        }}
+      />
 
       <HeroSection />
 
@@ -195,78 +209,77 @@ export default function Home() {
       <PricingSection />
 
       <section className="py-16 bg-[#fcfaf6] border-y border-stone-100">
-  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-```
-<div className="text-center mb-10">
-  <h2 className="text-3xl md:text-4xl font-serif text-stone-900 mb-4">
-    Areas We Serve Across Lucknow
-  </h2>
+          ```
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-serif text-stone-900 mb-4">
+              Areas We Serve Across Lucknow
+            </h2>
 
-  <p className="text-stone-600 max-w-3xl mx-auto">
-    Relaxio Spa welcomes guests from Gomti Nagar, Indira Nagar,
-    Chinhat, Hazratganj, Mahanagar, Faizabad Road and nearby areas
-    looking for premium wellness experiences and professional
-    massage therapies.
-  </p>
-</div>
+            <p className="text-stone-600 max-w-3xl mx-auto">
+              Relaxio Spa welcomes guests from Gomti Nagar, Indira Nagar,
+              Chinhat, Hazratganj, Mahanagar, Faizabad Road and nearby areas
+              looking for premium wellness experiences and professional
+              massage therapies.
+            </p>
+          </div>
 
-<div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
 
-  <Link
-    href="/spa-in-indira-nagar-lucknow"
-    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
-  >
-    Spa in Indira Nagar
-  </Link>
+            <Link
+              href="/spa-in-indira-nagar-lucknow"
+              className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+            >
+              Spa in Indira Nagar
+            </Link>
 
-  <Link
-    href="/spa-in-aliganj-lucknow"
-    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
-  >
-    Spa in Aliganj
-  </Link>
+            <Link
+              href="/spa-in-aliganj-lucknow"
+              className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+            >
+              Spa in Aliganj
+            </Link>
 
-  <Link
-    href="/spa-in-chinhat-lucknow"
-    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
-  >
-    Spa in Chinhat
-  </Link>
+            <Link
+              href="/spa-in-chinhat-lucknow"
+              className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+            >
+              Spa in Chinhat
+            </Link>
 
-  <Link
-    href="/spa-in-hazratganj-lucknow"
-    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
-  >
-    Spa in Hazratganj
-  </Link>
+            <Link
+              href="/spa-in-hazratganj-lucknow"
+              className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+            >
+              Spa in Hazratganj
+            </Link>
 
-  <Link
-    href="/spa-in-mahanagar-lucknow"
-    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
-  >
-    Spa in Mahanagar
-  </Link>
+            <Link
+              href="/spa-in-mahanagar-lucknow"
+              className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+            >
+              Spa in Mahanagar
+            </Link>
 
-  <Link
-    href="/spa-in-gomti-nagar-extension-lucknow"
-    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
-  >
-    Spa in Gomti Nagar Extension
-  </Link>
+            <Link
+              href="/spa-in-gomti-nagar-extension-lucknow"
+              className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+            >
+              Spa in Gomti Nagar Extension
+            </Link>
 
-  <Link
-    href="/spa-near-faizabad-road-lucknow"
-    className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
-  >
-    Spa Near Faizabad Road
-  </Link>
+            <Link
+              href="/spa-near-faizabad-road-lucknow"
+              className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
+            >
+              Spa Near Faizabad Road
+            </Link>
 
-</div>
-```
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
       <section className="py-20 md:py-28 bg-white content-auto">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -278,7 +291,7 @@ export default function Home() {
           </h2>
           <div className="w-20 h-[2px] bg-[#d4af37] mx-auto mb-8" />
           <p className="text-stone-600 max-w-3xl mx-auto leading-relaxed text-base md:text-lg font-light mb-16">
-             Relaxio Spa is one of the most trusted spa destinations in Gomti Nagar Lucknow, offering professional massage therapies, private wellness rooms, premium spa experiences and complete relaxation treatments for individuals and couples.
+            Relaxio Spa is one of the most trusted spa destinations in Gomti Nagar Lucknow, offering professional massage therapies, private wellness rooms, premium spa experiences and complete relaxation treatments for individuals and couples.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -355,10 +368,10 @@ export default function Home() {
               <div className="w-20 h-[2px] bg-[#d4af37] mx-auto mb-10" />
               <div className="max-w-3xl mx-auto space-y-7 text-stone-600 leading-relaxed text-[17px] md:text-lg font-light">
                 <p>
-                   Relaxio Spa is recognized as one of the best spa destinations in Gomti Nagar Lucknow, offering Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Spa experiences, Jacuzzi sessions and wellness therapies designed for complete relaxation and rejuvenation.
+                  Relaxio Spa is recognized as one of the best spa destinations in Gomti Nagar Lucknow, offering Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Spa experiences, Jacuzzi sessions and wellness therapies designed for complete relaxation and rejuvenation.
                 </p>
                 <p>
-                   Whether you are looking for a body massage in Lucknow, a relaxing spa session, or a premium wellness experience, our professional therapists provide personalized treatments focused on stress relief, relaxation and overall well-being.
+                  Whether you are looking for a body massage in Lucknow, a relaxing spa session, or a premium wellness experience, our professional therapists provide personalized treatments focused on stress relief, relaxation and overall well-being.
                 </p>
                 <p>
                   Elegant interiors, private wellness suites, soothing ambience, and professionally guided therapies create
@@ -397,32 +410,32 @@ export default function Home() {
       </section>
 
       <section className="py-16 bg-white">
-  <div className="max-w-5xl mx-auto px-4">
-    <h2 className="text-3xl font-serif text-center mb-8">
-      Popular Spa Services in Gomti Nagar Lucknow
-    </h2>
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl font-serif text-center mb-8">
+            Popular Spa Services in Gomti Nagar Lucknow
+          </h2>
 
-    <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
 
-      <Link href="/services/thai-massage">
-        Thai Massage in Gomti Nagar Lucknow
-      </Link>
+            <Link href="/services/thai-massage">
+              Thai Massage in Gomti Nagar Lucknow
+            </Link>
 
-      <Link href="/services/balinese-massage">
-        Balinese Massage in Lucknow
-      </Link>
+            <Link href="/services/balinese-massage">
+              Balinese Massage in Lucknow
+            </Link>
 
-      <Link href="/services/deep-tissue-massage">
-        Deep Tissue Massage in Gomti Nagar
-      </Link>
+            <Link href="/services/deep-tissue-massage">
+              Deep Tissue Massage in Gomti Nagar
+            </Link>
 
-      <Link href="/services/couple-massage">
-        Couple Massage in Lucknow
-      </Link>
+            <Link href="/services/couple-massage">
+              Couple Massage in Lucknow
+            </Link>
 
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
 
       <BlogSection />
 

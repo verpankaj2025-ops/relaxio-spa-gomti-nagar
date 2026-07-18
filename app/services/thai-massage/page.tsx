@@ -48,6 +48,24 @@ export default function ThaiMassagePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema(faqs)) }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Spa",
+            "name": "Relaxio Spa",
+            "url": "https://relaxiospa.in",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Lucknow",
+              "addressRegion": "Uttar Pradesh",
+              "addressCountry": "IN"
+            }
+          })
+        }}
+      />
+
       {/* Hero Section */}
       <ServiceHero
         title="Thai Massage in Gomti Nagar Lucknow"
@@ -119,6 +137,18 @@ export default function ThaiMassagePage() {
                 </div>
               ))}
             </div>
+
+            <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">
+              Thai Massage for Office Professionals
+            </h2>
+
+            <p className="mb-6 leading-relaxed">
+              Office professionals often experience neck stiffness, shoulder tightness, lower back discomfort, and reduced flexibility due to prolonged sitting. Thai Massage combines assisted stretching and pressure techniques that help improve mobility and physical comfort.
+            </p>
+
+            <p className="mb-10 leading-relaxed">
+              Many working professionals in Gomti Nagar choose Thai Massage as part of their wellness routine to reduce physical fatigue, improve flexibility, and support overall relaxation after long working hours.
+            </p>
 
             <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6">
               Why Guests Choose Our Thai Therapy
@@ -203,6 +233,19 @@ export default function ThaiMassagePage() {
                 },
               ]}
             />
+
+            <h2 className="font-serif text-3xl md:text-5xl text-stone-900 mb-6 mt-16">
+              Thai Massage in Gomti Nagar Lucknow
+            </h2>
+
+            <p className="mb-6 leading-relaxed">
+              Relaxio Spa offers professional Thai Massage in Gomti Nagar Lucknow for guests seeking flexibility improvement, stress relief, and complete body relaxation in a premium wellness environment.
+            </p>
+
+            <p className="mb-10 leading-relaxed">
+              Guests from Gomti Nagar, Vibhuti Khand, Viram Khand, Patrakarpuram, Indira Nagar, and nearby areas frequently visit Relaxio Spa for authentic Thai wellness therapy and relaxation experiences.
+            </p>
+
             <p className="text-center text-sm text-stone-600 mb-12">
               Want to learn before booking?{" "}
               <Link
@@ -238,6 +281,13 @@ export default function ThaiMassagePage() {
                   href: "/services/couple-massage",
                   description:
                     "Enjoy a relaxing private spa experience for couples with premium wellness therapies and peaceful ambience.",
+                },
+
+                {
+                  title: "Spa Facilities",
+                  href: "/services/spa-facilities",
+                  description:
+                    "Luxury Jacuzzi and Steam Bath experiences designed for relaxation and wellness.",
                 },
               ]}
             />

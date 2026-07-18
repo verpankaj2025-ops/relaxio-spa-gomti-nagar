@@ -5,10 +5,10 @@ export function getLocalBusinessSchema() {
     "@type": "Spa",
     "name": "Relaxio Spa",
     "image": [
-  "https://relaxiospa.in/images/luxury-spa-gomti-nagar-lucknow.avif",
-  "https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.avif",
-  "https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.avif"
-],
+      "https://relaxiospa.in/images/luxury-spa-gomti-nagar-lucknow.avif",
+      "https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.avif",
+      "https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.avif"
+    ],
     "@id": `${baseUrl}/#spa`,
     "url": baseUrl,
     "telephone": "+917081891995",
@@ -26,24 +26,24 @@ export function getLocalBusinessSchema() {
       "latitude": 26.8553677,
       "longitude": 80.9985092
     },
-    
+
     "openingHoursSpecification": [
-  {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "21:00"
+      }
     ],
-    "opens": "11:00",
-    "closes": "21:00"
-  }
-],
-    
+
     "sameAs": [
       "https://www.facebook.com/profile.php?id=61570999326665",
       "https://www.instagram.com/relaxio_spa_gomti_nagar",
@@ -101,5 +101,21 @@ export function getReviewSchema(reviews: { author: string; rating: number; revie
       },
       "reviewBody": review.reviewBody
     }))
+  };
+}
+
+export function getWebsiteSchema() {
+  const baseUrl = process.env.APP_URL || 'https://relaxiospa.in';
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Relaxio Spa",
+    "url": baseUrl,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${baseUrl}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
   };
 }

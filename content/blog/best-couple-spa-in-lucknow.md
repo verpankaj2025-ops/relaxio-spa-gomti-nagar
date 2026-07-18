@@ -3,7 +3,7 @@
 title: "Best Couple Spa in Lucknow for Relaxation & Quality Time"
 description: "Looking for the best couple spa in Lucknow? Discover luxury couple spa experiences, relaxing massage therapies, private wellness sessions, and premium spa facilities at Relaxio Spa."
 
-image: "/images/blog/couple-spa-lucknow.avif"
+image: "/images/blog/best-spa-gomti-nagar.avif"
 
 keywords:
   - best couple spa in lucknow

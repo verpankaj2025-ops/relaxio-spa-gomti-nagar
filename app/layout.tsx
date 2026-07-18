@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from "next/script";
 import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
@@ -104,6 +105,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-IN" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-sans bg-[#fdfbf7] text-stone-900 antialiased selection:bg-[#d4af37]/30" suppressHydrationWarning>
+
+      <Script
+  src="https://www.googletagmanager.com/gtag/js?id=AW-17470206378"
+  strategy="afterInteractive"
+/>
+
+<Script id="google-ads-tag" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+
+    gtag('js', new Date());
+    gtag('config', 'AW-17470206378');
+  `}
+</Script>
 
         <script
           type="application/ld+json"

@@ -3,7 +3,7 @@
 title: "Spa Near Me in Lucknow | Find the Best Luxury Spa Experience"
 description: "Searching for a spa near me in Lucknow? Discover premium wellness therapies, relaxing massage treatments, couple spa experiences, steam bath, and luxury spa facilities at Relaxio Spa."
 
-image: "/images/blog/spa-near-me-lucknow.avif"
+image: "/images/blog/deep-tissue-massage.avif"
 
 keywords:
   - spa near me lucknow
