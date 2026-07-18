@@ -104,19 +104,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-IN" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="font-sans bg-[#fdfbf7] text-stone-900 antialiased selection:bg-[#d4af37]/30" suppressHydrationWarning>
 
-     <noscript>
-  <iframe
-    src="https://www.googletagmanager.com/ns.html?id=GTM-TZT2H3DC"
-    height="0"
-    width="0"
-    style={{ display: "none", visibility: "hidden" }}
-  />
-</noscript>
-
-<Script id="gtm" strategy="afterInteractive">
-{`
+<head>
+  <Script id="gtm" strategy="afterInteractive">
+    {`
 (function(w,d,s,l,i){
   w[l]=w[l]||[];
   w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
@@ -128,7 +119,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TZT2H3DC');
 `}
-</Script>
+  </Script>
+</head>
+
+<body
+  className="font-sans bg-[#fdfbf7] text-stone-900 antialiased selection:bg-[#d4af37]/30"
+  suppressHydrationWarning
+>
+
+     <noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-TZT2H3DC"
+    height="0"
+    width="0"
+    style={{ display: "none", visibility: "hidden" }}
+  />
+</noscript>
 
         <script
           type="application/ld+json"
