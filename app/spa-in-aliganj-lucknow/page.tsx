@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-title: "Best Spa in Aliganj Lucknow | Relaxio Spa",
+title: "Best Spa Near Aliganj Lucknow | Relaxio Spa",
 description:
-"Looking for a spa near Aliganj Lucknow? Relaxio Spa offers Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Spa, Jacuzzi and Steam Bath wellness experiences.",
+"Relaxio Spa offers Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Spa, Jacuzzi and Steam Bath near Aliganj, Lucknow.",
 alternates: {
 canonical: "https://relaxiospa.in/spa-in-aliganj-lucknow",
 },
 openGraph: {
-title: "Best Spa in Aliganj Lucknow | Relaxio Spa",
+title: "Best Spa Near Aliganj Lucknow | Relaxio Spa",
 description:
 "Premium wellness spa near Aliganj Lucknow offering massage therapies, couple spa experiences and luxury relaxation services.",
 url: "https://relaxiospa.in/spa-in-aliganj-lucknow",
@@ -80,21 +80,27 @@ export default function SpaAliganjPage()
     </h1>
 
     <p className="text-lg leading-relaxed text-stone-700 mb-8">
-      Relaxio Spa is a premium wellness destination conveniently located
-      near Aliganj Lucknow. Guests from Aliganj regularly visit
-      Relaxio Spa for professional massage therapies, luxury spa
-      experiences, private wellness rooms, and complete relaxation.
-    </p>
+  Relaxio Spa is a premium wellness destination in Gomti Nagar, just a
+  short drive from Aliganj. Guests from Kapoorthala, Sector I, Sector J,
+  Sector K, Sector L, Aliganj Market and the University area regularly
+  visit us for Thai Massage, Balinese Massage, Deep Tissue Therapy,
+  Couple Spa experiences and complete relaxation in a peaceful,
+  luxurious environment.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Luxury Wellness Near Aliganj
     </h2>
 
     <p className="leading-relaxed text-stone-700 mb-8">
-      Our spa offers Thai Massage, Balinese Massage, Deep Tissue Massage,
-      Couple Massage, Jacuzzi and Steam Bath facilities designed to help
-      guests relax, recover, and recharge in a peaceful environment.
-    </p>
+  Whether you are travelling from Kapoorthala Crossing, Aliganj Market,
+  Sector I, Sector J, Sector K, Sector L or the Lucknow University area,
+  Relaxio Spa offers an easy wellness escape in Gomti Nagar. Our
+  experienced therapists provide Thai Massage, Balinese Massage, Deep
+  Tissue Massage, Couple Spa, Jacuzzi and Steam Bath services designed
+  to reduce stress, relieve muscle fatigue and improve overall
+  well-being.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Popular Services
@@ -120,12 +126,8 @@ export default function SpaAliganjPage()
       professional environment.
     </p>
 
-    <h2 className="font-serif text-3xl mb-6">
-      Explore Our Services
-    </h2>
-
     <h2 className="font-serif text-3xl mt-16 mb-6">
-  Spa Services for Residents of Aliganj
+  Explore Spa Services Near Aliganj
 </h2>
 
 <p className="leading-relaxed text-stone-700 mb-6">
@@ -141,6 +143,16 @@ export default function SpaAliganjPage()
   travel exhaustion, or simply looking for relaxation, our trained therapists
   provide personalized wellness sessions designed to improve physical and
   mental well-being.
+</p>
+
+<h2 className="font-serif text-3xl mb-6">
+  How to Reach Relaxio Spa from Aliganj
+</h2>
+
+<p className="leading-relaxed text-stone-700 mb-8">
+  Relaxio Spa is located in Vivek Khand 4, Gomti Nagar and is usually
+  around 20–30 minutes from Aliganj via Kapoorthala Crossing, Sitapur
+  Road and Gomti Nagar, depending on traffic.
 </p>
 
 <h2 className="font-serif text-3xl mb-6">
@@ -189,18 +201,8 @@ export default function SpaAliganjPage()
   </div>
 </div>
 
-<div className="bg-stone-100 rounded-2xl p-8 mt-12">
-  <h2 className="font-serif text-3xl mb-4">
-    Book Your Wellness Session
-  </h2>
-
-  <p className="text-stone-700 mb-4">
-    Looking for a premium spa near Aliganj Lucknow? Contact Relaxio Spa today
-    to book your preferred wellness therapy and experience professional
-    relaxation services.
-  </p>
-
-  <Link
+<div className="space-y-3"></div>
+<Link
     href="/contact"
     className="inline-block px-6 py-3 bg-[#d4af37] text-black rounded-lg"
   >
@@ -229,7 +231,40 @@ export default function SpaAliganjPage()
       <Link href="/services/spa-facilities" className="block underline">
         Jacuzzi & Steam Bath
       </Link>
+
+      <Link href="/" className="block underline">
+  Best Spa in Gomti Nagar
+</Link>
+
+<Link href="/services" className="block underline">
+  All Spa Services
+</Link>
+
+<Link href="/spa-in-chinhat-lucknow" className="block underline">
+  Spa Near Chinhat
+</Link>
+
+<Link href="/spa-in-indira-nagar-lucknow" className="block underline">
+  Spa Near Indira Nagar
+</Link>
+
+<Link href="/spa-in-hazratganj-lucknow" className="block underline">
+  Spa Near Hazratganj
+</Link>
     </div>
+
+<div className="bg-stone-100 rounded-2xl p-8 mt-12">
+  <h2 className="font-serif text-3xl mb-4">
+    Book Your Wellness Session
+  </h2>
+
+  <p className="text-stone-700 mb-4">
+    Looking for a premium spa near Aliganj Lucknow? Contact Relaxio Spa today
+    to book your preferred wellness therapy and experience professional
+    relaxation services.
+  </p>
+
+  
 
   </div>
 </section>

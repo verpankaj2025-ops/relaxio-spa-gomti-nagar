@@ -28,21 +28,24 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
     </h1>
 
     <p className="text-lg leading-relaxed text-stone-700 mb-8">
-      Relaxio Spa is a premium wellness destination conveniently located
-      near Gomti Nagar Extension Lucknow. Guests from Gomti Nagar Extension regularly visit
-      Relaxio Spa for professional massage therapies, luxury spa
-      experiences, private wellness rooms, and complete relaxation.
-    </p>
+  Relaxio Spa is a premium wellness destination in Gomti Nagar, serving
+  guests from Gomti Nagar Extension, Amar Shaheed Path, Sultanpur Road
+  and nearby residential communities. We offer luxury massage therapies,
+  private wellness suites and a peaceful environment for complete
+  relaxation.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Luxury Wellness Near Gomti Nagar Extension
     </h2>
 
     <p className="leading-relaxed text-stone-700 mb-8">
-      Our spa offers Thai Massage, Balinese Massage, Deep Tissue Massage,
-      Couple Massage, Jacuzzi and Steam Bath facilities designed to help
-      guests relax, recover, and recharge in a peaceful environment.
-    </p>
+  Whether you are travelling from Gomti Nagar Extension, Amar Shaheed
+  Path, Sultanpur Road or nearby residential townships, Relaxio Spa
+  provides premium Thai Massage, Balinese Massage, Deep Tissue Therapy,
+  Couple Spa, Jacuzzi and Steam Bath services with experienced therapists
+  in a hygienic and relaxing setting.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Popular Services
@@ -61,12 +64,12 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
     </h2>
 
     <p className="leading-relaxed text-stone-700 mb-8">
-      Guests appreciate our hygienic facilities, professional therapists,
-      luxury ambience, convenient location, and premium wellness
-      experiences. Whether you are looking for relaxation after work or a
-      complete wellness session, Relaxio Spa provides a comfortable and
-      professional environment.
-    </p>
+  Residents of Gomti Nagar Extension choose Relaxio Spa because of our
+  convenient location, professional therapists, private wellness rooms
+  and premium hospitality. Whether you want stress relief, muscle
+  recovery or a relaxing weekend experience, our therapies are tailored
+  to your individual wellness needs.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Explore Our Services
@@ -92,7 +95,46 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
       <Link href="/services/spa-facilities" className="block underline">
         Jacuzzi & Steam Bath
       </Link>
+
+      <Link href="/spa-near-faizabad-road-lucknow" className="block underline">
+  Spa Near Faizabad Road
+</Link>
+
+<Link href="/spa-in-indira-nagar-lucknow" className="block underline">
+  Spa Near Indira Nagar
+</Link>
+
+<Link href="/spa-in-chinhat-lucknow" className="block underline">
+  Spa Near Chinhat
+</Link>
     </div>
+
+    <h2 className="font-serif text-3xl mt-16 mb-6">
+  Wellness Centre Near Gomti Nagar Extension
+</h2>
+
+<p className="leading-relaxed text-stone-700 mb-6">
+  Gomti Nagar Extension is one of Lucknow&apos;s fastest-growing residential
+  areas. Relaxio Spa welcomes professionals, families and couples looking
+  for premium massage therapies and a calm wellness environment close to
+  home.
+</p>
+
+<p className="leading-relaxed text-stone-700 mb-8">
+  Our experienced therapists provide personalised wellness sessions using
+  recognised massage techniques to help reduce stress, improve comfort
+  and support overall relaxation.
+</p>
+
+<h2 className="font-serif text-3xl mb-6">
+  How to Reach Relaxio Spa from Gomti Nagar Extension
+</h2>
+
+<p className="leading-relaxed text-stone-700 mb-8">
+  Relaxio Spa is located in Vivek Khand 4, Gomti Nagar and is typically
+  around 10–15 minutes from most parts of Gomti Nagar Extension via Amar
+  Shaheed Path or internal Gomti Nagar roads, depending on traffic.
+</p>
 
   </div>
 </section>

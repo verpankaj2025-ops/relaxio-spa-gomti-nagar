@@ -107,20 +107,6 @@ export default function Home() {
         />
       )}
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getLocalBusinessSchema())
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getWebsiteSchema())
-        }}
-      />
-
       <HeroSection />
 
       <section className="py-16 md:py-20 bg-[#fdfbf7]">

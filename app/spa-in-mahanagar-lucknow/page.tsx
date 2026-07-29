@@ -39,10 +39,11 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
     </h2>
 
     <p className="leading-relaxed text-stone-700 mb-8">
-      Our spa offers Thai Massage, Balinese Massage, Deep Tissue Massage,
-      Couple Massage, Jacuzzi and Steam Bath facilities designed to help
-      guests relax, recover, and recharge in a peaceful environment.
-    </p>
+  Whether you are travelling from Nishatganj, Badshahnagar, IT Crossing
+  or Mahanagar Market, Relaxio Spa offers premium Thai Massage,
+  Balinese Massage, Deep Tissue Therapy, Couple Spa, Jacuzzi and Steam
+  Bath services in a relaxing and hygienic environment.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Popular Services
@@ -61,12 +62,11 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
     </h2>
 
     <p className="leading-relaxed text-stone-700 mb-8">
-      Guests appreciate our hygienic facilities, professional therapists,
-      luxury ambience, convenient location, and premium wellness
-      experiences. Whether you are looking for relaxation after work or a
-      complete wellness session, Relaxio Spa provides a comfortable and
-      professional environment.
-    </p>
+  Professionals, families and couples from Mahanagar choose Relaxio Spa
+  because of our experienced therapists, clean private wellness rooms
+  and premium ambience. Our therapies are designed to help reduce
+  stress, improve relaxation and promote overall wellbeing.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Explore Our Services
@@ -92,7 +92,46 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
       <Link href="/services/spa-facilities" className="block underline">
         Jacuzzi & Steam Bath
       </Link>
+
+      <Link href="/spa-in-hazratganj-lucknow" className="block underline">
+  Spa Near Hazratganj
+</Link>
+
+<Link href="/spa-in-aliganj-lucknow" className="block underline">
+  Spa Near Aliganj
+</Link>
+
+<Link href="/spa-in-indira-nagar-lucknow" className="block underline">
+  Spa Near Indira Nagar
+</Link>
     </div>
+
+    <h2 className="font-serif text-3xl mt-16 mb-6">
+  Spa Services for Residents of Mahanagar
+</h2>
+
+<p className="leading-relaxed text-stone-700 mb-6">
+  Mahanagar is one of Lucknow&apos;s well-established residential
+  neighbourhoods. Many residents visit Relaxio Spa after work or on
+  weekends to enjoy professional wellness therapies in a peaceful
+  environment.
+</p>
+
+<p className="leading-relaxed text-stone-700 mb-8">
+  From stress relief to muscle recovery, our personalised massage
+  therapies help guests relax, refresh and rejuvenate in complete
+  comfort.
+</p>
+
+<h2 className="font-serif text-3xl mb-6">
+  How to Reach Relaxio Spa from Mahanagar
+</h2>
+
+<p className="leading-relaxed text-stone-700 mb-8">
+  Relaxio Spa is located in Vivek Khand 4, Gomti Nagar and is generally
+  15–20 minutes from Mahanagar via Nishatganj, Polytechnic Crossing or
+  Shaheed Path, depending on traffic.
+</p>
 
   </div>
 </section>

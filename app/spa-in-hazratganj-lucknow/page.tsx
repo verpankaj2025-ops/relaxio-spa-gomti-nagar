@@ -28,21 +28,23 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
     </h1>
 
     <p className="text-lg leading-relaxed text-stone-700 mb-8">
-      Relaxio Spa is a premium wellness destination conveniently located
-      near Hazratganj Lucknow. Guests from Hazratganj regularly visit
-      Relaxio Spa for professional massage therapies, luxury spa
-      experiences, private wellness rooms, and complete relaxation.
-    </p>
+  Relaxio Spa is a premium wellness destination in Gomti Nagar, easily
+  accessible from Hazratganj. Guests visiting from Hazratganj, Lalbagh,
+  Kaiserbagh and nearby commercial areas choose Relaxio Spa for premium
+  wellness therapies, private spa suites and a relaxing escape from the
+  busy city lifestyle.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Luxury Wellness Near Hazratganj
     </h2>
 
     <p className="leading-relaxed text-stone-700 mb-8">
-      Our spa offers Thai Massage, Balinese Massage, Deep Tissue Massage,
-      Couple Massage, Jacuzzi and Steam Bath facilities designed to help
-      guests relax, recover, and recharge in a peaceful environment.
-    </p>
+  Whether you are coming from Hazratganj for shopping, business meetings
+  or after office hours, Relaxio Spa offers a peaceful wellness experience
+  with Thai Massage, Balinese Massage, Deep Tissue Therapy, Couple Spa,
+  Jacuzzi and Steam Bath services designed to help you unwind and recharge.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Popular Services
@@ -61,12 +63,12 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
     </h2>
 
     <p className="leading-relaxed text-stone-700 mb-8">
-      Guests appreciate our hygienic facilities, professional therapists,
-      luxury ambience, convenient location, and premium wellness
-      experiences. Whether you are looking for relaxation after work or a
-      complete wellness session, Relaxio Spa provides a comfortable and
-      professional environment.
-    </p>
+  Many office executives, entrepreneurs, hotel guests and business
+  travellers visiting Hazratganj choose Relaxio Spa because of our
+  professional therapists, hygienic private rooms and premium wellness
+  environment. It is an ideal destination to relax after a busy working
+  day or a long shopping trip.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Explore Our Services
@@ -92,7 +94,46 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
       <Link href="/services/spa-facilities" className="block underline">
         Jacuzzi & Steam Bath
       </Link>
+
+      <Link href="/spa-in-aliganj-lucknow" className="block underline">
+  Spa Near Aliganj
+</Link>
+
+<Link href="/spa-in-chinhat-lucknow" className="block underline">
+  Spa Near Chinhat
+</Link>
+
+<Link href="/spa-in-mahanagar-lucknow" className="block underline">
+  Spa Near Mahanagar
+</Link>
     </div>
+
+    <h2 className="font-serif text-3xl mt-16 mb-6">
+  Spa Services for Visitors from Hazratganj
+</h2>
+
+<p className="leading-relaxed text-stone-700 mb-6">
+  Hazratganj is one of Lucknow&apos;s busiest commercial and shopping districts.
+  Many office professionals, entrepreneurs, hotel guests and visitors choose
+  Relaxio Spa after work or shopping to enjoy premium wellness therapies in
+  a calm and private environment.
+</p>
+
+<p className="leading-relaxed text-stone-700 mb-8">
+  Whether you are looking to reduce stress, relieve muscle fatigue or simply
+  unwind after a busy day, our experienced therapists provide personalised
+  spa treatments designed for complete relaxation.
+</p>
+
+<h2 className="font-serif text-3xl mb-6">
+  How to Reach Relaxio Spa from Hazratganj
+</h2>
+
+<p className="leading-relaxed text-stone-700 mb-8">
+  Relaxio Spa is located in Vivek Khand 4, Gomti Nagar and is approximately
+  20 minutes from Hazratganj. Visitors can conveniently reach us via Ashok
+  Marg, Vikramaditya Marg or Gomti Nagar Road depending on traffic.
+</p>
 
   </div>
 </section>

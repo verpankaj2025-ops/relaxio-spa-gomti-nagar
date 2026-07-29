@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
-    template: '%s'
-  },
+  default: "Best Spa in Gomti Nagar Lucknow | Relaxio Spa",
+  template: "%s | Relaxio Spa"
+},
 
   description: 'Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, private rooms, calming ambience, and professional massage experiences.',
 

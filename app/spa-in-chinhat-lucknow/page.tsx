@@ -76,21 +76,26 @@ return (
     </h1>
 
     <p className="text-lg leading-relaxed text-stone-700 mb-8">
-      Relaxio Spa is a premium wellness destination conveniently located
-      near Chinhat Lucknow. Guests from Chinhat regularly visit
-      Relaxio Spa for professional massage therapies, luxury spa
-      experiences, private wellness rooms, and complete relaxation.
-    </p>
+  Relaxio Spa is a premium wellness destination in Gomti Nagar, easily
+  accessible from Chinhat via Faizabad Road and Shaheed Path. Guests from
+  Chinhat, Matiyari, Dayal Residency, Summit Building and nearby
+  residential communities regularly visit our spa for Thai Massage,
+  Balinese Massage, Deep Tissue Therapy, Couple Spa experiences and
+  complete relaxation in a luxurious environment.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Luxury Wellness Near Chinhat
     </h2>
 
     <p className="leading-relaxed text-stone-700 mb-8">
-      Our spa offers Thai Massage, Balinese Massage, Deep Tissue Massage,
-      Couple Massage, Jacuzzi and Steam Bath facilities designed to help
-      guests relax, recover, and recharge in a peaceful environment.
-    </p>
+  Whether you are travelling from Chinhat, Matiyari, Summit Building,
+  Malhaur or nearby areas, Relaxio Spa provides a peaceful wellness
+  experience just a short drive away in Gomti Nagar. Our experienced
+  therapists offer Thai Massage, Balinese Massage, Deep Tissue Massage,
+  Couple Spa therapies, Jacuzzi and Steam Bath services designed to reduce
+  stress, improve circulation and help you relax completely.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Popular Services
@@ -109,12 +114,12 @@ return (
     </h2>
 
     <p className="leading-relaxed text-stone-700 mb-8">
-      Guests appreciate our hygienic facilities, professional therapists,
-      luxury ambience, convenient location, and premium wellness
-      experiences. Whether you are looking for relaxation after work or a
-      complete wellness session, Relaxio Spa provides a comfortable and
-      professional environment.
-    </p>
+  Residents of Chinhat choose Relaxio Spa because of our hygienic private
+  wellness rooms, experienced therapists and premium spa ambience. Many IT
+  professionals, business owners, families and couples visit us after work
+  or on weekends to enjoy a relaxing and rejuvenating wellness experience
+  away from everyday stress.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Explore Our Services
@@ -140,7 +145,29 @@ return (
       <Link href="/services/spa-facilities" className="block underline">
         Jacuzzi & Steam Bath
       </Link>
+
+      <Link href="/spa-in-aliganj-lucknow" className="block underline">
+  Spa Near Aliganj
+</Link>
+
+<Link href="/spa-in-indira-nagar-lucknow" className="block underline">
+  Spa Near Indira Nagar
+</Link>
+
+<Link href="/spa-near-faizabad-road-lucknow" className="block underline">
+  Spa Near Faizabad Road
+</Link>
     </div>
+
+    <h2 className="font-serif text-3xl mb-6">
+  How to Reach Relaxio Spa from Chinhat
+</h2>
+
+<p className="leading-relaxed text-stone-700 mb-8">
+  Relaxio Spa is located in Vivek Khand 4, Gomti Nagar and can be reached
+  from Chinhat in approximately 15–20 minutes via Faizabad Road or
+  Shaheed Path, depending on traffic conditions.
+</p>
 
   <h2 className="font-serif text-3xl mb-6 mt-12">
   Frequently Asked Questions
@@ -149,20 +176,19 @@ return (
 <div className="space-y-6">
   <div>
     <h3 className="font-semibold text-xl">
-      Which is the best spa near Chinhat Lucknow?
+      How far is Relaxio Spa from Chinhat?
     </h3>
     <p className="text-stone-700 mt-2">
-      Relaxio Spa offers Thai Massage, Balinese Massage, Deep Tissue Massage,
-      Couple Spa, Jacuzzi and Steam Bath facilities.
+      Relaxio Spa is approximately 15–20 minutes from Chinhat and is easily accessible through Faizabad Road and Shaheed Path.
     </p>
   </div>
 
   <div>
     <h3 className="font-semibold text-xl">
-      How far is Relaxio Spa from Chinhat?
+      Which massage is most popular among Chinhat visitors?
     </h3>
     <p className="text-stone-700 mt-2">
-      Relaxio Spa is easily accessible from Chinhat and surrounding areas.
+      Thai Massage, Deep Tissue Massage, Balinese Massage and Couple Spa sessions are among the most preferred wellness experiences for guests visiting from Chinhat.
     </p>
   </div>
 

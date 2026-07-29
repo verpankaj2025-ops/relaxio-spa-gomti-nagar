@@ -28,21 +28,25 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
     </h1>
 
     <p className="text-lg leading-relaxed text-stone-700 mb-8">
-      Relaxio Spa is a premium wellness destination conveniently located
-      near Indira Nagar Lucknow. Guests from Indira Nagar regularly visit
-      Relaxio Spa for professional massage therapies, luxury spa
-      experiences, private wellness rooms, and complete relaxation.
-    </p>
+  Relaxio Spa is a premium wellness destination in Gomti Nagar, easily
+  accessible from Indira Nagar. Guests from Munshipulia, Polytechnic,
+  Takrohi, Bhootnath Market and nearby residential communities regularly
+  visit Relaxio Spa for Thai Massage, Balinese Massage, Deep Tissue
+  Therapy and premium wellness experiences in a peaceful environment.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Luxury Wellness Near Indira Nagar
     </h2>
 
     <p className="leading-relaxed text-stone-700 mb-8">
-      Our spa offers Thai Massage, Balinese Massage, Deep Tissue Massage,
-      Couple Massage, Jacuzzi and Steam Bath facilities designed to help
-      guests relax, recover, and recharge in a peaceful environment.
-    </p>
+  Whether you are travelling from Munshipulia, Polytechnic, Takrohi or
+  Bhootnath Market, Relaxio Spa offers a relaxing wellness experience
+  just a short drive away in Gomti Nagar. Our experienced therapists
+  provide Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Spa,
+  Jacuzzi and Steam Bath services designed to relieve stress, improve
+  flexibility and support complete relaxation.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Popular Services
@@ -61,12 +65,12 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
     </h2>
 
     <p className="leading-relaxed text-stone-700 mb-8">
-      Guests appreciate our hygienic facilities, professional therapists,
-      luxury ambience, convenient location, and premium wellness
-      experiences. Whether you are looking for relaxation after work or a
-      complete wellness session, Relaxio Spa provides a comfortable and
-      professional environment.
-    </p>
+  Residents of Indira Nagar choose Relaxio Spa because of our hygienic
+  private wellness rooms, experienced therapists and premium ambience.
+  Families, professionals, entrepreneurs and couples visit us to relax
+  after work, recover from physical fatigue and enjoy a comfortable
+  wellness experience.
+</p>
 
     <h2 className="font-serif text-3xl mb-6">
       Explore Our Services
@@ -92,7 +96,46 @@ return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-a
       <Link href="/services/spa-facilities" className="block underline">
         Jacuzzi & Steam Bath
       </Link>
+
+      <Link href="/spa-in-chinhat-lucknow" className="block underline">
+  Spa Near Chinhat
+</Link>
+
+<Link href="/spa-in-aliganj-lucknow" className="block underline">
+  Spa Near Aliganj
+</Link>
+
+<Link href="/spa-in-gomti-nagar-extension-lucknow" className="block underline">
+  Spa Near Gomti Nagar Extension
+</Link>
     </div>
+
+    <h2 className="font-serif text-3xl mt-16 mb-6">
+  Spa Services for Residents of Indira Nagar
+</h2>
+
+<p className="leading-relaxed text-stone-700 mb-6">
+  Indira Nagar is one of Lucknow&apos;s largest residential neighbourhoods.
+  Many residents visit Relaxio Spa for professional massage therapies,
+  stress relief and premium wellness sessions in a clean and peaceful
+  environment.
+</p>
+
+<p className="leading-relaxed text-stone-700 mb-8">
+  Whether you need relief from long working hours, muscle fatigue or
+  everyday stress, our personalised wellness treatments are designed to
+  help you relax and rejuvenate.
+</p>
+
+<h2 className="font-serif text-3xl mb-6">
+  How to Reach Relaxio Spa from Indira Nagar
+</h2>
+
+<p className="leading-relaxed text-stone-700 mb-8">
+  Relaxio Spa is located in Vivek Khand 4, Gomti Nagar and can usually be
+  reached from Indira Nagar in around 15–20 minutes via Polytechnic
+  Crossing or Shaheed Path, depending on traffic conditions.
+</p>
 
   </div>
 </section>
