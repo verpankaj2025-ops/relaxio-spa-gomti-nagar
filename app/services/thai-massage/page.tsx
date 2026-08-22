@@ -71,7 +71,7 @@ export default function ThaiMassagePage() {
         title="Thai Massage in Gomti Nagar Lucknow"
         subtitle="Traditional stretching and pressure-based Thai therapy designed to improve flexibility, body recovery, and relaxation."
         image="/images/thai-massage-gomti-nagar-lucknow.avif"
-        alt="Relaxing Thai massage therapy at Relaxio Spa"
+        alt="Thai Massage in Gomti Nagar Lucknow at Relaxio Spa"
       />
 
       {/* Main Content */}
@@ -100,10 +100,10 @@ export default function ThaiMassagePage() {
             <div className="my-16 relative h-[350px] md:h-[450px] rounded-[32px] overflow-hidden shadow-lg">
               <Image
                 src="/images/thai-massage-gomti-nagar-lucknow-spa.avif"
-                alt="Relaxing Thai massage therapy at Relaxio Spa"
+                alt="Thai Massage in Gomti Nagar Lucknow at Relaxio Spa"
                 fill
                 sizes="(max-width: 768px) 100vw, 1200px"
-                quality={55}
+                quality={80}
                 className="object-cover brightness-95"
                 loading="lazy"
               />

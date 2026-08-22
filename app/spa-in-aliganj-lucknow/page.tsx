@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getLocationSchemas } from "@/lib/location-schema";
 
 export const metadata: Metadata = {
 title: "Best Spa Near Aliganj Lucknow | Relaxio Spa",
@@ -19,44 +20,32 @@ type: "website",
 },
 };
 
-const faqSchema = {
-"@context": "https://schema.org",
-"@type": "FAQPage",
-mainEntity: [
-{
-"@type": "Question",
-name: "How far is Relaxio Spa from Aliganj?",
-acceptedAnswer: {
-"@type": "Answer",
-text: "Relaxio Spa is conveniently located in Gomti Nagar and can be reached easily from Aliganj."
-}
-},
-{
-"@type": "Question",
-name: "Which massage is most popular among Aliganj visitors?",
-acceptedAnswer: {
-"@type": "Answer",
-text: "Thai Massage, Balinese Massage, Deep Tissue Massage and Couple Spa Experiences are among the most popular services."
-}
-},
-{
-"@type": "Question",
-name: "Do you provide private spa rooms?",
-acceptedAnswer: {
-"@type": "Answer",
-text: "Yes, Relaxio Spa offers clean and private wellness rooms."
-}
-},
-{
-"@type": "Question",
-name: "Is prior booking recommended?",
-acceptedAnswer: {
-"@type": "Answer",
-text: "Yes, advance booking is recommended, especially on weekends."
-}
-}
-]
-};
+const schemas = getLocationSchemas({
+  location: "Aliganj",
+  url: "https://relaxiospa.in/spa-in-aliganj-lucknow",
+  faq: [
+    {
+      question: "How far is Relaxio Spa from Aliganj?",
+      answer:
+        "Relaxio Spa is conveniently located in Gomti Nagar and can be reached easily from Aliganj.",
+    },
+    {
+      question: "Which massage is most popular among Aliganj visitors?",
+      answer:
+        "Thai Massage, Balinese Massage, Deep Tissue Massage and Couple Spa are among the most popular services.",
+    },
+    {
+      question: "Do you provide private spa rooms?",
+      answer:
+        "Yes, Relaxio Spa offers clean and private wellness rooms.",
+    },
+    {
+      question: "Is prior booking recommended?",
+      answer:
+        "Yes, advance booking is recommended, especially on weekends.",
+    },
+  ],
+});
 
 export default function SpaAliganjPage()
 {
@@ -65,11 +54,25 @@ export default function SpaAliganjPage()
 <>
 
   <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify(faqSchema),
-    }}
-  />
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(schemas.breadcrumb),
+  }}
+/>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(schemas.spa),
+  }}
+/>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(schemas.faqSchema),
+  }}
+/>
 
   <section className="py-24 bg-[#fdfbf7]">
  <div className="max-w-5xl mx-auto px-4">
@@ -199,17 +202,7 @@ export default function SpaAliganjPage()
       evening hours.
     </p>
   </div>
-</div>
-
-<div className="space-y-3"></div>
-<Link
-    href="/contact"
-    className="inline-block px-6 py-3 bg-[#d4af37] text-black rounded-lg"
-  >
-    Book Appointment
-  </Link>
-</div>
-
+  </div>
 
     <div className="space-y-3">
       <Link href="/services/thai-massage" className="block underline">
@@ -264,11 +257,17 @@ export default function SpaAliganjPage()
     relaxation services.
   </p>
 
-  
+  <Link
+    href="/contact"
+    className="inline-block px-6 py-3 bg-[#d4af37] text-black rounded-lg"
+  >
+    Book Appointment
+  </Link>
+</div>   {/* CTA */}
 
-  </div>
+</div>   {/* max-w-5xl */}
+
 </section>
 </>
 );
 }
-

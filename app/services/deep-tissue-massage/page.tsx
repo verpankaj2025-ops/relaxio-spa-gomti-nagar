@@ -77,7 +77,7 @@ export default function DeepTissueMassagePage() {
         title="Deep Tissue Massage in Gomti Nagar Lucknow"
         subtitle="Firm-pressure wellness therapy designed to release muscle tightness, improve mobility, and support body recovery."
         image="/images/deep-tissue-massage-gomti-nagar-lucknow.avif"
-        alt="Deep tissue wellness therapy at Relaxio Spa"
+        alt="Deep Tissue Massage Therapy in Gomti Nagar Lucknow at Relaxio Spa"
       />
 
       {/* Main Content */}
@@ -98,7 +98,7 @@ export default function DeepTissueMassagePage() {
               className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/deep-tissue-massage-gomti-nagar-lucknow-spa.avif"
-                alt="Deep tissue wellness therapy at Relaxio Spa"
+                alt="Deep Tissue Massage Therapy in Gomti Nagar Lucknow at Relaxio Spa"
                 fill
                 className="object-cover brightness-95"
                 sizes="(max-width: 768px) 100vw, 1200px"

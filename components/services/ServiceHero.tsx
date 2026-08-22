@@ -24,7 +24,7 @@ export default function ServiceHero({
           priority
           fetchPriority="high"
           sizes="100vw"
-          quality={40}
+          quality={80}
           className="object-cover object-[center_65%] scale-[1.02]"
         />
 

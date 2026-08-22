@@ -84,7 +84,7 @@ export default function SpaFacilitiesPage() {
         title="Jacuzzi & Steam Bath in Gomti Nagar Lucknow"
         subtitle="Relax your body and mind with premium Jacuzzi and Steam Bath sessions at Relaxio Spa."
         image="/images/jacuzzi-steam-bath-lucknow.avif"
-        alt="Luxury jacuzzi and steam bath experience at Relaxio Spa"
+        alt="Luxury Jacuzzi and Steam Bath Facilities in Gomti Nagar Lucknow at Relaxio Spa"
       />
 
       {/* MAIN CONTENT */}
@@ -140,7 +140,7 @@ export default function SpaFacilitiesPage() {
               <Image
 
                 src="/images/jacuzzi-steam-bath-lucknow.avif"
-                alt="Luxury jacuzzi and steam bath experience at Relaxio Spa"
+                alt="Luxury Jacuzzi and Steam Bath Facilities in Gomti Nagar Lucknow at Relaxio Spa"
                 fill
                 sizes="100vw"
 

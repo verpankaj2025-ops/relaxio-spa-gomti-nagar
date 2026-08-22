@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getLocationSchemas } from "@/lib/location-schema";
 
 export const metadata: Metadata = {
 title: "Best Spa in Indira Nagar Lucknow | Relaxio Spa",

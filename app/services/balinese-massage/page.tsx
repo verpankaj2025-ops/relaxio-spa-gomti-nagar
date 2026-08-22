@@ -70,7 +70,7 @@ export default function BalineseMassagePage() {
         title="Balinese Massage in Gomti Nagar Lucknow"
         subtitle="Aromatherapy-based wellness therapy designed to relax the body, calm the mind, and reduce everyday stress."
         image="/images/balinese-massage-gomti-nagar-lucknow.avif"
-        alt="Luxury Balinese massage therapy at Relaxio Spa"
+        alt="Luxury Balinese Massage in Gomti Nagar Lucknow at Relaxio Spa"
       />
 
       {/* Main Content */}
@@ -110,7 +110,7 @@ export default function BalineseMassagePage() {
 
               <Image
                 src="/images/balinese-massage-gomti-nagar-lucknow-spa.avif"
-                alt="Luxury Balinese massage therapy at Relaxio Spa"
+                alt="Luxury Balinese Massage in Gomti Nagar Lucknow at Relaxio Spa"
                 fill
                 sizes="(max-width: 768px) 100vw, 1200px"
                 className="object-cover brightness-95"

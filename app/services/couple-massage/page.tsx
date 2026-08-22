@@ -97,7 +97,7 @@ export default function CoupleMassagePage() {
   title="Couple Massage in Gomti Nagar Lucknow"
   subtitle="Relax together with private wellness therapies designed for comfort, peace, and shared relaxation."
   image="/images/couple-massage-lucknow.avif"
-  alt="Private couple massage experience at Relaxio Spa"
+  alt="Private Couple Massage Spa Experience in Gomti Nagar Lucknow at Relaxio Spa"
 />
 
       <section className="pt-20 pb-10 bg-[#fdfbf7] content-auto">
@@ -186,7 +186,7 @@ export default function CoupleMassagePage() {
   <div className="my-16 relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
     <Image
        src="/images/couple-massage-lucknow-spa.avif"
-       alt="Private couple massage experience at Relaxio Spa"
+       alt="Private Couple Massage Spa Experience in Gomti Nagar Lucknow at Relaxio Spa"
        fill
        sizes="(max-width:768px) 100vw, 1200px"
        className="object-cover brightness-95"

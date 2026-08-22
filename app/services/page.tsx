@@ -53,7 +53,7 @@ export default function ServicesPage() {
             <div className="relative w-full h-[280px] lg:h-[360px] overflow-hidden rounded-2xl">
               <Image 
                 src="/images/deep-tissue-massage-gomti-nagar-lucknow.avif"
-                alt="Deep tissue wellness therapy at Relaxio Spa"
+                alt="Deep Tissue Massage Therapy in Gomti Nagar Lucknow at Relaxio Spa"
                 fill
                 className="object-cover"
                 loading="lazy"
@@ -104,7 +104,7 @@ export default function ServicesPage() {
             <div className="relative w-full h-[280px] lg:h-[360px] overflow-hidden rounded-2xl">
          <Image 
            src="/images/balinese-massage-gomti-nagar-lucknow.avif"
-           alt="Luxury Balinese massage therapy at Relaxio Spa"
+           alt="Luxury Balinese Massage in Gomti Nagar Lucknow at Relaxio Spa"
            fill
            className="object-cover"
            loading="lazy"
@@ -117,7 +117,7 @@ export default function ServicesPage() {
             <div className="relative w-full h-[280px] lg:h-[360px] overflow-hidden rounded-2xl">
               <Image 
                  src="/images/thai-massage-gomti-nagar-lucknow.avif"
-                 alt="Relaxing Thai massage therapy at Relaxio Spa"
+                 alt="Thai Massage in Gomti Nagar Lucknow at Relaxio Spa"
                  fill
                  className="object-cover"
                  loading="lazy"
@@ -177,7 +177,7 @@ export default function ServicesPage() {
   <div className="relative w-full h-[280px] lg:h-[360px] overflow-hidden rounded-2xl">
     <Image
       src="/images/couple-massage-lucknow.avif"
-      alt="Private couple wellness experience at Relaxio Spa"
+      alt="Private Couple Massage Spa Experience in Gomti Nagar Lucknow at Relaxio Spa"
       fill
       className="object-cover"
       loading="lazy"
@@ -191,7 +191,7 @@ export default function ServicesPage() {
   <div className="relative w-full h-[280px] lg:h-[360px] overflow-hidden rounded-2xl">
     <Image
       src="/images/jacuzzi-steam-bath-lucknow.avif"
-      alt="Luxury jacuzzi and steam bath experience at Relaxio Spa"
+      alt="Luxury Jacuzzi and Steam Bath Facilities in Gomti Nagar Lucknow at Relaxio Spa"
       fill
       className="object-cover"
       loading="lazy"
