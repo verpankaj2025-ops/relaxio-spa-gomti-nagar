@@ -2,7 +2,7 @@ import { faqsData } from "@/lib/faqs";
 import ServiceHero from "@/components/services/ServiceHero";
 import Image from 'next/image';
 import Link from "next/link";
-import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
+import { getBreadcrumbSchema, getFAQSchema, getServiceSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
 import { IconCheckCircle } from '@/components/icons';
 import PricingSection from "@/components/services/PricingSection";
@@ -37,6 +37,15 @@ export default function ThaiMassagePage() {
 
   const faqs = faqsData.thai || [];
 
+  const serviceSchema = getServiceSchema({
+    name: "Thai Massage in Gomti Nagar Lucknow",
+    description:
+      "Professional Thai Massage therapy in Gomti Nagar Lucknow for flexibility improvement, stress relief and complete body relaxation.",
+    url: "https://relaxiospa.in/services/thai-massage",
+    image:
+      "https://relaxiospa.in/images/thai-massage-gomti-nagar-lucknow.avif",
+  });
+
   return (
     <>
       <script
@@ -63,6 +72,13 @@ export default function ThaiMassagePage() {
               "addressCountry": "IN"
             }
           })
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema)
         }}
       />
 

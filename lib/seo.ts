@@ -119,3 +119,43 @@ export function getWebsiteSchema() {
     }
   };
 }
+
+
+export function getServiceSchema({
+  name,
+  description,
+  url,
+  image,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  image?: string;
+}) {
+  const baseUrl = process.env.APP_URL || 'https://relaxiospa.in';
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": name,
+    "description": description,
+    "url": url,
+
+    ...(image && {
+      "image": image,
+    }),
+
+    "provider": {
+      "@type": "Spa",
+      "name": "Relaxio Spa",
+      "url": baseUrl
+    },
+
+    "areaServed": {
+      "@type": "City",
+      "name": "Lucknow"
+    },
+
+    "serviceType": name
+  };
+}
