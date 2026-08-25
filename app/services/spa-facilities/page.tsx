@@ -5,7 +5,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import FAQ from "@/components/FAQ";
 import { IconCheckCircle } from "@/components/icons";
-import { getBreadcrumbSchema, getFAQSchema } from "@/lib/seo";
+import { getBreadcrumbSchema, getFAQSchema, getServiceSchema } from "@/lib/seo";
 import PricingSection from "@/components/services/PricingSection";
 import ExploreMore from "@/components/services/ExploreMore";
 
@@ -62,6 +62,15 @@ export default function SpaFacilitiesPage() {
 
   const faqs = faqsData["spa-facilities"] || [];
 
+  const serviceSchema = getServiceSchema({
+    name: "Jacuzzi and Steam Bath in Gomti Nagar Lucknow",
+    description:
+      "Premium Jacuzzi and Steam Bath wellness experience in Gomti Nagar Lucknow for relaxation, stress relief, muscle recovery and complete wellness.",
+    url: "https://relaxiospa.in/services/spa-facilities",
+    image:
+      "https://relaxiospa.in/images/jacuzzi-steam-bath-lucknow.avif",
+  });
+
   return (
     <>
       <script
@@ -79,6 +88,13 @@ export default function SpaFacilitiesPage() {
           }}
         />
       )}
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
 
       <ServiceHero
         title="Jacuzzi & Steam Bath in Gomti Nagar Lucknow"
