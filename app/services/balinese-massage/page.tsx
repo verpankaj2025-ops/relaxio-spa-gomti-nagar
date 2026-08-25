@@ -2,7 +2,7 @@ import { faqsData } from "@/lib/faqs";
 import ServiceHero from "@/components/services/ServiceHero";
 import Image from 'next/image';
 import Link from "next/link";
-import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
+import { getBreadcrumbSchema, getFAQSchema, getServiceSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
 import { IconCheckCircle } from '@/components/icons';
 import PricingSection from "@/components/services/PricingSection";
@@ -36,6 +36,15 @@ export default function BalineseMassagePage() {
 
   const faqs = faqsData.balinese || [];
 
+  const serviceSchema = getServiceSchema({
+    name: "Balinese Massage in Gomti Nagar Lucknow",
+    description:
+      "Professional Balinese Massage therapy in Gomti Nagar Lucknow combining relaxation techniques, gentle stretching and wellness therapy.",
+    url: "https://relaxiospa.in/services/balinese-massage",
+    image:
+      "https://relaxiospa.in/images/balinese-massage-gomti-nagar-lucknow.avif",
+  });
+
   return (
     <>
       <script
@@ -62,6 +71,13 @@ export default function BalineseMassagePage() {
               "addressCountry": "IN"
             }
           })
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema)
         }}
       />
 
