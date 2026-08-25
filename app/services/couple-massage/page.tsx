@@ -2,7 +2,7 @@ import { faqsData } from "@/lib/faqs";
 import ServiceHero from "@/components/services/ServiceHero";
 import Image from "next/image";
 import Link from "next/link";
-import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
+import { getBreadcrumbSchema, getFAQSchema, getServiceSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
 import PricingSection from "@/components/services/PricingSection";
 import ExploreMore from "@/components/services/ExploreMore";
@@ -57,6 +57,15 @@ export default function CoupleMassagePage() {
 
   const faqs = faqsData["couple-massage"] || [];
 
+  const serviceSchema = getServiceSchema({
+    name: "Couple Massage Spa in Lucknow",
+    description:
+      "Private Couple Massage Spa experience in Lucknow with relaxing wellness therapies, comfortable private rooms and a premium spa environment.",
+    url: "https://relaxiospa.in/services/couple-massage",
+    image:
+      "https://relaxiospa.in/images/couple-massage-lucknow.avif",
+  });
+
   return (
     <>
       <script
@@ -93,6 +102,14 @@ export default function CoupleMassagePage() {
 />
       
       {/* HERO SECTION */}
+          <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema)
+        }}
+      />
+
+      {/* Hero Section */}
       <ServiceHero
   title="Couple Massage in Gomti Nagar Lucknow"
   subtitle="Relax together with private wellness therapies designed for comfort, peace, and shared relaxation."
