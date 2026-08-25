@@ -2,7 +2,7 @@ import { faqsData } from "@/lib/faqs";
 import ServiceHero from "@/components/services/ServiceHero";
 import Image from 'next/image';
 import Link from "next/link";
-import { getBreadcrumbSchema, getFAQSchema } from '@/lib/seo';
+import { getBreadcrumbSchema, getFAQSchema, getServiceSchema } from '@/lib/seo';
 import FAQ from "@/components/FAQ";
 import { IconCheckCircle } from '@/components/icons';
 import PricingSection from "@/components/services/PricingSection";
@@ -38,6 +38,15 @@ export default function DeepTissueMassagePage() {
 
   const faqs = faqsData["deep-tissue"] || [];
 
+  const serviceSchema = getServiceSchema({
+    name: "Deep Tissue Massage in Gomti Nagar Lucknow",
+    description:
+      "Professional Deep Tissue Massage therapy in Gomti Nagar Lucknow designed to relieve muscle tension, support recovery and promote full-body relaxation.",
+    url: "https://relaxiospa.in/services/deep-tissue-massage",
+    image:
+      "https://relaxiospa.in/images/deep-tissue-massage-gomti-nagar-lucknow.avif",
+  });
+
   return (
     <>
       <script
@@ -71,6 +80,13 @@ export default function DeepTissueMassagePage() {
     })
   }}
 />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema)
+        }}
+      />
 
       {/* Hero Section */}
       <ServiceHero
