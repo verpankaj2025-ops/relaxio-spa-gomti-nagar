@@ -11,7 +11,7 @@ export const revalidate = 3600;
 
 export const metadata = {
   title:
-"Couple Massage in Gomti Nagar Lucknow | Relaxio Spa",
+"Couple Massage in Gomti Nagar",
 
   description:
 "Experience Couple Massage in Gomti Nagar Lucknow at Relaxio Spa. Enjoy private spa rooms, relaxing wellness therapies, luxury ambience, and a peaceful couple spa experience.",
@@ -19,7 +19,7 @@ export const metadata = {
 
   openGraph: {
   title:
-  "Couple Massage in Gomti Nagar Lucknow | Relaxio Spa",
+  "Couple Massage in Gomti Nagar",
 
   description:
   "Experience Couple Massage in Gomti Nagar Lucknow at Relaxio Spa. Enjoy private spa rooms, relaxing wellness therapies, luxury ambience, and a peaceful couple spa experience.",

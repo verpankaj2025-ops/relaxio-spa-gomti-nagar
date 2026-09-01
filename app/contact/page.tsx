@@ -5,7 +5,7 @@ import { getBreadcrumbSchema } from '@/lib/seo';
 import { IconClock, IconMail, IconMapPin, IconPhone } from '@/components/icons';
 
 export const metadata: Metadata = {
-  title: 'Contact Relaxio Spa | Luxury Wellness Spa in Gomti Nagar Lucknow',
+  title: 'Contact Us | Luxury Spa Gomti Nagar',
   description:
 'Contact Relaxio Spa in Gomti Nagar Lucknow for bookings, spa appointments, massage therapies and wellness consultations.',
   
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     canonical: 'https://relaxiospa.in/contact',
   },
   openGraph: {
-  title: 'Contact Relaxio Spa | Luxury Wellness Spa in Gomti Nagar Lucknow',
+  title: 'Contact Us | Luxury Spa Gomti Nagar',
 
   description:
   'Reach out to Relaxio Spa in Gomti Nagar Lucknow for relaxing wellness sessions, booking assistance, and personalized spa experiences.',

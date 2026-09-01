@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 import { getFAQSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Relaxio Spa Blog | Wellness & Massage Guides in Gomti Nagar Lucknow",
+  title: "Wellness & Massage Blog",
 
   description:
 "Read spa, massage and wellness guides from Relaxio Spa in Gomti Nagar Lucknow. Learn relaxation and therapy benefits.",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      "Relaxio Spa Blog | Wellness & Massage Guides in Gomti Nagar Lucknow",
+      "Wellness & Massage Blog",
 
     description:
       "Discover wellness guides, Thai massage benefits, spa therapies, and relaxation tips from Relaxio Spa.",

@@ -10,14 +10,14 @@ import ExploreMore from "@/components/services/ExploreMore";
 
 
 export const metadata = {
-  title: 'Thai Massage in Gomti Nagar Lucknow',
+  title: 'Thai Massage in Gomti Nagar',
   description:
     'Experience authentic Thai massage therapy at Relaxio Spa in Gomti Nagar Lucknow with assisted stretching, pressure techniques, and deep relaxation.',
   alternates: {
     canonical: 'https://relaxiospa.in/services/thai-massage',
   },
   openGraph: {
-    title: 'Thai Massage in Gomti Nagar Lucknow | Relaxio Spa',
+    title: 'Thai Massage in Gomti Nagar',
     description:
       'Experience authentic Thai massage therapy with assisted stretching, deep relaxation, and professional wellness techniques at Relaxio Spa.',
     url: 'https://relaxiospa.in/services/thai-massage',

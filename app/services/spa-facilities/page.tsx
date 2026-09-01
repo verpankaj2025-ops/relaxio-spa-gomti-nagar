@@ -11,7 +11,7 @@ import ExploreMore from "@/components/services/ExploreMore";
 
 
 export const metadata: Metadata = {
-  title: "Luxury Jacuzzi & Steam Bath Experience | Relaxio Spa",
+  title: "Jacuzzi & Steam Bath in Gomti Nagar",
   description:
     "Experience Jacuzzi and Steam Bath in Gomti Nagar Lucknow at Relaxio Spa. Enjoy relaxation, stress relief, muscle recovery, and a luxury wellness experience.",
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Luxury Jacuzzi & Steam Bath Experience | Relaxio Spa",
+    title: "Jacuzzi & Steam Bath in Gomti Nagar",
 
     description:
       "Experience Jacuzzi and Steam Bath in Gomti Nagar Lucknow at Relaxio Spa. Enjoy relaxation, stress relief, muscle recovery, and a luxury wellness experience.",

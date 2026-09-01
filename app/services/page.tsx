@@ -5,7 +5,7 @@ import Link from 'next/link';
 import FAQ from "@/components/FAQ";
 
 export const metadata: Metadata = {
-  title: 'Luxury Spa Services in Gomti Nagar Lucknow | Relaxio Spa',
+  title: 'Luxury Spa Services in Lucknow',
   description:
 'Explore Thai massage, Balinese massage, deep tissue therapy, couple spa, jacuzzi and steam bath services in Gomti Nagar Lucknow.',
 
@@ -14,7 +14,7 @@ alternates: {
 },
 
 openGraph: {
-  title: 'Luxury Wellness Therapies | Relaxio Spa',
+  title: 'Luxury Spa Services in Lucknow',
   description:
     'Explore luxury wellness therapies at Relaxio Spa including Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Massage, Jacuzzi, and Steam Bath in Gomti Nagar Lucknow.',
   url: 'https://relaxiospa.in/services',

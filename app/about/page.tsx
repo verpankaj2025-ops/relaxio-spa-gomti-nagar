@@ -7,7 +7,7 @@ import FAQ from '@/components/FAQ';
 import { IconHeartHandshake, IconShieldCheck, IconSparkles } from '@/components/icons';
 
 export const metadata: Metadata = {
-  title: 'About Relaxio Spa | Luxury Wellness Spa in Gomti Nagar Lucknow',
+  title: 'About Us | Luxury Spa in Gomti Nagar',
   description:
 'Learn about Relaxio Spa, a trusted spa in Gomti Nagar Lucknow known for hygiene, privacy, professional therapists and wellness treatments.',
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: 'https://relaxiospa.in/about',
   },
   openGraph: {
-    title: 'About Relaxio Spa | Luxury Wellness Spa in Gomti Nagar Lucknow',
+    title: 'About Us | Luxury Spa in Gomti Nagar',
     description: 'Learn about Relaxio Spa, the premier luxury wellness destination in Gomti Nagar, Lucknow. Discover our commitment to hygiene, privacy, and expert therapy.',
     url: '/about',
     images: [

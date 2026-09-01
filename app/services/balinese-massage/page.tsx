@@ -9,14 +9,14 @@ import PricingSection from "@/components/services/PricingSection";
 import ExploreMore from "@/components/services/ExploreMore";
 
 export const metadata = {
-  title: 'Balinese Massage in Gomti Nagar Lucknow | Relaxio Spa',
+  title: 'Balinese Massage in Gomti Nagar',
   description:
     'Experience professional Balinese Massage in Gomti Nagar Lucknow at Relaxio Spa. Enjoy aromatherapy, stress relief, relaxation, and a luxury wellness experience.',
   alternates: {
     canonical: 'https://relaxiospa.in/services/balinese-massage',
   },
   openGraph: {
-    title: 'Balinese Massage in Gomti Nagar Lucknow | Relaxio Spa',
+    title: 'Balinese Massage in Gomti Nagar',
     description:
       'Experience professional Balinese Massage in Gomti Nagar Lucknow at Relaxio Spa. Enjoy aromatherapy, stress relief, relaxation, and a luxury wellness experience.',
     url: 'https://relaxiospa.in/services/balinese-massage',

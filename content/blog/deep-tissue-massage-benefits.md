@@ -1,5 +1,5 @@
 ---
-title: "Deep Tissue Massage Benefits in Lucknow for Stress Relief & Muscle Recovery"
+title: "Deep Tissue Massage Benefits in Lucknow"
 description: "Discover the benefits of deep tissue massage in Lucknow including muscle relaxation, stress relief, body recovery, and wellness therapy insights from Relaxio Spa Gomti Nagar."
 
 image: "/images/blog/deep-tissue-massage.avif"

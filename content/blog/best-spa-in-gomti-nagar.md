@@ -1,5 +1,5 @@
 ---
-title: "Best Spa in Gomti Nagar Lucknow for Luxury Wellness & Relaxation"
+title: "Best Spa in Gomti Nagar Lucknow"
 description: "Discover the best spa in Gomti Nagar Lucknow offering luxury wellness therapies, private spa rooms, couple spa sessions, and premium massage experiences at Relaxio Spa."
 
 image: "/images/blog/best-spa-gomti-nagar.avif"

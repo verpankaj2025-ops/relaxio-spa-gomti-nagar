@@ -11,14 +11,14 @@ import ExploreMore from "@/components/services/ExploreMore";
 
 
 export const metadata = {
-  title: 'Deep Tissue Massage in Gomti Nagar Lucknow | Relaxio Spa',
+  title: 'Deep Tissue Massage in Gomti Nagar',
   description:
     'Experience professional Deep Tissue Massage in Gomti Nagar Lucknow at Relaxio Spa. Reduce muscle tension, improve flexibility, support recovery, and enjoy expert wellness therapy.',
   alternates: {
     canonical: 'https://relaxiospa.in/services/deep-tissue-massage',
   },
   openGraph: {
-    title: 'Deep Tissue Wellness Therapy | Relaxio Spa',
+    title: 'Deep Tissue Massage in Gomti Nagar',
     description:
       'Experience deep tissue massage therapy designed to reduce muscle tension, improve flexibility, and support full-body recovery at Relaxio Spa.',
     url: 'https://relaxiospa.in/services/deep-tissue-massage',

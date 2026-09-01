@@ -1,5 +1,5 @@
 ---
-title: "Best Thai Massage Benefits in Lucknow for Stress Relief & Wellness"
+title: "Thai Massage Benefits in Lucknow"
 description: "Discover the best Thai massage benefits in Lucknow including stress relief, flexibility improvement, body relaxation, and wellness therapy insights from Relaxio Spa Gomti Nagar."
 
 image: "/images/blog/thai-massage.avif"
