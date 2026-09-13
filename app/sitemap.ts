@@ -1,167 +1,144 @@
-import { MetadataRoute } from 'next'
-import { getAllPosts } from '@/lib/blog'
+import fs from 'fs';
+import path from 'path';
+import type { MetadataRoute } from 'next';
+import { getAllPosts } from '@/lib/blog';
+
+const BASE_URL = 'https://relaxiospa.in';
+const BLOG_DIR = path.join(process.cwd(), 'content/blog');
+
+function getBlogLastModified(slug: string): Date | undefined {
+  try {
+    const filePath = path.join(BLOG_DIR, `${slug}.md`);
+    return fs.statSync(filePath).mtime;
+  } catch {
+    return undefined;
+  }
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const currentDate = new Date()
-
   const blogs = getAllPosts().map((post) => ({
-    url: `https://relaxiospa.in/blog/${post.slug}`,
-    lastModified: currentDate,
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: getBlogLastModified(post.slug),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
-  }))
+  }));
 
   return [
     {
-      url: 'https://relaxiospa.in',
-      lastModified: currentDate,
+      url: BASE_URL,
       changeFrequency: 'weekly',
       priority: 1,
     },
 
     {
-      url: 'https://relaxiospa.in/services',
-      lastModified: currentDate,
+      url: `${BASE_URL}/services`,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
 
-    // SERVICES
+    // SERVICE PAGES
     {
-      url: 'https://relaxiospa.in/services/thai-massage',
-      lastModified: currentDate,
+      url: `${BASE_URL}/services/thai-massage`,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-
     {
-      url: 'https://relaxiospa.in/services/balinese-massage',
-      lastModified: currentDate,
+      url: `${BASE_URL}/services/balinese-massage`,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-
     {
-      url: 'https://relaxiospa.in/services/deep-tissue-massage',
-      lastModified: currentDate,
+      url: `${BASE_URL}/services/deep-tissue-massage`,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-
     {
-      url: 'https://relaxiospa.in/services/couple-massage',
-      lastModified: currentDate,
+      url: `${BASE_URL}/services/couple-massage`,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-
     {
-      url: 'https://relaxiospa.in/services/spa-facilities',
-      lastModified: currentDate,
+      url: `${BASE_URL}/services/spa-facilities`,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
 
-    // OTHER PAGES
+    // CORE PAGES
     {
-      url: 'https://relaxiospa.in/about',
-      lastModified: currentDate,
+      url: `${BASE_URL}/about`,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
-
     {
-      url: 'https://relaxiospa.in/contact',
-      lastModified: currentDate,
+      url: `${BASE_URL}/contact`,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-
     {
-url: 'https://relaxiospa.in/spa-in-indira-nagar-lucknow',
-lastModified: currentDate,
-changeFrequency: 'weekly',
-priority: 0.8,
-},
-
-{
-url: 'https://relaxiospa.in/spa-in-aliganj-lucknow',
-lastModified: currentDate,
-changeFrequency: 'weekly',
-priority: 0.7,
-},
-
-{
-url: 'https://relaxiospa.in/spa-in-chinhat-lucknow',
-lastModified: currentDate,
-changeFrequency: 'weekly',
-priority: 0.7,
-},
-
-{
-url: 'https://relaxiospa.in/spa-in-hazratganj-lucknow',
-lastModified: currentDate,
-changeFrequency: 'weekly',
-priority: 0.7,
-},
-
-{
-url: 'https://relaxiospa.in/spa-in-mahanagar-lucknow',
-lastModified: currentDate,
-changeFrequency: 'weekly',
-priority: 0.7,
-},
-
-{
-url: 'https://relaxiospa.in/spa-in-gomti-nagar-extension-lucknow',
-lastModified: currentDate,
-changeFrequency: 'weekly',
-priority: 0.7,
-},
-
-{
-url: 'https://relaxiospa.in/spa-near-faizabad-road-lucknow',
-lastModified: currentDate,
-changeFrequency: 'weekly',
-priority: 0.7,
-},
-
-
-    {
-      url: 'https://relaxiospa.in/privacy-policy',
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.4,
-    },
-
-    {
-      url: 'https://relaxiospa.in/terms-of-service',
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.4,
-    },
-
-    {
-      url: 'https://relaxiospa.in/terms-and-conditions',
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.4,
-    },
-
-    {
-      url: 'https://relaxiospa.in/user-data-deletion',
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.4,
-    },
-
-    {
-      url: 'https://relaxiospa.in/blog',
-      lastModified: currentDate,
+      url: `${BASE_URL}/blog`,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
 
+    // LOCATION PAGES
+    {
+      url: `${BASE_URL}/spa-in-indira-nagar-lucknow`,
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/spa-in-aliganj-lucknow`,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/spa-in-chinhat-lucknow`,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/spa-in-hazratganj-lucknow`,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/spa-in-mahanagar-lucknow`,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/spa-in-gomti-nagar-extension-lucknow`,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/spa-near-faizabad-road-lucknow`,
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+
+    // LEGAL / USER-DATA PAGES
+    {
+      url: `${BASE_URL}/privacy-policy`,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+    {
+      url: `${BASE_URL}/terms-of-service`,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+    {
+      url: `${BASE_URL}/terms-and-conditions`,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+    {
+      url: `${BASE_URL}/user-data-deletion`,
+      changeFrequency: 'yearly',
+      priority: 0.2,
+    },
+
     ...blogs,
-  ]
+  ];
 }

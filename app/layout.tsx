@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
-import Script from "next/script";
+import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
@@ -7,7 +7,7 @@ import Footer from '@/components/layout/Footer';
 import WhatsAppWidget from '@/components/layout/WhatsAppWidget';
 import CallWidget from '@/components/layout/CallWidget';
 
-const SITE_URL = "https://relaxiospa.in";
+const SITE_URL = 'https://relaxiospa.in';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -25,9 +25,9 @@ const playfair = Playfair_Display({
   preload: true,
 });
 
-export const viewport = {
-  themeColor: "#d4af37",
-  width: "device-width",
+export const viewport: Viewport = {
+  themeColor: '#d4af37',
+  width: 'device-width',
   initialScale: 1,
 };
 
@@ -35,29 +35,30 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   icons: {
-    icon: "/favicon.ico",
+    icon: '/favicon.ico',
   },
 
   verification: {
-    google: "fqsDy4r5bvC7t2LFbPsXD_h6SqzwN4GMD6ihrS1sDog",
+    google: 'fqsDy4r5bvC7t2LFbPsXD_h6SqzwN4GMD6ihrS1sDog',
   },
 
   title: {
-  default: "Best Spa in Gomti Nagar Lucknow | Relaxio Spa",
-  template: "%s | Relaxio Spa"
-},
+    default: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
+    template: '%s | Relaxio Spa',
+  },
 
-  description: 'Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, private rooms, calming ambience, and professional massage experiences.',
+  description:
+    'Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering Thai, Balinese, Deep Tissue and Couple Massage, plus Jacuzzi and Steam Bath facilities.',
 
   keywords: [
-    'Luxury Wellness Spa Lucknow',
     'Spa in Gomti Nagar',
+    'Spa in Gomti Nagar Lucknow',
     'Thai Massage Lucknow',
-    'Balinese Massage',
-    'Deep Tissue Massage',
-    'Couple Massage Spa',
-    'Wellness Spa Lucknow',
-    'Relaxation Therapy',
+    'Balinese Massage Lucknow',
+    'Deep Tissue Massage Lucknow',
+    'Couple Massage Lucknow',
+    'Jacuzzi Lucknow',
+    'Steam Bath Lucknow',
   ],
 
   alternates: {
@@ -70,9 +71,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
 
@@ -81,33 +82,105 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: SITE_URL,
     siteName: 'Relaxio Spa',
-    title: 'Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa',
-    description: 'Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, private rooms, calming ambience, and professional massage experiences.',
+    title: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
+    description:
+      'Relaxio Spa offers Thai, Balinese, Deep Tissue and Couple Massage with Jacuzzi and Steam Bath facilities in Gomti Nagar Lucknow.',
     images: [
       {
-        url: 'https://relaxiospa.in/images/spa.avif',
+        url: `${SITE_URL}/images/spa.avif`,
         width: 1200,
         height: 630,
-        alt: 'Relaxio Spa Gomti Nagar Lucknow',
+        alt: 'Relaxio Spa in Gomti Nagar Lucknow',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa',
-    description: 'Relaxio Spa is a luxury wellness spa in Gomti Nagar Lucknow offering relaxing therapies, private rooms, calming ambience, and professional massage experiences.',
-    images: ['https://relaxiospa.in/images/spa.avif'],
+    title: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
+    description:
+      'Relaxio Spa offers Thai, Balinese, Deep Tissue and Couple Massage with Jacuzzi and Steam Bath facilities in Gomti Nagar Lucknow.',
+    images: [`${SITE_URL}/images/spa.avif`],
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Spa',
+      '@id': `${SITE_URL}/#spa`,
+      name: 'Relaxio Spa',
+      url: SITE_URL,
+      telephone: ['+917081891995', '+919455671995'],
+      priceRange: '₹2,499 - ₹6,499',
+      image: `${SITE_URL}/images/spa.avif`,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '2nd Floor, 4/526, Vivek Khand 4',
+        addressLocality: 'Lucknow',
+        addressRegion: 'Uttar Pradesh',
+        postalCode: '226010',
+        addressCountry: 'IN',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 26.8553677,
+        longitude: 80.9985092,
+      },
+      hasMap:
+        'https://www.google.com/maps/dir/?api=1&destination=26.8553677,80.9985092',
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: [
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+            'Sunday',
+          ],
+          opens: '11:00',
+          closes: '21:00',
+        },
+      ],
+      areaServed: [
+        { '@type': 'Place', name: 'Gomti Nagar' },
+        { '@type': 'Place', name: 'Lucknow' },
+        { '@type': 'Place', name: 'Vivek Khand' },
+        { '@type': 'Place', name: 'Indira Nagar' },
+        { '@type': 'Place', name: 'Patrakarpuram' },
+        { '@type': 'Place', name: 'Chinhat' },
+      ],
+      sameAs: [
+        'https://www.instagram.com/relaxio_spa_lko/',
+        'https://www.facebook.com/profile.php?id=61589844524555',
+      ],
+    },
+
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: 'Relaxio Spa',
+      inLanguage: 'en-IN',
+      publisher: {
+        '@id': `${SITE_URL}/#spa`,
+      },
+    },
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en-IN" className={`${inter.variable} ${playfair.variable}`}>
-
-<head>
-  <Script id="gtm" strategy="afterInteractive">
-    {`
+      <body className="font-sans bg-[#fdfbf7] text-stone-900 antialiased selection:bg-[#d4af37]/30">
+        <Script id="gtm" strategy="afterInteractive">
+          {`
 (function(w,d,s,l,i){
   w[l]=w[l]||[];
   w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
@@ -119,112 +192,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TZT2H3DC');
 `}
-  </Script>
-</head>
+        </Script>
 
-<body
-  className="font-sans bg-[#fdfbf7] text-stone-900 antialiased selection:bg-[#d4af37]/30"
-  suppressHydrationWarning
->
-
-     <noscript>
-  <iframe
-    src="https://www.googletagmanager.com/ns.html?id=GTM-TZT2H3DC"
-    height="0"
-    width="0"
-    style={{ display: "none", visibility: "hidden" }}
-  />
-</noscript>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TZT2H3DC"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+            title="Google Tag Manager"
+          />
+        </noscript>
 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Spa",
-              "@id": `${SITE_URL}/#spa`,
-              name: "Relaxio Spa",
-              url: SITE_URL,
-              telephone: [
-                "+917081891995",
-                "+919455671995"
-              ],
-              priceRange: "₹1499 - ₹8999",
-              image: `${SITE_URL}/images/luxury-spa-gomti-nagar-lucknow.avif`,
-
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "2nd Floor, 4/526, Vivek Khand 4",
-                addressLocality: "Lucknow",
-                addressRegion: "UP",
-                postalCode: "226010",
-                addressCountry: "IN"
-              },
-
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: 26.8553677,
-                longitude: 80.9985092
-              },
-              hasMap:
-                "https://www.google.com/maps/dir/?api=1&destination=26.8553677,80.9985092",
-
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-                  ],
-                  opens: "11:00",
-                  closes: "21:00"
-                }
-              ],
-
-              areaServed: [
-                { "@type": "Place", name: "Gomti Nagar" },
-                { "@type": "Place", name: "Lucknow" },
-                { "@type": "Place", name: "Vivek Khand" },
-                { "@type": "Place", name: "Indira Nagar" },
-                { "@type": "Place", name: "Patrakarpuram" },
-                { "@type": "Place", name: "Chinhut" },
-              ],
-
-              sameAs: [
-                "https://www.instagram.com/relaxio_spa_lko/",
-                "https://www.facebook.com/profile.php?id=61589844524555"
-              ],
-
-            })
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "@id": `${SITE_URL}/#website`,
-              url: SITE_URL,
-              name: "Relaxio Spa",
-
-              inLanguage: "en-IN",
-
-              about: {
-                "@id": `${SITE_URL}/#spa`
-              }
-            })
+            __html: JSON.stringify(structuredData),
           }}
         />
 
         <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
+
+        <main className="min-h-screen">{children}</main>
+
         <Footer />
         <WhatsAppWidget />
         <CallWidget />
-
       </body>
     </html>
   );
