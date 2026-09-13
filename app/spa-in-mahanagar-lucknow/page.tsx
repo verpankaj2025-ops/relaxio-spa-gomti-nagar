@@ -3,139 +3,284 @@ import Link from "next/link";
 import { getLocationSchemas } from "@/lib/location-schema";
 
 export const metadata: Metadata = {
-title: "Best Spa in Mahanagar Lucknow | Relaxio Spa",
-description:
-"Looking for a spa near Mahanagar Lucknow? Relaxio Spa offers Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Spa, Jacuzzi and Steam Bath wellness experiences.",
-alternates: {
-canonical: "https://relaxiospa.in/spa-in-mahanagar-lucknow",
-},
-openGraph: {
-title: "Best Spa in Mahanagar Lucknow | Relaxio Spa",
-description:
-"Premium wellness spa near Mahanagar Lucknow offering massage therapies, couple spa experiences and luxury relaxation services.",
-url: "https://relaxiospa.in/spa-in-mahanagar-lucknow",
-siteName: "Relaxio Spa",
-locale: "en_IN",
-type: "website",
-},
+  title: "Best Spa in Mahanagar Lucknow | Relaxio Spa",
+  description:
+    "Looking for a spa near Mahanagar Lucknow? Visit Relaxio Spa in Gomti Nagar for Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Massage, Jacuzzi and Steam Bath.",
+  alternates: {
+    canonical: "https://relaxiospa.in/spa-in-mahanagar-lucknow",
+  },
+  openGraph: {
+    title: "Best Spa in Mahanagar Lucknow | Relaxio Spa",
+    description:
+      "Premium spa and massage services near Mahanagar Lucknow, including Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Massage, Jacuzzi and Steam Bath.",
+    url: "https://relaxiospa.in/spa-in-mahanagar-lucknow",
+    siteName: "Relaxio Spa",
+    locale: "en_IN",
+    type: "website",
+  },
 };
 
+const schemas = getLocationSchemas({
+  location: "Mahanagar",
+  url: "https://relaxiospa.in/spa-in-mahanagar-lucknow",
+  faq: [
+    {
+      question: "Is Relaxio Spa near Mahanagar Lucknow?",
+      answer:
+        "Yes. Relaxio Spa is located in Vivek Khand 4, Gomti Nagar and is accessible from Mahanagar by road, with travel time varying according to traffic.",
+    },
+    {
+      question: "Which spa services are available near Mahanagar?",
+      answer:
+        "Relaxio Spa offers Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Massage, Jacuzzi and Steam Bath wellness services.",
+    },
+    {
+      question: "Where is Relaxio Spa located?",
+      answer:
+        "Relaxio Spa is located at 2nd Floor, 4/526, Vivek Khand 4, Gomti Nagar, Lucknow, Uttar Pradesh 226010.",
+    },
+    {
+      question: "Can I book a spa session in advance?",
+      answer:
+        "Yes. Advance booking is recommended, especially during evenings and weekends.",
+    },
+  ],
+});
+
 export default function SpaMahanagarPage() {
-return ( <section className="py-24 bg-[#fdfbf7]"> <div className="max-w-5xl mx-auto px-4">
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schemas.breadcrumb),
+        }}
+      />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schemas.spa),
+        }}
+      />
 
-    <h1 className="font-serif text-4xl md:text-6xl mb-8">
-      Best Spa in Mahanagar Lucknow
-    </h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schemas.faqSchema),
+        }}
+      />
 
-    <p className="text-lg leading-relaxed text-stone-700 mb-8">
-      Relaxio Spa is a premium wellness destination conveniently located
-      near Mahanagar Lucknow. Guests from Mahanagar regularly visit
-      Relaxio Spa for professional massage therapies, luxury spa
-      experiences, private wellness rooms, and complete relaxation.
-    </p>
+      <section className="py-24 bg-[#fdfbf7]">
+        <div className="max-w-5xl mx-auto px-4">
+          <h1 className="font-serif text-4xl md:text-6xl mb-8">
+            Best Spa in Mahanagar Lucknow
+          </h1>
 
-    <h2 className="font-serif text-3xl mb-6">
-      Luxury Wellness Near Mahanagar
-    </h2>
+          <p className="text-lg leading-relaxed text-stone-700 mb-8">
+            Looking for a spa near Mahanagar Lucknow? Relaxio Spa is located
+            in Vivek Khand 4, Gomti Nagar and welcomes guests from Mahanagar,
+            Nishatganj, Badshahnagar, IT Crossing, Mahanagar Market and nearby
+            areas. Services include Thai Massage, Balinese Massage, Deep Tissue
+            Massage, Couple Massage, Jacuzzi and Steam Bath.
+          </p>
 
-    <p className="leading-relaxed text-stone-700 mb-8">
-  Whether you are travelling from Nishatganj, Badshahnagar, IT Crossing
-  or Mahanagar Market, Relaxio Spa offers premium Thai Massage,
-  Balinese Massage, Deep Tissue Therapy, Couple Spa, Jacuzzi and Steam
-  Bath services in a relaxing and hygienic environment.
-</p>
+          <h2 className="font-serif text-3xl mb-6">
+            Luxury Spa Near Mahanagar
+          </h2>
 
-    <h2 className="font-serif text-3xl mb-6">
-      Popular Services
-    </h2>
+          <p className="leading-relaxed text-stone-700 mb-8">
+            Guests travelling from Mahanagar and nearby Lucknow areas can choose
+            from professional massage therapies and premium spa facilities in a
+            calm environment in Gomti Nagar. Your choice can depend on the
+            preferred pressure, session duration and wellness goal.
+          </p>
 
-    <ul className="space-y-3 mb-10">
-      <li>✓ Thai Massage</li>
-      <li>✓ Balinese Massage</li>
-      <li>✓ Deep Tissue Massage</li>
-      <li>✓ Couple Massage</li>
-      <li>✓ Jacuzzi & Steam Bath</li>
-    </ul>
+          <h2 className="font-serif text-3xl mb-6">
+            Popular Spa Services Near Mahanagar
+          </h2>
 
-    <h2 className="font-serif text-3xl mb-6">
-      Why Guests from Mahanagar Choose Relaxio Spa
-    </h2>
+          <ul className="space-y-3 mb-10">
+            <li>✓ Thai Massage in Gomti Nagar Lucknow</li>
+            <li>✓ Balinese Massage in Gomti Nagar Lucknow</li>
+            <li>✓ Deep Tissue Massage in Gomti Nagar Lucknow</li>
+            <li>✓ Couple Massage in Gomti Nagar Lucknow</li>
+            <li>✓ Jacuzzi &amp; Steam Bath in Gomti Nagar Lucknow</li>
+          </ul>
 
-    <p className="leading-relaxed text-stone-700 mb-8">
-  Professionals, families and couples from Mahanagar choose Relaxio Spa
-  because of our experienced therapists, clean private wellness rooms
-  and premium ambience. Our therapies are designed to help reduce
-  stress, improve relaxation and promote overall wellbeing.
-</p>
+          <h2 className="font-serif text-3xl mb-6">
+            Why Guests from Mahanagar Choose Relaxio Spa
+          </h2>
 
-    <h2 className="font-serif text-3xl mb-6">
-      Explore Our Services
-    </h2>
+          <p className="leading-relaxed text-stone-700 mb-8">
+            Relaxio Spa offers professional therapists, private wellness rooms,
+            hygienic facilities and a calm ambience. Guests can choose from
+            multiple massage and wellness options for relaxation, physical
+            comfort and quality personal time.
+          </p>
 
-    <div className="space-y-3">
-      <Link href="/services/thai-massage" className="block underline">
-        Thai Massage
-      </Link>
+          <h2 className="font-serif text-3xl mb-6">
+            Spa Services for Mahanagar Residents
+          </h2>
 
-      <Link href="/services/balinese-massage" className="block underline">
-        Balinese Massage
-      </Link>
+          <p className="leading-relaxed text-stone-700 mb-6">
+            Mahanagar is an established residential and commercial area of
+            Lucknow. Guests often look for convenient wellness options after
+            work, exercise, travel or busy daily routines.
+          </p>
 
-      <Link href="/services/deep-tissue-massage" className="block underline">
-        Deep Tissue Massage
-      </Link>
+          <p className="leading-relaxed text-stone-700 mb-8">
+            Relaxio Spa provides multiple session types so guests can select a
+            treatment according to their preferred pressure, duration and
+            overall wellness goals.
+          </p>
 
-      <Link href="/services/couple-massage" className="block underline">
-        Couple Massage
-      </Link>
+          <h2 className="font-serif text-3xl mb-6">
+            How to Reach Relaxio Spa from Mahanagar
+          </h2>
 
-      <Link href="/services/spa-facilities" className="block underline">
-        Jacuzzi & Steam Bath
-      </Link>
+          <p className="leading-relaxed text-stone-700 mb-8">
+            Relaxio Spa is located at 2nd Floor, 4/526, Vivek Khand 4, Gomti
+            Nagar, Lucknow. Travel time from Mahanagar varies with traffic and
+            route conditions, so checking current navigation before your visit
+            is recommended.
+          </p>
 
-      <Link href="/spa-in-hazratganj-lucknow" className="block underline">
-  Spa Near Hazratganj
-</Link>
+          <h2 className="font-serif text-3xl mb-6">
+            Explore Spa &amp; Massage Services
+          </h2>
 
-<Link href="/spa-in-aliganj-lucknow" className="block underline">
-  Spa Near Aliganj
-</Link>
+          <div className="space-y-3 mb-12">
+            <Link href="/services/thai-massage" className="block underline">
+              Thai Massage in Gomti Nagar Lucknow
+            </Link>
 
-<Link href="/spa-in-indira-nagar-lucknow" className="block underline">
-  Spa Near Indira Nagar
-</Link>
-    </div>
+            <Link href="/services/balinese-massage" className="block underline">
+              Balinese Massage in Gomti Nagar Lucknow
+            </Link>
 
-    <h2 className="font-serif text-3xl mt-16 mb-6">
-  Spa Services for Residents of Mahanagar
-</h2>
+            <Link
+              href="/services/deep-tissue-massage"
+              className="block underline"
+            >
+              Deep Tissue Massage in Gomti Nagar Lucknow
+            </Link>
 
-<p className="leading-relaxed text-stone-700 mb-6">
-  Mahanagar is one of Lucknow&apos;s well-established residential
-  neighbourhoods. Many residents visit Relaxio Spa after work or on
-  weekends to enjoy professional wellness therapies in a peaceful
-  environment.
-</p>
+            <Link href="/services/couple-massage" className="block underline">
+              Couple Massage in Gomti Nagar Lucknow
+            </Link>
 
-<p className="leading-relaxed text-stone-700 mb-8">
-  From stress relief to muscle recovery, our personalised massage
-  therapies help guests relax, refresh and rejuvenate in complete
-  comfort.
-</p>
+            <Link
+              href="/services/spa-facilities"
+              className="block underline"
+            >
+              Jacuzzi &amp; Steam Bath in Gomti Nagar Lucknow
+            </Link>
 
-<h2 className="font-serif text-3xl mb-6">
-  How to Reach Relaxio Spa from Mahanagar
-</h2>
+            <Link href="/services" className="block underline">
+              All Spa Services in Gomti Nagar Lucknow
+            </Link>
+          </div>
 
-<p className="leading-relaxed text-stone-700 mb-8">
-  Relaxio Spa is located in Vivek Khand 4, Gomti Nagar and is generally
-  15–20 minutes from Mahanagar via Nishatganj, Polytechnic Crossing or
-  Shaheed Path, depending on traffic.
-</p>
+          <h2 className="font-serif text-3xl mb-6">
+            Other Nearby Spa Areas
+          </h2>
 
-  </div>
-</section>
+          <div className="space-y-3 mb-12">
+            <Link
+              href="/spa-in-hazratganj-lucknow"
+              className="block underline"
+            >
+              Spa Near Hazratganj Lucknow
+            </Link>
 
-);
+            <Link
+              href="/spa-in-aliganj-lucknow"
+              className="block underline"
+            >
+              Spa Near Aliganj Lucknow
+            </Link>
+
+            <Link
+              href="/spa-in-indira-nagar-lucknow"
+              className="block underline"
+            >
+              Spa Near Indira Nagar Lucknow
+            </Link>
+
+            <Link href="/spa-in-chinhat-lucknow" className="block underline">
+              Spa Near Chinhat Lucknow
+            </Link>
+          </div>
+
+          <h2 className="font-serif text-3xl mb-6">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-6 mb-12">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                Is Relaxio Spa near Mahanagar Lucknow?
+              </h3>
+              <p className="text-stone-700">
+                Yes. Relaxio Spa is located in Vivek Khand 4, Gomti Nagar and
+                is accessible from Mahanagar by road, with travel time varying
+                according to traffic.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                Which spa services are available near Mahanagar?
+              </h3>
+              <p className="text-stone-700">
+                Relaxio Spa offers Thai Massage, Balinese Massage, Deep Tissue
+                Massage, Couple Massage, Jacuzzi and Steam Bath wellness
+                services.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                Where is Relaxio Spa located?
+              </h3>
+              <p className="text-stone-700">
+                Relaxio Spa is located at 2nd Floor, 4/526, Vivek Khand 4,
+                Gomti Nagar, Lucknow, Uttar Pradesh 226010.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                Can I book a spa session in advance?
+              </h3>
+              <p className="text-stone-700">
+                Yes. Advance booking is recommended, especially during evenings
+                and weekends.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-stone-100 rounded-2xl p-8">
+            <h2 className="font-serif text-3xl mb-4">
+              Book Your Wellness Session
+            </h2>
+
+            <p className="text-stone-700 mb-4">
+              Looking for a spa near Mahanagar Lucknow? Contact Relaxio Spa to
+              check current availability and book your preferred wellness
+              therapy.
+            </p>
+
+            <Link
+              href="/contact"
+              className="inline-block px-6 py-3 bg-[#d4af37] text-black rounded-lg"
+            >
+              Book Appointment
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }

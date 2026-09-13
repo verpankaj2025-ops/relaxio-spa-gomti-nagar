@@ -23,16 +23,16 @@ import { faqsData } from '@/lib/faqs';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa',
+  title: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
   description:
-    'Best spa in Gomti Nagar Lucknow offering Thai massage, Balinese massage, deep tissue therapy, couple spa, jacuzzi and wellness treatments.',
+    'Looking for a spa in Gomti Nagar Lucknow? Relaxio Spa offers Thai, Balinese, deep tissue and couple massage, plus Jacuzzi & steam bath in private wellness rooms.',
   alternates: {
     canonical: 'https://relaxiospa.in',
   },
   openGraph: {
-    title: 'Luxury Wellness Spa in Gomti Nagar Lucknow | Relaxio Spa',
+    title: 'Best Spa in Gomti Nagar Lucknow | Relaxio Spa',
     description:
-      'Experience luxury wellness and relaxing spa therapies at Relaxio Spa in Gomti Nagar Lucknow with private rooms and professional therapists.',
+      'Relaxio Spa in Gomti Nagar Lucknow offers Thai, Balinese, deep tissue and couple massage, plus Jacuzzi & steam bath with private wellness rooms.',
     url: 'https://relaxiospa.in',
     siteName: 'Relaxio Spa',
     images: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: 'https://relaxiospa.in/images/luxury-spa-gomti-nagar-lucknow.avif',
         width: 1200,
         height: 630,
-        alt: 'Relaxio Spa Gomti Nagar Lucknow',
+        alt: 'Relaxio Spa - Best Spa in Gomti Nagar Lucknow',
       },
     ],
     locale: 'en_IN',
@@ -160,11 +160,11 @@ export default function Home() {
       <section className="py-16 bg-[#fcfaf6] border-t border-stone-100 content-auto">
         <div className="max-w-5xl mx-auto px-6 py-10 bg-white border border-stone-200/70 rounded-[36px] shadow-sm">
           <h2 className="text-3xl md:text-4xl font-serif text-stone-900 mb-6 text-center">
-            Explore Premium Spa Services in Gomti Nagar Lucknow
+            Spa in Gomti Nagar Lucknow — Massage & Wellness Services
           </h2>
           <p className="text-stone-600 text-center max-w-2xl mx-auto mb-12 leading-relaxed">
-            Relaxio Spa offers professional wellness therapies including Thai massage, Balinese massage, deep tissue
-            massage, couple spa therapies, steam bath, and luxury relaxation experiences in Gomti Nagar Lucknow.
+            Relaxio Spa is a premium wellness destination in Gomti Nagar Lucknow offering Thai Massage, Balinese Massage,
+            Deep Tissue Massage, Couple Massage, Jacuzzi and Steam Bath in a calm, private setting.
           </p>
           <nav className="flex max-w-4xl mx-auto flex-wrap justify-center gap-3 sm:gap-4 pt-2" aria-label="Spa services">
             {seoPillLinks.map((item) => (
@@ -185,7 +185,7 @@ export default function Home() {
               prefetch={false}
               className="font-medium text-amber-800 underline decoration-amber-700/50 underline-offset-4"
             >
-              Explore all spa services in Gomti Nagar Lucknow
+              Explore all spa services and massage treatments in Gomti Nagar
             </Link>
             .
           </p>
@@ -197,17 +197,16 @@ export default function Home() {
       <section className="py-16 bg-[#fcfaf6] border-y border-stone-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          ```
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-serif text-stone-900 mb-4">
               Areas We Serve Across Lucknow
             </h2>
 
             <p className="text-stone-600 max-w-3xl mx-auto">
-              Relaxio Spa welcomes guests from Gomti Nagar, Indira Nagar,
-              Chinhat, Hazratganj, Mahanagar, Faizabad Road and nearby areas
-              looking for premium wellness experiences and professional
-              massage therapies.
+              Relaxio Spa is based in Gomti Nagar, Lucknow and serves guests
+              from Indira Nagar, Chinhat, Hazratganj, Mahanagar, Faizabad Road
+              and nearby areas looking for professional massage and wellness
+              experiences.
             </p>
           </div>
 
@@ -252,14 +251,14 @@ export default function Home() {
               href="/spa-in-gomti-nagar-extension-lucknow"
               className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
             >
-              Spa in Gomti Nagar Extension
+              Spa in Gomti Nagar Extension Lucknow
             </Link>
 
             <Link
               href="/spa-near-faizabad-road-lucknow"
               className="px-5 py-3 rounded-full border border-stone-200 hover:border-amber-600 hover:text-amber-700"
             >
-              Spa Near Faizabad Road
+              Spa Near Faizabad Road Lucknow
             </Link>
 
           </div>
@@ -277,7 +276,7 @@ export default function Home() {
           </h2>
           <div className="w-20 h-[2px] bg-[#d4af37] mx-auto mb-8" />
           <p className="text-stone-600 max-w-3xl mx-auto leading-relaxed text-base md:text-lg font-light mb-16">
-            Relaxio Spa is one of the most trusted spa destinations in Gomti Nagar Lucknow, offering professional massage therapies, private wellness rooms, premium spa experiences and complete relaxation treatments for individuals and couples.
+            Relaxio Spa is a premium wellness spa in Gomti Nagar Lucknow offering professional massage therapies, private wellness rooms, couple spa experiences and relaxing wellness treatments for individuals and couples.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -354,7 +353,7 @@ export default function Home() {
               <div className="w-20 h-[2px] bg-[#d4af37] mx-auto mb-10" />
               <div className="max-w-3xl mx-auto space-y-7 text-stone-600 leading-relaxed text-[17px] md:text-lg font-light">
                 <p>
-                  Relaxio Spa is recognized as one of the best spa destinations in Gomti Nagar Lucknow, offering Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Spa experiences, Jacuzzi sessions and wellness therapies designed for complete relaxation and rejuvenation.
+                  Relaxio Spa offers Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Massage, Jacuzzi and Steam Bath in Gomti Nagar Lucknow, with private wellness rooms and a calm environment designed for relaxation and rejuvenation.
                 </p>
                 <p>
                   Whether you are looking for a body massage in Lucknow, a relaxing spa session, or a premium wellness experience, our professional therapists provide personalized treatments focused on stress relief, relaxation and overall well-being.
@@ -408,7 +407,7 @@ export default function Home() {
             </Link>
 
             <Link href="/services/balinese-massage">
-              Balinese Massage in Lucknow
+              Balinese Massage in Gomti Nagar Lucknow
             </Link>
 
             <Link href="/services/deep-tissue-massage">
@@ -416,7 +415,7 @@ export default function Home() {
             </Link>
 
             <Link href="/services/couple-massage">
-              Couple Massage in Lucknow
+              Couple Massage in Gomti Nagar Lucknow
             </Link>
 
           </div>

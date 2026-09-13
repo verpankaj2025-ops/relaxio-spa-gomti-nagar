@@ -1,3 +1,5 @@
+const SITE_URL = "https://relaxiospa.in";
+
 export function getLocationSchemas({
   location,
   url,
@@ -18,13 +20,13 @@ export function getLocationSchemas({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://relaxiospa.in",
+        item: SITE_URL,
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Locations",
-        item: "https://relaxiospa.in/services",
+        name: "Spa Services",
+        item: `${SITE_URL}/services`,
       },
       {
         "@type": "ListItem",
@@ -38,19 +40,49 @@ export function getLocationSchemas({
   const spa = {
     "@context": "https://schema.org",
     "@type": "Spa",
+    "@id": `${SITE_URL}/#spa`,
     name: "Relaxio Spa",
-    url: "https://relaxiospa.in",
-    image: "https://relaxiospa.in/og-image.jpg",
-    telephone: "+91-XXXXXXXXXX",
+    url: SITE_URL,
+    image: `${SITE_URL}/images/luxury-spa-gomti-nagar-lucknow.avif`,
+    telephone: ["+917081891995", "+919455671995"],
+    priceRange: "₹1499 - ₹8999",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Vivek Khand 4",
-      addressLocality: "Gomti Nagar",
-      addressRegion: "Uttar Pradesh",
+      streetAddress: "2nd Floor, 4/526, Vivek Khand 4",
+      addressLocality: "Lucknow",
+      addressRegion: "UP",
       postalCode: "226010",
       addressCountry: "IN",
     },
-    areaServed: location,
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 26.8553677,
+      longitude: 80.9985092,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "11:00",
+        closes: "21:00",
+      },
+    ],
+    areaServed: {
+      "@type": "Place",
+      name: location,
+    },
+    sameAs: [
+      "https://www.instagram.com/relaxio_spa_lko/",
+      "https://www.facebook.com/profile.php?id=61589844524555",
+    ],
   };
 
   const faqSchema = {

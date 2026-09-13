@@ -5,7 +5,7 @@ import Link from 'next/link';
 import FAQ from "@/components/FAQ";
 
 export const metadata: Metadata = {
-  title: 'Luxury Spa Services in Lucknow',
+  title: 'Spa Services in Gomti Nagar Lucknow | Relaxio Spa',
   description:
 'Explore Thai massage, Balinese massage, deep tissue therapy, couple spa, jacuzzi and steam bath services in Gomti Nagar Lucknow.',
 
@@ -14,7 +14,7 @@ alternates: {
 },
 
 openGraph: {
-  title: 'Luxury Spa Services in Lucknow',
+  title: 'Spa Services in Gomti Nagar Lucknow | Relaxio Spa',
   description:
     'Explore luxury wellness therapies at Relaxio Spa including Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Massage, Jacuzzi, and Steam Bath in Gomti Nagar Lucknow.',
   url: 'https://relaxiospa.in/services',
@@ -38,11 +38,11 @@ export default function ServicesPage() {
   <div className="w-16 h-px bg-[#d4af37] mx-auto mb-5 opacity-80" />
 
   <h1 className="text-3xl sm:text-3xl md:text-4xl font-serif text-stone-900 mb-4 leading-[1.08] tracking-[-0.02em]">
-    Our Premium Therapies
+    Spa Services in Gomti Nagar Lucknow
   </h1>
 
   <p className="text-stone-600 text-sm sm:text-base max-w-2xl mx-auto font-light leading-relaxed">
-    Discover luxury wellness therapies designed for relaxation, body recovery, and premium spa experiences in Gomti Nagar Lucknow.
+    Explore professional spa services in Gomti Nagar Lucknow, including Thai Massage, Balinese Massage, Deep Tissue Massage, Couple Massage, Jacuzzi and Steam Bath.
   </p>
 
 </div>
@@ -62,7 +62,7 @@ export default function ServicesPage() {
             <div>
               <h2 className="text-2xl md:text-3xl font-serif text-stone-900 mb-4">Deep Tissue Massage</h2>
               <p className="text-stone-600 mb-6 font-light leading-relaxed">
-                Designed to relieve severe tension in the muscle and the connective tissue or fascia. This type of massage focuses on the muscles located below the surface of the top muscles. Perfect for individuals who experience consistent pain, are involved in heavy physical activity, or have sustained physical injury.
+                Our Deep Tissue Massage in Gomti Nagar Lucknow is designed to relieve muscle tension and support body relaxation. This type of massage focuses on the muscles located below the surface of the top muscles. Perfect for individuals who experience consistent pain, are involved in heavy physical activity, or have sustained physical injury.
               </p>
               <ul className="space-y-3 mb-8 font-light text-stone-700">
                 <li>✓ Relieves chronic muscle tension</li>
@@ -71,7 +71,7 @@ export default function ServicesPage() {
                 <li>✓ Rehabilitates injured muscles</li>
               </ul>
               <Link href="/services/deep-tissue-massage" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-amber-900 hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md">
-                <span>Explore Therapy</span>
+                <span>View Massage Service</span>
 
 <span className="group-hover:translate-x-1 transition-transform duration-200">
   →
@@ -85,7 +85,7 @@ export default function ServicesPage() {
             <div>
               <h2 className="text-2xl md:text-3xl font-serif text-stone-900 mb-4">Balinese Massage</h2>
               <p className="text-stone-600 mb-6 font-light leading-relaxed">
-                A full-body, deep-tissue, holistic treatment. Balinese massage uses a combination of gentle stretches, acupressure, reflexology, and aromatherapy to stimulate the flow of blood, oxygen, and &quot;qi&quot; (energy) around your body, bringing a sense of wellbeing, calm, and deep relaxation.
+                Our Balinese Massage in Gomti Nagar Lucknow is a full-body, deep-tissue wellness treatment. Balinese massage uses a combination of gentle stretches, acupressure, reflexology, and aromatherapy to stimulate the flow of blood, oxygen, and &quot;qi&quot; (energy) around your body, bringing a sense of wellbeing, calm, and deep relaxation.
               </p>
               <ul className="space-y-3 mb-8 font-light text-stone-700">
                 <li>✓ Deep relaxation and stress relief</li>
@@ -94,7 +94,7 @@ export default function ServicesPage() {
                 <li>✓ Boosts mood with aromatherapy</li>
               </ul>
               <Link href="/services/balinese-massage" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-amber-900 hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md">
-                <span>Explore Therapy</span>
+                <span>View Massage Service</span>
 
 <span className="group-hover:translate-x-1 transition-transform duration-200">
   →
@@ -104,7 +104,7 @@ export default function ServicesPage() {
             <div className="relative w-full h-[280px] lg:h-[360px] overflow-hidden rounded-2xl">
          <Image 
            src="/images/balinese-massage-gomti-nagar-lucknow.avif"
-           alt="Luxury Balinese Massage in Gomti Nagar Lucknow at Relaxio Spa"
+           alt="Balinese Massage in Gomti Nagar Lucknow at Relaxio Spa"
            fill
            className="object-cover"
            loading="lazy"
@@ -126,7 +126,7 @@ export default function ServicesPage() {
             <div>
               <h2 className="text-2xl md:text-3xl font-serif text-stone-900 mb-4">Thai Massage</h2>
               <p className="text-stone-600 mb-6 font-light leading-relaxed">
-                An ancient healing system combining acupressure, Indian Ayurvedic principles, and assisted yoga postures. Unlike traditional massages, Thai massage doesn&apos;t use oils or lotions, and you remain fully clothed. The therapist uses their hands, knees, legs, and feet to move you into a series of yoga-like stretches.
+                Thai Massage in Gomti Nagar Lucknow combines acupressure, assisted stretching, and traditional wellness techniques. Unlike traditional massages, Thai massage doesn&apos;t use oils or lotions, and you remain fully clothed. The therapist uses their hands, knees, legs, and feet to move you into a series of yoga-like stretches.
               </p>
               <ul className="space-y-3 mb-8 font-light text-stone-700">
                 <li>✓ Increases flexibility and range of motion</li>
@@ -135,7 +135,7 @@ export default function ServicesPage() {
                 <li>✓ Reduces stress and anxiety</li>
               </ul>
               <Link href="/services/thai-massage" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-amber-900 hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md">
-                <span>Explore Therapy</span>
+                <span>View Massage Service</span>
 
 <span className="group-hover:translate-x-1 transition-transform duration-200">
   →
@@ -166,7 +166,7 @@ export default function ServicesPage() {
       href="/services/couple-massage"
       className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-amber-900 hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md"
     >
-      <span>Explore Therapy</span>
+      <span>View Couple Massage</span>
 
 <span className="group-hover:translate-x-1 transition-transform duration-200">
   →
@@ -177,7 +177,7 @@ export default function ServicesPage() {
   <div className="relative w-full h-[280px] lg:h-[360px] overflow-hidden rounded-2xl">
     <Image
       src="/images/couple-massage-lucknow.avif"
-      alt="Private Couple Massage Spa Experience in Gomti Nagar Lucknow at Relaxio Spa"
+      alt="Couple Massage in Gomti Nagar Lucknow at Relaxio Spa"
       fill
       className="object-cover"
       loading="lazy"
@@ -191,7 +191,7 @@ export default function ServicesPage() {
   <div className="relative w-full h-[280px] lg:h-[360px] overflow-hidden rounded-2xl">
     <Image
       src="/images/jacuzzi-steam-bath-lucknow.avif"
-      alt="Luxury Jacuzzi and Steam Bath Facilities in Gomti Nagar Lucknow at Relaxio Spa"
+      alt="Jacuzzi and Steam Bath in Gomti Nagar Lucknow at Relaxio Spa"
       fill
       className="object-cover"
       loading="lazy"
@@ -219,7 +219,7 @@ export default function ServicesPage() {
       className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-[#d4af37]/30 bg-white text-amber-900 hover:bg-[#d4af37] hover:text-white hover:border-[#d4af37] transition-all duration-300 uppercase tracking-[0.18em] text-[11px] font-medium group shadow-sm hover:shadow-md"
     >
       <>
-  <span>Explore Therapy</span>
+  <span>View Jacuzzi & Steam Bath</span>
   <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
 </>
     </Link>
